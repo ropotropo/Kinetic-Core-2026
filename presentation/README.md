@@ -23,6 +23,8 @@ Rebuild with Python, ReportLab and Pillow: `python source/build_pdfs.py`. macOS 
 
 [source/captures.json](source/captures.json) records source capture hashes and limitations. The game was not modified by this presentation addition.
 
-## Next task: video
+## Gameplay video
 
-Create a separate professional gameplay video for YouTube, maximum 90 seconds. Show real motion from mission choice and spacecraft assembly through rollout/launch, changing instruments, lunar approach, landing success and a distinct docking exercise. Use restrained zooms and transitions, KC identity, and the same black/white visual language. Preserve genuine time/resource changes and distinguish time warp from editing. Video production is the next task and is not represented as complete here.
+[video/Kinetic-Core-Gameplay.mp4](video/Kinetic-Core-Gameplay.mp4) is the finished **88-second, 1920 x 1080, 30 fps H.264/AAC** film. It shows actual recorded workshop interaction, mission selection, rollout, initial liftoff, a local Moon landing rehearsal, a separate docking exercise and genuine touchdown confirmation. Authored captions distinguish the separate exercises and assistance modes. The opening portrait is fictional cover artwork; gameplay is not generated. The soundtrack is original synthesized ambient audio.
+
+[video/README.md](video/README.md) documents the editable Remotion project, capture provenance, source footage and rebuild instructions. No game source or physics was modified by this media package.

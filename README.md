@@ -8,6 +8,10 @@ See [authorship](AUTHORS.md).
 The site menu's **About the author** page shows **Микита Борисов**, Ukraine,
 with the project spacesuit portrait.
 
+## Gameplay demo
+
+[Watch the latest 88-second gameplay film](https://ropotropo.github.io/Kinetic-Core-2026/demo/). Editable video sources and credits are in [presentation/video](presentation/video/README.md).
+
 ## Play v0.4.4
 
 Open **[the browser game](https://ropotropo.github.io/Kinetic-Core-2026/)**

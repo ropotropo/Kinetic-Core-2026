@@ -1,0 +1,156 @@
+{
+  "recordedAtUTC": "2026-11-15T20:48:39.730Z",
+  "url": "http://127.0.0.1:5188/",
+  "build": "Kinetic Core v0.4.4 dist",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "method": "Actual game render, ordinary UI and keyboard inputs; read-only state hooks for shot logging. No state injection.",
+  "clips": [
+    {
+      "name": "builder-launch",
+      "source": "builder-launch.webm",
+      "events": [
+        {
+          "seconds": 9.646,
+          "label": "Workshop ready"
+        },
+        {
+          "seconds": 9.793,
+          "label": "Dimension changed through workshop input"
+        },
+        {
+          "seconds": 17.187,
+          "label": "Workshop detail"
+        },
+        {
+          "seconds": 22.33,
+          "label": "Moon mission planner"
+        },
+        {
+          "seconds": 26.828,
+          "label": "Integrated mission start"
+        },
+        {
+          "seconds": 26.831,
+          "label": "Mission phase rollout",
+          "state": {
+            "time": 0,
+            "phase": "rollout"
+          }
+        },
+        {
+          "seconds": 80.787,
+          "label": "Mission phase countdown",
+          "state": {
+            "time": 0,
+            "phase": "countdown"
+          }
+        },
+        {
+          "seconds": 103.506,
+          "label": "Mission phase launch",
+          "state": {
+            "time": 0.0333999999999854,
+            "phase": "launch"
+          }
+        },
+        {
+          "seconds": 112.817,
+          "label": "Mission clip end"
+        }
+      ],
+      "errors": [],
+      "wallDurationSeconds": 112.817
+    },
+    {
+      "name": "docking",
+      "source": "docking.webm",
+      "events": [
+        {
+          "seconds": 12.556,
+          "label": "Separate manual docking exercise"
+        },
+        {
+          "seconds": 43.62,
+          "label": "Powered RCS braking",
+          "state": {
+            "phase": "docking",
+            "paused": false,
+            "cameraView": "cockpit",
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "timeUnits": "seconds",
+            "distanceUnits": "meters",
+            "dockingAxes": "+X right, +Y up, +Z away from target; craft nose −Z",
+            "destination": "moon",
+            "preview": false,
+            "telemetry": {
+              "phase": "docking",
+              "time": 29.36666666666628,
+              "range": 51.91333662656894,
+              "distance": 52.89807422354539,
+              "offsetX": -6.470505503308975,
+              "offsetY": 7.832259915752426,
+              "lateralOffset": 10.159317735766214,
+              "velocityX": -0.08594578938223973,
+              "velocityY": 0.12169601448565717,
+              "velocityZ": -0.8315451771480366,
+              "closingSpeed": 0.8315451771480366,
+              "relativeSpeed": 0.8447863518620488,
+              "pitch": 0.0010104374898054996,
+              "yaw": -0.0016142683419988846,
+              "roll": 0.001070950132863258,
+              "angle": 0.0021844983348891425,
+              "pitchDegrees": 0.057893803627648274,
+              "yawDegrees": -0.09249076299811707,
+              "rollDegrees": 0.061360922682039444,
+              "angleDegrees": 0.12516253494250376,
+              "angularSpeed": 0.0003248550239492081,
+              "angularSpeedDegrees": 0.018612821825910904,
+              "fuel": 310.37218285518225,
+              "fuelFraction": 0.9699130714224445,
+              "fuelUsed": 9.627817144817978,
+              "mass": 7910.3721828551825,
+              "holdAttitude": true,
+              "brake": false,
+              "lastThrust": [
+                0,
+                0,
+                0
+              ],
+              "lastTorque": [
+                0.7880455565757583,
+                -1.2470605448947327,
+                0.301372951405546
+              ],
+              "capture": {
+                "lateral": 0.35,
+                "speed": 0.2,
+                "closingSpeed": 0.15,
+                "angle": 0.08726646259971647,
+                "angularSpeed": 0.017453292519943295
+              },
+              "captureReady": false,
+              "event": "Terminal approach training begins 70 m from the port. Manual RCS control.",
+              "failure": null
+            }
+          }
+        },
+        {
+          "seconds": 50.803,
+          "label": "External docking detail"
+        }
+      ],
+      "errors": [],
+      "wallDurationSeconds": 50.803
+    }
+  ]
+}

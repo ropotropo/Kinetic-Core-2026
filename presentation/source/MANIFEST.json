@@ -20,8 +20,8 @@
     },
     {
       "file": "README.md",
-      "sha256": "89b22da4ab17b5141844ae087d992c49a815317fea1ea2f3e44315fcd4efa859",
-      "bytes": 2769
+      "sha256": "fe4fbac3dc6bf97382b9e6b40f96030bb84b6135e197b927f41823b5d27f98a7",
+      "bytes": 2996
     },
     {
       "file": "assets/approach.jpg",
@@ -385,18 +385,143 @@
     },
     {
       "file": "source/content.json",
-      "sha256": "85a01d263120bc39f1b74f01acd8b23677958a2fcbb76ab5c28ff0a329157f73",
-      "bytes": 26237
+      "sha256": "dcb0c2c078b0a5c4e67dce987e408c6893fb69ce2a7f1bc4b83f80b9204a33c4",
+      "bytes": 26406
     },
     {
       "file": "source/speaker-notes-en.md",
-      "sha256": "5bf918be87e99ee4930c036105f2baa1ed0dd1acf95e90253eb363034b082758",
-      "bytes": 3623
+      "sha256": "9ec13d421fd926be5c7812059f02c6003242b6147f16d4c90e992a2acb098d77",
+      "bytes": 3656
     },
     {
       "file": "source/speaker-notes-uk.md",
-      "sha256": "1faba7dbc2835c5b774b197c671fd2abc53dc52082ffac9c8b7eeaf75539b298",
-      "bytes": 6656
+      "sha256": "856cd81542e424b10b4717cfd58809877b17638cb36b47c793304991997d7f03",
+      "bytes": 6792
+    },
+    {
+      "file": "video/Kinetic-Core-Gameplay.mp4",
+      "sha256": "16ed92d42c1e588b06e8c0328ca4d8159c4a456dcfa2003645447d87524aacd3",
+      "bytes": 9618041
+    },
+    {
+      "file": "video/README.md",
+      "sha256": "3cf8f8e8222ff54afe03bc4a2c824436a058db94b3be17ab0277391b484ad773",
+      "bytes": 5808
+    },
+    {
+      "file": "video/capture-manifest.json",
+      "sha256": "cd9a22196277be759e2dd46752f8ea332a56e44c3063194549a22b0d83fed9ca",
+      "bytes": 4647
+    },
+    {
+      "file": "video/landing-provenance.json",
+      "sha256": "3c59ff8883c637bb08824c06d1579a480b3918795b40426e443cafef8f8c7268",
+      "bytes": 155178
+    },
+    {
+      "file": "video/remotion/.gitignore",
+      "sha256": "aec949d1fbf80687da7f6059290d2f7d0515f759903f774075f7957ca71667da",
+      "bytes": 110
+    },
+    {
+      "file": "video/remotion/.prettierrc",
+      "sha256": "10e86224d2f90945fbe57db21ac109bdb0ce9b5d7470e7b78fa5f8b6d49a1afd",
+      "bytes": 66
+    },
+    {
+      "file": "video/remotion/README.md",
+      "sha256": "cf37158f12dff533b34b437686ec3d05beca19c9151de1ecd36230a1e7cbfda0",
+      "bytes": 1138
+    },
+    {
+      "file": "video/remotion/eslint.config.mjs",
+      "sha256": "7f2ca640409fd597965bedf929073b9a74f143643e1711150c4cac3b6ec5c80d",
+      "bytes": 79
+    },
+    {
+      "file": "video/remotion/package-lock.json",
+      "sha256": "a56e5c1f0002eafa44f3faf6885e11221cc9a82704d9c7fa04c641371273f80a",
+      "bytes": 189390
+    },
+    {
+      "file": "video/remotion/package.json",
+      "sha256": "a5f7a53e7dce8c14511f27d6cb9ed8e1bcf9dc00d76e3456163b7f01d1179de1",
+      "bytes": 788
+    },
+    {
+      "file": "video/remotion/public/footage/builder-launch.webm",
+      "sha256": "a47195936d3834c150ad29e2173cd1bf848ddde26220cca793c83b6078344ad2",
+      "bytes": 8736611
+    },
+    {
+      "file": "video/remotion/public/footage/docking.webm",
+      "sha256": "1ec50a836973e8226ecb53345dda1db9e73a5622f500a1ba4dd46a0d2a146c71",
+      "bytes": 4496081
+    },
+    {
+      "file": "video/remotion/public/footage/moon-landing-qa.webm",
+      "sha256": "c58a1dda6a5de0bfc674dc83d61d26c1296a5ca7c38a2e28e5941e8cd3dfd53f",
+      "bytes": 20014940
+    },
+    {
+      "file": "video/remotion/public/hero.png",
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915",
+      "bytes": 2151188
+    },
+    {
+      "file": "video/remotion/public/logo.png",
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061",
+      "bytes": 1206586
+    },
+    {
+      "file": "video/remotion/public/original-ambient.wav",
+      "sha256": "6e64ac468be315bd7c93ebca7301179b5326572177182c0c611dc4f93e908560",
+      "bytes": 8448044
+    },
+    {
+      "file": "video/remotion/remotion.config.ts",
+      "sha256": "af5ce97f98b2c91a7891f2bef4801f7dc700843f010fd81e1566d9eebf6f5ad1",
+      "bytes": 371
+    },
+    {
+      "file": "video/remotion/src/Composition.tsx",
+      "sha256": "41be4aa37769311ba2d38b58b4ded433c8b6eac4173efcf1c103a75b384dd6ba",
+      "bytes": 5374
+    },
+    {
+      "file": "video/remotion/src/Root.tsx",
+      "sha256": "8410e0951c9a0d7c34428e1b26a6fc8093f1a3fbcdf48d922f016c4775f54107",
+      "bytes": 249
+    },
+    {
+      "file": "video/remotion/src/index.ts",
+      "sha256": "957e481dd33a29b4a55ae0e95dbf763b7e48c37c427ca4bd1275faf34bc07a74",
+      "bytes": 109
+    },
+    {
+      "file": "video/remotion/tsconfig.json",
+      "sha256": "a6fbcf514dbfd3d116c3f7f78b72949c8c2ff45bdbe17aeff4c97e16bc1327fa",
+      "bytes": 368
+    },
+    {
+      "file": "video/scripts/capture-gameplay.mjs",
+      "sha256": "7c7dfc06c64dbfebe192e648790b3f30c06a388ef48d9daaea06af3006fde4c1",
+      "bytes": 4794
+    },
+    {
+      "file": "video/scripts/capture-local-landing.mjs",
+      "sha256": "53ecd55d587077d73af30fb7f3f8a91f4520b6ba9da040b66b797a9ca3ad6e50",
+      "bytes": 3227
+    },
+    {
+      "file": "video/scripts/generate-audio.mjs",
+      "sha256": "d4986a1a10362bbebf9f781277834ec04113066f591daa0cb79e83f82897dfc6",
+      "bytes": 944
+    },
+    {
+      "file": "video/source-manifest.json",
+      "sha256": "26923a197046415a9e8d8995526e2f4f89a89f4b1f5a79cc46c14f5fb8d653c1",
+      "bytes": 2591
     }
   ],
   "presentationRevision": {
@@ -404,5 +529,16 @@
     "fullScreenCaptures": 7,
     "rehearsalSeconds": 280,
     "pdfHyperlinks": 0
+  },
+  "video": {
+    "file": "video/Kinetic-Core-Gameplay.mp4",
+    "durationSeconds": 88,
+    "width": 1920,
+    "height": 1080,
+    "framesPerSecond": 30,
+    "videoCodec": "H.264",
+    "audioCodec": "AAC",
+    "sourceBuild": "local v0.4.4 dist; see video/source-manifest.json",
+    "validation": "Full decode and independent visual/motion QA passed"
   }
 }

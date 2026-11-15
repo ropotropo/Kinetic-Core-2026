@@ -22,31 +22,31 @@ The workshop shows mass, thrust and an ideal delta-v budget. That budget helps c
 
 ## 6. The Moon mission (15 s)
 
-The main continuous route takes that same spacecraft from Earth to the Moon. The player launches, separates stages and manages burns.
+The main continuous route takes that same spacecraft from Earth to the Moon. Other destinations are available as labelled local landing rehearsals. They are separate exercises, so they do not imply a complete Earth-to-every-world mission.
 
 ## 7. Rollout to the launch pad (10 s)
 
-During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting.
+The player launches, separates stages and manages burns.
 
 ## 8. Lunar capture burn (20 s)
 
-The recorded Moon demonstration uses powered guidance and explicit pilot staging. Stating that assist mode keeps the demonstration clear. Other destinations are available as labelled local landing rehearsals.
+During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting. The recorded Moon demonstration uses powered guidance and explicit pilot staging.
 
 ## 9. Final lunar descent (10 s)
 
-They are separate exercises, so they do not imply a complete Earth-to-every-world mission.
+Here, powered guidance helps manage the final descent while mass and fuel remain finite.
 
-## 10. Landing and docking (15 s)
+## 10. Landing and docking (10 s)
 
-Landing and docking turn the mission into precise control. A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware.
+Landing and docking turn the mission into precise control.
 
-## 11. Touchdown confirmed (15 s)
+## 11. Touchdown confirmed (10 s)
 
-Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited.
+A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware.
 
-## 12. Docking cockpit - full view (15 s)
+## 12. Docking cockpit - full view (25 s)
 
-These interactions give small corrections a visible cost and make the final moments understandable through instruments.
+Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited. These interactions give small corrections a visible cost and make the final moments understandable through instruments.
 
 ## 13. Physics with clear limits (55 s)
 

@@ -6,7 +6,7 @@
   "gameURL": "https://ropotropo.github.io/Kinetic-Core-2026/",
   "sourceVersion": "0.4.4",
   "sourceSnapshot": "b77208515f0398a0a57263db7c6b45641fb26bdc",
-  "presentationSnapshot": "1a197ec56be4c62e6680f0924db559e1da61289e",
+  "presentationSnapshot": "163ff8851b450067ccb815ee13f3e2136d855962",
   "historyIncluded": false,
   "licensesPreserved": true,
   "note": "Complete source snapshot plus latest presentation directory. Original repository history is not modified. Native preview binaries are transferred unchanged and retain their original verification limits.",
@@ -24,5 +24,10 @@
     "productionBuild": true,
     "portableBuild": true,
     "nativeBinaries": "transferred unchanged; not installed or acceptance-tested during migration"
+  },
+  "gameplayVideo": {
+    "durationSeconds": 88,
+    "publicURL": "https://ropotropo.github.io/Kinetic-Core-2026/demo/",
+    "originalBytesPreserved": true
   }
 }

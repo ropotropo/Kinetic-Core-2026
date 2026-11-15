@@ -1,0 +1,66 @@
+{
+  "generatedAtUTC": "2026-11-15T21:02:31.566Z",
+  "project": "Kinetic Core",
+  "soleAuthor": "Mykyta Borisov",
+  "durationSeconds": 88,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "composition": "KineticCoreGameplay",
+  "remotionVersion": "4.0.543",
+  "gameVersion": "0.4.4",
+  "servedURL": "http://127.0.0.1:5188/",
+  "repositoryHEADAtHandoff": "b77208515f0398a0a57263db7c6b45641fb26bdc",
+  "distIndexSha256": "010df1e9c0c38646b2cdcb6e7367723bcf126d1503c9be1522f290eeb81d11b1",
+  "distEntries": [
+    {
+      "file": "./assets/index-BqOL0qKo.js",
+      "sha256": "481e464b62596bbe29f321fdc4b5a9028eb7d4b540b2a087131eb17fce9e9220"
+    },
+    {
+      "file": "./assets/index-BKkw9oWo.css",
+      "sha256": "ed3f9e90f3fff1d04e270022bacbbef3b663be5a2775538718ab4c027cad2855"
+    }
+  ],
+  "files": [
+    {
+      "file": "Kinetic-Core-Gameplay.mp4",
+      "bytes": 9618041,
+      "sha256": "16ed92d42c1e588b06e8c0328ca4d8159c4a456dcfa2003645447d87524aacd3"
+    },
+    {
+      "file": "remotion/public/hero.png",
+      "bytes": 2151188,
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915"
+    },
+    {
+      "file": "remotion/public/logo.png",
+      "bytes": 1206586,
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061"
+    },
+    {
+      "file": "remotion/public/original-ambient.wav",
+      "bytes": 8448044,
+      "sha256": "6e64ac468be315bd7c93ebca7301179b5326572177182c0c611dc4f93e908560"
+    },
+    {
+      "file": "remotion/public/footage/builder-launch.webm",
+      "bytes": 8736611,
+      "sha256": "a47195936d3834c150ad29e2173cd1bf848ddde26220cca793c83b6078344ad2"
+    },
+    {
+      "file": "remotion/public/footage/docking.webm",
+      "bytes": 4496081,
+      "sha256": "1ec50a836973e8226ecb53345dda1db9e73a5622f500a1ba4dd46a0d2a146c71"
+    },
+    {
+      "file": "remotion/public/footage/moon-landing-qa.webm",
+      "bytes": 20014940,
+      "sha256": "c58a1dda6a5de0bfc674dc83d61d26c1296a5ca7c38a2e28e5941e8cd3dfd53f"
+    }
+  ],
+  "captureBoundary": "New actual v0.4.4 gameplay montage. Standard local Moon landing and separate terminal docking are not an uninterrupted integrated campaign. No success injection or advanceTime used in delivered captures.",
+  "coverArtProvenance": "Generated portrait and approved KC artwork, distinct from gameplay. See presentation/design-kit technical sources.",
+  "audio": "Original synthesized ambient sine composition; no downloaded music or narration.",
+  "verification": "2640 frames rendered; independent full video/audio decoding and visual checks reported by parent."
+}

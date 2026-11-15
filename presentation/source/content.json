@@ -230,11 +230,11 @@
       "notes": {
         "en": {
           "title": "The Moon mission",
-          "speech": "The main continuous route takes that same spacecraft from Earth to the Moon. The player launches, separates stages and manages burns."
+          "speech": "The main continuous route takes that same spacecraft from Earth to the Moon. Other destinations are available as labelled local landing rehearsals. They are separate exercises, so they do not imply a complete Earth-to-every-world mission."
         },
         "uk": {
           "title": "Місія від Землі до Місяця",
-          "speech": "Основний безперервний маршрут веде цей самий апарат від Землі до Місяця. Гравець запускає ракету, відокремлює ступені й керує маневрами."
+          "speech": "Основний безперервний маршрут веде цей самий апарат від Землі до Місяця. Інші світи представлені окремими локальними вправами з посадки. Вони не означають, що в грі вже змодельовано повний переліт від Землі до кожного світу."
         }
       }
     },
@@ -245,11 +245,11 @@
       "notes": {
         "en": {
           "title": "Rollout to the launch pad",
-          "speech": "During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting."
+          "speech": "The player launches, separates stages and manages burns."
         },
         "uk": {
           "title": "Рух до стартового майданчика",
-          "speech": "На пасивних ділянках двигун може бути вимкнений, а апарат продовжує рух. Наближення до Місяця, вихід на його орбіту та спуск зберігають той самий баланс маси й пального."
+          "speech": "Гравець запускає ракету, відокремлює ступені й керує маневрами."
         }
       }
     },
@@ -260,11 +260,11 @@
       "notes": {
         "en": {
           "title": "Lunar capture burn",
-          "speech": "The recorded Moon demonstration uses powered guidance and explicit pilot staging. Stating that assist mode keeps the demonstration clear. Other destinations are available as labelled local landing rehearsals."
+          "speech": "During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting. The recorded Moon demonstration uses powered guidance and explicit pilot staging."
         },
         "uk": {
           "title": "Гальмування біля Місяця",
-          "speech": "Записана демонстрація місячної місії використовує активну допомогу наведення та ручне відокремлення ступенів. Тому важливо назвати обраний режим допомоги. Інші світи представлені окремими локальними вправами з посадки."
+          "speech": "На пасивних ділянках двигун може бути вимкнений, а апарат продовжує рух. Наближення до Місяця, вихід на його орбіту та спуск зберігають той самий баланс маси й пального. Записана демонстрація місячної місії використовує активну допомогу наведення та ручне відокремлення ступенів."
         }
       }
     },
@@ -275,55 +275,55 @@
       "notes": {
         "en": {
           "title": "Final lunar descent",
-          "speech": "They are separate exercises, so they do not imply a complete Earth-to-every-world mission."
+          "speech": "Here, powered guidance helps manage the final descent while mass and fuel remain finite."
         },
         "uk": {
           "title": "Фінальний спуск до Місяця",
-          "speech": "Вони не означають, що в грі вже змодельовано повний переліт від Землі до кожного світу."
+          "speech": "Тут активна допомога наведення допомагає керувати фінальним спуском, а маса й запаси пального залишаються обмеженими."
         }
       }
     },
     {
       "infoIndex": 5,
-      "seconds": 15,
+      "seconds": 10,
       "notes": {
         "en": {
           "title": "Landing and docking",
-          "speech": "Landing and docking turn the mission into precise control. A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware."
+          "speech": "Landing and docking turn the mission into precise control."
         },
         "uk": {
           "title": "Посадка та стикування",
-          "speech": "Посадка та стикування потребують точних корекцій. Безпечний контакт залежить від вертикальної й бокової швидкості, відхилення від майданчика, нахилу та посадкового обладнання."
+          "speech": "Посадка та стикування потребують точних корекцій."
         }
       }
     },
     {
       "infoIndex": 5,
-      "seconds": 15,
+      "seconds": 10,
       "imageKey": "success",
       "notes": {
         "en": {
           "title": "Touchdown confirmed",
-          "speech": "Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited."
+          "speech": "A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware."
         },
         "uk": {
           "title": "Посадку підтверджено",
-          "speech": "Стикування є окремою локальною тривимірною вправою. Гравець стежить за відстанню, швидкістю зближення й орієнтацією та коригує рух бортовими двигунами керування. Активне гальмування й утримання орієнтації допомагають під час підходу, але витрачають обмежений запас пального."
+          "speech": "Безпечний контакт залежить від вертикальної й бокової швидкості, відхилення від майданчика, нахилу та посадкового обладнання."
         }
       }
     },
     {
       "infoIndex": 5,
-      "seconds": 15,
+      "seconds": 25,
       "imageKey": "docking",
       "notes": {
         "en": {
           "title": "Docking cockpit - full view",
-          "speech": "These interactions give small corrections a visible cost and make the final moments understandable through instruments."
+          "speech": "Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited. These interactions give small corrections a visible cost and make the final moments understandable through instruments."
         },
         "uk": {
           "title": "Кабіна стикування - повний екран",
-          "speech": "Невеликі корекції мають видиму ціну, а прилади пояснюють стан апарата в найвідповідальніші моменти."
+          "speech": "Стикування є окремою локальною тривимірною вправою. Гравець стежить за відстанню, швидкістю зближення й орієнтацією та коригує рух бортовими двигунами керування. Активне гальмування й утримання орієнтації допомагають під час підходу, але витрачають обмежений запас пального. Невеликі корекції мають видиму ціну, а прилади пояснюють стан апарата в найвідповідальніші моменти."
         }
       }
     },
