@@ -1,0 +1,46 @@
+{
+  "voice": {
+    "provider": "Microsoft Edge online TTS via edge-tts 7.3.1",
+    "catalogId": "en-US-ChristopherNeural",
+    "genericPreset": true,
+    "celebrityImitation": false,
+    "textFile": "../../../narration-v2-en.txt",
+    "normalization": "FFmpeg loudnorm I=-17 LUFS, TP=-2 dBTP, LRA=7; 48000Hz mono PCM16"
+  },
+  "music": {
+    "type": "Original algorithmic composition; no sampled or downloaded music",
+    "script": "../../../scripts/generate-score-v2.py",
+    "tempoBPM": 108,
+    "durationSeconds": 90,
+    "format": "48000Hz stereo PCM16",
+    "musicalElements": [
+      "minor-key pad progression",
+      "arpeggiated plucks",
+      "bass",
+      "quiet rhythmic pulse"
+    ],
+    "stemIsUnducked": true
+  },
+  "files": [
+    {
+      "file": "music.wav",
+      "bytes": 17280044,
+      "sha256": "72bf1063fbd741fae15e8929ce4fd89243472080bdafbad71e80f52f1280fd71"
+    },
+    {
+      "file": "voiceover-en.json",
+      "bytes": 4457,
+      "sha256": "01b8db397e9cc3e3233b163e378e02108f50b3dc44c8b5f8b447263f1d2fa153"
+    },
+    {
+      "file": "voiceover-en.mp3",
+      "bytes": 472752,
+      "sha256": "c63f86daa8a358bb636a6709d228f8e41160c3949f99b679b77e9e97f8ad7cbc"
+    },
+    {
+      "file": "voiceover-en.wav",
+      "bytes": 7564110,
+      "sha256": "42847f35219f340669ee571e23e885945c6668d200065fc678dbdfd48c75c280"
+    }
+  ]
+}

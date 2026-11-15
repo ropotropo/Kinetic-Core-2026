@@ -1,0 +1,22 @@
+{
+  "source": "remotion/public/footage/moon-landing-qa.webm",
+  "sourceCaptureFPS": 25,
+  "outputFPS": 30,
+  "editorialSpeed": 1.2,
+  "interpolatedFrames": false,
+  "method": "Input timestamp scale 1/1.2 and30fps encode. Retains real recorded frames and original in-game telemetry.",
+  "clips": [
+    {
+      "file": "remotion/public/footage-v2/landing.mp4",
+      "sourceStartSeconds": 100,
+      "outputDurationSeconds": 12
+    },
+    {
+      "file": "remotion/public/footage-v2/contact.mp4",
+      "sourceStartSeconds": 157.5,
+      "outputDurationSeconds": 7
+    }
+  ],
+  "contactIsGenuine": true,
+  "scenario": "Separate local Moon landing rehearsal; powered landing assist"
+}

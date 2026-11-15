@@ -1,0 +1,22 @@
+{
+  "file": "planner.mp4",
+  "fps": 30,
+  "frames": 125,
+  "duration": 4.166666666666667,
+  "resolution": [
+    1600,
+    900
+  ],
+  "method": "Controlled browser clock, one screenshot per33/33/34ms, ordinary UI actions; no injected game state. Original150-frame target stopped at screenshot timeout; retained complete125-frame prefix only.",
+  "actions": [
+    {
+      "time": 1.333,
+      "action": "Select Hadley approach / Apollo15"
+    },
+    {
+      "time": 3.167,
+      "action": "Select Taurus\u2013Littrow approach / Apollo17"
+    }
+  ],
+  "scope": "Planner only; not a flown mission or measured ephemeris."
+}

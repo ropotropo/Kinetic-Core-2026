@@ -1,0 +1,1605 @@
+{
+  "recordedAtUTC": "2026-11-15T21:23:44.036Z",
+  "url": "http://127.0.0.1:5188/",
+  "fps": 30,
+  "method": "One screenshot after each controlled browser-clock frame. Existing RAF and fixed-step physics; no source edits, injected states or fabricated telemetry.",
+  "clips": [
+    {
+      "name": "destinations",
+      "file": "footage-v2/destinations.mp4",
+      "seconds": 6,
+      "frames": 180,
+      "fps": 30,
+      "detail": "Actual destination selector; physical reference parameters and local-rehearsal boundaries remain visible.",
+      "before": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": null,
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "after": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": null,
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "captureWallSeconds": 29.067035542,
+      "resolution": [
+        1600,
+        900
+      ],
+      "playbackRate": 1
+    },
+    {
+      "name": "builder",
+      "file": "footage-v2/builder.mp4",
+      "seconds": 12,
+      "frames": 360,
+      "fps": 30,
+      "detail": "Typed service-tank dimensions changed through normal controls: length7\u219210m, radius2\u21922.6m, then restored. Geometry, mass and delta-v are computed by the game.",
+      "before": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": null,
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "after": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": null,
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "captureWallSeconds": 87.687787875,
+      "resolution": [
+        1600,
+        900
+      ],
+      "playbackRate": 1
+    },
+    {
+      "name": "liftoff",
+      "file": "footage-v2/liftoff.mp4",
+      "seconds": 10,
+      "frames": 300,
+      "fps": 30,
+      "detail": "Integrated Moon route: ordinary Skip to countdown, real powered ascent. Existing UI warp10\u00d7 becomes active after actual first100m handover; no state injection.",
+      "before": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": {
+          "version": 1,
+          "kind": "lunar-mission",
+          "design": {
+            "format": "kineti-core-rocket",
+            "version": 2,
+            "slots": {
+              "core-engine": {
+                "type": "engine",
+                "radius": 2.6,
+                "length": 4
+              },
+              "core-tank-1": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "core-tank-2": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "core-separator": {
+                "type": "separator",
+                "radius": 3,
+                "length": 0.5
+              },
+              "upper-engine": {
+                "type": "engine",
+                "radius": 1.8,
+                "length": 3
+              },
+              "upper-tank": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "upper-separator": {
+                "type": "separator",
+                "radius": 2,
+                "length": 0.4
+              },
+              "service-engine": {
+                "type": "engine",
+                "radius": 1.2,
+                "length": 2
+              },
+              "service-tank": {
+                "type": "tank",
+                "radius": 2,
+                "length": 7
+              },
+              "capsule": {
+                "type": "capsule",
+                "radius": 2,
+                "length": 3.4
+              },
+              "leg-1": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-2": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-3": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-4": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "solar-1": {
+                "type": "solar",
+                "radius": 1,
+                "length": 3
+              },
+              "solar-2": {
+                "type": "solar",
+                "radius": 1,
+                "length": 3
+              }
+            }
+          },
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy",
+            "design": {
+              "format": "kineti-core-rocket",
+              "version": 2,
+              "slots": {
+                "core-engine": {
+                  "type": "engine",
+                  "radius": 2.6,
+                  "length": 4
+                },
+                "core-tank-1": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "core-tank-2": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "core-separator": {
+                  "type": "separator",
+                  "radius": 3,
+                  "length": 0.5
+                },
+                "upper-engine": {
+                  "type": "engine",
+                  "radius": 1.8,
+                  "length": 3
+                },
+                "upper-tank": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "upper-separator": {
+                  "type": "separator",
+                  "radius": 2,
+                  "length": 0.4
+                },
+                "service-engine": {
+                  "type": "engine",
+                  "radius": 1.2,
+                  "length": 2
+                },
+                "service-tank": {
+                  "type": "tank",
+                  "radius": 2,
+                  "length": 7
+                },
+                "capsule": {
+                  "type": "capsule",
+                  "radius": 2,
+                  "length": 3.4
+                },
+                "leg-1": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-2": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-3": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-4": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "solar-1": {
+                  "type": "solar",
+                  "radius": 1,
+                  "length": 3
+                },
+                "solar-2": {
+                  "type": "solar",
+                  "radius": 1,
+                  "length": 3
+                }
+              }
+            }
+          },
+          "siteId": "tranquility",
+          "phase": "launch",
+          "time": 0.08800000000000355,
+          "sequenceTime": 0,
+          "launch": {
+            "version": 1,
+            "kind": "launch",
+            "phase": "launch",
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy",
+              "design": {
+                "format": "kineti-core-rocket",
+                "version": 2,
+                "slots": {
+                  "core-engine": {
+                    "type": "engine",
+                    "radius": 2.6,
+                    "length": 4
+                  },
+                  "core-tank-1": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "core-tank-2": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "core-separator": {
+                    "type": "separator",
+                    "radius": 3,
+                    "length": 0.5
+                  },
+                  "upper-engine": {
+                    "type": "engine",
+                    "radius": 1.8,
+                    "length": 3
+                  },
+                  "upper-tank": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "upper-separator": {
+                    "type": "separator",
+                    "radius": 2,
+                    "length": 0.4
+                  },
+                  "service-engine": {
+                    "type": "engine",
+                    "radius": 1.2,
+                    "length": 2
+                  },
+                  "service-tank": {
+                    "type": "tank",
+                    "radius": 2,
+                    "length": 7
+                  },
+                  "capsule": {
+                    "type": "capsule",
+                    "radius": 2,
+                    "length": 3.4
+                  },
+                  "leg-1": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-2": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-3": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-4": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "solar-1": {
+                    "type": "solar",
+                    "radius": 1,
+                    "length": 3
+                  },
+                  "solar-2": {
+                    "type": "solar",
+                    "radius": 1,
+                    "length": 3
+                  }
+                }
+              }
+            },
+            "time": 0.08800000000000355,
+            "position": [
+              6371000.031424314,
+              35.903920005357975
+            ],
+            "velocity": [
+              0.7143329504246652,
+              407.9990918616876
+            ],
+            "effectiveRotation": 6.404003933768906e-05,
+            "stages": [
+              {
+                "id": "custom-0",
+                "name": "Custom core stage",
+                "dryMass": 48346.01414581604,
+                "propellant": 865194.616798629,
+                "thrustSea": 20000000,
+                "thrustVac": 22000000,
+                "ispSea": 285,
+                "ispVac": 315,
+                "radius": 3,
+                "height": 40.5,
+                "dragCoefficient": 0.28,
+                "fuel": 864564.8973127198,
+                "attached": true
+              },
+              {
+                "id": "custom-1",
+                "name": "Custom upper stage",
+                "dryMass": 14298.760077053515,
+                "propellant": 151409.05793976007,
+                "thrustSea": 1100000,
+                "thrustVac": 1800000,
+                "ispSea": 300,
+                "ispVac": 450,
+                "radius": 3,
+                "height": 21.4,
+                "dragCoefficient": 0.28,
+                "fuel": 151409.05793976007,
+                "attached": true
+              }
+            ],
+            "stageIndex": 0,
+            "payloadMass": 36038.4046334184,
+            "initialMass": 1115286.853594677,
+            "throttle": 1,
+            "commandedThrottle": 1,
+            "pitch": 0,
+            "pitchTrim": 0,
+            "guidance": true,
+            "guidancePitch": 0,
+            "engineOn": true,
+            "liftoff": true,
+            "maxQ": 0.21080022529866432,
+            "dynamicPressure": 0.21080022529866432,
+            "loadG": 1.8295558843843576,
+            "thrust": 20000000,
+            "acceleration": 8.12156394662751,
+            "fuelUsed": 629.7194859092021,
+            "deltaVUsed": 1.5785150255325278,
+            "dragLoss": 4.878255176400798e-08,
+            "events": [
+              {
+                "time": 0,
+                "type": "liftoff",
+                "message": "Liftoff. Positive vertical acceleration."
+              }
+            ],
+            "event": "Liftoff. Positive vertical acceleration.",
+            "failure": null,
+            "orbit": {
+              "energy": -62481582.67112337,
+              "angularMomentum": 2599362201.42455,
+              "eccentricity": 0.9973393471048103,
+              "semiMajor": 3189743.4289161987,
+              "periapsis": -6362513.1999109415,
+              "apoapsis": 0.05774333979934454
+            }
+          },
+          "primary": "earth",
+          "position": [
+            6371000.031424314,
+            35.903920005357975
+          ],
+          "velocity": [
+            0.7143329504246652,
+            407.9990918616876
+          ],
+          "stageIndex": 0,
+          "resources": null,
+          "craftAngle": 5.635523438688656e-06,
+          "throttle": 1,
+          "commandedThrottle": 1,
+          "guide": true,
+          "handedOver": false,
+          "plan": null,
+          "windowError": null,
+          "fuelUsed": 0,
+          "deltaVUsed": 0,
+          "impact": null,
+          "failure": null,
+          "event": "Ignition. Flight director controls the first 100 metres.",
+          "events": [
+            {
+              "time": 0,
+              "message": "Rollout complete. Ignition countdown armed."
+            },
+            {
+              "time": 0,
+              "message": "Ignition. Flight director controls the first 100 metres."
+            }
+          ],
+          "track": [],
+          "lastTrack": 0
+        },
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "after": {
+        "legacy": {
+          "phase": "assembly",
+          "paused": false,
+          "cameraView": "chase",
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy"
+          },
+          "timeUnits": "seconds",
+          "distanceUnits": "meters",
+          "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+          "destination": "moon",
+          "preview": false,
+          "telemetry": {
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy"
+            },
+            "parts": {
+              "capsule": {
+                "id": "pioneer",
+                "name": "Pioneer CM",
+                "description": "A compact two-seat command capsule.",
+                "dryMass": 5800,
+                "crew": 2,
+                "radius": 1.85,
+                "height": 3.4,
+                "color": "#e4e9ed"
+              },
+              "service": {
+                "id": "survey",
+                "name": "Survey SM",
+                "description": "Light service module with a modest RCS reserve.",
+                "dryMass": 1800,
+                "rcsFuel": 320,
+                "rcsThrust": 550,
+                "rcsIsp": 285,
+                "torque": 650,
+                "radius": 1.85,
+                "height": 3.2
+              },
+              "core": {
+                "id": "atlas",
+                "name": "Atlas C1",
+                "description": "A balanced kerosene/oxygen first stage.",
+                "dryMass": 23000,
+                "propellant": 400000,
+                "thrustSea": 7600000,
+                "thrustVac": 8300000,
+                "ispSea": 282,
+                "ispVac": 311,
+                "radius": 2.05,
+                "height": 40,
+                "dragCoefficient": 0.28
+              },
+              "upper": {
+                "id": "swift",
+                "name": "Swift U1",
+                "description": "A vacuum-optimized upper stage.",
+                "dryMass": 4500,
+                "propellant": 105000,
+                "thrustSea": 750000,
+                "thrustVac": 1050000,
+                "ispSea": 260,
+                "ispVac": 360,
+                "radius": 2.05,
+                "height": 13.5,
+                "dragCoefficient": 0.25
+              },
+              "cargo": {
+                "id": "none",
+                "name": "Crew only",
+                "description": "No additional mission cargo.",
+                "dryMass": 0
+              },
+              "site": {
+                "id": "kennedy",
+                "name": "Kennedy Space Center",
+                "latitude": 28.5729,
+                "longitude": -80.649,
+                "description": "Florida \u00b7 eastbound training ascent"
+              }
+            },
+            "wetMass": 540420,
+            "mass": 540420,
+            "dryMass": 35100,
+            "payloadMass": 7920,
+            "propellantMass": 505000,
+            "rcsFuel": 320,
+            "deltaV": 12041.184474741634,
+            "idealDeltaV": 12041.184474741634,
+            "coreDeltaV": 4110.33378908563,
+            "upperDeltaV": 7930.850685656004,
+            "serviceDeltaV": 0,
+            "twr": 1.434040786542366,
+            "TWR": 1.434040786542366,
+            "height": 60.1,
+            "radius": 2.05,
+            "valid": true,
+            "warnings": [],
+            "errors": [],
+            "synthetic": true
+          }
+        },
+        "mission": {
+          "version": 1,
+          "kind": "lunar-mission",
+          "design": {
+            "format": "kineti-core-rocket",
+            "version": 2,
+            "slots": {
+              "core-engine": {
+                "type": "engine",
+                "radius": 2.6,
+                "length": 4
+              },
+              "core-tank-1": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "core-tank-2": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "core-separator": {
+                "type": "separator",
+                "radius": 3,
+                "length": 0.5
+              },
+              "upper-engine": {
+                "type": "engine",
+                "radius": 1.8,
+                "length": 3
+              },
+              "upper-tank": {
+                "type": "tank",
+                "radius": 3,
+                "length": 18
+              },
+              "upper-separator": {
+                "type": "separator",
+                "radius": 2,
+                "length": 0.4
+              },
+              "service-engine": {
+                "type": "engine",
+                "radius": 1.2,
+                "length": 2
+              },
+              "service-tank": {
+                "type": "tank",
+                "radius": 2,
+                "length": 7
+              },
+              "capsule": {
+                "type": "capsule",
+                "radius": 2,
+                "length": 3.4
+              },
+              "leg-1": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-2": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-3": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "leg-4": {
+                "type": "legs",
+                "radius": 0.35,
+                "length": 3
+              },
+              "solar-1": {
+                "type": "solar",
+                "radius": 1,
+                "length": 3
+              },
+              "solar-2": {
+                "type": "solar",
+                "radius": 1,
+                "length": 3
+              }
+            }
+          },
+          "config": {
+            "capsule": "pioneer",
+            "service": "survey",
+            "core": "atlas",
+            "upper": "swift",
+            "cargo": "none",
+            "site": "kennedy",
+            "design": {
+              "format": "kineti-core-rocket",
+              "version": 2,
+              "slots": {
+                "core-engine": {
+                  "type": "engine",
+                  "radius": 2.6,
+                  "length": 4
+                },
+                "core-tank-1": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "core-tank-2": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "core-separator": {
+                  "type": "separator",
+                  "radius": 3,
+                  "length": 0.5
+                },
+                "upper-engine": {
+                  "type": "engine",
+                  "radius": 1.8,
+                  "length": 3
+                },
+                "upper-tank": {
+                  "type": "tank",
+                  "radius": 3,
+                  "length": 18
+                },
+                "upper-separator": {
+                  "type": "separator",
+                  "radius": 2,
+                  "length": 0.4
+                },
+                "service-engine": {
+                  "type": "engine",
+                  "radius": 1.2,
+                  "length": 2
+                },
+                "service-tank": {
+                  "type": "tank",
+                  "radius": 2,
+                  "length": 7
+                },
+                "capsule": {
+                  "type": "capsule",
+                  "radius": 2,
+                  "length": 3.4
+                },
+                "leg-1": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-2": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-3": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "leg-4": {
+                  "type": "legs",
+                  "radius": 0.35,
+                  "length": 3
+                },
+                "solar-1": {
+                  "type": "solar",
+                  "radius": 1,
+                  "length": 3
+                },
+                "solar-2": {
+                  "type": "solar",
+                  "radius": 1,
+                  "length": 3
+                }
+              }
+            }
+          },
+          "siteId": "tranquility",
+          "phase": "launch",
+          "time": 56.74399999999803,
+          "sequenceTime": 0,
+          "launch": {
+            "version": 1,
+            "kind": "launch",
+            "phase": "launch",
+            "config": {
+              "capsule": "pioneer",
+              "service": "survey",
+              "core": "atlas",
+              "upper": "swift",
+              "cargo": "none",
+              "site": "kennedy",
+              "design": {
+                "format": "kineti-core-rocket",
+                "version": 2,
+                "slots": {
+                  "core-engine": {
+                    "type": "engine",
+                    "radius": 2.6,
+                    "length": 4
+                  },
+                  "core-tank-1": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "core-tank-2": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "core-separator": {
+                    "type": "separator",
+                    "radius": 3,
+                    "length": 0.5
+                  },
+                  "upper-engine": {
+                    "type": "engine",
+                    "radius": 1.8,
+                    "length": 3
+                  },
+                  "upper-tank": {
+                    "type": "tank",
+                    "radius": 3,
+                    "length": 18
+                  },
+                  "upper-separator": {
+                    "type": "separator",
+                    "radius": 2,
+                    "length": 0.4
+                  },
+                  "service-engine": {
+                    "type": "engine",
+                    "radius": 1.2,
+                    "length": 2
+                  },
+                  "service-tank": {
+                    "type": "tank",
+                    "radius": 2,
+                    "length": 7
+                  },
+                  "capsule": {
+                    "type": "capsule",
+                    "radius": 2,
+                    "length": 3.4
+                  },
+                  "leg-1": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-2": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-3": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "leg-4": {
+                    "type": "legs",
+                    "radius": 0.35,
+                    "length": 3
+                  },
+                  "solar-1": {
+                    "type": "solar",
+                    "radius": 1,
+                    "length": 3
+                  },
+                  "solar-2": {
+                    "type": "solar",
+                    "radius": 1,
+                    "length": 3
+                  }
+                }
+              }
+            },
+            "time": 56.74399999999803,
+            "position": [
+              6388614.7966448115,
+              25793.11419704149
+            ],
+            "velocity": [
+              703.1639699008426,
+              650.4354650187157
+            ],
+            "effectiveRotation": 6.404003933768906e-05,
+            "stages": [
+              {
+                "id": "custom-0",
+                "name": "Custom core stage",
+                "dryMass": 48346.01414581604,
+                "propellant": 865194.616798629,
+                "thrustSea": 20000000,
+                "thrustVac": 22000000,
+                "ispSea": 285,
+                "ispVac": 315,
+                "radius": 3,
+                "height": 40.5,
+                "dragCoefficient": 0.28,
+                "fuel": 459954.999410743,
+                "attached": true
+              },
+              {
+                "id": "custom-1",
+                "name": "Custom upper stage",
+                "dryMass": 14298.760077053515,
+                "propellant": 151409.05793976007,
+                "thrustSea": 1100000,
+                "thrustVac": 1800000,
+                "ispSea": 300,
+                "ispVac": 450,
+                "radius": 3,
+                "height": 21.4,
+                "dragCoefficient": 0.28,
+                "fuel": 151409.05793976007,
+                "attached": true
+              }
+            ],
+            "stageIndex": 0,
+            "payloadMass": 36038.4046334184,
+            "initialMass": 1115286.853594677,
+            "throttle": 1,
+            "commandedThrottle": 1,
+            "pitch": 0.5889195570284422,
+            "pitchTrim": 0,
+            "guidance": true,
+            "guidancePitch": 0.5889195570284422,
+            "engineOn": true,
+            "liftoff": true,
+            "maxQ": 54928.8950743149,
+            "dynamicPressure": 35631.40720199725,
+            "loadG": 3.097577767281101,
+            "thrust": 21842333.054855686,
+            "acceleration": 22.93209447928437,
+            "fuelUsed": 405239.6173878865,
+            "deltaVUsed": 1321.405043776983,
+            "dragLoss": 16.025965326637433,
+            "events": [
+              {
+                "time": 0,
+                "type": "liftoff",
+                "message": "Liftoff. Positive vertical acceleration."
+              }
+            ],
+            "event": "Liftoff. Positive vertical acceleration.",
+            "failure": null,
+            "orbit": {
+              "energy": -61933048.67068563,
+              "angularMomentum": 4137244847.5062184,
+              "eccentricity": 0.9933053862688921,
+              "semiMajor": 3217994.625345054,
+              "periapsis": -6349456.768994533,
+              "apoapsis": 43446.01968464162
+            }
+          },
+          "primary": "earth",
+          "position": [
+            6388614.7966448115,
+            25793.11419704149
+          ],
+          "velocity": [
+            703.1639699008426,
+            650.4354650187157
+          ],
+          "stageIndex": 0,
+          "resources": null,
+          "craftAngle": 0.5929568913919504,
+          "throttle": 1,
+          "commandedThrottle": 1,
+          "guide": true,
+          "handedOver": true,
+          "plan": null,
+          "windowError": null,
+          "fuelUsed": 0,
+          "deltaVUsed": 0,
+          "impact": null,
+          "failure": null,
+          "event": "100 metres. Flight controls are yours. Guidance is optional; staging remains manual.",
+          "events": [
+            {
+              "time": 0,
+              "message": "Rollout complete. Ignition countdown armed."
+            },
+            {
+              "time": 0,
+              "message": "Ignition. Flight director controls the first 100 metres."
+            },
+            {
+              "time": 4.904000000000007,
+              "message": "100 metres. Flight controls are yours. Guidance is optional; staging remains manual."
+            }
+          ],
+          "track": [],
+          "lastTrack": 0
+        },
+        "version": "Mission laboratory\nv0.4.4\nDesign the mission. Fly the critical moments.\nFlight model & credits",
+        "scripts": [
+          "http://127.0.0.1:5188/assets/index-BqOL0qKo.js"
+        ]
+      },
+      "captureWallSeconds": 89.14820420800001,
+      "resolution": [
+        1280,
+        720
+      ],
+      "playbackRate": 1
+    },
+    {
+      "name": "planner",
+      "file": "footage-v2/planner.mp4",
+      "seconds": 4.166666666666667,
+      "frames": 125,
+      "fps": 30,
+      "resolution": [
+        1600,
+        900
+      ],
+      "playbackRate": 1,
+      "detail": "Controlled browser clock, one screenshot per33/33/34ms, ordinary UI actions; no injected game state. Original150-frame target stopped at screenshot timeout; retained complete125-frame prefix only.",
+      "actions": [
+        {
+          "time": 1.333,
+          "action": "Select Hadley approach / Apollo15"
+        },
+        {
+          "time": 3.167,
+          "action": "Select Taurus\u2013Littrow approach / Apollo17"
+        }
+      ],
+      "scope": "Planner only; not a flown mission or measured ephemeris."
+    }
+  ],
+  "captureNotes": [
+    "Destination selector and builder captured at 1600\u00d7900; flight captured at 1280\u00d7720 to reduce software-GPU load.",
+    "Planner retained 125 complete frames after a screenshot timeout; no frames interpolated or repeated to extend it.",
+    "Physical ascent initially runs1\u00d7 through the 100 m handover; existing visible10\u00d7 game warp then activates. Output playback remains1\u00d7.",
+    "Staging omitted at editor request after complete 10 s ascent source; footage does not show or imply stage separation.",
+    "Root separately owns Solar System and docking capture files and their provenance."
+  ],
+  "limitations": [
+    "Controlled-clock frame capture removes recorder timing loss; scene-motion quality still requires decoded-frame QA.",
+    "Integrated Moon ascent and separately initialized terminal exercises must remain distinguishable."
+  ],
+  "rawCaptureRecords": [
+    "work/kinetic-core-video-v2/capture/capture-manifest-initial-batch.json",
+    "work/kinetic-core-video-v2/capture/capture-manifest-flight-raw.json"
+  ]
+}

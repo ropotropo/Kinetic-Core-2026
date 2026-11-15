@@ -1,0 +1,98 @@
+{
+  "voiceStartSeconds": 0.5,
+  "voiceFile": "audio-v2/voiceover-en.wav",
+  "musicFile": "audio-v2/music.wav",
+  "durationSeconds": 78.792,
+  "beats": [
+    {
+      "startSeconds": 0.6,
+      "endSeconds": 3.369,
+      "text": "Spaceflight begins with a decision."
+    },
+    {
+      "startSeconds": 3.319,
+      "endSeconds": 7.473,
+      "text": "This is Kinetic Core, created by Mykyta Borisov."
+    },
+    {
+      "startSeconds": 7.473,
+      "endSeconds": 9.9,
+      "text": "Explore the Solar System."
+    },
+    {
+      "startSeconds": 9.9,
+      "endSeconds": 14.115,
+      "text": "Compare worlds, choose a destination, and plan your mission."
+    },
+    {
+      "startSeconds": 14.115,
+      "endSeconds": 16.554,
+      "text": "Then build the spacecraft."
+    },
+    {
+      "startSeconds": 16.554,
+      "endSeconds": 23.944,
+      "text": "Select compatible components, adjust their dimensions, and watch mass, thrust, and fuel change together."
+    },
+    {
+      "startSeconds": 23.944,
+      "endSeconds": 26.775,
+      "text": "These numbers are part of the flight model."
+    },
+    {
+      "startSeconds": 26.775,
+      "endSeconds": 32.044,
+      "text": "Launch, manage your engine, and follow the instruments as the mission unfolds."
+    },
+    {
+      "startSeconds": 32.044,
+      "endSeconds": 36.909,
+      "text": "Gravity, propellant flow, and changing mass shape every maneuver."
+    },
+    {
+      "startSeconds": 36.909,
+      "endSeconds": 40.831,
+      "text": "For the final approach, practice a local Moon landing."
+    },
+    {
+      "startSeconds": 40.831,
+      "endSeconds": 45.255,
+      "text": "Read altitude, vertical speed, and sideways drift."
+    },
+    {
+      "startSeconds": 45.255,
+      "endSeconds": 49.029,
+      "text": "Powered guidance helps, but it still uses fuel."
+    },
+    {
+      "startSeconds": 49.029,
+      "endSeconds": 52.449,
+      "text": "Then switch to a separate docking exercise."
+    },
+    {
+      "startSeconds": 52.449,
+      "endSeconds": 59.164,
+      "text": "Change camera views, align the spacecraft, and make small corrections with reaction-control thrusters."
+    },
+    {
+      "startSeconds": 59.164,
+      "endSeconds": 65.953,
+      "text": "Finally, review the touchdown: real contact speeds, remaining fuel, and a clear result."
+    },
+    {
+      "startSeconds": 65.953,
+      "endSeconds": 74.581,
+      "text": "Built for curious students and future explorers, Kinetic Core turns engineering choices into something you can see, test, and understand."
+    },
+    {
+      "startSeconds": 74.581,
+      "endSeconds": 76.885,
+      "text": "Design the spacecraft."
+    },
+    {
+      "startSeconds": 76.885,
+      "endSeconds": 79.238,
+      "text": "Fly the critical moments."
+    }
+  ]
+}

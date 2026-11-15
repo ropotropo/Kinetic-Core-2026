@@ -1,0 +1,118 @@
+{
+  "provider": "Microsoft Edge online TTS via edge-tts 7.3.1",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+2%",
+  "pitch": "-2Hz",
+  "text": "Spaceflight begins with a decision. This is Kinetic Core, created by Mykyta Borisov. Explore the Solar System. Compare worlds, choose a destination, and plan your mission. Then build the spacecraft. Select compatible components, adjust their dimensions, and watch mass, thrust, and fuel change together. These numbers are part of the flight model. Launch, manage your engine, and follow the instruments as the mission unfolds. Gravity, propellant flow, and changing mass shape every maneuver. For the final approach, practice a local Moon landing. Read altitude, vertical speed, and sideways drift. Powered guidance helps, but it still uses fuel. Then switch to a separate docking exercise. Change camera views, align the spacecraft, and make small corrections with reaction-control thrusters. Finally, review the touchdown: real contact speeds, remaining fuel, and a clear result. Built for curious students and future explorers, Kinetic Core turns engineering choices into something you can see, test, and understand. Design the spacecraft. Fly the critical moments.",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 27686275,
+      "text": "Spaceflight begins with a decision."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 28186275,
+      "duration": 41544118,
+      "text": "This is Kinetic Core, created by Mykyta Borisov."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 69730393,
+      "duration": 24264706,
+      "text": "Explore the Solar System."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 93995099,
+      "duration": 42156863,
+      "text": "Compare worlds, choose a destination, and plan your mission."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 136151963,
+      "duration": 24387255,
+      "text": "Then build the spacecraft."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 160539218,
+      "duration": 73897060,
+      "text": "Select compatible components, adjust their dimensions, and watch mass, thrust, and fuel change together."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 234436278,
+      "duration": 28308824,
+      "text": "These numbers are part of the flight model."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 262745102,
+      "duration": 52696079,
+      "text": "Launch, manage your engine, and follow the instruments as the mission unfolds."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 315441182,
+      "duration": 48651961,
+      "text": "Gravity, propellant flow, and changing mass shape every maneuver."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 364093144,
+      "duration": 39215687,
+      "text": "For the final approach, practice a local Moon landing."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 403308831,
+      "duration": 44240196,
+      "text": "Read altitude, vertical speed, and sideways drift."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 447549027,
+      "duration": 37745098,
+      "text": "Powered guidance helps, but it still uses fuel."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 485294126,
+      "duration": 34191177,
+      "text": "Then switch to a separate docking exercise."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 519485303,
+      "duration": 67156864,
+      "text": "Change camera views, align the spacecraft, and make small corrections with reaction-control thrusters."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 586642167,
+      "duration": 67892158,
+      "text": "Finally, review the touchdown: real contact speeds, remaining fuel, and a clear result."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 654534325,
+      "duration": 86274511,
+      "text": "Built for curious students and future explorers, Kinetic Core turns engineering choices into something you can see, test, and understand."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 740808837,
+      "duration": 23039216,
+      "text": "Design the spacecraft."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 763848053,
+      "duration": 23529412,
+      "text": "Fly the critical moments."
+    }
+  ],
+  "impersonation": false
+}

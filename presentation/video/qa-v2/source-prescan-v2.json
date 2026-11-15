@@ -1,0 +1,108 @@
+{
+  "schema": "kinetic-core-source-cadence-prescan.v2",
+  "methodVersion": "decoded-luma-cadence.v4-cumulative-anchor",
+  "scriptSha256": "792a6c885e5d0ff072a8695f080ef8fbc3d8372f1701ae09d323ddadb72fafca",
+  "threshold": {
+    "nearDuplicateMeanLumaDeltaLessThan": 0.03,
+    "fractionPixelsChangingByAtLeast2LumaLessThan": 0.001
+  },
+  "analysisRaster": [
+    240,
+    180
+  ],
+  "interpretation": "Decoded adjacent and cumulative-anchor visual changes, not a rendering-fps counter. Excludes menu/title/deliberately settled debrief sources.",
+  "sources": [
+    {
+      "file": "liftoff.mp4",
+      "sha256": "956d06c95f4ff9a938dd3ade8d6dff9ea8659864820a5e8aaa130ce304b21b4a",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "decodedFrames": 300,
+      "roiCropWHXY": "1010:496:0:76",
+      "summary": {
+        "start": 0,
+        "end": 10.0,
+        "decodedTransitions": 299,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 29.9,
+        "medianAdjacentLumaMAE": 1.5701851851851851,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "file": "root-docking-external.mp4",
+      "sha256": "04a9f81b3d588e9ce09474031d0535d703268522c075048de2db208eed875b45",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "decodedFrames": 150,
+      "roiCropWHXY": "720:540:360:180",
+      "summary": {
+        "start": 0,
+        "end": 5.0,
+        "decodedTransitions": 149,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 29.8,
+        "medianAdjacentLumaMAE": 0.03333333333333333,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "file": "root-docking-cockpit.mp4",
+      "sha256": "9da8d97daf26b3f2299fec32c4a7e488def3343bb324d6baa39a6ccab6038e3a",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "decodedFrames": 270,
+      "roiCropWHXY": "720:540:360:180",
+      "summary": {
+        "start": 0,
+        "end": 9.0,
+        "decodedTransitions": 269,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 29.88888888888889,
+        "medianAdjacentLumaMAE": 0.1186574074074074,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "file": "landing.mp4",
+      "sha256": "f20e222c832a0733d9d30a94890c0a68b8e6ce10a0fb27a926cd05e3e884ca8a",
+      "dimensions": [
+        1600,
+        900
+      ],
+      "decodedFrames": 360,
+      "roiCropWHXY": "720:540:360:180",
+      "summary": {
+        "start": 0,
+        "end": 12.0,
+        "decodedTransitions": 359,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 5.2924791086350975,
+        "meaningfulChangesPerSecond": 28.333333333333332,
+        "medianAdjacentLumaMAE": 0.17344907407407406,
+        "longestNearStaticHoldSeconds": 0.0666670000000007,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 5.013927576601671,
+        "longestAnchoredNearStaticHoldSeconds": 0.0666670000000007
+      }
+    }
+  ]
+}

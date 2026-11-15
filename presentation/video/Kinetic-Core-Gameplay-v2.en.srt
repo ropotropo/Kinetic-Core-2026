@@ -1,0 +1,102 @@
+1
+00:00:00,600 --> 00:00:03,319
+Spaceflight begins with a decision.
+
+2
+00:00:03,319 --> 00:00:07,473
+This is Kinetic Core, created by Mykyta
+Borisov.
+
+3
+00:00:07,473 --> 00:00:09,900
+Explore the Solar System.
+
+4
+00:00:09,900 --> 00:00:14,115
+Compare worlds, choose a destination, and
+plan your mission.
+
+5
+00:00:14,115 --> 00:00:16,554
+Then build the spacecraft.
+
+6
+00:00:16,554 --> 00:00:22,437
+Select compatible components, adjust their
+dimensions, and watch mass, thrust, and
+
+7
+00:00:22,437 --> 00:00:23,944
+fuel change together.
+
+8
+00:00:23,944 --> 00:00:26,775
+These numbers are part of the flight
+model.
+
+9
+00:00:26,775 --> 00:00:32,044
+Launch, manage your engine, and follow the
+instruments as the mission unfolds.
+
+10
+00:00:32,044 --> 00:00:36,909
+Gravity, propellant flow, and changing
+mass shape every maneuver.
+
+11
+00:00:36,909 --> 00:00:40,831
+For the final approach, practice a local
+Moon landing.
+
+12
+00:00:40,831 --> 00:00:45,255
+Read altitude, vertical speed, and
+sideways drift.
+
+13
+00:00:45,255 --> 00:00:49,029
+Powered guidance helps, but it still uses
+fuel.
+
+14
+00:00:49,029 --> 00:00:52,449
+Then switch to a separate docking
+exercise.
+
+15
+00:00:52,449 --> 00:00:57,369
+Change camera views, align the spacecraft,
+and make small corrections with
+
+16
+00:00:57,369 --> 00:00:59,164
+reaction-control thrusters.
+
+17
+00:00:59,164 --> 00:01:05,400
+Finally, review the touchdown: real
+contact speeds, remaining fuel, and a
+clear
+
+18
+00:01:05,400 --> 00:01:05,953
+result.
+
+19
+00:01:05,953 --> 00:01:10,965
+Built for curious students and future
+explorers, Kinetic Core turns engineering
+
+20
+00:01:10,965 --> 00:01:14,581
+choices into something you can see, test,
+and understand.
+
+21
+00:01:14,581 --> 00:01:16,885
+Design the spacecraft.
+
+22
+00:01:16,885 --> 00:01:19,238
+Fly the critical moments.
