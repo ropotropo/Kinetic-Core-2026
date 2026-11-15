@@ -1,0 +1,359 @@
+{
+  "en": [
+    {
+      "title": "Kinetic Core",
+      "lead": "NASA Space Apps Challenge 2026",
+      "points": [
+        "Space Mission Design Game",
+        "Created by Mykyta Borisov"
+      ],
+      "speech": "Hello, I'm Mykyta Borisov, the author of Kinetic Core. This is my space mission design game for NASA Space Apps Challenge 2026. I wanted the spacecraft you build to matter throughout the mission.",
+      "seconds": 20
+    },
+    {
+      "title": "For curious minds",
+      "lead": "Explore space engineering through play",
+      "points": [
+        "Students",
+        "Curious learners",
+        "Space enthusiasts"
+      ],
+      "speech": "Kinetic Core is designed for students, curious learners and space enthusiasts. It gives them a place to explore engineering choices before seeing those choices in motion. The central question is simple: what happens when I change my spacecraft? The aim is to make mass, thrust, fuel and the consequences of a decision visible through interaction with the game.",
+      "seconds": 35
+    },
+    {
+      "title": "Spacecraft builder",
+      "lead": "The same design flies",
+      "points": [
+        "Compatible attachment points",
+        "Mass, thrust and fuel",
+        "Save and fly your design"
+      ],
+      "speech": "The mission starts in the workshop. Players assemble a spacecraft using typed attachment points, so components must fit compatible places. Changing dimensions changes the vehicle's geometry and the values used by the flight model, including loaded fuel and mass. The workshop shows mass, thrust and an ideal delta-v budget. That budget helps compare designs, with gravity, drag and steering losses outside the ideal calculation. A saved design then becomes the spacecraft used in flight, connecting construction with its consequences.",
+      "seconds": 45
+    },
+    {
+      "title": "The Moon mission",
+      "lead": "One spacecraft across the journey",
+      "points": [
+        "Launch and staging",
+        "Finite burns and coasting",
+        "Lunar capture and descent"
+      ],
+      "speech": "The main continuous route takes that same spacecraft from Earth to the Moon. The player launches, separates stages and manages burns. During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting. The recorded Moon demonstration uses powered guidance and explicit pilot staging. Stating that assist mode keeps the demonstration clear. Other destinations are available as labelled local landing rehearsals. They are separate exercises, so they do not imply a complete Earth-to-every-world mission.",
+      "seconds": 55
+    },
+    {
+      "title": "Landing and docking",
+      "lead": "Small corrections have visible consequences",
+      "points": [
+        "Landing: speed, drift and tilt",
+        "Docking: range and alignment",
+        "Powered assistance uses fuel"
+      ],
+      "speech": "Landing and docking turn the mission into precise control. A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware. Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited. These interactions give small corrections a visible cost and make the final moments understandable through instruments.",
+      "seconds": 45
+    },
+    {
+      "title": "Physics with clear limits",
+      "lead": "SI units throughout",
+      "points": [
+        "Double-precision state",
+        "Finite fuel and shared mass",
+        "2D flight. Local 3D docking."
+      ],
+      "speech": "Four choices make the physics inspectable: SI units, double-precision state, finite fuel with shared mass accounting, and explicit model boundaries. The Moon route uses two-dimensional patched conics with a synthetic circular Moon and idealized engine pointing. Docking uses a separate local three-dimensional model with quaternion attitude. Existing project QA records eighty-six passing tests. Those records cover defined fixtures, including conservation, resource accounting, reference-frame changes and contact. They are earlier evidence, not a new test run. The useful claim is a transparent educational model whose assumptions and checks can be inspected.",
+      "seconds": 55
+    },
+    {
+      "title": "Thank you",
+      "lead": "Kinetic Core",
+      "points": [
+        "Created by Mykyta Borisov"
+      ],
+      "speech": "Thank you for looking at Kinetic Core. My goal is to make spacecraft design and critical flight decisions tangible through play. I'm Mykyta Borisov, and I'd be happy to show the game and answer questions.",
+      "seconds": 25
+    }
+  ],
+  "uk": [
+    {
+      "title": "Kinetic Core",
+      "lead": "NASA Space Apps Challenge 2026",
+      "points": [
+        "Гра з проєктування космічних місій",
+        "Автор: Микита Борисов"
+      ],
+      "speech": "Вітаю! Я Микита Борисов, автор Kinetic Core. Це моя гра з проєктування космічних місій для NASA Space Apps Challenge 2026. Я хотів, щоб апарат, який гравець збирає, визначав подальший перебіг усієї місії.",
+      "seconds": 20
+    },
+    {
+      "title": "Для тих, кого цікавить космос",
+      "lead": "Інженерні рішення через гру",
+      "points": [
+        "Учні та студенти",
+        "Допитливі люди",
+        "Шанувальники космосу"
+      ],
+      "speech": "Kinetic Core створено для учнів, студентів, допитливих людей і шанувальників космосу. Тут можна досліджувати інженерні рішення, а потім бачити їх у польоті. Головне запитання просте: що станеться, якщо змінити мій апарат? Мета гри полягає в тому, щоб зробити масу, тягу, запаси пального та наслідки вибору зрозумілими через взаємодію з грою.",
+      "seconds": 35
+    },
+    {
+      "title": "Конструктор космічного апарата",
+      "lead": "Той самий апарат летить далі",
+      "points": [
+        "Сумісні точки кріплення",
+        "Маса, тяга та пальне",
+        "Збереження та запуск"
+      ],
+      "speech": "Місія починається в майстерні. Гравець збирає апарат із компонентів і встановлює їх у сумісні точки кріплення. Зміна розмірів змінює геометрію, масу, запас пального й характеристики, які далі використовує модель польоту. Майстерня показує масу, тягу та ідеальний запас зміни швидкості, або дельта-ве. Він допомагає порівнювати конструкції, але не враховує гравітаційні, аеродинамічні втрати та втрати на керування напрямком тяги. Збережена конструкція стає тим самим апаратом у польоті. Так вибір у конструкторі має наслідки для наступних етапів.",
+      "seconds": 45
+    },
+    {
+      "title": "Місія від Землі до Місяця",
+      "lead": "Один апарат на всьому маршруті",
+      "points": [
+        "Запуск і відокремлення ступенів",
+        "Маневри та пасивний політ",
+        "Місячна орбіта та спуск"
+      ],
+      "speech": "Основний безперервний маршрут веде цей самий апарат від Землі до Місяця. Гравець запускає ракету, відокремлює ступені й керує маневрами. На пасивних ділянках двигун може бути вимкнений, а апарат продовжує рух. Наближення до Місяця, вихід на його орбіту та спуск зберігають той самий баланс маси й пального. Записана демонстрація місячної місії використовує активну допомогу наведення та ручне відокремлення ступенів. Тому важливо назвати обраний режим допомоги. Інші світи представлені окремими локальними вправами з посадки. Вони не означають, що в грі вже змодельовано повний переліт від Землі до кожного світу.",
+      "seconds": 55
+    },
+    {
+      "title": "Посадка та стикування",
+      "lead": "Точні корекції мають значення",
+      "points": [
+        "Посадка: швидкість, знос, нахил",
+        "Стикування: відстань і орієнтація",
+        "Активна допомога витрачає пальне"
+      ],
+      "speech": "Посадка та стикування потребують точних корекцій. Безпечний контакт залежить від вертикальної й бокової швидкості, відхилення від майданчика, нахилу та посадкового обладнання. Стикування є окремою локальною тривимірною вправою. Гравець стежить за відстанню, швидкістю зближення й орієнтацією та коригує рух бортовими двигунами керування. Активне гальмування й утримання орієнтації допомагають під час підходу, але витрачають обмежений запас пального. Невеликі корекції мають видиму ціну, а прилади пояснюють стан апарата в найвідповідальніші моменти.",
+      "seconds": 45
+    },
+    {
+      "title": "Фізика з чіткими межами",
+      "lead": "Одиниці SI на всіх етапах",
+      "points": [
+        "Обчислення подвійної точності",
+        "Обмежене пальне, єдиний баланс маси",
+        "2D переліт, локальне 3D стикування"
+      ],
+      "speech": "Фізику роблять зрозумілою чотири рішення. Це одиниці SI, обчислення подвійної точності, обмежене пальне зі спільним балансом маси та чіткі межі моделі. Місячний маршрут використовує двовимірне наближення спряжених конік, синтетичну кругову орбіту Місяця й ідеалізований напрямок тяги. Стикування має окрему локальну тривимірну модель із кватерніонним описом орієнтації. У попередньому звіті перевірок проєкту зафіксовано вісімдесят шість успішних тестів. Вони перевіряють визначені сценарії: збереження величин, облік ресурсів, зміну систем відліку й контакт із поверхнею. Це наявні результати попередніх перевірок. Коректний висновок полягає в прозорій навчальній моделі з доступними для перевірки припущеннями.",
+      "seconds": 55
+    },
+    {
+      "title": "Дякую",
+      "lead": "Kinetic Core",
+      "points": [
+        "Автор: Микита Борисов"
+      ],
+      "speech": "Дякую за увагу до Kinetic Core. Я хочу, щоб проєктування космічного апарата й відповідальні рішення під час польоту ставали зрозумілими через гру. Я Микита Борисов і буду радий показати проєкт та відповісти на запитання.",
+      "seconds": 25
+    }
+  ],
+  "sequence": [
+    {
+      "infoIndex": 1,
+      "seconds": 20,
+      "notes": {
+        "en": {
+          "title": "Kinetic Core",
+          "speech": "Hello, I'm Mykyta Borisov, the author of Kinetic Core. This is my space mission design game for NASA Space Apps Challenge 2026. I wanted the spacecraft you build to matter throughout the mission."
+        },
+        "uk": {
+          "title": "Kinetic Core",
+          "speech": "Вітаю! Я Микита Борисов, автор Kinetic Core. Це моя гра з проєктування космічних місій для NASA Space Apps Challenge 2026. Я хотів, щоб апарат, який гравець збирає, визначав подальший перебіг усієї місії."
+        }
+      }
+    },
+    {
+      "infoIndex": 2,
+      "seconds": 15,
+      "notes": {
+        "en": {
+          "title": "For curious minds",
+          "speech": "Kinetic Core is designed for students, curious learners and space enthusiasts. It gives them a place to explore engineering choices before seeing those choices in motion."
+        },
+        "uk": {
+          "title": "Для тих, кого цікавить космос",
+          "speech": "Kinetic Core створено для учнів, студентів, допитливих людей і шанувальників космосу. Тут можна досліджувати інженерні рішення, а потім бачити їх у польоті."
+        }
+      }
+    },
+    {
+      "infoIndex": 2,
+      "seconds": 20,
+      "imageKey": "planner",
+      "notes": {
+        "en": {
+          "title": "Mission selection",
+          "speech": "The central question is simple: what happens when I change my spacecraft? The aim is to make mass, thrust, fuel and the consequences of a decision visible through interaction with the game."
+        },
+        "uk": {
+          "title": "Вибір місії",
+          "speech": "Головне запитання просте: що станеться, якщо змінити мій апарат? Мета гри полягає в тому, щоб зробити масу, тягу, запаси пального та наслідки вибору зрозумілими через взаємодію з грою."
+        }
+      }
+    },
+    {
+      "infoIndex": 3,
+      "seconds": 20,
+      "notes": {
+        "en": {
+          "title": "Spacecraft builder",
+          "speech": "The mission starts in the workshop. Players assemble a spacecraft using typed attachment points, so components must fit compatible places. Changing dimensions changes the vehicle's geometry and the values used by the flight model, including loaded fuel and mass."
+        },
+        "uk": {
+          "title": "Конструктор космічного апарата",
+          "speech": "Місія починається в майстерні. Гравець збирає апарат із компонентів і встановлює їх у сумісні точки кріплення. Зміна розмірів змінює геометрію, масу, запас пального й характеристики, які далі використовує модель польоту."
+        }
+      }
+    },
+    {
+      "infoIndex": 3,
+      "seconds": 25,
+      "imageKey": "builder",
+      "notes": {
+        "en": {
+          "title": "Spacecraft builder - full view",
+          "speech": "The workshop shows mass, thrust and an ideal delta-v budget. That budget helps compare designs, with gravity, drag and steering losses outside the ideal calculation. A saved design then becomes the spacecraft used in flight, connecting construction with its consequences."
+        },
+        "uk": {
+          "title": "Конструктор - повний екран",
+          "speech": "Майстерня показує масу, тягу та ідеальний запас зміни швидкості, або дельта-ве. Він допомагає порівнювати конструкції, але не враховує гравітаційні, аеродинамічні втрати та втрати на керування напрямком тяги. Збережена конструкція стає тим самим апаратом у польоті. Так вибір у конструкторі має наслідки для наступних етапів."
+        }
+      }
+    },
+    {
+      "infoIndex": 4,
+      "seconds": 15,
+      "notes": {
+        "en": {
+          "title": "The Moon mission",
+          "speech": "The main continuous route takes that same spacecraft from Earth to the Moon. The player launches, separates stages and manages burns."
+        },
+        "uk": {
+          "title": "Місія від Землі до Місяця",
+          "speech": "Основний безперервний маршрут веде цей самий апарат від Землі до Місяця. Гравець запускає ракету, відокремлює ступені й керує маневрами."
+        }
+      }
+    },
+    {
+      "infoIndex": 4,
+      "seconds": 10,
+      "imageKey": "rollout",
+      "notes": {
+        "en": {
+          "title": "Rollout to the launch pad",
+          "speech": "During coasting, engines can be off while the spacecraft keeps moving. The Moon approach, capture and descent continue the same mass and fuel accounting."
+        },
+        "uk": {
+          "title": "Рух до стартового майданчика",
+          "speech": "На пасивних ділянках двигун може бути вимкнений, а апарат продовжує рух. Наближення до Місяця, вихід на його орбіту та спуск зберігають той самий баланс маси й пального."
+        }
+      }
+    },
+    {
+      "infoIndex": 4,
+      "seconds": 20,
+      "imageKey": "approach",
+      "notes": {
+        "en": {
+          "title": "Lunar capture burn",
+          "speech": "The recorded Moon demonstration uses powered guidance and explicit pilot staging. Stating that assist mode keeps the demonstration clear. Other destinations are available as labelled local landing rehearsals."
+        },
+        "uk": {
+          "title": "Гальмування біля Місяця",
+          "speech": "Записана демонстрація місячної місії використовує активну допомогу наведення та ручне відокремлення ступенів. Тому важливо назвати обраний режим допомоги. Інші світи представлені окремими локальними вправами з посадки."
+        }
+      }
+    },
+    {
+      "infoIndex": 4,
+      "seconds": 10,
+      "imageKey": "descent",
+      "notes": {
+        "en": {
+          "title": "Final lunar descent",
+          "speech": "They are separate exercises, so they do not imply a complete Earth-to-every-world mission."
+        },
+        "uk": {
+          "title": "Фінальний спуск до Місяця",
+          "speech": "Вони не означають, що в грі вже змодельовано повний переліт від Землі до кожного світу."
+        }
+      }
+    },
+    {
+      "infoIndex": 5,
+      "seconds": 15,
+      "notes": {
+        "en": {
+          "title": "Landing and docking",
+          "speech": "Landing and docking turn the mission into precise control. A safe landing depends on contact conditions: vertical and sideways speed, pad offset, tilt and suitable hardware."
+        },
+        "uk": {
+          "title": "Посадка та стикування",
+          "speech": "Посадка та стикування потребують точних корекцій. Безпечний контакт залежить від вертикальної й бокової швидкості, відхилення від майданчика, нахилу та посадкового обладнання."
+        }
+      }
+    },
+    {
+      "infoIndex": 5,
+      "seconds": 15,
+      "imageKey": "success",
+      "notes": {
+        "en": {
+          "title": "Touchdown confirmed",
+          "speech": "Docking is a separate local three-dimensional exercise. The player reads range, closing speed and alignment, then uses body-axis thrusters to correct the approach. Powered braking and attitude assistance help, while propellant remains limited."
+        },
+        "uk": {
+          "title": "Посадку підтверджено",
+          "speech": "Стикування є окремою локальною тривимірною вправою. Гравець стежить за відстанню, швидкістю зближення й орієнтацією та коригує рух бортовими двигунами керування. Активне гальмування й утримання орієнтації допомагають під час підходу, але витрачають обмежений запас пального."
+        }
+      }
+    },
+    {
+      "infoIndex": 5,
+      "seconds": 15,
+      "imageKey": "docking",
+      "notes": {
+        "en": {
+          "title": "Docking cockpit - full view",
+          "speech": "These interactions give small corrections a visible cost and make the final moments understandable through instruments."
+        },
+        "uk": {
+          "title": "Кабіна стикування - повний екран",
+          "speech": "Невеликі корекції мають видиму ціну, а прилади пояснюють стан апарата в найвідповідальніші моменти."
+        }
+      }
+    },
+    {
+      "infoIndex": 6,
+      "seconds": 55,
+      "notes": {
+        "en": {
+          "title": "Physics with clear limits",
+          "speech": "Four choices make the physics inspectable: SI units, double-precision state, finite fuel with shared mass accounting, and explicit model boundaries. The Moon route uses two-dimensional patched conics with a synthetic circular Moon and idealized engine pointing. Docking uses a separate local three-dimensional model with quaternion attitude. Existing project QA records eighty-six passing tests. Those records cover defined fixtures, including conservation, resource accounting, reference-frame changes and contact. They are earlier evidence, not a new test run. The useful claim is a transparent educational model whose assumptions and checks can be inspected."
+        },
+        "uk": {
+          "title": "Фізика з чіткими межами",
+          "speech": "Фізику роблять зрозумілою чотири рішення. Це одиниці SI, обчислення подвійної точності, обмежене пальне зі спільним балансом маси та чіткі межі моделі. Місячний маршрут використовує двовимірне наближення спряжених конік, синтетичну кругову орбіту Місяця й ідеалізований напрямок тяги. Стикування має окрему локальну тривимірну модель із кватерніонним описом орієнтації. У попередньому звіті перевірок проєкту зафіксовано вісімдесят шість успішних тестів. Вони перевіряють визначені сценарії: збереження величин, облік ресурсів, зміну систем відліку й контакт із поверхнею. Це наявні результати попередніх перевірок. Коректний висновок полягає в прозорій навчальній моделі з доступними для перевірки припущеннями."
+        }
+      }
+    },
+    {
+      "infoIndex": 7,
+      "seconds": 25,
+      "notes": {
+        "en": {
+          "title": "Thank you",
+          "speech": "Thank you for looking at Kinetic Core. My goal is to make spacecraft design and critical flight decisions tangible through play. I'm Mykyta Borisov, and I'd be happy to show the game and answer questions."
+        },
+        "uk": {
+          "title": "Дякую",
+          "speech": "Дякую за увагу до Kinetic Core. Я хочу, щоб проєктування космічного апарата й відповідальні рішення під час польоту ставали зрозумілими через гру. Я Микита Борисов і буду радий показати проєкт та відповісти на запитання."
+        }
+      }
+    }
+  ]
+}

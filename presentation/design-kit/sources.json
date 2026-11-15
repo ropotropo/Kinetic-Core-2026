@@ -1,0 +1,103 @@
+{
+  "project": "Kinetic Core",
+  "soleAuthor": "Mykyta Borisov",
+  "revision": "v5",
+  "date": "2026-11-15",
+  "timezone": "America/Los_Angeles",
+  "imageTool": "Built-in image_gen",
+  "identityReference": {
+    "path": "photo_2026-11-15 10.32.40.jpeg",
+    "includedInPortableArchive": false
+  },
+  "assets": [
+    {
+      "path": "assets/mykyta-anamorphic-portrait-v5.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "cbb7f33b48025522324f16f3096a6e3a68e5669a3170fd7087e31425c25e46f8",
+      "method": "Fresh generation from original identity portrait and KC logo; no previous scene image used"
+    },
+    {
+      "path": "assets/mykyta-anamorphic-shadowline-v5.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915",
+      "method": "Fresh generation from original identity portrait and KC logo; no previous scene image used"
+    },
+    {
+      "path": "assets/mykyta-anamorphic-sunlit-v5.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "a1a3a155cef47090577459bbde2c6391546c96a6909cf7dcced84aa662d05ffc",
+      "method": "Fresh generation from original identity portrait and KC logo; no previous scene image used"
+    }
+  ],
+  "logo": {
+    "primary": "branding/kinetic-core-mission-emblem.png",
+    "alpha": "RGBA, transparent exterior",
+    "vectorCompanions": "Native SVG geometry/text; not exact raster traces"
+  },
+  "references": [
+    {
+      "title": "NASA Space Apps Challenge 2026",
+      "url": "https://www.spaceappschallenge.org/2026/",
+      "use": "Event name and dates"
+    },
+    {
+      "title": "Space Mission Design Game",
+      "url": "https://www.spaceappschallenge.org/2026/challenges/space-mission-design-game/",
+      "use": "Challenge title; originally verified in local brief on 14 November 2026; refetch on 15 November returned 502"
+    },
+    {
+      "title": "Prada and Axiom Space unveil the spacesuit design",
+      "url": "https://www.pradagroup.com/en/news-media/news-section/24-10-16-prada-axiom-space.html",
+      "use": "Contemporary AxEMU silhouette, no logos copied"
+    },
+    {
+      "title": "2026 inner-layer suit presentation",
+      "url": "https://www.pradagroup.com/en/news-media/news-section/26-06-07-axiom-space-prada-lunar-spacesuit.html",
+      "use": "Distinguishes cooling undergarment from outer EVA suit"
+    },
+    {
+      "title": "Artemis II",
+      "url": "https://www.nasa.gov/mission/artemis-ii/",
+      "use": "April 2026 lunar flyby context"
+    },
+    {
+      "title": "Apple",
+      "url": "https://www.apple.com/",
+      "use": "User-requested typographic restraint; no assets copied"
+    },
+    {
+      "title": "TradingView",
+      "url": "https://www.tradingview.com/",
+      "use": "User-requested restrained black space mood; no assets copied"
+    }
+  ],
+  "physicsReferences": [
+    {
+      "title": "NASA ideal rocket equation",
+      "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/"
+    },
+    {
+      "title": "NASA specific impulse",
+      "url": "https://www.grc.nasa.gov/www/BGH/specimp.html"
+    },
+    {
+      "title": "JPL astrodynamic parameters",
+      "url": "https://ssd.jpl.nasa.gov/astro_par.html"
+    },
+    {
+      "title": "Clohessy-Wiltshire reference",
+      "url": "https://ntrs.nasa.gov/citations/19930041082"
+    }
+  ],
+  "provenance": {
+    "scene": "Fictional AI-generated lunar portrait, not a real mission photograph",
+    "visibleCoverCaption": false,
+    "technicalNotesRetained": true,
+    "cinematography": "Anamorphic optical LED streaks, shallow background focus and fine cinematic grain"
+  },
+  "screenshots": "Unchanged real game reference captures; see presentation-content.json for capture slots and math-evidence.json for evidence scope",
+  "publication": "Local only"
+}

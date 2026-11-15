@@ -1,0 +1,800 @@
+{
+  "schemaVersion": 1,
+  "project": "Kinetic Core",
+  "author": "Mykyta Borisov",
+  "purpose": "Presentation claims and validation evidence; read-only source audit",
+  "capturedAtUTC": "2026-11-15T19:49:07.472779+00:00",
+  "capturedAtLocal": "2026-11-15T11:49:07.472779-08:00",
+  "repository": ".",
+  "snapshot": {
+    "head": "d495fd715efc7ac1a19c57974c3750263763c192",
+    "dirty": true,
+    "gitStatusShort": [
+      " M AGENTS.md",
+      " M README.md",
+      " M dist/Kineti-Core.html",
+      " M dist/assets/SOURCES.md",
+      " D dist/assets/index-CYkU4lJs.js",
+      " D dist/assets/index-DsBL6Voc.css",
+      " M dist/index.html",
+      " M docs/DESIGN.md",
+      " M docs/DESTINATIONS.md",
+      " M docs/DISTRIBUTION.md",
+      " M docs/NIKITA-DEMO.md",
+      " M docs/NIKITA-NAVIGATION.md",
+      " M docs/NORTH-STAR.md",
+      " M docs/PHYSICS.md",
+      " M docs/PLAYABLE-V1.md",
+      " M docs/PLAYABLE-V2.md",
+      " M docs/QA-V2.md",
+      " M docs/QA.md",
+      " M index.html",
+      " M package-lock.json",
+      " M package.json",
+      " M public/assets/SOURCES.md",
+      " M skills/kineti-design/SKILL.md",
+      " M src/catalog.js",
+      " M src/celestial.js",
+      " M src/earth-online.css",
+      " M src/earth-online.js",
+      " M src/main.js",
+      " M src/physics.js",
+      " M src/rocket-workshop.css",
+      " M src/rocket-workshop.js",
+      " M src/rollout.js",
+      " M src/scene.js",
+      " M src/site-menu.css",
+      " M src/site-menu.js",
+      " M src/solar-view.css",
+      " M src/storage.js",
+      " M src/styles.css",
+      "?? AUTHORS.md",
+      "?? dist/assets/celestial-europa-hd.jpg",
+      "?? dist/assets/celestial-moon-hd.jpg",
+      "?? dist/assets/hd-sources.json",
+      "?? dist/assets/index-D7varkHM.css",
+      "?? dist/assets/index-DboM9t0b.js",
+      "?? dist/assets/mykyta-portrait-source.json",
+      "?? dist/assets/mykyta-portrait.jpg",
+      "?? docs/EUROPA.md",
+      "?? docs/QA-V04.md",
+      "?? docs/RELEASE-V04.md",
+      "?? docs/REPOSITORY-TRANSFER.md",
+      "?? docs/media/",
+      "?? public/assets/celestial-europa-hd.jpg",
+      "?? public/assets/celestial-moon-hd.jpg",
+      "?? public/assets/hd-sources.json",
+      "?? public/assets/mykyta-portrait-source.json",
+      "?? public/assets/mykyta-portrait.jpg",
+      "?? scripts/export-project.mjs",
+      "?? src/cinematic.js",
+      "?? src/custom-descent.js",
+      "?? src/europa-guide.css",
+      "?? src/europa-guide.js",
+      "?? src/landing-assist.js",
+      "?? src/lunar-mission.js",
+      "?? src/mission-control.js",
+      "?? src/mission-map.js",
+      "?? src/mission-panel.css",
+      "?? src/mission-sites.js",
+      "?? src/mode-hub.css",
+      "?? src/mode-hub.js",
+      "?? src/vehicle-design.js",
+      "?? src/vehicle-geometry.js",
+      "?? tests/custom-descent.test.js",
+      "?? tests/landing-assist.test.js",
+      "?? tests/lunar-mission.test.js",
+      "?? tests/vehicle-design.test.js"
+    ],
+    "warning": "Working tree actively edited; source/hash observations are not an atomic frozen release snapshot."
+  },
+  "verification": {
+    "sourceInspected": true,
+    "testDefinitionsInspected": true,
+    "testsRunByThisAudit": false,
+    "browserRunByThisAudit": false,
+    "reason": "Read-only audit of actively edited working tree; retain prior QA as reported evidence rather than asserting fresh execution."
+  },
+  "recommendedHeadline": "Physics-based flight, tested within explicit model limits",
+  "recommendedSlideCopy": "A shared spacecraft model connects design choices to mass, thrust, fuel and flight. Numerical regression checks verify targeted behavior, while each scenario states its approximations.",
+  "claims": [
+    {
+      "id": "design-model",
+      "title": "One spacecraft design drives geometry and flight",
+      "slideCopy": "Change the spacecraft, change the mission. Dimensions and hardware choices affect mass, thrust, fuel capacity and ideal delta-v.",
+      "status": "implemented; existing numerical tests defined; recorded QA observation available",
+      "evidence": [
+        {
+          "file": "src/vehicle-design.js",
+          "absolutePath": "src/vehicle-design.js",
+          "line": 1,
+          "endLine": 15
+        },
+        {
+          "file": "src/vehicle-design.js",
+          "absolutePath": "src/vehicle-design.js",
+          "line": 122,
+          "endLine": 143
+        },
+        {
+          "file": "src/vehicle-design.js",
+          "absolutePath": "src/vehicle-design.js",
+          "line": 228,
+          "endLine": 250
+        },
+        {
+          "file": "tests/vehicle-design.test.js",
+          "absolutePath": "tests/vehicle-design.test.js",
+          "line": 79,
+          "endLine": 103
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 34,
+          "endLine": 36
+        }
+      ],
+      "boundary": "Hardware scaling, tank loading and propulsion values are fictional educational assumptions, not certified vehicle specifications. Ideal delta-v excludes gravity, drag and steering losses."
+    },
+    {
+      "id": "bounded-numerical-time",
+      "title": "The solver advances physical time in bounded substeps",
+      "slideCopy": "Physical state advances independently of animation. Ascent uses substeps no larger than 1/60 second; long coasts use bounded phase-dependent integration.",
+      "status": "implemented; existing scheduling tests defined",
+      "evidence": [
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 6,
+          "endLine": 7
+        },
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 217,
+          "endLine": 220
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 239,
+          "endLine": 267
+        },
+        {
+          "file": "src/main.js",
+          "absolutePath": "src/main.js",
+          "line": 332
+        },
+        {
+          "file": "tests/physics.test.js",
+          "absolutePath": "tests/physics.test.js",
+          "line": 118,
+          "endLine": 125
+        }
+      ],
+      "boundary": "Do not claim every phase uses exactly 60 Hz: the integrated transfer uses phase-specific steps up to 30 seconds; the separate standard landing solver uses 1/120-second substeps."
+    },
+    {
+      "id": "orbital-gravity",
+      "title": "Orbits follow inverse-square gravity and calculated orbital elements",
+      "slideCopy": "A bound orbit is calculated from energy, angular momentum and apsides. It is not awarded by a progress timer.",
+      "status": "implemented; existing conservation and escape-rejection tests defined",
+      "evidence": [
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 72,
+          "endLine": 81
+        },
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 191,
+          "endLine": 193
+        },
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 211,
+          "endLine": 213
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 67,
+          "endLine": 78
+        },
+        {
+          "file": "tests/physics.test.js",
+          "absolutePath": "tests/physics.test.js",
+          "line": 65,
+          "endLine": 84
+        }
+      ],
+      "boundary": "The ascent and integrated mission are planar point-mass models. Numerical conservation within a chosen model does not establish real-world flight accuracy."
+    },
+    {
+      "id": "finite-resources",
+      "title": "Thrust, propellant and vehicle mass are coupled",
+      "slideCopy": "Every burn spends finite propellant. Thrust and specific impulse determine mass flow, while the shrinking mass changes acceleration.",
+      "status": "implemented; existing mass-flow and depleted-tank tests defined",
+      "evidence": [
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 159,
+          "endLine": 176
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 53,
+          "endLine": 57
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 70,
+          "endLine": 90
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 155,
+          "endLine": 165
+        }
+      ],
+      "equations": [
+        "mass flow = thrust / (Isp \u00d7 g0)",
+        "ideal delta-v = Isp \u00d7 g0 \u00d7 ln(initial mass / final mass)"
+      ],
+      "boundary": "Synthetic hardware values and ideal engine pointing remain modeling assumptions. The integrated model does not spend attitude-control fuel for idealized pointing."
+    },
+    {
+      "id": "manual-staging",
+      "title": "Separation changes actual retained mass",
+      "slideCopy": "The pilot releases stages explicitly. Dry structure and any remaining propellant leave the craft together.",
+      "status": "implemented; existing continuity tests defined; recorded manual browser staging available",
+      "evidence": [
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 106,
+          "endLine": 116
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 58,
+          "endLine": 65
+        },
+        {
+          "file": "tests/physics.test.js",
+          "absolutePath": "tests/physics.test.js",
+          "line": 51,
+          "endLine": 63
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 80,
+          "endLine": 108
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 42,
+          "endLine": 45
+        }
+      ],
+      "boundary": "No pyrotechnic separation impulse, debris collision or discarded-stage recovery model is implemented."
+    },
+    {
+      "id": "shared-moon-mission",
+      "title": "One finite-resource spacecraft connects Earth ascent to Moon contact",
+      "slideCopy": "Fly the assembled spacecraft through Earth orbit, lunar departure, coast, capture and powered landing while retaining its mass and fuel ledger.",
+      "status": "implemented; all-four-site numerical tests defined; a guided browser mission is documented",
+      "evidence": [
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 34,
+          "endLine": 55
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 104,
+          "endLine": 133
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 239,
+          "endLine": 269
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 111,
+          "endLine": 129
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 38,
+          "endLine": 55
+        }
+      ],
+      "boundary": "This continuity applies to the Moon route. Other worlds are local surface rehearsals, not connected interplanetary missions. The documented complete browser flight used powered guidance and manual staging, not an entirely unassisted manual campaign."
+    },
+    {
+      "id": "frame-continuity",
+      "title": "The Earth-to-Moon reference-frame change preserves world state",
+      "slideCopy": "Changing coordinate frames preserves world position, velocity, time and fuel. The switch is not a trajectory teleport.",
+      "status": "implemented; exact fixture continuity tests defined",
+      "evidence": [
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 220,
+          "endLine": 227
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 281,
+          "endLine": 283
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 131,
+          "endLine": 143
+        }
+      ],
+      "boundary": "The acceleration field changes at the sphere-of-influence boundary under patched conics. It is not simultaneous three-body gravity. The Moon follows a synthetic circular coplanar orbit."
+    },
+    {
+      "id": "physical-contact",
+      "title": "Landing outcomes depend on actual contact state",
+      "slideCopy": "Touchdown depends on contact speed, lateral drift, offset, tilt and landing hardware. Unsafe contact preserves the impact state for review.",
+      "status": "implemented; existing crossing-time and unsafe-contact tests defined",
+      "evidence": [
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 80,
+          "endLine": 85
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 205,
+          "endLine": 218
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 175,
+          "endLine": 182
+        },
+        {
+          "file": "src/landing.js",
+          "absolutePath": "src/landing.js",
+          "line": 65,
+          "endLine": 101
+        }
+      ],
+      "boundary": "The integrated Moon model checks spherical surface/pad contact. Display terrain is illustrative, not a surveyed collision mesh or terrain DEM. Limits are game training limits."
+    },
+    {
+      "id": "terminal-docking",
+      "title": "Docking is a separate local 3D translational and quaternion-attitude exercise",
+      "slideCopy": "Manual RCS docking combines body-axis thrust, orbital-frame drift, quaternion attitude and fuel-consuming assistance.",
+      "status": "implemented; existing docking tests defined; manual soft capture documented in QA",
+      "evidence": [
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 264,
+          "endLine": 284
+        },
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 304,
+          "endLine": 343
+        },
+        {
+          "file": "src/physics.js",
+          "absolutePath": "src/physics.js",
+          "line": 345,
+          "endLine": 358
+        },
+        {
+          "file": "tests/physics.test.js",
+          "absolutePath": "tests/physics.test.js",
+          "line": 127,
+          "endLine": 185
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 63,
+          "endLine": 81
+        }
+      ],
+      "boundary": "Hill/Clohessy\u2013Wiltshire dynamics assume a small separation near a circular reference orbit. This is terminal docking training, not a complete orbital rendezvous transfer. Rotational inertia is fixed for the short exercise; gravity-gradient torque and compliant docking hardware are omitted."
+    },
+    {
+      "id": "destination-training",
+      "title": "Local landing rehearsals expose different body gravity and selected atmosphere effects",
+      "slideCopy": "Practice terminal descent across 14 destinations, with body-dependent gravity, finite thrust and clearly labeled local scenarios.",
+      "status": "implemented; existing destination/contact tests defined; Europa UI examples documented",
+      "evidence": [
+        {
+          "file": "src/landing.js",
+          "absolutePath": "src/landing.js",
+          "line": 22,
+          "endLine": 37
+        },
+        {
+          "file": "src/landing.js",
+          "absolutePath": "src/landing.js",
+          "line": 58,
+          "endLine": 62
+        },
+        {
+          "file": "src/landing.js",
+          "absolutePath": "src/landing.js",
+          "line": 119,
+          "endLine": 131
+        },
+        {
+          "file": "tests/landing.test.js",
+          "absolutePath": "tests/landing.test.js",
+          "line": 21,
+          "endLine": 55
+        },
+        {
+          "file": "tests/landing.test.js",
+          "absolutePath": "tests/landing.test.js",
+          "line": 178,
+          "endLine": 185
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 91,
+          "endLine": 95
+        }
+      ],
+      "boundary": "These are local exercises. Titan/Mars atmosphere is simplified, irregular-body gravity and parent-body effects are omitted, and radiation/life support/sampling are not simulated."
+    },
+    {
+      "id": "trusted-retry",
+      "title": "Checkpoints restore evolving state while rebuilding trusted physics constants",
+      "slideCopy": "Retry from a validated checkpoint. Motion and fuel return, while engine constants are reconstructed from the canonical spacecraft design.",
+      "status": "implemented; existing tamper/ledger tests defined; UI restore documented",
+      "evidence": [
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 319,
+          "endLine": 360
+        },
+        {
+          "file": "src/lunar-mission.js",
+          "absolutePath": "src/lunar-mission.js",
+          "line": 373,
+          "endLine": 377
+        },
+        {
+          "file": "tests/lunar-mission.test.js",
+          "absolutePath": "tests/lunar-mission.test.js",
+          "line": 193,
+          "endLine": 213
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 24
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 55
+        }
+      ],
+      "boundary": "Checkpoint validation establishes data consistency, not general security certification. Restore deliberately sets engine power to zero and pauses the UI."
+    },
+    {
+      "id": "verification-and-limits",
+      "title": "Accuracy is stated through model assumptions and targeted validation",
+      "slideCopy": "The project documents its equations, numerical regression checks and the limits of each scenario.",
+      "status": "source and test definitions inspected; prior independent QA reports 86 passing tests; not rerun in this audit",
+      "evidence": [
+        {
+          "file": "docs/PHYSICS.md",
+          "absolutePath": "docs/PHYSICS.md",
+          "line": 1,
+          "endLine": 27
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 7,
+          "endLine": 11
+        },
+        {
+          "file": "docs/QA-V04.md",
+          "absolutePath": "docs/QA-V04.md",
+          "line": 26,
+          "endLine": 30
+        },
+        {
+          "file": "docs/RELEASE-V04.md",
+          "absolutePath": "docs/RELEASE-V04.md",
+          "line": 73,
+          "endLine": 91
+        }
+      ],
+      "boundary": "No overall accuracy percentage, NASA certification, current-ephemeris fidelity, physical mobile-device performance or complete mission-return capability is established."
+    }
+  ],
+  "numericalChecks": [
+    {
+      "id": "earth-orbit-conservation",
+      "kind": "test_definition_not_rerun",
+      "scope": "One circular 400 km Earth-orbit fixture, 600 simulated seconds",
+      "criteria": [
+        "relative specific-energy drift < 1e-9",
+        "relative angular-momentum drift < 1e-10",
+        "radius deviation \u2264 0.03 m"
+      ],
+      "reference": {
+        "file": "tests/physics.test.js",
+        "absolutePath": "tests/physics.test.js",
+        "line": 65,
+        "endLine": 75
+      },
+      "interpretation": "Tolerances in an ideal two-body numerical fixture, not a universal position error or real mission accuracy claim."
+    },
+    {
+      "id": "lunar-coast-conservation",
+      "kind": "test_definition_not_rerun",
+      "scope": "One local circular lunar-orbit fixture, 48 simulated hours, no thrust",
+      "criteria": [
+        "relative specific-energy drift < 1e-7",
+        "relative angular-momentum drift < 1e-11",
+        "no propellant consumed"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 145,
+        "endLine": 153
+      },
+      "interpretation": "Model-specific conservation checks; does not include omitted perturbations or validate every trajectory."
+    },
+    {
+      "id": "launch-display-scheduling",
+      "kind": "test_definition_not_rerun",
+      "scope": "30-second ascent scheduled at 30 Hz versus 120 Hz caller steps",
+      "criteria": [
+        "altitude difference \u2264 0.2 m",
+        "speed difference \u2264 0.03 m/s",
+        "fuel difference \u2264 0.05 kg"
+      ],
+      "reference": {
+        "file": "tests/physics.test.js",
+        "absolutePath": "tests/physics.test.js",
+        "line": 118,
+        "endLine": 125
+      },
+      "interpretation": "Scheduling sensitivity check for this fixture; does not measure GPU frame rate or physical-device performance."
+    },
+    {
+      "id": "frame-switch",
+      "kind": "test_definition_not_rerun",
+      "scope": "Reference fixture on the lunar sphere-of-influence boundary",
+      "criteria": [
+        "world position difference \u2264 1e-7 m",
+        "world velocity difference \u2264 1e-12 m/s",
+        "time, fuel ledger unchanged"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 131,
+        "endLine": 143
+      },
+      "interpretation": "A coordinate-transform invariant, not an acceleration-field continuity or three-body-accuracy claim."
+    },
+    {
+      "id": "contact-time",
+      "kind": "test_definition_not_rerun",
+      "scope": "10 m lunar drop with initial -5 m/s vertical speed and no fuel",
+      "criteria": [
+        "contact-time difference \u2264 0.0001 s against local constant-gravity reference",
+        "surface radius difference \u2264 1e-6 m",
+        "unsafe impact speed retained"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 175,
+        "endLine": 182
+      },
+      "interpretation": "A near-surface event-solver regression, not surveyed-terrain or landing-site accuracy."
+    },
+    {
+      "id": "shared-mass-ledger",
+      "kind": "test_definition_not_rerun",
+      "scope": "Complete guided numerical runs for four lunar reference pads",
+      "criteria": [
+        "initial mass \u2212 burned propellant \u2212 discarded mass matches retained mass within 0.001 kg",
+        "all four runs must reach landed with finite fuel and preserved design"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 29,
+        "endLine": 53
+      },
+      "additionalReference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 111,
+        "endLine": 129
+      },
+      "interpretation": "Internal accounting and feasibility in synthetic hardware/model assumptions."
+    }
+  ],
+  "reportedValidation": [
+    {
+      "id": "prior-qa-suite",
+      "status": "reported_by_existing_QA_not_rerun_here",
+      "result": "86 passed, 0 failed",
+      "reference": {
+        "file": "docs/QA-V04.md",
+        "absolutePath": "docs/QA-V04.md",
+        "line": 28
+      },
+      "buildBoundary": "Recorded integrated v0.4 source; the current tree is still dirty and is not a frozen release commit."
+    },
+    {
+      "id": "guided-moon-browser",
+      "status": "documented_browser_observation_not_replayed_here",
+      "result": {
+        "missionTime": "4 d 20 h 52 m",
+        "verticalContactSpeedMps": 0.5,
+        "lateralContactSpeedMps": 0.08,
+        "mainPropellantRemainingKg": 1632.3,
+        "massTonnes": 11.76
+      },
+      "reference": {
+        "file": "docs/QA-V04.md",
+        "absolutePath": "docs/QA-V04.md",
+        "line": 30,
+        "endLine": 55
+      },
+      "boundary": "Edited/saved/loaded custom capsule, powered guidance, explicit pilot staging. Not an unassisted campaign or real hardware prediction."
+    },
+    {
+      "id": "manual-docking-browser",
+      "status": "documented_browser_observation_not_replayed_here",
+      "result": {
+        "elapsed": "3 min 22 s",
+        "rcsPropellantUsedKg": 12.9,
+        "rcsPropellantRemainingKg": 307.1
+      },
+      "reference": {
+        "file": "docs/QA-V04.md",
+        "absolutePath": "docs/QA-V04.md",
+        "line": 63,
+        "endLine": 81
+      },
+      "boundary": "Normal 70 m training setup, powered attitude hold/brake, manual RCS corrections; not long-range rendezvous."
+    }
+  ],
+  "limits": [
+    "Integrated ascent/transfer/landing is 2D patched conics with a circular coplanar synthetic Moon, not live ephemerides or simultaneous multi-body dynamics.",
+    "Moon-site longitude is projected into the training plane; latitude is reference metadata, not a modeled plane change.",
+    "The integrated engine has idealized pointing; manual angle control is kinematic and has no rigid-body attitude-control fuel/torque model.",
+    "Hardware performance, tank densities, structural thresholds and contact limits are fictional training assumptions.",
+    "Terrain/celestial imagery is display/reference material, not measured collision terrain or certified landing-site data.",
+    "Legacy docking is a distinct local HCW/quaternion scenario; it does not complete a long-range rendezvous transfer.",
+    "Other destinations are local surface rehearsals; sampling, life support, radiation survival, lunar ascent/return and atmospheric recovery remain unimplemented.",
+    "No numerical evidence supports an overall real-world accuracy percentage or NASA certification.",
+    "Prior browser/portable QA is documented separately; do not infer direct-file, network-disabled, Safari, physical-mobile or FPS coverage beyond its stated record."
+  ],
+  "doNotClaim": [
+    "100% realistic physics",
+    "NASA-certified accuracy",
+    "An overall accuracy percentage",
+    "A complete Solar System transfer simulation",
+    "A fully unassisted Earth-to-Moon browser campaign",
+    "A completed lunar return or sampling mission",
+    "All displayed maps are collision terrain",
+    "All tests passed on the current dirty tree without a new run"
+  ],
+  "suggestedScreenshotEvidence": [
+    {
+      "path": "docs/media/v04-custom-moon-touchdown.jpg",
+      "relativePath": "docs/media/v04-custom-moon-touchdown.jpg",
+      "sha256": "ca63b5d0622d396fdfd3c0d513362373e126d50635c7f398a297c96d52836805",
+      "descriptionFromReleaseNotes": "Recorded guided saved-custom-craft Moon touchdown and crew/text-flag finale",
+      "status": "Existing v0.4 evidence asset; not independently viewed or recaptured in this audit",
+      "buildProvenance": "See docs/QA-V04.md and docs/RELEASE-V04.md; do not assume the current dirty tree is the exact capture build."
+    },
+    {
+      "path": "docs/media/v04-docking-cockpit.jpg",
+      "relativePath": "docs/media/v04-docking-cockpit.jpg",
+      "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9",
+      "descriptionFromReleaseNotes": "Recorded final-build docking cockpit and camera controls",
+      "status": "Existing v0.4 evidence asset; not independently viewed or recaptured in this audit",
+      "buildProvenance": "See docs/QA-V04.md and docs/RELEASE-V04.md; do not assume the current dirty tree is the exact capture build."
+    },
+    {
+      "path": "docs/media/v04-europa-lander.jpg",
+      "relativePath": "docs/media/v04-europa-lander.jpg",
+      "sha256": "8902796c22341606a8d8309b2101d2b6b21d34039eec61772e703efcdc130be6",
+      "descriptionFromReleaseNotes": "Recorded standard Europa terminal descent controls",
+      "status": "Existing v0.4 evidence asset; not independently viewed or recaptured in this audit",
+      "buildProvenance": "See docs/QA-V04.md and docs/RELEASE-V04.md; do not assume the current dirty tree is the exact capture build."
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": "docs/PHYSICS.md",
+      "sha256": "76cf871a110b05b1e3b0942ee09b92d5dda90fab43e06d837f19dc0e925a961e"
+    },
+    {
+      "path": "docs/QA-V04.md",
+      "sha256": "5229eb187beb8aa171e90d313bea2790bc26b2a2cfe27cafe7f056846dbb540b"
+    },
+    {
+      "path": "docs/RELEASE-V04.md",
+      "sha256": "9ec2052e7eb7b77b0a071e5152ba88cde65d1d3e10e756f61a7f11009af062bb"
+    },
+    {
+      "path": "src/landing.js",
+      "sha256": "cf6b673d1422b0a88873059772c6cf4232ac7a124dac33dbfa67b7b7b172476c"
+    },
+    {
+      "path": "src/lunar-mission.js",
+      "sha256": "cc03f8e75957c5fde966008610931c0e83309c96e82e4bf0ff397378cac97000"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "684f88bde92b6445c7bc714f3f42f7a8bf2401c93e31e5ddab0cc6373bc3e689"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "7f977603b23553d747cfca42036e4d5a6c83506f4ae24798f3d358149cef7907"
+    },
+    {
+      "path": "src/vehicle-design.js",
+      "sha256": "d8017d2d333a6d7e633effe00843ebef5f727654bd330d6e559817325aca5cb4"
+    },
+    {
+      "path": "tests/landing.test.js",
+      "sha256": "c2f84fc12a69c043d150ac74998f52712da0a0e8ff6a7b8e58673dcd19a315c8"
+    },
+    {
+      "path": "tests/lunar-mission.test.js",
+      "sha256": "0000fc6ed9fc7c11101b444102280ae24481fa1fd0c98fe55941b096a5a8ae3b"
+    },
+    {
+      "path": "tests/physics.test.js",
+      "sha256": "1ca52648a7cf7c6a7607b0a1dd888b3aed5464b0b0411a4acce2b2dd6bad3a9a"
+    },
+    {
+      "path": "tests/vehicle-design.test.js",
+      "sha256": "43e628e32785d1496285ced40ec48212188b6b99355004ab7186eb211540c220"
+    }
+  ]
+}

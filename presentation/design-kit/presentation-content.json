@@ -1,0 +1,435 @@
+{
+  "project": "Kinetic Core",
+  "author": "Mykyta Borisov",
+  "revision": "v5",
+  "release": {
+    "version": "0.4.0 reference",
+    "commit": "d495fd715efc7ac1a19c57974c3750263763c192",
+    "dirty": true,
+    "status": "Draft, final build capture pending"
+  },
+  "links": {
+    "demo": "",
+    "repository": "https://github.com/ropotropo/Kinetic-Core-2026"
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "title": "Kinetic Core",
+      "lead": "Space Mission Design Game",
+      "body": [
+        "Created by Mykyta Borisov"
+      ],
+      "shots": [],
+      "notes": "NASA Space Apps Challenge 2026. Mykyta Borisov is the sole project author. Use the selected lunar portrait as cover artwork; retain image-generation provenance in technical notes, without a visible cover caption. KC is the simple project monogram.",
+      "evidenceIds": []
+    },
+    {
+      "id": "concept",
+      "title": "Engineering choices shape the mission",
+      "lead": "Design a spacecraft and follow its choices into flight.",
+      "body": [
+        "Hardware choices affect mass, thrust, fuel and ideal delta-v.",
+        "The Moon route connects the same craft from Earth ascent to touchdown.",
+        "Other worlds provide clearly labeled local landing rehearsals."
+      ],
+      "shots": [
+        "overview"
+      ],
+      "notes": "This is the implemented play loop, not a measured learning-outcome claim. The overview image is an existing v0.4 reference capture; replace it with a capture from the frozen final build. Broader destinations do not imply complete interplanetary transfers.",
+      "evidenceIds": [
+        "design-model",
+        "shared-moon-mission",
+        "destination-training"
+      ]
+    },
+    {
+      "id": "builder",
+      "title": "One design drives the spacecraft",
+      "lead": "The workshop and flight resolve the same validated vehicle.",
+      "body": [
+        "Typed attachment points keep components compatible.",
+        "Dimensions change geometry, loaded fuel, mass and performance.",
+        "Saved custom designs return to the same flight model."
+      ],
+      "shots": [
+        "builder"
+      ],
+      "notes": "Show one edited custom vehicle and readable mass, thrust-to-weight and ideal delta-v values. Hardware values and dimension scaling are fictional educational assumptions. Ideal delta-v is a design budget, excluding gravity, drag and steering losses. Do not describe a visual resize as measured real-vehicle engineering accuracy.",
+      "evidenceIds": [
+        "design-model",
+        "finite-resources",
+        "trusted-retry"
+      ]
+    },
+    {
+      "id": "mission",
+      "title": "The same spacecraft reaches the Moon",
+      "lead": "A physical trajectory carries a shared mass and fuel ledger.",
+      "body": [
+        "Manual staging changes the retained vehicle mass.",
+        "Finite burns connect departure, coast, lunar capture and descent.",
+        "Touchdown depends on speed, drift, offset, tilt and landing hardware."
+      ],
+      "shots": [
+        "earth-orbit",
+        "moon-touchdown"
+      ],
+      "notes": "Integrated Moon flight uses 2D patched conics, a synthetic circular Moon and ideal engine pointing. Existing QA documents a guided browser mission with explicit pilot staging. This is not a claim of an entirely unassisted manual campaign. The reference touchdown image belongs to that recorded v0.4 run; its flag/finale is visual presentation, not implemented sampling or lunar return.",
+      "evidenceIds": [
+        "manual-staging",
+        "shared-moon-mission",
+        "frame-continuity",
+        "physical-contact"
+      ]
+    },
+    {
+      "id": "docking",
+      "title": "Manual control for terminal docking",
+      "lead": "Three-dimensional RCS translation meets quaternion attitude.",
+      "body": [
+        "Read relative range, speed, offset and alignment.",
+        "Body-axis thrusters spend finite propellant.",
+        "Powered braking and attitude hold help manage the approach."
+      ],
+      "shots": [
+        "docking"
+      ],
+      "notes": "Docking is a separate short-range exercise near a circular reference orbit, using local Hill/Clohessy-Wiltshire dynamics. It is not a complete long-range rendezvous. External chase, docking camera and cockpit show the same physical state. Prior QA documents a manual soft capture using ordinary controls and powered assists; no fresh browser run is claimed by this presentation audit.",
+      "evidenceIds": [
+        "terminal-docking",
+        "finite-resources"
+      ]
+    },
+    {
+      "id": "physics",
+      "title": "Equations, checks and clear limits",
+      "lead": "Targeted numerical validation makes the model inspectable.",
+      "body": [
+        "Recorded v0.4 QA: 86 tests passed; the final build still needs a fresh run.",
+        "These values are regression criteria, not an overall accuracy percentage.",
+        "Limits: 2D patched conics, a synthetic Moon and ideal engine pointing."
+      ],
+      "shots": [],
+      "notes": "Render physicsRows as a native editable table. Each numerical value is an acceptance criterion defined in existing test code, not a fresh test result from this audit. Prior QA reports 86 passing tests, but the currently inspected working tree is dirty. Ascent substeps are at most 1/60 second; transfer/coast steps vary by phase up to 30 seconds; the separate standard terminal lander uses 1/120-second steps. The simulation is an educational model, not flight software or a certified real-vehicle prediction.",
+      "evidenceIds": [
+        "bounded-numerical-time",
+        "orbital-gravity",
+        "finite-resources",
+        "frame-continuity",
+        "physical-contact",
+        "verification-and-limits"
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "Kinetic Core",
+      "lead": "Created by Mykyta Borisov",
+      "body": [
+        "The Moon mission and terminal exercises share transparent physical rules.",
+        "Additional destinations are local landing rehearsals.",
+        "Sampling, lunar return and broader transfers remain future work."
+      ],
+      "shots": [
+        "europa"
+      ],
+      "notes": "The Europa reference capture illustrates a separate standard terminal exercise, not a continuous Earth-to-Europa flight or human survival model. Replace the empty demo URL after final-build verification. Keep source/data credits and the exact build identifier with the final presentation. The repository link is supplied in links.repository.",
+      "evidenceIds": [
+        "destination-training",
+        "verification-and-limits"
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "id": "overview",
+      "label": "Mission overview and destination planner",
+      "preferredFile": "screenshots/overview.jpg",
+      "purpose": "Show the selected Moon mission, landing-site choices and the relationship between the assembled craft and mission plan.",
+      "captureInstructions": "Open Start Flight from the retained custom design. Select the Moon and one named site. Keep the mission summary, route label and start controls readable. Use normal UI only; avoid a menu that hides the craft or planner. Record the selected site and build in the capture manifest.",
+      "status": "reference",
+      "source": "outputs/v0.4.0/mission-planner.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 reference capture of the mission planner with Moon destination and landing-site choices."
+    },
+    {
+      "id": "builder",
+      "label": "Typed-slot spacecraft workshop",
+      "preferredFile": "screenshots/builder.jpg",
+      "purpose": "Show actual custom geometry together with readable mass, thrust-to-weight and ideal delta-v values.",
+      "captureInstructions": "Load a compatible lunar design, adjust one dimension through the normal workshop UI and save it. Capture the resulting craft with the edited dimension and performance values visible. Record the dimension change and displayed before/after values as notes; do not fabricate a side-by-side comparison.",
+      "status": "reference",
+      "source": "outputs/v0.4.0/workshop-custom-performance.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 reference capture of a custom spacecraft and workshop performance readings."
+    },
+    {
+      "id": "earth-orbit",
+      "label": "Physical Earth orbit",
+      "preferredFile": "screenshots/earth-orbit.jpg",
+      "purpose": "Show bound Earth orbit, calculated apsides, retained stage state and propellant after actual ascent.",
+      "captureInstructions": "Fly the frozen build through ascent using ordinary controls and explicit stage separation. Capture after the orbit-confirmed event with apoapsis, periapsis, speed, fuel and mission time readable. Pause through the normal UI if necessary. Record guidance mode and stage state.",
+      "status": "reference",
+      "source": "outputs/v0.4.0/qa/custom-earth-orbit.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 QA capture of the custom spacecraft in confirmed Earth orbit with flight instruments visible."
+    },
+    {
+      "id": "moon-touchdown",
+      "label": "Same-craft Moon touchdown",
+      "preferredFile": "screenshots/moon-touchdown.jpg",
+      "purpose": "Show the retained custom spacecraft at safe lunar contact with contact telemetry and remaining fuel.",
+      "captureInstructions": "Continue the same saved craft through departure, coast, capture and descent. Capture the genuine successful-contact screen with vertical/lateral impact speeds, remaining propellant and site identity visible. Keep the final ground/spacecraft in frame. State whether powered guidance was used. Do not use a fixture or injected success state as mission evidence.",
+      "status": "reference",
+      "source": "docs/media/v04-custom-moon-touchdown.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 guided-browser-flight capture of the custom spacecraft after lunar touchdown and crew finale."
+    },
+    {
+      "id": "docking",
+      "label": "Manual docking cockpit and live instruments",
+      "preferredFile": "screenshots/docking-31d281f6.jpg",
+      "purpose": "Show the separate terminal docking exercise, cockpit camera and actual range/alignment/RCS readings.",
+      "captureInstructions": "Enter the normal docking exercise. Use ordinary RCS controls and select Cockpit. Capture a readable approach frame with range, closing speed, lateral offset and reserve visible. Record powered-assist states. A separate soft-capture image may be retained as supporting evidence; do not quote secured post-capture zero values as approach measurements.",
+      "status": "reference",
+      "source": "screenshots/docking-31d281f6.jpg",
+      "fit": "contain",
+      "alt": "Screenshot: Manual docking cockpit and live instruments",
+      "provenance": {
+        "capturedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+        "resolvedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+        "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9",
+        "width": 1728,
+        "height": 997,
+        "format": "jpeg",
+        "byteLength": 126204,
+        "importedAtUTC": "2026-11-15T20:14:09.573Z",
+        "dateUTC": "2026-11-15T20:14:09.573Z",
+        "dateMeaning": "UTC intake time; actual capture time is not inferred",
+        "capturedAtUTC": null,
+        "sourceModifiedAtUTC": "2026-11-15T19:22:20.895Z",
+        "build": "v0.4 recorded QA",
+        "commit": null,
+        "note": "Unchanged reference capture. Historical UI author label predates correction; replace with the final Mykyta Borisov build.",
+        "status": "reference",
+        "originalBytesPreserved": true
+      }
+    },
+    {
+      "id": "europa",
+      "label": "Europa local terminal rehearsal",
+      "preferredFile": "screenshots/europa.jpg",
+      "purpose": "Show destination variety while preserving the explicit boundary between a local rehearsal and a transfer mission.",
+      "captureInstructions": "Select the local Europa surface exercise and keep its rehearsal/scenario label visible. Capture the lander, horizon and readable altitude, vertical speed, pad offset, power and fuel controls. Record whether this is the standard lander or custom craft, and whether landing assist is active. Do not caption it as an Earth-to-Europa transfer.",
+      "status": "reference",
+      "source": "docs/media/v04-europa-lander.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 reference capture of the standard lander in the separate Europa terminal descent exercise."
+    },
+    {
+      "id": "lunar-approach",
+      "label": "Lunar approach and capture",
+      "preferredFile": "screenshots/lunar-approach.jpg",
+      "purpose": "Optional evidence of the real-distance coast, moving Moon encounter and finite capture burn between orbit and touchdown.",
+      "captureInstructions": "Continue the same ordinary Moon flight to the named approach or capture phase. Capture the craft, Moon, phase label, mission time, relative distance/speed, fuel and navigation map. Record the checkpoint and the exact phase. Use a genuine flight frame rather than a renderer fixture.",
+      "status": "missing",
+      "source": "",
+      "fit": "contain",
+      "alt": "Pending final-build capture of the continuous Moon approach or capture burn with physical telemetry."
+    },
+    {
+      "id": "checkpoint-retry",
+      "label": "Validated checkpoint and retry",
+      "preferredFile": "screenshots/checkpoint-retry.jpg",
+      "purpose": "Optional evidence that a saved physical state can be restored safely with controls released and engine power zero.",
+      "captureInstructions": "Save an active flight through the normal UI, record its displayed time and resource state, advance, then restore. Capture the restored paused screen with zero engine ceiling, the recovered time/fuel and the checkpoint message visible. Record those before/after values in the manifest. Never inject a saved state for the screenshot.",
+      "status": "missing",
+      "source": "",
+      "fit": "contain",
+      "alt": "Pending final-build capture of a restored paused checkpoint with engine power zero and recovered physical state."
+    }
+  ],
+  "physicsRows": [
+    {
+      "topic": "Orbital integration",
+      "model": "Inverse-square gravity; velocity-Verlet-style steps",
+      "check": "Earth circular-orbit fixture: relative energy drift < 1e-9 over 600 s",
+      "scope": "A defined regression criterion, not universal trajectory accuracy"
+    },
+    {
+      "topic": "Resources",
+      "model": "Mass flow = thrust / (Isp × g0)",
+      "check": "Finite-tank and mass-ledger regression checks",
+      "scope": "Fictional hardware; ideal pointing in the integrated Moon model"
+    },
+    {
+      "topic": "Reference frames",
+      "model": "Earth/Moon patched-conic coordinates",
+      "check": "World position, velocity, time and fuel remain continuous at the frame switch",
+      "scope": "2D, synthetic circular Moon; no simultaneous three-body gravity"
+    },
+    {
+      "topic": "Contact",
+      "model": "Surface-crossing time plus speed, offset and tilt gates",
+      "check": "10 m drop fixture: contact-time criterion within 0.0001 s",
+      "scope": "Game thresholds and illustrative terrain, not surveyed-site accuracy"
+    }
+  ],
+  "limits": [
+    "Integrated ascent/transfer/landing is 2D patched conics with a circular coplanar synthetic Moon, not live ephemerides or simultaneous multi-body dynamics.",
+    "Moon-site longitude is projected into the training plane; latitude is reference metadata, not a modeled plane change.",
+    "The integrated engine has idealized pointing; manual angle control is kinematic and has no rigid-body attitude-control fuel/torque model.",
+    "Hardware performance, tank densities, structural thresholds and contact limits are fictional training assumptions.",
+    "Terrain/celestial imagery is display/reference material, not measured collision terrain or certified landing-site data.",
+    "Legacy docking is a distinct local HCW/quaternion scenario; it does not complete a long-range rendezvous transfer.",
+    "Other destinations are local surface rehearsals; sampling, life support, radiation survival, lunar ascent/return and atmospheric recovery remain unimplemented.",
+    "No numerical evidence supports an overall real-world accuracy percentage or NASA certification.",
+    "Prior browser/portable QA is documented separately; do not infer direct-file, network-disabled, Safari, physical-mobile or FPS coverage beyond its stated record."
+  ],
+  "numericalChecks": [
+    {
+      "id": "earth-orbit-conservation",
+      "kind": "test_definition_not_rerun",
+      "scope": "One circular 400 km Earth-orbit fixture, 600 simulated seconds",
+      "criteria": [
+        "relative specific-energy drift < 1e-9",
+        "relative angular-momentum drift < 1e-10",
+        "radius deviation ≤ 0.03 m"
+      ],
+      "reference": {
+        "file": "tests/physics.test.js",
+        "absolutePath": "tests/physics.test.js",
+        "line": 65,
+        "endLine": 75
+      },
+      "interpretation": "Tolerances in an ideal two-body numerical fixture, not a universal position error or real mission accuracy claim."
+    },
+    {
+      "id": "lunar-coast-conservation",
+      "kind": "test_definition_not_rerun",
+      "scope": "One local circular lunar-orbit fixture, 48 simulated hours, no thrust",
+      "criteria": [
+        "relative specific-energy drift < 1e-7",
+        "relative angular-momentum drift < 1e-11",
+        "no propellant consumed"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 145,
+        "endLine": 153
+      },
+      "interpretation": "Model-specific conservation checks; does not include omitted perturbations or validate every trajectory."
+    },
+    {
+      "id": "launch-display-scheduling",
+      "kind": "test_definition_not_rerun",
+      "scope": "30-second ascent scheduled at 30 Hz versus 120 Hz caller steps",
+      "criteria": [
+        "altitude difference ≤ 0.2 m",
+        "speed difference ≤ 0.03 m/s",
+        "fuel difference ≤ 0.05 kg"
+      ],
+      "reference": {
+        "file": "tests/physics.test.js",
+        "absolutePath": "tests/physics.test.js",
+        "line": 118,
+        "endLine": 125
+      },
+      "interpretation": "Scheduling sensitivity check for this fixture; does not measure GPU frame rate or physical-device performance."
+    },
+    {
+      "id": "frame-switch",
+      "kind": "test_definition_not_rerun",
+      "scope": "Reference fixture on the lunar sphere-of-influence boundary",
+      "criteria": [
+        "world position difference ≤ 1e-7 m",
+        "world velocity difference ≤ 1e-12 m/s",
+        "time, fuel ledger unchanged"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 131,
+        "endLine": 143
+      },
+      "interpretation": "A coordinate-transform invariant, not an acceleration-field continuity or three-body-accuracy claim."
+    },
+    {
+      "id": "contact-time",
+      "kind": "test_definition_not_rerun",
+      "scope": "10 m lunar drop with initial -5 m/s vertical speed and no fuel",
+      "criteria": [
+        "contact-time difference ≤ 0.0001 s against local constant-gravity reference",
+        "surface radius difference ≤ 1e-6 m",
+        "unsafe impact speed retained"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 175,
+        "endLine": 182
+      },
+      "interpretation": "A near-surface event-solver regression, not surveyed-terrain or landing-site accuracy."
+    },
+    {
+      "id": "shared-mass-ledger",
+      "kind": "test_definition_not_rerun",
+      "scope": "Complete guided numerical runs for four lunar reference pads",
+      "criteria": [
+        "initial mass − burned propellant − discarded mass matches retained mass within 0.001 kg",
+        "all four runs must reach landed with finite fuel and preserved design"
+      ],
+      "reference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 29,
+        "endLine": 53
+      },
+      "additionalReference": {
+        "file": "tests/lunar-mission.test.js",
+        "absolutePath": "tests/lunar-mission.test.js",
+        "line": 111,
+        "endLine": 129
+      },
+      "interpretation": "Internal accounting and feasibility in synthetic hardware/model assumptions."
+    }
+  ],
+  "auditProvenance": {
+    "path": "work/kinetic-core-presentation-2026-11-15/math-evidence.json",
+    "capturedAtUTC": "2026-11-15T19:49:07.472779+00:00",
+    "sourceInspected": true,
+    "testDefinitionsInspected": true,
+    "testsRunByThisAudit": false,
+    "browserRunByThisAudit": false,
+    "priorQAReportedTests": "86 passed, 0 failed",
+    "priorQAReference": "docs/QA-V04.md:28",
+    "warning": "The source audit observed an actively dirty working tree. Existing QA reports and reference screenshots are historical evidence, not a fresh verification of a frozen final release."
+  },
+  "coverVariants": [
+    {
+      "id": "sunlit",
+      "name": "Sunlit",
+      "file": "assets/mykyta-anamorphic-sunlit-v5.png",
+      "aspect": "16:9"
+    },
+    {
+      "id": "shadowline",
+      "name": "Shadowline",
+      "file": "assets/mykyta-anamorphic-shadowline-v5.png",
+      "aspect": "16:9"
+    },
+    {
+      "id": "portrait",
+      "name": "Mission Portrait",
+      "file": "assets/mykyta-anamorphic-portrait-v5.png",
+      "aspect": "2:3"
+    }
+  ],
+  "selectedCover": "shadowline",
+  "identity": {
+    "title": "Kinetic Core",
+    "author": "Mykyta Borisov",
+    "monogram": "KC"
+  }
+}

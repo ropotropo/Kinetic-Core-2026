@@ -1,0 +1,11 @@
+{
+  "hero": "hero.png",
+  "logo": "logo.png",
+  "planner": "planner.jpg",
+  "builder": "builder.jpg",
+  "rollout": "rollout.jpg",
+  "approach": "approach.jpg",
+  "success": "success.jpg",
+  "docking": "docking.jpg",
+  "descent": "descent.jpg"
+}

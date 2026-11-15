@@ -1,0 +1,247 @@
+{
+  "generatedAtUTC": "2026-11-15T20:29:29.637153+00:00",
+  "repoHeadAtAudit": "2c625ee6476aa37d94338f7fdd45ea87684bfa42",
+  "workingTreeCleanAtAudit": false,
+  "workingTreeStatusAtAudit": [
+    "?? presentation/"
+  ],
+  "method": "Read-only file inventory, PNG/JPEG dimensions and local view_image inspection. No browser or game interaction, image modification or fresh QA. File modification times are not asserted to be capture times.",
+  "narrativeBoundary": "Use these as recorded product illustrations. Do not claim all frames were captured from current HEAD/current working tree, or that the full Earth-to-Moon route, manual docking and separate planetary rehearsals are one uninterrupted mission.",
+  "selection": [
+    {
+      "id": "workshop",
+      "path": "outputs/v0.4.0/workshop-custom-performance.jpg",
+      "priority": "primary",
+      "use": "Spacecraft design and performance",
+      "captionEN": "The workshop links the assembled spacecraft to mass, thrust, fuel and an ideal delta-v budget.",
+      "captionUA": "Конструктор пов’язує зібраний апарат із масою, тягою, пальним та ідеальним запасом delta-v.",
+      "visibleState": "Custom vehicle, ready for mission planning. All main performance values are in frame.",
+      "notes": [
+        "No personal author name is visible.",
+        "The displayed hardware/model values are fictional educational assumptions.",
+        "Do not imply this vehicle configuration exactly matches every other historical capture."
+      ],
+      "absolutePath": "outputs/v0.4.0/workshop-custom-performance.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "557dad61f7dfa2c7a35a6c81a09a6d72318bc0f4347737f146a71374208d5f9b",
+      "fileModifiedAtUTC": "2026-11-15T18:43:47.539126+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "planner",
+      "path": "outputs/v0.4.0/mission-planner.jpg",
+      "priority": "primary",
+      "use": "Mission choice and end-to-end Moon route",
+      "captionEN": "Choose a Moon approach and carry the assembled craft into the mission.",
+      "captionUA": "Оберіть район підходу до Місяця та продовжте місію на зібраному апараті.",
+      "visibleState": "Moon / complete lunar mission selected; four named approach choices and mission-start controls.",
+      "notes": [
+        "No personal author name is visible.",
+        "The footnote explicitly limits the route to a continuous 2D patched-conic model and other destinations to separate surface rehearsals."
+      ],
+      "absolutePath": "outputs/v0.4.0/mission-planner.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "63bbf75ec07fb601f2d7a45466b35d87a88b4b842716f56096675e387318ec7b",
+      "fileModifiedAtUTC": "2026-11-15T19:01:54.618711+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "rollout",
+      "path": "outputs/v0.4.2/rollout.jpg",
+      "priority": "primary",
+      "use": "Opening rollout / transition into launch",
+      "captionEN": "The assembled rocket rolls to the pad before launch.",
+      "captionUA": "Зібрана ракета рухається до стартового майданчика перед запуском.",
+      "visibleState": "Rollout to the pad; T+00:00; no pause overlay, with terrain and launch infrastructure visible.",
+      "notes": [
+        "Prefer this v0.4.2 capture over the older qa/rollout-start.jpg with a large countdown overlay.",
+        "No personal author name is visible.",
+        "The 408 m/s field is labeled reference-frame speed; do not describe it as upward launch speed.",
+        "This frame shows rollout, not powered ascent or confirmed orbit."
+      ],
+      "absolutePath": "outputs/v0.4.2/rollout.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "043a7e94a258551e062fc0fba6f17ac02933390a69cf0e277400fe893c424674",
+      "fileModifiedAtUTC": "2026-11-15T20:23:58.689973+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "lunar-capture",
+      "path": "outputs/v0.4.0/qa/lunar-capture-burn.jpg",
+      "priority": "primary",
+      "use": "Lunar arrival / finite capture burn",
+      "captionEN": "A finite burn brakes the retained spacecraft into lunar orbit.",
+      "captionUA": "Обмежений запасом пального імпульс гальмує апарат для виходу на місячну орбіту.",
+      "visibleState": "Lunar capture; engine plume, mass/fuel readings and Earth-Moon route inset; no pause overlay.",
+      "notes": [
+        "No personal author name is visible.",
+        "Powered guidance on is visible.",
+        "The phase log records prior departure, sphere-of-influence change and capture burn.",
+        "This is the cleanest reviewed unpaused lunar-approach/capture image; qa/lunar-frame-approach.jpg is blurred by a pause overlay."
+      ],
+      "absolutePath": "outputs/v0.4.0/qa/lunar-capture-burn.jpg",
+      "width": 1728,
+      "height": 997,
+      "sha256": "3e51936a2ecb3fb116ffaf7ad5ff51ae84845a4bdb29c1275915b34823e17988",
+      "fileModifiedAtUTC": "2026-11-15T19:09:53.132848+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "touchdown",
+      "path": "outputs/v0.4.0/qa/custom-moon-touchdown-eva.jpg",
+      "priority": "primary",
+      "use": "Successful lunar contact and crew finale",
+      "captionEN": "Touchdown succeeds only within the contact limits.",
+      "captionUA": "Посадка успішна лише за виконання умов контакту з поверхнею.",
+      "visibleState": "Touchdown confirmed success panel; retained spacecraft, astronaut and project flag on the ground; no pause overlay.",
+      "notes": [
+        "No personal author name is visible.",
+        "Success text records contact at 0.5 m/s vertical and 0.08 m/s lateral; avoid substituting the separate 4.6 m/s sidebar speed as contact velocity.",
+        "Powered guidance on is visible.",
+        "Astronaut/flag imagery is the implemented visual finale, not evidence of implemented scientific sampling, lunar return or life-support simulation.",
+        "Existing QA capture, not a renderer fixture."
+      ],
+      "absolutePath": "outputs/v0.4.0/qa/custom-moon-touchdown-eva.jpg",
+      "width": 1728,
+      "height": 997,
+      "sha256": "ca63b5d0622d396fdfd3c0d513362373e126d50635c7f398a297c96d52836805",
+      "fileModifiedAtUTC": "2026-11-15T19:13:08.266741+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "docking",
+      "path": "outputs/v0.4.0/cockpit-final.jpg",
+      "priority": "primary",
+      "use": "Manual terminal docking / full cockpit interface",
+      "captionEN": "Use RCS to translate, align and brake for terminal docking.",
+      "captionUA": "Керуйте RCS, щоб переміщувати апарат, вирівнювати осі та гальмувати перед стикуванням.",
+      "visibleState": "Full app frame, Cockpit selected, range 68.3 m, closing speed +0.06 m/s, lateral offset 2.16 m and finite RCS reserve.",
+      "notes": [
+        "Correct visible author credit: Created by Mykyta Borisov.",
+        "No Flight paused overlay; the top pause-icon button is a control, not a paused-state modal.",
+        "Prefer this actual approach frame over published-cockpit.jpg at the 70 m initial state.",
+        "This is a separate local terminal approach scenario, not a complete long-range rendezvous transfer.",
+        "Contains no external page padding."
+      ],
+      "absolutePath": "outputs/v0.4.0/cockpit-final.jpg",
+      "width": 1280,
+      "height": 800,
+      "sha256": "5069f78343462f335f3702e3113a865a3dab6c935d23d0487fea74be8fd94833",
+      "fileModifiedAtUTC": "2026-11-15T19:56:46.926047+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "attachment-points",
+      "path": "outputs/v0.4.0/workshop-attachment-points.jpg",
+      "priority": "alternate",
+      "use": "Optional close explanation of typed attachment-point choices",
+      "captionEN": "A component is placed at an explicit compatible attachment point.",
+      "captionUA": "Компонент встановлюється у вибрану сумісну точку кріплення.",
+      "visibleState": "Propellant tank selected, four highlighted compatible points on an assembled vehicle, attachment list visible.",
+      "notes": [
+        "No personal author name is visible.",
+        "No pause overlay.",
+        "Use as an alternate to the performance screenshot when explaining interaction; the main workshop capture is better for performance values."
+      ],
+      "absolutePath": "outputs/v0.4.0/workshop-attachment-points.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "33eb1a9a5c47fe18252f4aa37bd716d6ef82f45523f080491619188af4d04e42",
+      "fileModifiedAtUTC": "2026-11-15T18:41:01.848033+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "docking-published-alternate",
+      "path": "outputs/v0.4.0/published-cockpit.jpg",
+      "priority": "alternate",
+      "use": "Alternative full cockpit frame from a recorded published preview",
+      "captionEN": "Cockpit and instruments show the same terminal approach state.",
+      "captionUA": "Кабіна та прилади показують один і той самий стан зближення.",
+      "visibleState": "Full app, correct author credit, 70.0 m range, zero closing speed and 1.45 m lateral offset.",
+      "notes": [
+        "Correct visible author credit: Created by Mykyta Borisov.",
+        "No pause overlay or external page padding.",
+        "This appears near the initial terminal scenario state, so cockpit-final.jpg gives a stronger demonstration of an active approach."
+      ],
+      "absolutePath": "outputs/v0.4.0/published-cockpit.jpg",
+      "width": 1280,
+      "height": 800,
+      "sha256": "c5025f33364ef79914d1ab81691a882e6cda627ffdee4cf0d091ba21180ba48d",
+      "fileModifiedAtUTC": "2026-11-15T20:02:17.146896+00:00",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry"
+    },
+    {
+      "id": "descent",
+      "path": "outputs/v0.4.0/qa/corrected-lunar-horizon.jpg",
+      "use": "Full-screen final lunar descent",
+      "width": 1728,
+      "height": 997,
+      "sha256": "630b2428768a4d1e18e852308684a3175e4b959ad9753d7a743523651f7b452c",
+      "classification": "existing recorded game capture; visually inspected, not freshly captured or rerun",
+      "pauseOverlay": false,
+      "visibleOldAuthorNames": [],
+      "recommendedFit": "contain; preserve the complete UI and telemetry",
+      "notes": [
+        "Final descent with engine plume. Sticky checkpoint log is historical; do not narrate it as current engine-zero state."
+      ]
+    }
+  ],
+  "rejectedOrLimited": [
+    {
+      "path": "outputs/v0.4.0/qa/custom-earth-orbit.jpg",
+      "reason": "Flight paused overlay blurs the main scene. Avoid for the main PDF narrative; orbit telemetry is readable but the spacecraft is obscured."
+    },
+    {
+      "path": "outputs/v0.4.0/qa/lunar-frame-approach.jpg",
+      "reason": "Flight paused overlay blurs the lunar approach scene. Use unpaused lunar-capture-burn.jpg instead."
+    },
+    {
+      "path": "outputs/v0.4.0/europa-lander-descent.jpg",
+      "reason": "Visible old author credit Original game by Nikita. It is also explicitly a local rehearsal, not Earth-to-Europa transfer."
+    },
+    {
+      "path": "outputs/v0.4.0/qa/integrated-low-descent.jpg",
+      "reason": "Despite the filename, the visible frame is already Touchdown confirmed, not an active descent. The later EVA/flag capture is clearer for a success slide."
+    },
+    {
+      "path": "outputs/v0.4.0/qa/rollout-start.jpg",
+      "reason": "Superseded for presentation by the clean v0.4.2 rollout frame; older frame has a large Rollout / 3 overlay."
+    },
+    {
+      "path": "outputs/v0.4.0/renderer-finale-fixture.jpg",
+      "reason": "Explicit renderer fixture. Do not use as evidence of an ordinary successful gameplay mission."
+    },
+    {
+      "path": "outputs/v0.4.0/renderer-dust-fixture.jpg",
+      "reason": "Explicit renderer fixture. Do not use as gameplay evidence."
+    }
+  ],
+  "languageNote": "For the Ukrainian PDF, translate the external slide caption/narration while retaining authentic English interface text inside recorded game screenshots."
+}

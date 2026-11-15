@@ -1,0 +1,95 @@
+.rollout {
+  position: fixed; inset: 0; box-sizing: border-box; width: 100vw; max-width: none;
+  height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0;
+  background: #000; color: #f5f5f7; overflow: hidden;
+  font: 13px/1.45 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+.rollout:not([open]) { display: none; }
+.rollout::backdrop { background: #000; }
+.rollout *, .rollout *::before, .rollout *::after { box-sizing: border-box; }
+.rollout .rollout-scene { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.rollout button {
+  min-height: 44px; padding: 9px 15px; border: 1px solid #45454b; border-radius: 7px;
+  background: #0a0a0beF; color: #f5f5f7; font: inherit; cursor: pointer;
+}
+.rollout button:hover { border-color: #a1a1a8; }
+.rollout button:focus-visible { outline: 3px solid #9bcaff; outline-offset: 3px; }
+.rollout button:disabled { color: #85858c; border-color: #303034; cursor: default; background: #17171a; }
+.rollout .rollout-header {
+  position: absolute; inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: max(22px, env(safe-area-inset-top)) max(26px, env(safe-area-inset-right)) 22px max(26px, env(safe-area-inset-left));
+  background: linear-gradient(#000e, #0008 70%, transparent);
+}
+.rollout .rollout-eyebrow { color: #b3b5bc; font-size: 11px; }
+.rollout h1 { margin: 4px 0 0; font-size: 25px; line-height: 1.1; font-weight: 550; letter-spacing: -.7px; }
+.rollout .rollout-instruments {
+  position: absolute; top: 115px; left: max(26px, env(safe-area-inset-left));
+  display: grid; gap: 16px; padding: 16px 20px; min-width: 183px;
+  background: #000c; border-left: 1px solid #45454b; font-variant-numeric: tabular-nums;
+}
+.rollout-instruments > div { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 6px; }
+.rollout .rollout-instruments span { flex-basis: 100%; color: #a1a1a8; font-size: 11px; }
+.rollout .rollout-instruments output { font-size: 28px; letter-spacing: -.6px; }
+.rollout .rollout-instruments small { color: #a1a1a8; font-size: 11px; }
+.rollout .rollout-alignment output { font-size: 16px; margin-top: 4px; letter-spacing: 0; }
+.rollout .rollout-alignment small { flex-basis: 100%; }
+.rollout.is-aligned .rollout-alignment output { color: #a8d8bd; }
+.rollout .rollout-view-tools { position: absolute; top: 115px; right: max(26px, env(safe-area-inset-right)); display: flex; gap: 8px; }
+.rollout .rollout-command {
+  position: absolute; inset: auto 0 0; padding: 18px max(26px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(26px, env(safe-area-inset-left));
+  background: linear-gradient(transparent, #000e 16%, #000 70%);
+}
+.rollout .rollout-command p { margin: 3px 0 8px; }
+.rollout .rollout-command [data-status] { font-size: 14px; }
+.rollout .rollout-help { color: #b3b5bc; font-size: 12px; }
+.rollout .rollout-touch { display: flex; gap: 7px; margin: 12px 0; }
+.rollout .rollout-touch button { min-width: 68px; min-height: 52px; touch-action: none; user-select: none; -webkit-user-select: none; font-size: 19px; }
+.rollout .rollout-touch span { display: block; font-size: 10px; }
+.rollout .rollout-touch .is-held { background: #f5f5f7; color: #000; border-color: #f5f5f7; }
+.rollout .rollout-handoff { display: flex; justify-content: space-between; gap: 16px; align-items: center; border-top: 1px solid #303034; padding-top: 12px; }
+.rollout .rollout-handoff > span { color: #a1a1a8; font-size: 12px; }
+.rollout [data-ready]:enabled { background: #f5f5f7; color: #000; border-color: #f5f5f7; font-weight: 600; }
+.rollout .rollout-model { display: block; color: #85858c; font-size: 10px; margin-top: 9px; }
+@media (max-width: 700px) {
+  .rollout .rollout-header { padding: max(12px, env(safe-area-inset-top)) 12px 16px; gap: 8px; }
+  .rollout h1 { font-size: 20px; }
+  .rollout .rollout-eyebrow { font-size: 9px; }
+  .rollout .rollout-header button { padding: 8px 10px; font-size: 12px; }
+  .rollout .rollout-instruments { top: 86px; left: 12px; right: 12px; min-width: 0; grid-template-columns: repeat(3, 1fr); gap: 6px; padding: 10px 12px; }
+  .rollout .rollout-instruments output { font-size: 22px; }
+  .rollout .rollout-instruments span { font-size: 10px; }
+  .rollout .rollout-alignment { grid-column: 1 / -1; gap: 8px; }
+  .rollout .rollout-alignment span, .rollout .rollout-alignment small { flex-basis: auto; }
+  .rollout .rollout-alignment output { font-size: 13px; margin: 0; }
+  .rollout .rollout-view-tools { top: 204px; right: 12px; gap: 5px; }
+  .rollout .rollout-view-tools button { font-size: 11px; padding: 7px 10px; }
+  .rollout .rollout-command { padding: 16px 12px max(10px, env(safe-area-inset-bottom)); }
+  .rollout .rollout-command [data-status] { font-size: 12px; }
+  .rollout .rollout-help { font-size: 10px; }
+  .rollout .rollout-touch { gap: 5px; }
+  .rollout .rollout-touch button { min-width: 0; flex: 1; padding: 5px; }
+  .rollout .rollout-handoff { gap: 8px; }
+  .rollout .rollout-handoff > span { font-size: 10px; max-width: 145px; }
+  .rollout .rollout-handoff button { font-size: 11px; }
+  .rollout .rollout-model { font-size: 9px; }
+}
+@media (max-height: 600px) and (min-width: 701px) {
+  .rollout .rollout-instruments { top: 85px; gap: 6px; }
+  .rollout .rollout-instruments output { font-size: 22px; }
+  .rollout .rollout-command { padding-top: 6px; }
+  .rollout .rollout-touch { position: absolute; bottom: 90px; right: 26px; }
+  .rollout .rollout-help { max-width: 48%; }
+}
+@media (max-height: 550px) and (max-width: 700px) {
+  .rollout .rollout-instruments { top: 70px; right: auto; width: 180px; grid-template-columns: 1fr 1fr; padding: 6px 8px; }
+  .rollout .rollout-instruments > div:nth-child(3) { grid-column: 1 / -1; }
+  .rollout .rollout-instruments output { font-size: 17px; }
+  .rollout .rollout-alignment { display: none; }
+  .rollout .rollout-view-tools { top: 72px; }
+  .rollout .rollout-help, .rollout .rollout-model { display: none; }
+  .rollout .rollout-touch { margin: 5px 0; }
+  .rollout .rollout-touch button { min-height: 44px; }
+  .rollout .rollout-handoff { padding-top: 5px; }
+}
+@media (prefers-reduced-motion: reduce) { .rollout *, .rollout *::before, .rollout *::after { animation: none !important; transition: none !important; } }

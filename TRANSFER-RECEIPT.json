@@ -1,0 +1,28 @@
+{
+  "project": "Kinetic Core 2026",
+  "author": "Mykyta Borisov",
+  "githubOwner": "ropotropo",
+  "repository": "https://github.com/ropotropo/Kinetic-Core-2026",
+  "gameURL": "https://ropotropo.github.io/Kinetic-Core-2026/",
+  "sourceVersion": "0.4.4",
+  "sourceSnapshot": "b77208515f0398a0a57263db7c6b45641fb26bdc",
+  "presentationSnapshot": "1a197ec56be4c62e6680f0924db559e1da61289e",
+  "historyIncluded": false,
+  "licensesPreserved": true,
+  "note": "Complete source snapshot plus latest presentation directory. Original repository history is not modified. Native preview binaries are transferred unchanged and retain their original verification limits.",
+  "modifications": [
+    "README and distribution URLs point to Kinetic-Core-2026",
+    "AUTHORS and project instructions identify only Mykyta Borisov as game author",
+    "Prior hosting project association removed; static configuration retained",
+    "Presentation metadata personal absolute paths sanitized; presentation archive and manifests refreshed",
+    "Latest presentation directory overlaid without changing game logic",
+    "Source history begins with an author-owned snapshot; original history remains in original repository"
+  ],
+  "validation": {
+    "numericalTests": 86,
+    "passed": 86,
+    "productionBuild": true,
+    "portableBuild": true,
+    "nativeBinaries": "transferred unchanged; not installed or acceptance-tested during migration"
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "9178ff2b-1625-47fb-b5ee-2ab2e9505636",
+    "operation": "import-screenshot",
+    "phase": "committed",
+    "importedAtUTC": "2026-11-15T20:14:09.573Z",
+    "screenshotId": "docking",
+    "destination": "screenshots/docking-31d281f6.jpg",
+    "contentFile": "presentation-content.json",
+    "status": "reference",
+    "provenance": {
+      "capturedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+      "resolvedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+      "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9",
+      "width": 1728,
+      "height": 997,
+      "format": "jpeg",
+      "byteLength": 126204,
+      "importedAtUTC": "2026-11-15T20:14:09.573Z",
+      "dateUTC": "2026-11-15T20:14:09.573Z",
+      "dateMeaning": "UTC intake time; actual capture time is not inferred",
+      "capturedAtUTC": null,
+      "sourceModifiedAtUTC": "2026-11-15T19:22:20.895Z",
+      "build": "v0.4 recorded QA",
+      "commit": null,
+      "note": "Unchanged reference capture. Historical UI author label predates correction; replace with the final Mykyta Borisov build.",
+      "status": "reference",
+      "originalBytesPreserved": true
+    },
+    "previousSlot": {
+      "id": "docking",
+      "label": "Manual docking cockpit and live instruments",
+      "preferredFile": "screenshots/docking.jpg",
+      "purpose": "Show the separate terminal docking exercise, cockpit camera and actual range/alignment/RCS readings.",
+      "captureInstructions": "Enter the normal docking exercise. Use ordinary RCS controls and select Cockpit. Capture a readable approach frame with range, closing speed, lateral offset and reserve visible. Record powered-assist states. A separate soft-capture image may be retained as supporting evidence; do not quote secured post-capture zero values as approach measurements.",
+      "status": "reference",
+      "source": "docs/media/v04-docking-cockpit.jpg",
+      "fit": "contain",
+      "alt": "Existing v0.4 reference capture of the docking cockpit with camera controls and live approach instruments."
+    },
+    "currentSlot": {
+      "id": "docking",
+      "label": "Manual docking cockpit and live instruments",
+      "preferredFile": "screenshots/docking-31d281f6.jpg",
+      "purpose": "Show the separate terminal docking exercise, cockpit camera and actual range/alignment/RCS readings.",
+      "captureInstructions": "Enter the normal docking exercise. Use ordinary RCS controls and select Cockpit. Capture a readable approach frame with range, closing speed, lateral offset and reserve visible. Record powered-assist states. A separate soft-capture image may be retained as supporting evidence; do not quote secured post-capture zero values as approach measurements.",
+      "status": "reference",
+      "source": "screenshots/docking-31d281f6.jpg",
+      "fit": "contain",
+      "alt": "Screenshot: Manual docking cockpit and live instruments",
+      "provenance": {
+        "capturedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+        "resolvedSource": "outputs/v0.4.0/qa/docking-cockpit.jpg",
+        "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9",
+        "width": 1728,
+        "height": 997,
+        "format": "jpeg",
+        "byteLength": 126204,
+        "importedAtUTC": "2026-11-15T20:14:09.573Z",
+        "dateUTC": "2026-11-15T20:14:09.573Z",
+        "dateMeaning": "UTC intake time; actual capture time is not inferred",
+        "capturedAtUTC": null,
+        "sourceModifiedAtUTC": "2026-11-15T19:22:20.895Z",
+        "build": "v0.4 recorded QA",
+        "commit": null,
+        "note": "Unchanged reference capture. Historical UI author label predates correction; replace with the final Mykyta Borisov build.",
+        "status": "reference",
+        "originalBytesPreserved": true
+      }
+    }
+  }
+]

@@ -1,0 +1,42 @@
+plugins { id 'com.android.application' }
+
+def gamePackage = new groovy.json.JsonSlurper().parse(rootProject.file('../package.json'))
+def versionParts = gamePackage.version.tokenize('.').collect { it.toInteger() }
+
+def bundledGame = layout.buildDirectory.dir('generated/gameAssets')
+def syncGame = tasks.register('syncGame', Sync) {
+    from(rootProject.file('../dist')) { exclude 'Kineti-Core.html' }
+    from(rootProject.file('../AUTHORS.md'))
+    from(rootProject.file('ANDROID-NOTICES.txt'))
+    into(bundledGame.map { it.dir('game') })
+    doFirst {
+        if (!rootProject.file('../dist/index.html').isFile()) {
+            throw new GradleException('Run npm run build in the repository root first.')
+        }
+    }
+}
+
+android {
+    namespace 'ua.mykyta.kineticcore'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
+    defaultConfig {
+        applicationId 'ua.mykyta.kineticcore'
+        minSdk 26
+        targetSdk 35
+        versionCode versionParts[0] * 10000 + versionParts[1] * 100 + versionParts[2]
+        versionName gamePackage.version
+    }
+    sourceSets.main.assets.srcDir(bundledGame)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildTypes {
+        debug { debuggable false }
+        release { minifyEnabled false }
+    }
+}
+tasks.named('preBuild').configure { dependsOn syncGame }
+
+dependencies { implementation 'androidx.webkit:webkit:1.12.1' }

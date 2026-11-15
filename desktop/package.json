@@ -1,0 +1,60 @@
+{
+  "name": "kinetic-core-desktop",
+  "version": "0.4.4",
+  "private": true,
+  "description": "Kinetic Core spaceflight game by Mykyta Borisov",
+  "author": "Mykyta Borisov",
+  "main": "main.cjs",
+  "scripts": {
+    "stage": "node stage.mjs",
+    "start": "electron .",
+    "package:windows": "npm run stage && electron-builder --win nsis --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "45.3.2",
+    "electron-builder": "26.18.0",
+    "resedit": "3.1.1"
+  },
+  "build": {
+    "appId": "ua.mykyta.kineticcore",
+    "productName": "Kinetic Core",
+    "copyright": "Copyright \u00a9 Mykyta Borisov",
+    "asar": true,
+    "directories": {
+      "output": "release",
+      "buildResources": "resources"
+    },
+    "files": [
+      "main.cjs",
+      "game/**/*",
+      "resources/icon.png",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "resources/icon.ico",
+      "signAndEditExecutable": false,
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "artifactName": "Kinetic-Core-${version}-Windows-x64-Setup.${ext}",
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": false,
+      "packElevateHelper": false,
+      "createDesktopShortcut": true,
+      "shortcutName": "Kinetic Core",
+      "deleteAppDataOnUninstall": false,
+      "installerIcon": "resources/icon.ico",
+      "uninstallerIcon": "resources/icon.ico"
+    },
+    "afterPack": "after-pack.cjs"
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Approved Kinetic Core / KC vector paths; Created by Mykyta Borisov. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <group android:translateX="13.7" android:translateY="31.6" android:scaleX="0.13" android:scaleY="0.13">
+        <path android:fillColor="#FFFFFF" android:pathData="M34,40 H118 V148 L260,40 H366 L198,184 L365,304 H252 L118,196 V304 H34 Z" />
+        <path android:fillColor="#FFFFFF" android:pathData="M607,40 H476 C377,40 321,91 321,172 C321,255 377,304 476,304 H574 L616,234 H479 C423,234 400,212 400,172 C400,133 423,110 479,110 H572 Z" />
+    </group>
+</vector>

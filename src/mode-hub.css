@@ -1,0 +1,75 @@
+/* One discoverable manifest for routes, training and exploration. */
+.mode-hub-trigger { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 36px; padding: 8px 11px; font: 500 12px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #f5f5f7; border: 1px solid #55555e; border-radius: 7px; background: #17171b; cursor: pointer; white-space: nowrap; }
+.mode-hub-trigger::after { content: '⌄'; font-size: 12px; color: #aaaab6; }
+.mode-hub-trigger:hover { background: #303037; border-color: #92929c; }
+.mode-hub-trigger:focus-visible { outline: 2px solid #9bcaff; outline-offset: 3px; }
+.mode-hub-header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.mode-hub-dialog { width: min(720px, calc(100vw - 32px)); max-height: 88dvh; padding: 0; margin: auto; overflow: hidden; color: #f5f5f7; background: #08080a; border: 1px solid #5a5a65; border-radius: 16px; box-shadow: 0 35px 140px #000d; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.mode-hub-dialog[open] { display: flex; flex-direction: column; }
+.mode-hub-dialog::backdrop { background: #000c; backdrop-filter: blur(8px); }
+.mode-hub-dialog *, .mode-hub-dialog *::before, .mode-hub-dialog *::after { box-sizing: border-box; }
+.mh-header { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 26px 19px; flex-shrink: 0; }
+.mh-header p { color: #9999a5; font-size: 11px; margin: 0 0 8px; }
+.mh-header h2 { color: #f5f5f7; font-size: 28px; line-height: 1.1; letter-spacing: -.04em; font-weight: 500; margin: 0; }
+.mh-close { display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; border: 1px solid #4a4a53; border-radius: 50%; background: transparent; color: #f5f5f7; font-size: 22px; font-weight: 300; cursor: pointer; }
+.mh-intro { color: #b0b0bb; padding: 0 26px 18px; margin: 0; font-size: 12px; line-height: 1.7; flex-shrink: 0; }
+.mh-modes { overflow-y: auto; overscroll-behavior: contain; min-height: 0; padding: 0 14px 12px; scrollbar-width: thin; scrollbar-color: #55555f transparent; }
+.mh-mode { display: grid; grid-template-columns: 28px minmax(0, 1fr) 45px; align-items: center; gap: 15px; width: 100%; min-height: 72px; padding: 14px 13px; text-align: left; background: transparent; color: #ededf4; border: 1px solid transparent; border-bottom-color: #24242b; border-radius: 5px; cursor: pointer; font: inherit; }
+.mh-mode:hover { border-color: #4a4a56; background: #17171d; }
+.mh-mode.is-current { background: #18181e; border-left-color: #b9d9ff; }
+.mh-mode:focus-visible, .mh-close:focus-visible { outline: 2px solid #9bcaff; outline-offset: -2px; }
+.mh-symbol { display: block; width: 27px; height: 27px; color: #c7cbd4; }
+.mh-mode.is-current .mh-symbol { color: #b9d9ff; }
+.mh-mode-copy strong { display: block; font-size: 14px; font-weight: 500; line-height: 1.4; margin-bottom: 4px; }
+.mh-mode-copy small { display: block; color: #a6a6b2; font-size: 11px; line-height: 1.65; }
+.mh-current { visibility: hidden; color: #b9d9ff; font-size: 10px; text-align: right; }
+.is-current .mh-current { visibility: visible; }
+.mh-footer { flex-shrink: 0; padding: 14px 26px 19px; border-top: 1px solid #303037; color: #a0a0ad; font-size: 11px; line-height: 1.7; }
+@media (max-width: 650px) {
+  .app-header .header-actions:has(.mode-hub-trigger) { gap: 8px; }
+  .app-header .header-actions:has(.mode-hub-trigger) #guide-button { font-size: 0; }
+  .app-header .header-actions:has(.mode-hub-trigger) #guide-button > span { font-size: 11px; width: 21px; height: 21px; margin: 0; }
+  .app-header .header-actions .mode-hub-trigger { min-height: 35px; padding: 8px 9px; font-size: 11px; gap: 5px; }
+  .mode-hub-header-actions { gap: 6px; }
+  .mode-hub-header-actions button { min-height: 36px; padding: 8px 9px; font-size: 10px; }
+  .solar-explorer > header { gap: 10px; }
+  .solar-explorer > header h2 { font-size: 22px; }
+  .mode-hub-dialog { width: calc(100vw - 24px); max-height: 91dvh; border-radius: 13px; }
+  .mh-header { padding: 22px 21px 17px; }
+  .mh-header h2 { font-size: 26px; }
+  .mh-intro { padding: 0 21px 16px; font-size: 12px; }
+  .mh-modes { padding: 0 9px 10px; }
+  .mh-mode { gap: 12px; padding: 14px 11px; grid-template-columns: 24px minmax(0, 1fr); min-height: 83px; }
+  .mh-symbol { width: 24px; height: 24px; }
+  .mh-mode-copy strong { font-size: 14px; }
+  .mh-mode-copy small { font-size: 11px; }
+  .mh-current { display: none; }
+  .mh-footer { padding: 14px 21px 18px; font-size: 10px; }
+}
+@media (max-width: 390px) {
+  .rw-header-actions:has(.mode-hub-trigger) { display: grid; grid-template-columns: auto auto; gap: 5px; }
+  .rw-header-actions:has(.mode-hub-trigger) .rw-flight { grid-column: 1 / -1; grid-row: 1; }
+  .rw-header-actions .mode-hub-trigger { min-height: 30px; font-size: 10px; }
+}
+@media (max-width: 370px) {
+  .app-header .header-actions:has(.mode-hub-trigger) { gap: 5px; }
+  .app-header .header-actions:has(.mode-hub-trigger) #guide-button { display: none; }
+  .app-header .header-actions:has(.mode-hub-trigger) .icon-button { width: 31px; min-width: 31px; height: 33px; }
+  .app-header .header-actions .mode-hub-trigger { font-size: 10px; padding: 7px 8px; }
+  .mh-header { padding-left: 17px; padding-right: 17px; }
+  .mh-header h2 { font-size: 24px; }
+  .mh-intro, .mh-footer { padding-left: 17px; padding-right: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mode-hub-dialog::backdrop { backdrop-filter: none; }
+  .mode-hub-dialog *, .mode-hub-dialog *::before, .mode-hub-dialog *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* Quiet navigation uses the same 7 px geometry as other utility actions. */
+.mode-hub-trigger { min-height: 40px; border-radius: var(--radius-control, 7px); }
+.mh-close { width: 44px; height: 44px; border-radius: var(--radius-control, 7px); }
+@media (max-width: 760px) {
+  body .mode-hub-trigger, body .mode-hub-header-actions button,
+  body .rw-header-actions .mode-hub-trigger,
+  body .app-header .header-actions .mode-hub-trigger { min-height: 44px; padding: 9px 11px; font-size: 11px; }
+}

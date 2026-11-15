@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="400" viewBox="0 0 1600 400" role="img" aria-labelledby="title">
+  <title id="title">Kinetic Core</title>
+  <g transform="translate(32 108) scale(.54)" fill="#ffffff">
+    <path d="M34 40 H118 V148 L260 40 H366 L198 184 L365 304 H252 L118 196 V304 H34 Z"/>
+    <path d="M607 40 H476 C377 40 321 91 321 172 C321 255 377 304 476 304 H574 L616 234 H479 C423 234 400 212 400 172 C400 133 423 110 479 110 H572 Z"/>
+  </g>
+  <text x="430" y="250" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="144" font-weight="600" letter-spacing="-5">Kinetic Core</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "retrievedUTC": "2026-11-15T18:43:39.832386+00:00",
+  "sources": [
+    {
+      "source": "https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004720/lroc_color_16bit_srgb_4k.tif",
+      "sourceFile": "moon-color-4k.tif",
+      "sourceSha256": "9731fa8af425b6c2f88f277ecca82bf8c603f3743894f64ed7b25c5bfefa22ff",
+      "file": "celestial-moon-hd.jpg",
+      "sha256": "56cc0117ac7aa66505c6cdb22c21b1d32dc4ee9030e3c23cd09fe96709c9ca54",
+      "bytes": 2980142,
+      "width": 4096,
+      "height": 2048,
+      "processing": "NASA LROC sRGB 4K TIFF converted to 8-bit RGB JPEG quality94; no synthetic detail."
+    },
+    {
+      "source": "https://planetarymaps.usgs.gov/mosaic/Europa_Voyager_GalileoSSI_global_mosaic_500m.tif",
+      "sourceFile": "europa-global-500m.tif",
+      "sourceSha256": "a323f0c9ccb47d5af9902ea8297fe81f9a9708795645b80801f103c3f7c9a624",
+      "file": "celestial-europa-hd.jpg",
+      "sha256": "bd29fd38f877ac788c6b3fa386aac1be9deadc8504aa958f5a3b24971a8c97e9",
+      "bytes": 2935905,
+      "width": 4096,
+      "height": 2048,
+      "processing": "USGS Galileo/Voyager SimpleCylindrical 500m global monochrome mosaic, resampled19631x9816 to4096x2048; mild display-level contrast and warm-neutral tint; zero/nodata pixels filled flat median, not reconstructed. This is a monochrome visualization, not measured true color."
+    }
+  ],
+  "europaNoDataFraction": 0.04253506660461426,
+  "europaGeoCitation": "SimpleCylindrical Europa|GCS Name = GCS_Europa|Datum = D_Europa|Ellipsoid = Europa|Primem = Reference_Meridian||",
+  "sourceCredit": "NASA/GSFC/ASU/LROC and NASA/JPL/USGS; media usage and data-source acknowledgements retained."
+}

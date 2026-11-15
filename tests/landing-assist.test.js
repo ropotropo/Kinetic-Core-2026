@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {createLanding,stepLanding} from '../src/landing.js';import {landingAssistInput} from '../src/landing-assist.js';
+test('powered assistance lands Moon and Europa through finite engine and torque commands',()=>{for(const id of ['moon','europa']){const s=createLanding(id);s.position[0]=110;s.velocity[0]=.4;for(let i=0;i<12000&&s.phase==='landing';i++)stepLanding(s,landingAssistInput(s),.05);assert.equal(s.phase,'landed',s.failure);assert.ok(s.fuel<s.initialFuel&&s.fuel>0);assert.ok(Math.abs(s.impact.offset)<=25);}});
+test('assistance respects engine ceiling and cannot brake with zero propellant',()=>{const s=createLanding('europa');assert.equal(landingAssistInput(s,0).throttle,0);s.fuel=0;s.fuelUsed=s.initialFuel;const vy=s.velocity[1];stepLanding(s,landingAssistInput(s),1);assert.equal(s.thrust,0);assert.ok(s.velocity[1]<vy);});

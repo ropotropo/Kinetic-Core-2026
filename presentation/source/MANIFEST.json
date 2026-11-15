@@ -1,0 +1,408 @@
+{
+  "author": "Mykyta Borisov",
+  "project": "Kinetic Core",
+  "gameReferenceCommit": "c96a5bcac98e2f8e116c15945c346ef0be07f046",
+  "files": [
+    {
+      "file": ".gitattributes",
+      "sha256": "547f59603028195ff9f8a87d04c4651551e8bd0d68f075257dfd549cd846b25b",
+      "bytes": 13
+    },
+    {
+      "file": "Kinetic-Core-EN.pdf",
+      "sha256": "d5dc3f70c35c390731a2a574e742bbf7212b776461e6e4d97ac788048f5bf0e4",
+      "bytes": 5270554
+    },
+    {
+      "file": "Kinetic-Core-UA.pdf",
+      "sha256": "b388a0ad6af8609eeb4ecbadc0f72fd6920c4d6b623d48c3c558d21ced663ca1",
+      "bytes": 5282659
+    },
+    {
+      "file": "README.md",
+      "sha256": "89b22da4ab17b5141844ae087d992c49a815317fea1ea2f3e44315fcd4efa859",
+      "bytes": 2769
+    },
+    {
+      "file": "assets/approach.jpg",
+      "sha256": "3e51936a2ecb3fb116ffaf7ad5ff51ae84845a4bdb29c1275915b34823e17988",
+      "bytes": 100619
+    },
+    {
+      "file": "assets/builder.jpg",
+      "sha256": "557dad61f7dfa2c7a35a6c81a09a6d72318bc0f4347737f146a71374208d5f9b",
+      "bytes": 70188
+    },
+    {
+      "file": "assets/descent.jpg",
+      "sha256": "630b2428768a4d1e18e852308684a3175e4b959ad9753d7a743523651f7b452c",
+      "bytes": 97461
+    },
+    {
+      "file": "assets/docking.jpg",
+      "sha256": "5069f78343462f335f3702e3113a865a3dab6c935d23d0487fea74be8fd94833",
+      "bytes": 105159
+    },
+    {
+      "file": "assets/hero.png",
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915",
+      "bytes": 2151188
+    },
+    {
+      "file": "assets/logo.png",
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061",
+      "bytes": 1206586
+    },
+    {
+      "file": "assets/planner.jpg",
+      "sha256": "63bbf75ec07fb601f2d7a45466b35d87a88b4b842716f56096675e387318ec7b",
+      "bytes": 69798
+    },
+    {
+      "file": "assets/rollout.jpg",
+      "sha256": "043a7e94a258551e062fc0fba6f17ac02933390a69cf0e277400fe893c424674",
+      "bytes": 72390
+    },
+    {
+      "file": "assets/success.jpg",
+      "sha256": "ca63b5d0622d396fdfd3c0d513362373e126d50635c7f398a297c96d52836805",
+      "bytes": 115641
+    },
+    {
+      "file": "design-kit/DESIGN-SYSTEM.md",
+      "sha256": "b2bd255f3ebf301dc88f592c790bbc54235633936bf2986b3fc3faa00a1f2099",
+      "bytes": 21906
+    },
+    {
+      "file": "design-kit/README.md",
+      "sha256": "fc689ce00b5ee72c94abe125a184f6fedb4cc2b74014a06a51f587683dc68550",
+      "bytes": 6609
+    },
+    {
+      "file": "design-kit/SCREENSHOT-PLAN.md",
+      "sha256": "5eb38f63a198d9dbcaa7f4a11f56d9a86fec492a0b0619ea9ca324953211e394",
+      "bytes": 11672
+    },
+    {
+      "file": "design-kit/asset-journal.json",
+      "sha256": "6c35e0a6697bd63cc697433427a3bce42f0d72c792671b86cfa94d8ef85fd27e",
+      "bytes": 3832
+    },
+    {
+      "file": "design-kit/assets/mykyta-anamorphic-portrait-v5.png",
+      "sha256": "cbb7f33b48025522324f16f3096a6e3a68e5669a3170fd7087e31425c25e46f8",
+      "bytes": 2265655
+    },
+    {
+      "file": "design-kit/assets/mykyta-anamorphic-shadowline-v5.png",
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915",
+      "bytes": 2151188
+    },
+    {
+      "file": "design-kit/assets/mykyta-anamorphic-sunlit-v5.png",
+      "sha256": "a1a3a155cef47090577459bbde2c6391546c96a6909cf7dcced84aa662d05ffc",
+      "bytes": 2123897
+    },
+    {
+      "file": "design-kit/branding/README.md",
+      "sha256": "c51202670c145862a7fed22ff8c2bd1e986601edbc21a5f33270a37485af359b",
+      "bytes": 3707
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-flag-3x5.png",
+      "sha256": "c72b1b781d9f647a67300ce96b27e78a23b254311cf14f3092ce356cdfa54b95",
+      "bytes": 236779
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-flag-3x5.svg",
+      "sha256": "93d04e6674209a38dc56588ca7a5534de90c949699bea1d6509a6169a2c0fdcb",
+      "bytes": 3041
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-horizontal-wordmark.svg",
+      "sha256": "fe835f3510898e2af060112ada719a2c11ad4022b48dc92ddc8e4c35a66b13c3",
+      "bytes": 682
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-kc-mark.png",
+      "sha256": "be2db230ba32a6229acfbb724099eaf5255298e2bb9bc1b2ffc7458a866ec7a7",
+      "bytes": 17563
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-kc-mark.svg",
+      "sha256": "0accb1123b056432677087be323e904a95800d1bd0b740aaca9160571bcff950",
+      "bytes": 441
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-mission-emblem-companion.svg",
+      "sha256": "d606ab33685fa84ed8f4f4d0f766de6afdfc26bacd36bce7079e083b8e974147",
+      "bytes": 2853
+    },
+    {
+      "file": "design-kit/branding/kinetic-core-mission-emblem.png",
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061",
+      "bytes": 1206586
+    },
+    {
+      "file": "design-kit/cover-fit.js",
+      "sha256": "5e9d6d9b3c5c6145b9783ca000a9daa207a3abe3d9bf9ede2ad646c950470a0e",
+      "bytes": 567
+    },
+    {
+      "file": "design-kit/covers-16x9.pptx",
+      "sha256": "266d5a4858a111a80a0ffd96218cf174072bde9e794b66a24885efc75e9535ce",
+      "bytes": 4082783
+    },
+    {
+      "file": "design-kit/covers/cover-portrait-2160x3240.png",
+      "sha256": "6a5da07b9a2312012d341158b2f1d7144f6be5f6df1c9e968043dd3b1ba950ec",
+      "bytes": 5466996
+    },
+    {
+      "file": "design-kit/covers/cover-portrait.html",
+      "sha256": "6227821f311819833f1b6a57e5604340dbebedf22b0ef148dfe539d29bdea9a4",
+      "bytes": 944
+    },
+    {
+      "file": "design-kit/covers/cover-shadowline-3840x2160.png",
+      "sha256": "497094bcc8e1cc42fc12ebc9f615ce5a3ff8b81390c14b869da46e43e833c274",
+      "bytes": 6304594
+    },
+    {
+      "file": "design-kit/covers/cover-shadowline.html",
+      "sha256": "2f61feacb76b39e7a242b7b4447fd924c4e57e50f9e4658b0612c8155c2e1415",
+      "bytes": 963
+    },
+    {
+      "file": "design-kit/covers/cover-sunlit-3840x2160.png",
+      "sha256": "35d9ae9b47488bec193400b3c0defd8ef2deff0967b37c7142fb73ce1a84c463",
+      "bytes": 6114888
+    },
+    {
+      "file": "design-kit/covers/cover-sunlit.html",
+      "sha256": "d788bae261ed0b7ba1c4661e1a5da130f88a8eb5695b0d1441adb7edbec2caad",
+      "bytes": 947
+    },
+    {
+      "file": "design-kit/deck-previews/slide-1.png",
+      "sha256": "6a5a9c9ab30a573db815a9f171e3518fc5f8fb0dadffd7b3ead1544c45236c8a",
+      "bytes": 700161
+    },
+    {
+      "file": "design-kit/deck-previews/slide-2.png",
+      "sha256": "ead982f638d90cb60ff4fe867054332f27926cacfc76b3951665eeb0af3b5d25",
+      "bytes": 109099
+    },
+    {
+      "file": "design-kit/deck-previews/slide-3.png",
+      "sha256": "cef919a40c417f5a22c4cc6819e0fa7fc3338b06710e604dbda411e60fa7bef5",
+      "bytes": 87017
+    },
+    {
+      "file": "design-kit/deck-previews/slide-4.png",
+      "sha256": "b01bc22cd1331696b47765b0f91a031cd337b1673a47aef6d6e3958dbb45e6e9",
+      "bytes": 131140
+    },
+    {
+      "file": "design-kit/deck-previews/slide-5.png",
+      "sha256": "ce94d217c72e264644a8fe2bb92378fb43735ceeeabc92232709d9f30174705c",
+      "bytes": 116782
+    },
+    {
+      "file": "design-kit/deck-previews/slide-6.png",
+      "sha256": "1356609460a9198d905dbc238e305cb74be4ba0a9f119dbdef6390f8028f0464",
+      "bytes": 85426
+    },
+    {
+      "file": "design-kit/deck-previews/slide-7.png",
+      "sha256": "1fb86dfb892580299b99045af3b74583f52fa1db7924f5c691ac6866ed268bdc",
+      "bytes": 139321
+    },
+    {
+      "file": "design-kit/deck.css",
+      "sha256": "0dcf5e6963ed93ab357bb9d2718ad60d74f21475b4995e8d885acc192d0912bb",
+      "bytes": 7551
+    },
+    {
+      "file": "design-kit/deck.html",
+      "sha256": "2c29cd8cfe03bf6770e1d605e211af22362a39eaf4807379b2bdf5006344010b",
+      "bytes": 3108
+    },
+    {
+      "file": "design-kit/deck.js",
+      "sha256": "0dfb9de0fe0aba114cd76c37a207134f9b1e75dd070e4bd242b65990d9d35151",
+      "bytes": 10570
+    },
+    {
+      "file": "design-kit/export-manifest.json",
+      "sha256": "9f8b11daed62247e4114243530d182b567e8366ea3bdfcbe95e14b94883c96b9",
+      "bytes": 5656
+    },
+    {
+      "file": "design-kit/image-prompts.json",
+      "sha256": "2ff5cc79932640e5d6d5b9a2b5011cfa8a12eb90cfa69988915ad295303ea35a",
+      "bytes": 13141
+    },
+    {
+      "file": "design-kit/index.html",
+      "sha256": "d0296cca1edd630822ea401b1362528ca4560ea31d2fa8417a24431999d21814",
+      "bytes": 13262
+    },
+    {
+      "file": "design-kit/kinetic-core-design-kit.zip",
+      "sha256": "324068b3d1d5f52e5ca46153d31b2a962ca3e1d5fb7213599fd6d43e4fd03c55",
+      "bytes": 35942734
+    },
+    {
+      "file": "design-kit/kinetic-core-presentation-draft.pptx",
+      "sha256": "1c0a82963e8f6046ce44e865b1ae340d4d2a157f3cd11035104759c69267dcce",
+      "bytes": 2570951
+    },
+    {
+      "file": "design-kit/masters.html",
+      "sha256": "4eac9c8b3907680c6702fc2840762e4841192eb001d3a991ca2245aa5fda9d98",
+      "bytes": 385
+    },
+    {
+      "file": "design-kit/masters.js",
+      "sha256": "5b73dbc3fe68f79e32b6169bb0be703d355cd75a7150c6a95b88429c1ca85760",
+      "bytes": 2130
+    },
+    {
+      "file": "design-kit/math-evidence.json",
+      "sha256": "33685e0f11224ec397b47d3f088f2119138fa6995695ce1cd7c4894c2bb3a17b",
+      "bytes": 30449
+    },
+    {
+      "file": "design-kit/poster-2x3.pptx",
+      "sha256": "c2d3aee29a2a4bf397e04aae8de60aade641cc4592d268683c24d92a9027cd49",
+      "bytes": 2135229
+    },
+    {
+      "file": "design-kit/presentation-content.js",
+      "sha256": "5921370fbb464270791088b11611a978f33139a3b26c86153227ceb76625b4c0",
+      "bytes": 18610
+    },
+    {
+      "file": "design-kit/presentation-content.json",
+      "sha256": "2ee0c96956b3c7a3cf3289da39966d503c2260765a87c68d30fe3f244e5e572e",
+      "bytes": 21837
+    },
+    {
+      "file": "design-kit/presentation.css",
+      "sha256": "1e046c9a977a5f627cb7633742236225127b7c5123f82208d18db6b5d682b252",
+      "bytes": 4964
+    },
+    {
+      "file": "design-kit/screenshots/builder.jpg",
+      "sha256": "557dad61f7dfa2c7a35a6c81a09a6d72318bc0f4347737f146a71374208d5f9b",
+      "bytes": 70188
+    },
+    {
+      "file": "design-kit/screenshots/docking-31d281f6.jpg",
+      "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9",
+      "bytes": 126204
+    },
+    {
+      "file": "design-kit/screenshots/earth-orbit.jpg",
+      "sha256": "419368cde6eec08e79567abef4ed656ea3199a7cd844bc76feb971233a69f7bb",
+      "bytes": 76894
+    },
+    {
+      "file": "design-kit/screenshots/europa.jpg",
+      "sha256": "8902796c22341606a8d8309b2101d2b6b21d34039eec61772e703efcdc130be6",
+      "bytes": 119399
+    },
+    {
+      "file": "design-kit/screenshots/moon-touchdown.jpg",
+      "sha256": "ca63b5d0622d396fdfd3c0d513362373e126d50635c7f398a297c96d52836805",
+      "bytes": 115641
+    },
+    {
+      "file": "design-kit/screenshots/overview.jpg",
+      "sha256": "63bbf75ec07fb601f2d7a45466b35d87a88b4b842716f56096675e387318ec7b",
+      "bytes": 69798
+    },
+    {
+      "file": "design-kit/sources.json",
+      "sha256": "2c048669f1a525e9eaab0669ac7e8753921273927a2d14f0bd7166a00ea5204d",
+      "bytes": 3830
+    },
+    {
+      "file": "design-kit/studio.css",
+      "sha256": "ba02cc19e7fb40bf793dd05595ed36946ed28308b1840d0571652952152a4538",
+      "bytes": 10282
+    },
+    {
+      "file": "design-kit/studio.js",
+      "sha256": "03b388f8c3ea3fa3583c84ba3fdff20f2b3c2ffd5d98e2ef141ba90d761ddadc",
+      "bytes": 3463
+    },
+    {
+      "file": "design-kit/tokens.json",
+      "sha256": "98c6ca4ed757691542a8f8d4c77baab184e0a7d8340dfefcbd8b434b45935ec8",
+      "bytes": 11141
+    },
+    {
+      "file": "design-kit/tools/README.md",
+      "sha256": "9b01717bbbfc8c987c53276a54f644dec25c68d54aa357eea4f49638ecbfd8ea",
+      "bytes": 4041
+    },
+    {
+      "file": "design-kit/tools/apply-draft.mjs",
+      "sha256": "1212c3b8b43a558e853dfb6cfd439207c2633cac9aff68fba014dc447461d538",
+      "bytes": 14843
+    },
+    {
+      "file": "design-kit/tools/build-presentation.mjs",
+      "sha256": "e20a73220e8dd474679ed3269f3017df4be1dc30c4f2508dde18eccce43ae002",
+      "bytes": 9142
+    },
+    {
+      "file": "design-kit/tools/finalize-presentation.mjs",
+      "sha256": "4a7b6eda09191036481024205a9b9655300b0f95d4df99316507bf29e2314ee2",
+      "bytes": 2667
+    },
+    {
+      "file": "design-kit/tools/intake-screenshot.mjs",
+      "sha256": "334251480bc22e8dd360ea096e6496f80080359e933da6bb3210d66316ad3dca",
+      "bytes": 14753
+    },
+    {
+      "file": "source/assets.json",
+      "sha256": "e122057cce3acb69efdf63524bfb6230444b34657b9e2e2926e393433e315805",
+      "bytes": 245
+    },
+    {
+      "file": "source/build_pdfs.py",
+      "sha256": "bc8088a83012b8fed87c9a10f7e7041ef9f34d7c823352b5958fe7ac566620a6",
+      "bytes": 5583
+    },
+    {
+      "file": "source/captures.json",
+      "sha256": "5d7e3d86be70f537815f99508f64360d79bdf5b747471cd404d45b5faca09bff",
+      "bytes": 14124
+    },
+    {
+      "file": "source/content.json",
+      "sha256": "85a01d263120bc39f1b74f01acd8b23677958a2fcbb76ab5c28ff0a329157f73",
+      "bytes": 26237
+    },
+    {
+      "file": "source/speaker-notes-en.md",
+      "sha256": "5bf918be87e99ee4930c036105f2baa1ed0dd1acf95e90253eb363034b082758",
+      "bytes": 3623
+    },
+    {
+      "file": "source/speaker-notes-uk.md",
+      "sha256": "1faba7dbc2835c5b774b197c671fd2abc53dc52082ffac9c8b7eeaf75539b298",
+      "bytes": 6656
+    }
+  ],
+  "presentationRevision": {
+    "slidesPerLanguage": 14,
+    "fullScreenCaptures": 7,
+    "rehearsalSeconds": 280,
+    "pdfHyperlinks": 0
+  }
+}

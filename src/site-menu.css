@@ -1,0 +1,140 @@
+/* Kinetic Core / optical bench. Scoped to the site navigation surfaces. */
+.site-menu-trigger,
+.site-menu-dialog,
+.site-biography {
+  color: #f5f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  color-scheme: dark;
+  box-sizing: border-box;
+}
+.site-menu-trigger {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.site-menu-trigger > span { display: grid; gap: 5px; width: 21px; opacity: .82; }
+.site-menu-trigger i { display: block; height: 1px; background: currentColor; border-radius: 1px; }
+.site-menu-trigger:hover > span { opacity: 1; }
+.site-menu-dialog {
+  position: fixed;
+  inset: 74px 24px auto auto;
+  width: min(440px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  max-height: calc(100dvh - 32px);
+  margin: 0;
+  padding: 24px 27px 8px;
+  overflow: auto;
+  background: #030304;
+  border: 1px solid #484850;
+  border-radius: 12px;
+  box-shadow: 0 25px 100px #000b;
+}
+.site-menu-dialog::backdrop { background: #000a; backdrop-filter: blur(6px); }
+.site-menu-heading,
+.site-biography-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.site-menu-heading { margin-bottom: 20px; }
+.site-menu-heading h2 { margin: 0; font-size: 19px; font-weight: 500; letter-spacing: -.025em; }
+.site-menu-dialog button,
+.site-biography button {
+  min-height: 44px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.site-menu-close {
+  flex: 0 0 44px;
+  width: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 24px !important;
+}
+.site-menu-dialog nav { display: grid; }
+.site-menu-dialog nav button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 23px 0;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #29292f;
+  text-align: left;
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: -.025em;
+}
+.site-menu-trigger:hover { background: transparent; }
+.site-menu-close:hover { background: #1c1c21; }
+.site-menu-dialog nav button:hover { color: #fff; border-top-color: #777781; }
+.site-menu-trigger:focus-visible,
+.site-menu-dialog button:focus-visible,
+.site-biography button:focus-visible,
+.site-biography h1:focus-visible { outline: 2px solid #9bcaff; outline-offset: 4px; }
+.site-biography[hidden] { display: none !important; }
+.site-biography {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  min-width: 0;
+  height: 100dvh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #000;
+}
+.site-biography-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  min-height: 76px;
+  padding: 12px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+  border-bottom: 1px solid #303034;
+  background: #000;
+}
+.site-menu-brand { font-size: 20px; font-weight: 600; letter-spacing: -.045em; }
+.site-biography-back { padding: 10px 16px; border: 0; border-radius: 7px; background: #f5f5f7; color: #000 !important; }
+.site-biography-content { display: grid; grid-template-columns: minmax(240px, 1fr) minmax(260px, 1fr); align-items: center; gap: clamp(40px, 7vw, 96px); max-width: 1160px; min-height: calc(100dvh - 76px); margin: 0 auto; padding: 42px 34px 48px; }
+.site-author-portrait { width: 100%; max-width: 470px; margin: 0; justify-self: center; }
+.site-author-image { display: flex; align-items: center; justify-content: center; width: 100%; height: min(66dvh, 620px); overflow: hidden; background: #000; }
+.site-author-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.site-author-copy { min-width: 0; padding-bottom: 20px; }
+.site-biography-content h1 { margin: 0; max-width: 9ch; font-size: clamp(43px, 5.5vw, 74px); line-height: 1.01; font-weight: 500; letter-spacing: -.045em; overflow-wrap: normal; }
+.site-author-country { display: flex; align-items: center; gap: 10px; margin: 22px 0 0; color: #d0d0db; font-size: 14px; line-height: 1.5; }
+.site-country-mark { display: inline-block; width: 21px; height: 14px; border: 1px solid #ffffff29; border-radius: 2px; background: linear-gradient(#3479d2 0 50%, #ead15b 50% 100%); }
+.site-author-biography { max-width: 37ch; margin: 24px 0 0; color: #d0d0d7; font-size: 17px; line-height: 1.8; }
+.site-author-attribution { max-width: 34ch; margin: 30px 0 0; padding-top: 23px; border-top: 1px solid #303034; font-size: 14px; line-height: 1.85; color: #aaaab7; }
+@media (max-width: 650px) {
+  .header-actions:has(.site-menu-trigger) { gap: 8px; }
+  .app-header:has(.site-menu-trigger) { height: auto; min-height: 70px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .site-menu-dialog { inset: 82px 12px auto auto; width: calc(100vw - 24px); max-width: calc(100vw - 24px); padding: 20px 23px 6px; }
+  .site-menu-heading { margin-bottom: 15px; }
+  .site-menu-dialog nav button { padding: 22px 0; font-size: 21px; }
+  .site-biography-header { flex-wrap: wrap; padding: 12px 16px; }
+  .site-biography-content { display: flex; flex-direction: column; align-items: stretch; gap: 32px; padding: 26px 22px 42px; }
+  .site-author-portrait { max-width: 470px; margin: 0 auto; }
+  .site-author-image { height: min(61dvh, 590px); }
+  .site-author-copy { padding-bottom: 0; }
+  .site-biography-content h1 { font-size: clamp(43px, 11vw, 63px); max-width: none; }
+  .site-author-country { margin-top: 18px; }
+  .site-author-attribution { max-width: none; margin-top: 25px; padding-top: 21px; font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-menu-trigger,
+  .site-menu-dialog button,
+  .site-biography button { transition: none; animation: none; }
+  .site-biography { scroll-behavior: auto; }
+  .site-menu-dialog::backdrop { backdrop-filter: none; }
+}
+
+.site-menu-heading h2,.site-menu-brand {display:flex;align-items:center;gap:13px;}
+.menu-kc {display:block;width:42px;flex:0 0 42px;}
+.menu-kc .kc-mark {max-height:26px;}

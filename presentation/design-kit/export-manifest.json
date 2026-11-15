@@ -1,0 +1,185 @@
+{
+  "project": "Kinetic Core",
+  "author": "Mykyta Borisov",
+  "revision": "v5",
+  "date": "2026-11-15",
+  "files": [
+    {
+      "path": "assets/mykyta-anamorphic-portrait-v5.png",
+      "bytes": 2265655,
+      "sha256": "cbb7f33b48025522324f16f3096a6e3a68e5669a3170fd7087e31425c25e46f8",
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "path": "assets/mykyta-anamorphic-shadowline-v5.png",
+      "bytes": 2151188,
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "assets/mykyta-anamorphic-sunlit-v5.png",
+      "bytes": 2123897,
+      "sha256": "a1a3a155cef47090577459bbde2c6391546c96a6909cf7dcced84aa662d05ffc",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "path": "branding/kinetic-core-flag-3x5.png",
+      "bytes": 236779,
+      "sha256": "c72b1b781d9f647a67300ce96b27e78a23b254311cf14f3092ce356cdfa54b95",
+      "width": 3000,
+      "height": 1800
+    },
+    {
+      "path": "branding/kinetic-core-flag-3x5.svg",
+      "bytes": 3041,
+      "sha256": "93d04e6674209a38dc56588ca7a5534de90c949699bea1d6509a6169a2c0fdcb"
+    },
+    {
+      "path": "branding/kinetic-core-horizontal-wordmark.svg",
+      "bytes": 682,
+      "sha256": "fe835f3510898e2af060112ada719a2c11ad4022b48dc92ddc8e4c35a66b13c3"
+    },
+    {
+      "path": "branding/kinetic-core-kc-mark.png",
+      "bytes": 17563,
+      "sha256": "be2db230ba32a6229acfbb724099eaf5255298e2bb9bc1b2ffc7458a866ec7a7",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "path": "branding/kinetic-core-kc-mark.svg",
+      "bytes": 441,
+      "sha256": "0accb1123b056432677087be323e904a95800d1bd0b740aaca9160571bcff950"
+    },
+    {
+      "path": "branding/kinetic-core-mission-emblem-companion.svg",
+      "bytes": 2853,
+      "sha256": "d606ab33685fa84ed8f4f4d0f766de6afdfc26bacd36bce7079e083b8e974147"
+    },
+    {
+      "path": "branding/kinetic-core-mission-emblem.png",
+      "bytes": 1206586,
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "path": "covers/cover-portrait-2160x3240.png",
+      "bytes": 5466996,
+      "sha256": "6a5da07b9a2312012d341158b2f1d7144f6be5f6df1c9e968043dd3b1ba950ec",
+      "width": 2160,
+      "height": 3240
+    },
+    {
+      "path": "covers/cover-shadowline-3840x2160.png",
+      "bytes": 6304594,
+      "sha256": "497094bcc8e1cc42fc12ebc9f615ce5a3ff8b81390c14b869da46e43e833c274",
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "path": "covers/cover-sunlit-3840x2160.png",
+      "bytes": 6114888,
+      "sha256": "35d9ae9b47488bec193400b3c0defd8ef2deff0967b37c7142fb73ce1a84c463",
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "path": "covers-16x9.pptx",
+      "bytes": 4082783,
+      "sha256": "266d5a4858a111a80a0ffd96218cf174072bde9e794b66a24885efc75e9535ce"
+    },
+    {
+      "path": "deck-previews/slide-1.png",
+      "bytes": 700161,
+      "sha256": "6a5a9c9ab30a573db815a9f171e3518fc5f8fb0dadffd7b3ead1544c45236c8a",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-2.png",
+      "bytes": 109099,
+      "sha256": "ead982f638d90cb60ff4fe867054332f27926cacfc76b3951665eeb0af3b5d25",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-3.png",
+      "bytes": 87017,
+      "sha256": "cef919a40c417f5a22c4cc6819e0fa7fc3338b06710e604dbda411e60fa7bef5",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-4.png",
+      "bytes": 131140,
+      "sha256": "b01bc22cd1331696b47765b0f91a031cd337b1673a47aef6d6e3958dbb45e6e9",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-5.png",
+      "bytes": 116782,
+      "sha256": "ce94d217c72e264644a8fe2bb92378fb43735ceeeabc92232709d9f30174705c",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-6.png",
+      "bytes": 85426,
+      "sha256": "1356609460a9198d905dbc238e305cb74be4ba0a9f119dbdef6390f8028f0464",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "deck-previews/slide-7.png",
+      "bytes": 139321,
+      "sha256": "1fb86dfb892580299b99045af3b74583f52fa1db7924f5c691ac6866ed268bdc",
+      "width": 960,
+      "height": 540
+    },
+    {
+      "path": "kinetic-core-presentation-draft.pptx",
+      "bytes": 2570951,
+      "sha256": "1c0a82963e8f6046ce44e865b1ae340d4d2a157f3cd11035104759c69267dcce"
+    },
+    {
+      "path": "poster-2x3.pptx",
+      "bytes": 2135229,
+      "sha256": "c2d3aee29a2a4bf397e04aae8de60aade641cc4592d268683c24d92a9027cd49"
+    },
+    {
+      "path": "screenshots/builder.jpg",
+      "bytes": 70188,
+      "sha256": "557dad61f7dfa2c7a35a6c81a09a6d72318bc0f4347737f146a71374208d5f9b"
+    },
+    {
+      "path": "screenshots/docking-31d281f6.jpg",
+      "bytes": 126204,
+      "sha256": "31d281f6c81297192629393dd893d4de788825a9a9a593b807fa798c385040c9"
+    },
+    {
+      "path": "screenshots/earth-orbit.jpg",
+      "bytes": 76894,
+      "sha256": "419368cde6eec08e79567abef4ed656ea3199a7cd844bc76feb971233a69f7bb"
+    },
+    {
+      "path": "screenshots/europa.jpg",
+      "bytes": 119399,
+      "sha256": "8902796c22341606a8d8309b2101d2b6b21d34039eec61772e703efcdc130be6"
+    },
+    {
+      "path": "screenshots/moon-touchdown.jpg",
+      "bytes": 115641,
+      "sha256": "ca63b5d0622d396fdfd3c0d513362373e126d50635c7f398a297c96d52836805"
+    },
+    {
+      "path": "screenshots/overview.jpg",
+      "bytes": 69798,
+      "sha256": "63bbf75ec07fb601f2d7a45466b35d87a88b4b842716f56096675e387318ec7b"
+    }
+  ]
+}
