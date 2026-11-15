@@ -1,0 +1,1561 @@
+{
+  "schema": "kinetic-core-video-validation.v2",
+  "createdAtUTC": "2026-11-15T21:37:05.858451+00:00",
+  "film": {
+    "file": "Kinetic-Core-Gameplay-v2.mp4",
+    "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+    "durationSeconds": 82.005,
+    "width": 1920,
+    "height": 1080,
+    "decodedFrameCount": 2460,
+    "containerFrameRate": "30/1",
+    "within90Seconds": true
+  },
+  "method": {
+    "version": "decoded-luma-cadence.v4-cumulative-anchor",
+    "scriptFile": "analyze_cadence.py",
+    "scriptSha256": "792a6c885e5d0ff072a8695f080ef8fbc3d8372f1701ae09d323ddadb72fafca",
+    "allFramesDecoded": true,
+    "timing": "Presentation timestamps independently read with ffprobe; duplicate-run duration uses actual PTS intervals.",
+    "analysisRaster": [
+      240,
+      180
+    ],
+    "scaling": "Area averaging to8-bit gray, after ROI crop.",
+    "rois": {
+      "fullGameplay": {
+        "x": 64,
+        "y": 0,
+        "width": 1792,
+        "height": 1008
+      },
+      "centralWorld": {
+        "x": 448,
+        "y": 170,
+        "width": 800,
+        "height": 600
+      },
+      "wholeFrame": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "nearDuplicateThreshold": {
+      "meanAbsoluteLumaDeltaLessThan": 0.03,
+      "fractionOfPixelsChangingByAtLeast2LumaLessThan": 0.001
+    },
+    "cumulativeAnchorGuard": "Also compare each near-duplicate frame to the fixed start of its run. Reset/break when cumulative change exceeds the same thresholds. This prevents tiny continuous drift from being counted as one literal freeze.",
+    "blackFrameThreshold": {
+      "meanLumaLessThan": 0.6,
+      "fractionOfPixelsAbove8LumaLessThan": 0.001
+    },
+    "shotEdgeTrimSeconds": 0.1,
+    "limits": "Near-duplicate/change rate is a visual-change proxy, not an instrumented game render-fps counter. Camera tracking, deliberate static UI, and settled landing result can legitimately repeat. Container30fps is not evidence of smoothness. Full-game and central-world crops exclude external captions; closeups can move the craft outside the central crop, so both are reported."
+  },
+  "activeFlightSummary": {
+    "segments": 9,
+    "fullGameplayWorstNearDuplicatePct": 77.227723,
+    "fullGameplayLongestNearStaticHoldSeconds": 0.266667,
+    "centralWorldLongestNearStaticHoldSeconds": 0.066666,
+    "fullGameplayLongestAnchoredNearStaticHoldSeconds": 0.133334,
+    "centralWorldLongestAnchoredNearStaticHoldSeconds": 0.033334
+  },
+  "blackGaps": {
+    "wholeFrameBlackIntervals": [],
+    "gameplayPlateBlackIntervals": [],
+    "operationalWholeFrameBlackIntervals3to79Seconds": [],
+    "operationalGameplayPlateBlackIntervals3to79Seconds": [],
+    "noOperationalBlackGaps": true
+  },
+  "segments": [
+    {
+      "id": 1,
+      "name": "Opening / sole author",
+      "classification": "intentional-title",
+      "startSeconds": 0.0,
+      "endSeconds": 3.0,
+      "source": "hero.png",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        0.1,
+        2.9
+      ],
+      "fullGameplayROI": {
+        "start": 0.1,
+        "end": 2.9,
+        "decodedTransitions": 84,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.12213,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 0.1,
+        "end": 2.9,
+        "decodedTransitions": 84,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.068021,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "Missionlaboratory:actualSolarSystemUIandJupiter/Europafocus",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 3.0,
+      "endSeconds": 7.466667,
+      "source": "footage-v2/solar-system.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        3.1,
+        7.366667
+      ],
+      "fullGameplayROI": {
+        "start": 3.1,
+        "end": 7.366667,
+        "decodedTransitions": 128,
+        "exactDuplicatePct": 0.78125,
+        "nearDuplicatePct": 98.4375,
+        "meaningfulChangesPerSecond": 0.46875,
+        "medianAdjacentLumaMAE": 0.000139,
+        "longestNearStaticHoldSeconds": 2.133333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 4.5,
+            "end": 6.633333,
+            "seconds": 2.133333
+          },
+          {
+            "start": 3.1,
+            "end": 4.466667,
+            "seconds": 1.366667
+          },
+          {
+            "start": 6.666667,
+            "end": 7.333333,
+            "seconds": 0.666666
+          }
+        ],
+        "anchorNearDuplicatePct": 98.4375,
+        "longestAnchoredNearStaticHoldSeconds": 2.133333
+      },
+      "centralWorldROI": {
+        "start": 3.1,
+        "end": 7.366667,
+        "decodedTransitions": 128,
+        "exactDuplicatePct": 8.59375,
+        "nearDuplicatePct": 98.4375,
+        "meaningfulChangesPerSecond": 0.46875,
+        "medianAdjacentLumaMAE": 0.000255,
+        "longestNearStaticHoldSeconds": 2.133333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 4.5,
+            "end": 6.633333,
+            "seconds": 2.133333
+          },
+          {
+            "start": 3.1,
+            "end": 4.466667,
+            "seconds": 1.366667
+          },
+          {
+            "start": 6.666667,
+            "end": 7.333333,
+            "seconds": 0.666666
+          }
+        ],
+        "anchorNearDuplicatePct": 98.4375,
+        "longestAnchoredNearStaticHoldSeconds": 2.133333
+      }
+    },
+    {
+      "id": 3,
+      "name": "Solarcontexttodetail:EuropaandEarth/Moon",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 7.466667,
+      "endSeconds": 9.9,
+      "source": "footage-v2/solar-system.mp4",
+      "sourceTrimSeconds": 4.466667,
+      "playbackRate": 1,
+      "editorZoom": 1.15,
+      "measuredRangeSeconds": [
+        7.566667,
+        9.8
+      ],
+      "fullGameplayROI": {
+        "start": 7.566667,
+        "end": 9.8,
+        "decodedTransitions": 67,
+        "exactDuplicatePct": 2.985075,
+        "nearDuplicatePct": 98.507463,
+        "meaningfulChangesPerSecond": 0.447761,
+        "medianAdjacentLumaMAE": 0.000231,
+        "longestNearStaticHoldSeconds": 1.233333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 7.566667,
+            "end": 8.8,
+            "seconds": 1.233333
+          },
+          {
+            "start": 8.833333,
+            "end": 9.766667,
+            "seconds": 0.933334
+          }
+        ],
+        "anchorNearDuplicatePct": 98.507463,
+        "longestAnchoredNearStaticHoldSeconds": 1.233333
+      },
+      "centralWorldROI": {
+        "start": 7.566667,
+        "end": 9.8,
+        "decodedTransitions": 67,
+        "exactDuplicatePct": 8.955224,
+        "nearDuplicatePct": 98.507463,
+        "meaningfulChangesPerSecond": 0.447761,
+        "medianAdjacentLumaMAE": 0.000231,
+        "longestNearStaticHoldSeconds": 1.233333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 7.566667,
+            "end": 8.8,
+            "seconds": 1.233333
+          },
+          {
+            "start": 8.833333,
+            "end": 9.766667,
+            "seconds": 0.933334
+          }
+        ],
+        "anchorNearDuplicatePct": 98.507463,
+        "longestAnchoredNearStaticHoldSeconds": 1.233333
+      }
+    },
+    {
+      "id": 4,
+      "name": "World comparison",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 9.9,
+      "endSeconds": 14.1,
+      "source": "footage-v2/destinations.mp4",
+      "sourceTrimSeconds": 0.7,
+      "playbackRate": 1,
+      "editorZoom": 1.15,
+      "measuredRangeSeconds": [
+        10.0,
+        14.0
+      ],
+      "fullGameplayROI": {
+        "start": 10.0,
+        "end": 14.0,
+        "decodedTransitions": 120,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 97.5,
+        "meaningfulChangesPerSecond": 0.75,
+        "medianAdjacentLumaMAE": 0.000463,
+        "longestNearStaticHoldSeconds": 1.8,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 10.2,
+            "end": 12.0,
+            "seconds": 1.8
+          },
+          {
+            "start": 12.033333,
+            "end": 13.666667,
+            "seconds": 1.633334
+          }
+        ],
+        "anchorNearDuplicatePct": 97.5,
+        "longestAnchoredNearStaticHoldSeconds": 1.8
+      },
+      "centralWorldROI": {
+        "start": 10.0,
+        "end": 14.0,
+        "decodedTransitions": 120,
+        "exactDuplicatePct": 52.5,
+        "nearDuplicatePct": 95.833333,
+        "meaningfulChangesPerSecond": 1.25,
+        "medianAdjacentLumaMAE": 0.0,
+        "longestNearStaticHoldSeconds": 1.8,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 10.2,
+            "end": 12.0,
+            "seconds": 1.8
+          },
+          {
+            "start": 12.033333,
+            "end": 13.666667,
+            "seconds": 1.633334
+          }
+        ],
+        "anchorNearDuplicatePct": 95.833333,
+        "longestAnchoredNearStaticHoldSeconds": 1.8
+      }
+    },
+    {
+      "id": 5,
+      "name": "Builder full context",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 14.1,
+      "endSeconds": 16.566667,
+      "source": "footage-v2/builder.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        14.2,
+        16.466667
+      ],
+      "fullGameplayROI": {
+        "start": 14.2,
+        "end": 16.466667,
+        "decodedTransitions": 68,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.012859,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 14.2,
+        "end": 16.466667,
+        "decodedTransitions": 68,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.057095,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 6,
+      "name": "Inspect compatible component and dimensions",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 16.566667,
+      "endSeconds": 20.333333,
+      "source": "footage-v2/builder.mp4",
+      "sourceTrimSeconds": 2.466667,
+      "playbackRate": 1,
+      "editorZoom": 1.18,
+      "measuredRangeSeconds": [
+        16.666667,
+        20.233333
+      ],
+      "fullGameplayROI": {
+        "start": 16.666667,
+        "end": 20.233333,
+        "decodedTransitions": 108,
+        "exactDuplicatePct": 7.407407,
+        "nearDuplicatePct": 86.111111,
+        "meaningfulChangesPerSecond": 4.205607,
+        "medianAdjacentLumaMAE": 8.1e-05,
+        "longestNearStaticHoldSeconds": 2.133333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 17.6,
+            "end": 19.733333,
+            "seconds": 2.133333
+          },
+          {
+            "start": 17.066667,
+            "end": 17.566667,
+            "seconds": 0.5
+          }
+        ],
+        "anchorNearDuplicatePct": 85.185185,
+        "longestAnchoredNearStaticHoldSeconds": 2.133333
+      },
+      "centralWorldROI": {
+        "start": 16.666667,
+        "end": 20.233333,
+        "decodedTransitions": 108,
+        "exactDuplicatePct": 24.074074,
+        "nearDuplicatePct": 84.259259,
+        "meaningfulChangesPerSecond": 4.766355,
+        "medianAdjacentLumaMAE": 4.6e-05,
+        "longestNearStaticHoldSeconds": 2.133333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 17.6,
+            "end": 19.733333,
+            "seconds": 2.133333
+          }
+        ],
+        "anchorNearDuplicatePct": 83.333333,
+        "longestAnchoredNearStaticHoldSeconds": 2.133333
+      }
+    },
+    {
+      "id": 7,
+      "name": "Mass/thrust/fuel detail",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 20.333333,
+      "endSeconds": 23.933333,
+      "source": "footage-v2/builder.mp4",
+      "sourceTrimSeconds": 6.233333,
+      "playbackRate": 1,
+      "editorZoom": 1.28,
+      "measuredRangeSeconds": [
+        20.433333,
+        23.833333
+      ],
+      "fullGameplayROI": {
+        "start": 20.433333,
+        "end": 23.833333,
+        "decodedTransitions": 102,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 97.058824,
+        "meaningfulChangesPerSecond": 0.882353,
+        "medianAdjacentLumaMAE": 9.3e-05,
+        "longestNearStaticHoldSeconds": 1.733333,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 22.0,
+            "end": 23.733333,
+            "seconds": 1.733333
+          },
+          {
+            "start": 20.433333,
+            "end": 21.9,
+            "seconds": 1.466667
+          }
+        ],
+        "anchorNearDuplicatePct": 97.058824,
+        "longestAnchoredNearStaticHoldSeconds": 1.733333
+      },
+      "centralWorldROI": {
+        "start": 20.433333,
+        "end": 23.833333,
+        "decodedTransitions": 102,
+        "exactDuplicatePct": 38.235294,
+        "nearDuplicatePct": 100.0,
+        "meaningfulChangesPerSecond": 0.0,
+        "medianAdjacentLumaMAE": 4.6e-05,
+        "longestNearStaticHoldSeconds": 3.4,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 20.433333,
+            "end": 23.833333,
+            "seconds": 3.4
+          }
+        ],
+        "anchorNearDuplicatePct": 99.019608,
+        "longestAnchoredNearStaticHoldSeconds": 3.3
+      }
+    },
+    {
+      "id": 8,
+      "name": "Mission planner",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 23.933333,
+      "endSeconds": 26.9,
+      "source": "footage-v2/planner.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        24.033333,
+        26.8
+      ],
+      "fullGameplayROI": {
+        "start": 24.033333,
+        "end": 26.8,
+        "decodedTransitions": 82,
+        "exactDuplicatePct": 41.463415,
+        "nearDuplicatePct": 97.560976,
+        "meaningfulChangesPerSecond": 0.722892,
+        "medianAdjacentLumaMAE": 4.6e-05,
+        "longestNearStaticHoldSeconds": 1.466667,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 25.3,
+            "end": 26.766667,
+            "seconds": 1.466667
+          },
+          {
+            "start": 24.033333,
+            "end": 25.233333,
+            "seconds": 1.2
+          }
+        ],
+        "anchorNearDuplicatePct": 97.560976,
+        "longestAnchoredNearStaticHoldSeconds": 1.466667
+      },
+      "centralWorldROI": {
+        "start": 24.033333,
+        "end": 26.8,
+        "decodedTransitions": 82,
+        "exactDuplicatePct": 57.317073,
+        "nearDuplicatePct": 95.121951,
+        "meaningfulChangesPerSecond": 1.445783,
+        "medianAdjacentLumaMAE": 0.0,
+        "longestNearStaticHoldSeconds": 1.333334,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 25.433333,
+            "end": 26.766667,
+            "seconds": 1.333334
+          },
+          {
+            "start": 24.033333,
+            "end": 25.233333,
+            "seconds": 1.2
+          }
+        ],
+        "anchorNearDuplicatePct": 95.121951,
+        "longestAnchoredNearStaticHoldSeconds": 1.333334
+      }
+    },
+    {
+      "id": 9,
+      "name": "Liftoff",
+      "classification": "active-flight",
+      "startSeconds": 26.9,
+      "endSeconds": 32.033333,
+      "source": "footage-v2/liftoff.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        27.0,
+        31.933333
+      ],
+      "fullGameplayROI": {
+        "start": 27.0,
+        "end": 31.933333,
+        "decodedTransitions": 149,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.202703,
+        "medianAdjacentLumaMAE": 0.506875,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 27.0,
+        "end": 31.933333,
+        "decodedTransitions": 149,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.202703,
+        "medianAdjacentLumaMAE": 1.037153,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 10,
+      "name": "Powered ascent and actual instruments; no staging claim",
+      "classification": "active-flight",
+      "startSeconds": 32.033333,
+      "endSeconds": 36.9,
+      "source": "footage-v2/liftoff.mp4",
+      "sourceTrimSeconds": 5.133333,
+      "playbackRate": 1,
+      "editorZoom": 1.24,
+      "measuredRangeSeconds": [
+        32.133333,
+        36.8
+      ],
+      "fullGameplayROI": {
+        "start": 32.133333,
+        "end": 36.8,
+        "decodedTransitions": 139,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 29.785714,
+        "medianAdjacentLumaMAE": 2.251806,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 32.133333,
+        "end": 36.8,
+        "decodedTransitions": 139,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 29.785714,
+        "medianAdjacentLumaMAE": 3.441458,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 11,
+      "name": "Local Moon rehearsal",
+      "classification": "active-flight",
+      "startSeconds": 36.9,
+      "endSeconds": 40.766667,
+      "source": "footage-v2/landing.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        37.0,
+        40.666667
+      ],
+      "fullGameplayROI": {
+        "start": 37.0,
+        "end": 40.666667,
+        "decodedTransitions": 110,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 15.454545,
+        "meaningfulChangesPerSecond": 25.363636,
+        "medianAdjacentLumaMAE": 0.053137,
+        "longestNearStaticHoldSeconds": 0.1,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 14.545455,
+        "longestAnchoredNearStaticHoldSeconds": 0.1
+      },
+      "centralWorldROI": {
+        "start": 37.0,
+        "end": 40.666667,
+        "decodedTransitions": 110,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 2.727273,
+        "meaningfulChangesPerSecond": 29.181818,
+        "medianAdjacentLumaMAE": 0.131956,
+        "longestNearStaticHoldSeconds": 0.066666,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 1.818182,
+        "longestAnchoredNearStaticHoldSeconds": 0.033333
+      }
+    },
+    {
+      "id": 12,
+      "name": "Descent telemetry",
+      "classification": "active-flight",
+      "startSeconds": 40.766667,
+      "endSeconds": 45.2,
+      "source": "footage-v2/landing.mp4",
+      "sourceTrimSeconds": 3.866667,
+      "playbackRate": 1,
+      "editorZoom": 1.25,
+      "measuredRangeSeconds": [
+        40.866667,
+        45.1
+      ],
+      "fullGameplayROI": {
+        "start": 40.866667,
+        "end": 45.1,
+        "decodedTransitions": 127,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 8.661417,
+        "meaningfulChangesPerSecond": 27.401575,
+        "medianAdjacentLumaMAE": 0.06706,
+        "longestNearStaticHoldSeconds": 0.066667,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 7.874016,
+        "longestAnchoredNearStaticHoldSeconds": 0.066667
+      },
+      "centralWorldROI": {
+        "start": 40.866667,
+        "end": 45.1,
+        "decodedTransitions": 127,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.787402,
+        "meaningfulChangesPerSecond": 29.76378,
+        "medianAdjacentLumaMAE": 0.143588,
+        "longestNearStaticHoldSeconds": 0.033334,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.787402,
+        "longestAnchoredNearStaticHoldSeconds": 0.033334
+      }
+    },
+    {
+      "id": 13,
+      "name": "Powered assist and fuel",
+      "classification": "active-flight",
+      "startSeconds": 45.2,
+      "endSeconds": 48.9,
+      "source": "footage-v2/landing.mp4",
+      "sourceTrimSeconds": 8.3,
+      "playbackRate": 1,
+      "editorZoom": 1.2,
+      "measuredRangeSeconds": [
+        45.3,
+        48.8
+      ],
+      "fullGameplayROI": {
+        "start": 45.3,
+        "end": 48.8,
+        "decodedTransitions": 104,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 6.730769,
+        "meaningfulChangesPerSecond": 27.714286,
+        "medianAdjacentLumaMAE": 0.132859,
+        "longestNearStaticHoldSeconds": 0.033334,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 6.730769,
+        "longestAnchoredNearStaticHoldSeconds": 0.033334
+      },
+      "centralWorldROI": {
+        "start": 45.3,
+        "end": 48.8,
+        "decodedTransitions": 104,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.961538,
+        "meaningfulChangesPerSecond": 29.428571,
+        "medianAdjacentLumaMAE": 0.246817,
+        "longestNearStaticHoldSeconds": 0.033333,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.961538,
+        "longestAnchoredNearStaticHoldSeconds": 0.033333
+      }
+    },
+    {
+      "id": 14,
+      "name": "Separate docking exercise",
+      "classification": "active-flight",
+      "startSeconds": 48.9,
+      "endSeconds": 52.466667,
+      "source": "footage-v2/root-docking-external.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        49.0,
+        52.366667
+      ],
+      "fullGameplayROI": {
+        "start": 49.0,
+        "end": 52.366667,
+        "decodedTransitions": 101,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 77.227723,
+        "meaningfulChangesPerSecond": 6.831683,
+        "medianAdjacentLumaMAE": 0.007639,
+        "longestNearStaticHoldSeconds": 0.266667,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 65.346535,
+        "longestAnchoredNearStaticHoldSeconds": 0.133334
+      },
+      "centralWorldROI": {
+        "start": 49.0,
+        "end": 52.366667,
+        "decodedTransitions": 101,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 20.792079,
+        "meaningfulChangesPerSecond": 23.762376,
+        "medianAdjacentLumaMAE": 0.022292,
+        "longestNearStaticHoldSeconds": 0.066666,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 19.80198,
+        "longestAnchoredNearStaticHoldSeconds": 0.033334
+      }
+    },
+    {
+      "id": 15,
+      "name": "Cockpit approach",
+      "classification": "active-flight",
+      "startSeconds": 52.466667,
+      "endSeconds": 55.9,
+      "source": "footage-v2/root-docking-cockpit.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        52.566667,
+        55.8
+      ],
+      "fullGameplayROI": {
+        "start": 52.566667,
+        "end": 55.8,
+        "decodedTransitions": 97,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 1.030928,
+        "meaningfulChangesPerSecond": 29.690722,
+        "medianAdjacentLumaMAE": 0.027662,
+        "longestNearStaticHoldSeconds": 0.033334,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 1.030928,
+        "longestAnchoredNearStaticHoldSeconds": 0.033334
+      },
+      "centralWorldROI": {
+        "start": 52.566667,
+        "end": 55.8,
+        "decodedTransitions": 97,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.107593,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 16,
+      "name": "RCS correction",
+      "classification": "active-flight",
+      "startSeconds": 55.9,
+      "endSeconds": 59.166667,
+      "source": "footage-v2/root-docking-cockpit.mp4",
+      "sourceTrimSeconds": 3.433333,
+      "playbackRate": 1,
+      "editorZoom": 1.24,
+      "measuredRangeSeconds": [
+        56.0,
+        59.066667
+      ],
+      "fullGameplayROI": {
+        "start": 56.0,
+        "end": 59.066667,
+        "decodedTransitions": 92,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.034722,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 56.0,
+        "end": 59.066667,
+        "decodedTransitions": 92,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 0.150475,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 17,
+      "name": "Genuine touchdown result",
+      "classification": "touchdown-with-intentional-settled-debrief",
+      "startSeconds": 59.166667,
+      "endSeconds": 65.966667,
+      "source": "footage-v2/contact.mp4",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        59.266667,
+        65.866667
+      ],
+      "fullGameplayROI": {
+        "start": 59.266667,
+        "end": 65.866667,
+        "decodedTransitions": 198,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 29.79798,
+        "meaningfulChangesPerSecond": 21.060606,
+        "medianAdjacentLumaMAE": 0.042627,
+        "longestNearStaticHoldSeconds": 0.233333,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 26.262626,
+        "longestAnchoredNearStaticHoldSeconds": 0.233333
+      },
+      "centralWorldROI": {
+        "start": 59.266667,
+        "end": 65.866667,
+        "decodedTransitions": 198,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 9.090909,
+        "meaningfulChangesPerSecond": 27.272727,
+        "medianAdjacentLumaMAE": 0.090856,
+        "longestNearStaticHoldSeconds": 0.2,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 7.575758,
+        "longestAnchoredNearStaticHoldSeconds": 0.1
+      }
+    },
+    {
+      "id": 18,
+      "name": "Engineering montage",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 65.966667,
+      "endSeconds": 70.066667,
+      "source": "footage-v2/builder.mp4",
+      "sourceTrimSeconds": 7.8,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        66.066667,
+        69.966667
+      ],
+      "fullGameplayROI": {
+        "start": 66.066667,
+        "end": 69.966667,
+        "decodedTransitions": 117,
+        "exactDuplicatePct": 1.709402,
+        "nearDuplicatePct": 99.145299,
+        "meaningfulChangesPerSecond": 0.25641,
+        "medianAdjacentLumaMAE": 0.000139,
+        "longestNearStaticHoldSeconds": 2.1,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 67.833333,
+            "end": 69.933333,
+            "seconds": 2.1
+          },
+          {
+            "start": 66.066667,
+            "end": 67.8,
+            "seconds": 1.733333
+          }
+        ],
+        "anchorNearDuplicatePct": 99.145299,
+        "longestAnchoredNearStaticHoldSeconds": 2.1
+      },
+      "centralWorldROI": {
+        "start": 66.066667,
+        "end": 69.966667,
+        "decodedTransitions": 117,
+        "exactDuplicatePct": 82.051282,
+        "nearDuplicatePct": 99.145299,
+        "meaningfulChangesPerSecond": 0.25641,
+        "medianAdjacentLumaMAE": 0.0,
+        "longestNearStaticHoldSeconds": 2.1,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 67.833333,
+            "end": 69.933333,
+            "seconds": 2.1
+          },
+          {
+            "start": 66.066667,
+            "end": 67.8,
+            "seconds": 1.733333
+          }
+        ],
+        "anchorNearDuplicatePct": 99.145299,
+        "longestAnchoredNearStaticHoldSeconds": 2.1
+      }
+    },
+    {
+      "id": 19,
+      "name": "Europa thenEarth/Moonactualfocus;forcuriouslearners",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 70.066667,
+      "endSeconds": 74.6,
+      "source": "footage-v2/solar-system.mp4",
+      "sourceTrimSeconds": 3,
+      "playbackRate": 1,
+      "editorZoom": 1.2,
+      "measuredRangeSeconds": [
+        70.166667,
+        74.5
+      ],
+      "fullGameplayROI": {
+        "start": 70.166667,
+        "end": 74.5,
+        "decodedTransitions": 130,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 98.461538,
+        "meaningfulChangesPerSecond": 0.461538,
+        "medianAdjacentLumaMAE": 0.000394,
+        "longestNearStaticHoldSeconds": 2.133334,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 70.733333,
+            "end": 72.866667,
+            "seconds": 2.133334
+          },
+          {
+            "start": 72.9,
+            "end": 74.466667,
+            "seconds": 1.566667
+          },
+          {
+            "start": 70.166667,
+            "end": 70.7,
+            "seconds": 0.533333
+          }
+        ],
+        "anchorNearDuplicatePct": 98.461538,
+        "longestAnchoredNearStaticHoldSeconds": 2.133334
+      },
+      "centralWorldROI": {
+        "start": 70.166667,
+        "end": 74.5,
+        "decodedTransitions": 130,
+        "exactDuplicatePct": 0.769231,
+        "nearDuplicatePct": 98.461538,
+        "meaningfulChangesPerSecond": 0.461538,
+        "medianAdjacentLumaMAE": 0.000255,
+        "longestNearStaticHoldSeconds": 2.133334,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 70.733333,
+            "end": 72.866667,
+            "seconds": 2.133334
+          },
+          {
+            "start": 72.9,
+            "end": 74.466667,
+            "seconds": 1.566667
+          },
+          {
+            "start": 70.166667,
+            "end": 70.7,
+            "seconds": 0.533333
+          }
+        ],
+        "anchorNearDuplicatePct": 98.461538,
+        "longestAnchoredNearStaticHoldSeconds": 2.133334
+      }
+    },
+    {
+      "id": 20,
+      "name": "Design tag",
+      "classification": "ui-operation-or-menu",
+      "startSeconds": 74.6,
+      "endSeconds": 76.9,
+      "source": "footage-v2/builder.mp4",
+      "sourceTrimSeconds": 0.4,
+      "playbackRate": 1,
+      "editorZoom": 1.15,
+      "measuredRangeSeconds": [
+        74.7,
+        76.8
+      ],
+      "fullGameplayROI": {
+        "start": 74.7,
+        "end": 76.8,
+        "decodedTransitions": 64,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.47619,
+        "medianAdjacentLumaMAE": 0.017708,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 74.7,
+        "end": 76.8,
+        "decodedTransitions": 64,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.47619,
+        "medianAdjacentLumaMAE": 0.082002,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 21,
+      "name": "Flight tag",
+      "classification": "active-flight",
+      "startSeconds": 76.9,
+      "endSeconds": 79.0,
+      "source": "footage-v2/liftoff.mp4",
+      "sourceTrimSeconds": 7.8,
+      "playbackRate": 1,
+      "editorZoom": 1.2,
+      "measuredRangeSeconds": [
+        77.0,
+        78.9
+      ],
+      "fullGameplayROI": {
+        "start": 77.0,
+        "end": 78.9,
+        "decodedTransitions": 57,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 1.497778,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      },
+      "centralWorldROI": {
+        "start": 77.0,
+        "end": 78.9,
+        "decodedTransitions": 57,
+        "exactDuplicatePct": 0.0,
+        "nearDuplicatePct": 0.0,
+        "meaningfulChangesPerSecond": 30.0,
+        "medianAdjacentLumaMAE": 2.658333,
+        "longestNearStaticHoldSeconds": 0,
+        "nearStaticHoldsAtLeastHalfSecond": [],
+        "anchorNearDuplicatePct": 0.0,
+        "longestAnchoredNearStaticHoldSeconds": 0
+      }
+    },
+    {
+      "id": 22,
+      "name": "Closing / sole author",
+      "classification": "intentional-title",
+      "startSeconds": 79.0,
+      "endSeconds": 82.0,
+      "source": "logo.png",
+      "sourceTrimSeconds": 0,
+      "playbackRate": 1,
+      "editorZoom": 1,
+      "measuredRangeSeconds": [
+        79.1,
+        81.9
+      ],
+      "fullGameplayROI": {
+        "start": 79.1,
+        "end": 81.9,
+        "decodedTransitions": 84,
+        "exactDuplicatePct": 90.47619,
+        "nearDuplicatePct": 92.857143,
+        "meaningfulChangesPerSecond": 2.142857,
+        "medianAdjacentLumaMAE": 0.0,
+        "longestNearStaticHoldSeconds": 2.566667,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 79.1,
+            "end": 81.666667,
+            "seconds": 2.566667
+          }
+        ],
+        "anchorNearDuplicatePct": 92.857143,
+        "longestAnchoredNearStaticHoldSeconds": 2.566667
+      },
+      "centralWorldROI": {
+        "start": 79.1,
+        "end": 81.9,
+        "decodedTransitions": 84,
+        "exactDuplicatePct": 85.714286,
+        "nearDuplicatePct": 92.857143,
+        "meaningfulChangesPerSecond": 2.142857,
+        "medianAdjacentLumaMAE": 0.0,
+        "longestNearStaticHoldSeconds": 2.566667,
+        "nearStaticHoldsAtLeastHalfSecond": [
+          {
+            "start": 79.1,
+            "end": 81.666667,
+            "seconds": 2.566667
+          }
+        ],
+        "anchorNearDuplicatePct": 92.857143,
+        "longestAnchoredNearStaticHoldSeconds": 2.566667
+      }
+    }
+  ],
+  "nativeSourcePrescan": {
+    "schema": "kinetic-core-source-cadence-prescan.v2",
+    "methodVersion": "decoded-luma-cadence.v4-cumulative-anchor",
+    "scriptSha256": "792a6c885e5d0ff072a8695f080ef8fbc3d8372f1701ae09d323ddadb72fafca",
+    "threshold": {
+      "nearDuplicateMeanLumaDeltaLessThan": 0.03,
+      "fractionPixelsChangingByAtLeast2LumaLessThan": 0.001
+    },
+    "analysisRaster": [
+      240,
+      180
+    ],
+    "interpretation": "Decoded adjacent and cumulative-anchor visual changes, not a rendering-fps counter. Excludes menu/title/deliberately settled debrief sources.",
+    "sources": [
+      {
+        "file": "liftoff.mp4",
+        "sha256": "956d06c95f4ff9a938dd3ade8d6dff9ea8659864820a5e8aaa130ce304b21b4a",
+        "dimensions": [
+          1280,
+          720
+        ],
+        "decodedFrames": 300,
+        "roiCropWHXY": "1010:496:0:76",
+        "summary": {
+          "start": 0,
+          "end": 10.0,
+          "decodedTransitions": 299,
+          "exactDuplicatePct": 0.0,
+          "nearDuplicatePct": 0.0,
+          "meaningfulChangesPerSecond": 29.9,
+          "medianAdjacentLumaMAE": 1.570185,
+          "longestNearStaticHoldSeconds": 0,
+          "nearStaticHoldsAtLeastHalfSecond": [],
+          "anchorNearDuplicatePct": 0.0,
+          "longestAnchoredNearStaticHoldSeconds": 0
+        }
+      },
+      {
+        "file": "root-docking-external.mp4",
+        "sha256": "04a9f81b3d588e9ce09474031d0535d703268522c075048de2db208eed875b45",
+        "dimensions": [
+          1600,
+          900
+        ],
+        "decodedFrames": 150,
+        "roiCropWHXY": "720:540:360:180",
+        "summary": {
+          "start": 0,
+          "end": 5.0,
+          "decodedTransitions": 149,
+          "exactDuplicatePct": 0.0,
+          "nearDuplicatePct": 0.0,
+          "meaningfulChangesPerSecond": 29.8,
+          "medianAdjacentLumaMAE": 0.033333,
+          "longestNearStaticHoldSeconds": 0,
+          "nearStaticHoldsAtLeastHalfSecond": [],
+          "anchorNearDuplicatePct": 0.0,
+          "longestAnchoredNearStaticHoldSeconds": 0
+        }
+      },
+      {
+        "file": "root-docking-cockpit.mp4",
+        "sha256": "9da8d97daf26b3f2299fec32c4a7e488def3343bb324d6baa39a6ccab6038e3a",
+        "dimensions": [
+          1600,
+          900
+        ],
+        "decodedFrames": 270,
+        "roiCropWHXY": "720:540:360:180",
+        "summary": {
+          "start": 0,
+          "end": 9.0,
+          "decodedTransitions": 269,
+          "exactDuplicatePct": 0.0,
+          "nearDuplicatePct": 0.0,
+          "meaningfulChangesPerSecond": 29.888889,
+          "medianAdjacentLumaMAE": 0.118657,
+          "longestNearStaticHoldSeconds": 0,
+          "nearStaticHoldsAtLeastHalfSecond": [],
+          "anchorNearDuplicatePct": 0.0,
+          "longestAnchoredNearStaticHoldSeconds": 0
+        }
+      },
+      {
+        "file": "landing.mp4",
+        "sha256": "f20e222c832a0733d9d30a94890c0a68b8e6ce10a0fb27a926cd05e3e884ca8a",
+        "dimensions": [
+          1600,
+          900
+        ],
+        "decodedFrames": 360,
+        "roiCropWHXY": "720:540:360:180",
+        "summary": {
+          "start": 0,
+          "end": 12.0,
+          "decodedTransitions": 359,
+          "exactDuplicatePct": 0.0,
+          "nearDuplicatePct": 5.292479,
+          "meaningfulChangesPerSecond": 28.333333,
+          "medianAdjacentLumaMAE": 0.173449,
+          "longestNearStaticHoldSeconds": 0.066667,
+          "nearStaticHoldsAtLeastHalfSecond": [],
+          "anchorNearDuplicatePct": 5.013928,
+          "longestAnchoredNearStaticHoldSeconds": 0.066667
+        }
+      }
+    ]
+  },
+  "audio": {
+    "schema": "kinetic-core-audio-validation.v1",
+    "methodVersion": "pcm-stem-comparison.v3-stereo-loudnorm",
+    "scriptSha256": "1ddcf4467742568da8acfa066c4dd88dff0d9029919e00aba19a553f53f08fc9",
+    "method": "Decode final AAC to48kHz stereo PCM, measure unclipped PCM samples, independently correlate known speech stem to export, then fit known voice/music stems within each spoken beat. Speech-over-residual uses20ms speech-active blocks.",
+    "limits": "RMS dBFS is reported separately from loudnorm integrated LUFS/true peak. A numeric level test does not replace listening for intelligibility/pronunciation. Timing correlation uses mono-average; stem fits and speech/residual level comparisons preserve both stereo channels.",
+    "film": {
+      "file": "Kinetic-Core-Gameplay-v2.mp4",
+      "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+      "sampleRate": 48000,
+      "channels": 2,
+      "durationSeconds": 82.005333,
+      "rmsDbFS": -18.175673,
+      "samplePeakDbFS": -1.499318,
+      "clippingSamplesAt0999": 0,
+      "integratedLUFS": -14.54,
+      "truePeakDbTP": -1.5,
+      "loudnessRangeLU": 3.4,
+      "measurement": "ffmpeg loudnorm first-pass input statistics; no modification to deliverable"
+    },
+    "voiceStem": {
+      "file": "voiceover-en.wav",
+      "sha256": "42847f35219f340669ee571e23e885945c6668d200065fc678dbdfd48c75c280",
+      "sampleRate": 48000,
+      "channels": 1,
+      "durationSeconds": 78.792,
+      "rmsDbFS": -18.112525,
+      "samplePeakDbFS": -1.992844,
+      "clippingSamplesAt0999": 0
+    },
+    "musicStem": {
+      "file": "music.wav",
+      "sha256": "72bf1063fbd741fae15e8929ce4fd89243472080bdafbad71e80f52f1280fd71",
+      "sampleRate": 48000,
+      "channels": 2,
+      "durationSeconds": 90.0,
+      "rmsDbFS": -20.388912,
+      "samplePeakDbFS": -7.535368,
+      "clippingSamplesAt0999": 0
+    },
+    "measuredVoiceOffsetSeconds": 0.5,
+    "voiceCorrelation7to9Seconds": 0.989925,
+    "expectedVoiceStartSeconds": 0.5,
+    "expectedVoiceEndSeconds": 79.292,
+    "narrationFitsWithinFilm": true,
+    "tailAfterCompleteVoiceSeconds": 2.713333,
+    "beats": [
+      {
+        "text": "Spaceflight begins with a decision.",
+        "startSeconds": 0.6,
+        "endSeconds": 3.369,
+        "fittedVoiceGain": 0.998498,
+        "fittedMusicGain": 0.199105,
+        "speechActiveRmsDbFS": -15.606749,
+        "residualUnderSpeechRmsDbFS": -36.246222,
+        "speechOverResidualDb": 20.639474,
+        "twoStemFitResidualDbFS": -58.340112
+      },
+      {
+        "text": "This is Kinetic Core, created by Mykyta Borisov.",
+        "startSeconds": 3.319,
+        "endSeconds": 7.473,
+        "fittedVoiceGain": 0.998562,
+        "fittedMusicGain": 0.199331,
+        "speechActiveRmsDbFS": -16.284704,
+        "residualUnderSpeechRmsDbFS": -34.463164,
+        "speechOverResidualDb": 18.17846,
+        "twoStemFitResidualDbFS": -57.597284
+      },
+      {
+        "text": "Explore the Solar System.",
+        "startSeconds": 7.473,
+        "endSeconds": 9.9,
+        "fittedVoiceGain": 0.998223,
+        "fittedMusicGain": 0.198964,
+        "speechActiveRmsDbFS": -15.541512,
+        "residualUnderSpeechRmsDbFS": -34.030649,
+        "speechOverResidualDb": 18.489137,
+        "twoStemFitResidualDbFS": -57.608492
+      },
+      {
+        "text": "Compare worlds, choose a destination, and plan your mission.",
+        "startSeconds": 9.9,
+        "endSeconds": 14.115,
+        "fittedVoiceGain": 0.998498,
+        "fittedMusicGain": 0.199003,
+        "speechActiveRmsDbFS": -16.164799,
+        "residualUnderSpeechRmsDbFS": -34.019833,
+        "speechOverResidualDb": 17.855034,
+        "twoStemFitResidualDbFS": -57.618758
+      },
+      {
+        "text": "Then build the spacecraft.",
+        "startSeconds": 14.115,
+        "endSeconds": 16.554,
+        "fittedVoiceGain": 0.99908,
+        "fittedMusicGain": 0.199058,
+        "speechActiveRmsDbFS": -15.741458,
+        "residualUnderSpeechRmsDbFS": -34.183669,
+        "speechOverResidualDb": 18.442211,
+        "twoStemFitResidualDbFS": -59.029899
+      },
+      {
+        "text": "Select compatible components, adjust their dimensions, and watch mass, thrust, and fuel change together.",
+        "startSeconds": 16.554,
+        "endSeconds": 23.944,
+        "fittedVoiceGain": 0.998447,
+        "fittedMusicGain": 0.199007,
+        "speechActiveRmsDbFS": -16.990348,
+        "residualUnderSpeechRmsDbFS": -34.121602,
+        "speechOverResidualDb": 17.131254,
+        "twoStemFitResidualDbFS": -57.795054
+      },
+      {
+        "text": "These numbers are part of the flight model.",
+        "startSeconds": 23.944,
+        "endSeconds": 26.775,
+        "fittedVoiceGain": 0.99838,
+        "fittedMusicGain": 0.199024,
+        "speechActiveRmsDbFS": -15.767789,
+        "residualUnderSpeechRmsDbFS": -34.364219,
+        "speechOverResidualDb": 18.596429,
+        "twoStemFitResidualDbFS": -57.661828
+      },
+      {
+        "text": "Launch, manage your engine, and follow the instruments as the mission unfolds.",
+        "startSeconds": 26.775,
+        "endSeconds": 32.044,
+        "fittedVoiceGain": 0.998658,
+        "fittedMusicGain": 0.19919,
+        "speechActiveRmsDbFS": -16.280361,
+        "residualUnderSpeechRmsDbFS": -34.043745,
+        "speechOverResidualDb": 17.763384,
+        "twoStemFitResidualDbFS": -57.558821
+      },
+      {
+        "text": "Gravity, propellant flow, and changing mass shape every maneuver.",
+        "startSeconds": 32.044,
+        "endSeconds": 36.909,
+        "fittedVoiceGain": 0.998487,
+        "fittedMusicGain": 0.199055,
+        "speechActiveRmsDbFS": -16.022514,
+        "residualUnderSpeechRmsDbFS": -34.071227,
+        "speechOverResidualDb": 18.048712,
+        "twoStemFitResidualDbFS": -58.071473
+      },
+      {
+        "text": "For the final approach, practice a local Moon landing.",
+        "startSeconds": 36.909,
+        "endSeconds": 40.831,
+        "fittedVoiceGain": 0.998892,
+        "fittedMusicGain": 0.199068,
+        "speechActiveRmsDbFS": -16.043439,
+        "residualUnderSpeechRmsDbFS": -34.047126,
+        "speechOverResidualDb": 18.003687,
+        "twoStemFitResidualDbFS": -57.915208
+      },
+      {
+        "text": "Read altitude, vertical speed, and sideways drift.",
+        "startSeconds": 40.831,
+        "endSeconds": 45.255,
+        "fittedVoiceGain": 0.998329,
+        "fittedMusicGain": 0.199265,
+        "speechActiveRmsDbFS": -15.911876,
+        "residualUnderSpeechRmsDbFS": -34.1335,
+        "speechOverResidualDb": 18.221624,
+        "twoStemFitResidualDbFS": -57.870354
+      },
+      {
+        "text": "Powered guidance helps, but it still uses fuel.",
+        "startSeconds": 45.255,
+        "endSeconds": 49.029,
+        "fittedVoiceGain": 0.998543,
+        "fittedMusicGain": 0.199137,
+        "speechActiveRmsDbFS": -16.086852,
+        "residualUnderSpeechRmsDbFS": -34.010588,
+        "speechOverResidualDb": 17.923736,
+        "twoStemFitResidualDbFS": -57.901567
+      },
+      {
+        "text": "Then switch to a separate docking exercise.",
+        "startSeconds": 49.029,
+        "endSeconds": 52.449,
+        "fittedVoiceGain": 0.997979,
+        "fittedMusicGain": 0.199046,
+        "speechActiveRmsDbFS": -16.002204,
+        "residualUnderSpeechRmsDbFS": -34.431045,
+        "speechOverResidualDb": 18.428841,
+        "twoStemFitResidualDbFS": -57.032742
+      },
+      {
+        "text": "Change camera views, align the spacecraft, and make small corrections with reaction-control thrusters.",
+        "startSeconds": 52.449,
+        "endSeconds": 59.164,
+        "fittedVoiceGain": 0.998696,
+        "fittedMusicGain": 0.199117,
+        "speechActiveRmsDbFS": -16.527737,
+        "residualUnderSpeechRmsDbFS": -34.098814,
+        "speechOverResidualDb": 17.571077,
+        "twoStemFitResidualDbFS": -57.248957
+      },
+      {
+        "text": "Finally, review the touchdown: real contact speeds, remaining fuel, and a clear result.",
+        "startSeconds": 59.164,
+        "endSeconds": 65.953,
+        "fittedVoiceGain": 0.998579,
+        "fittedMusicGain": 0.19911,
+        "speechActiveRmsDbFS": -15.497095,
+        "residualUnderSpeechRmsDbFS": -34.077583,
+        "speechOverResidualDb": 18.580488,
+        "twoStemFitResidualDbFS": -58.237002
+      },
+      {
+        "text": "Built for curious students and future explorers, Kinetic Core turns engineering choices into something you can see, test, and understand.",
+        "startSeconds": 65.953,
+        "endSeconds": 74.581,
+        "fittedVoiceGain": 0.998578,
+        "fittedMusicGain": 0.199131,
+        "speechActiveRmsDbFS": -15.903895,
+        "residualUnderSpeechRmsDbFS": -34.162108,
+        "speechOverResidualDb": 18.258214,
+        "twoStemFitResidualDbFS": -57.221546
+      },
+      {
+        "text": "Design the spacecraft.",
+        "startSeconds": 74.581,
+        "endSeconds": 76.885,
+        "fittedVoiceGain": 0.998538,
+        "fittedMusicGain": 0.199138,
+        "speechActiveRmsDbFS": -15.811547,
+        "residualUnderSpeechRmsDbFS": -34.265179,
+        "speechOverResidualDb": 18.453632,
+        "twoStemFitResidualDbFS": -58.296853
+      },
+      {
+        "text": "Fly the critical moments.",
+        "startSeconds": 76.885,
+        "endSeconds": 79.238,
+        "fittedVoiceGain": 0.999011,
+        "fittedMusicGain": 0.199358,
+        "speechActiveRmsDbFS": -15.7328,
+        "residualUnderSpeechRmsDbFS": -34.521673,
+        "speechOverResidualDb": 18.788874,
+        "twoStemFitResidualDbFS": -59.007436
+      }
+    ],
+    "listeningStatus": "Not established by this numeric analysis; direct listening required separately.",
+    "minimumPerPhraseSpeechOverResidualDb": 17.131254
+  },
+  "visualReview": {
+    "status": "passed-instrumented-motion-and-decoded-visual-review",
+    "verifiedFilmSha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+    "authorExpected": "Mykyta Borisov",
+    "projectExpected": "Kinetic Core",
+    "checks": {
+      "all22CaptionBandsReviewed": true,
+      "openingAndEndingSoleAuthorCorrect": true,
+      "captionOrIdentityClippingDefectFound": false,
+      "fullContextPrecedesPurposefulDetailCrops": true,
+      "nativeEngineeringInputsAndResultsVisible": true,
+      "separateDockingAndLocalMoonRehearsalLabeled": true,
+      "blackOperationalGapFound": false,
+      "fullFrameShotIdsInspected": [
+        1,
+        7,
+        9,
+        10,
+        16,
+        17,
+        22
+      ],
+      "narrationAndVisibleActionsSemanticallyAligned": true
+    },
+    "evidence": "Visual checks used final MP4 decoded RGB frames saved through PIL as PNG, including all22caption bands and selected full-frame operations. This avoids the image-viewer JPEG clipping artifact. Motion assessment additionally uses every decoded frame and the transparent adjacent/cumulative-anchor metrics.",
+    "listeningStatus": "This agent did not perform subjective listening. Whole narration presence, exact0.500s offset, last-phrase gain, per-phrase stereo voice/music separation, LUFS/true peak and zero clipping are independently measured. Pronunciation and musical feel require the parent listening review.",
+    "actionableIssues": [],
+    "conclusion": "No actionable visual, cadence or encoded-audio alignment defect found. Active flight no longer has the multi-second near-identical holds seen in v1. Intentional menu/inspection/settled-result stillness is classified separately."
+  },
+  "conclusion": "No actionable visual, cadence or encoded-audio alignment defect found. Active flight no longer has the multi-second near-identical holds seen in v1. Intentional menu/inspection/settled-result stillness is classified separately."
+}

@@ -29,5 +29,7 @@
     "durationSeconds": 88,
     "publicURL": "https://ropotropo.github.io/Kinetic-Core-2026/demo/",
     "originalBytesPreserved": true
-  }
+  },
+  "recordStatus": "Historical initial migration record",
+  "currentHandoff": "docs/review/FINAL-HANDOFF.json"
 }

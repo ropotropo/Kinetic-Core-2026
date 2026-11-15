@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:5188/",
+  "method": "Actual Solar System UI; ordinary select controls, controlled browser clock; one screenshot per1/30s, no generated gameplay or physics edits",
+  "frames": 240,
+  "fps": 30,
+  "events": [
+    {
+      "frame": 45,
+      "action": "Choose Jupiter system"
+    },
+    {
+      "frame": 110,
+      "action": "Focus Europa"
+    },
+    {
+      "frame": 175,
+      "action": "Choose Earth system and focus Moon"
+    }
+  ]
+}

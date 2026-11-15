@@ -1,0 +1,29 @@
+{
+  "status": "passed-instrumented-motion-and-decoded-visual-review",
+  "verifiedFilmSha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+  "authorExpected": "Mykyta Borisov",
+  "projectExpected": "Kinetic Core",
+  "checks": {
+    "all22CaptionBandsReviewed": true,
+    "openingAndEndingSoleAuthorCorrect": true,
+    "captionOrIdentityClippingDefectFound": false,
+    "fullContextPrecedesPurposefulDetailCrops": true,
+    "nativeEngineeringInputsAndResultsVisible": true,
+    "separateDockingAndLocalMoonRehearsalLabeled": true,
+    "blackOperationalGapFound": false,
+    "fullFrameShotIdsInspected": [
+      1,
+      7,
+      9,
+      10,
+      16,
+      17,
+      22
+    ],
+    "narrationAndVisibleActionsSemanticallyAligned": true
+  },
+  "evidence": "Visual checks used final MP4 decoded RGB frames saved through PIL as PNG, including all22caption bands and selected full-frame operations. This avoids the image-viewer JPEG clipping artifact. Motion assessment additionally uses every decoded frame and the transparent adjacent/cumulative-anchor metrics.",
+  "listeningStatus": "This agent did not perform subjective listening. Whole narration presence, exact0.500s offset, last-phrase gain, per-phrase stereo voice/music separation, LUFS/true peak and zero clipping are independently measured. Pronunciation and musical feel require the parent listening review.",
+  "actionableIssues": [],
+  "conclusion": "No actionable visual, cadence or encoded-audio alignment defect found. Active flight no longer has the multi-second near-identical holds seen in v1. Intentional menu/inspection/settled-result stillness is classified separately."
+}

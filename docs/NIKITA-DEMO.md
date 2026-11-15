@@ -1,11 +1,5 @@
-# Mykyta demonstration build
+# Historical document
 
-Open Explore Solar System for a full-window 3D atlas. All eight planets, the Sun and Pluto appear as visible spheres, with Saturn's rings. Select a system to see its catalog satellites; select a body or double-click it to focus. Mouse orbit, pan and zoom are independent of spacecraft motion. Twelve supported moons connect directly to their landing exercises.
+This earlier development record is preserved in [demo-v03.md](history/demo-v03.md).
 
-Planet distances, sizes, satellite spacing and orientations are illustrative, not ephemerides. Body maps use existing credited assets where available; unmapped bodies use neutral material. The atlas does not implement orbital transfers. Catalog-only bodies do not acquire fictional landing physics.
-
-The original launch/staging, docking and descent simulation remains intact. Expanded view includes pause/resume and guide actions. Map Escape no longer toggles simulation behind the dialog. Blur prevents automatic resume when a map/guide/atlas is subsequently closed.
-
-Validation: all 42 existing physics/checkpoint tests passed. Production and portable builds completed. Browser verified visible Solar System, Saturn catalog selection, Titan focus and handoff to a paused Titan landing scenario. Separate earlier checks verified mouse orbit and expanded viewport. Safari, full mission completion and every catalog-body selection have not been replayed in this revision.
-
-Suggested demonstration: assemble a vehicle → show the 3D Solar System → choose Saturn/Titan → start landing practice → open Flight map to explain position/velocity → resume descent. Use Flight guide for controls. This is a playable demonstration, not a claim of full mission coverage.
+For the current game, read [Kinetic Core — current version](CURRENT-VERSION.md) and the [documentation index](README.md). Earlier working names and test counts do not describe the latest version.

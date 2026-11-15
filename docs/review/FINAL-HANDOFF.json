@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "project": "Kinetic Core",
+  "soleAuthor": "Mykyta Borisov",
+  "before": {
+    "mainBefore": "3d1964a5cf35de4d60c1e9679db6dd96c9eddd84",
+    "upstreamMedia": "cffa56667d6a05c4680e0b1f75864e8865858c4a",
+    "upstreamPages": "e364190ca4fe7e0085225ac2a0b31ba5aa3e43d6",
+    "upstreamGame": "b77208515f0398a0a57263db7c6b45641fb26bdc",
+    "submittedPDF": "https://github.com/ropotropo/Hakaton2026/blob/codex/final-presentations/presentation/Kinetic-Core-EN.pdf",
+    "repository": "ropotropo/Kinetic-Core-2026",
+    "pdfUA": "b388a0ad6af8609eeb4ecbadc0f72fd6920c4d6b623d48c3c558d21ced663ca1",
+    "pagesBefore": "3c7b5a2addd7abcdb2d5cabda4d2db471e078fc6",
+    "upstreamDocs": "30cec1012a2191d45300590c016fb7575d2645f0",
+    "pdfEN": "d5dc3f70c35c390731a2a574e742bbf7212b776461e6e4d97ac788048f5bf0e4"
+  },
+  "upstream": {
+    "game": "b77208515f0398a0a57263db7c6b45641fb26bdc",
+    "documentation": "30cec1012a2191d45300590c016fb7575d2645f0",
+    "media": "cffa56667d6a05c4680e0b1f75864e8865858c4a"
+  },
+  "video": {
+    "file": "presentation/video/Kinetic-Core-Gameplay-v2.mp4",
+    "bytes": 11702957,
+    "gitBlob": "e87e39c66be66e448a759b91fec414e54acc8283",
+    "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+    "durationSeconds": 82.005
+  },
+  "pdf": {
+    "Kinetic-Core-EN.pdf": "d5dc3f70c35c390731a2a574e742bbf7212b776461e6e4d97ac788048f5bf0e4",
+    "Kinetic-Core-UA.pdf": "b388a0ad6af8609eeb4ecbadc0f72fd6920c4d6b623d48c3c558d21ced663ca1"
+  },
+  "tests": {
+    "passed": 86,
+    "failed": 0
+  },
+  "productionBuild": true,
+  "protectedGameFilesUnchanged": true,
+  "sourceHistoryPreserved": true,
+  "archiveRepositoryWritesPerformed": false,
+  "wikiPages": 7,
+  "unverified": [
+    "Safari unavailable in this Windows environment",
+    "No repeated complete lunar campaign",
+    "No Windows/Android device acceptance"
+  ],
+  "links": {
+    "game": "https://ropotropo.github.io/Kinetic-Core-2026/",
+    "demo": "https://ropotropo.github.io/Kinetic-Core-2026/demo/",
+    "wiki": "https://github.com/ropotropo/Kinetic-Core-2026/wiki"
+  },
+  "scope": "Documentation, Wiki and exact media transfer; no physics change."
+}

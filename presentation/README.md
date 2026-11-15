@@ -25,6 +25,6 @@ Rebuild with Python, ReportLab and Pillow: `python source/build_pdfs.py`. macOS 
 
 ## Gameplay video
 
-[video/Kinetic-Core-Gameplay.mp4](video/Kinetic-Core-Gameplay.mp4) is the finished **88-second, 1920 x 1080, 30 fps H.264/AAC** film. It shows actual recorded workshop interaction, mission selection, rollout, initial liftoff, a local Moon landing rehearsal, a separate docking exercise and genuine touchdown confirmation. Authored captions distinguish the separate exercises and assistance modes. The opening portrait is fictional cover artwork; gameplay is not generated. The soundtrack is original synthesized ambient audio.
+[video/Kinetic-Core-Gameplay-v2.mp4](video/Kinetic-Core-Gameplay-v2.mp4) is the latest **82-second, 1920 x 1080, 30 fps H.264/AAC** narrated film. It includes 22 shorter operational shots: Solar System exploration, world selection, component dimensions and performance, mission planning, real liftoff, a local Moon landing, separate docking and genuine touchdown confirmation. English voiceover and an original musical score accompany purposeful close-ups. The earlier 88-second version is retained.
 
-[video/README.md](video/README.md) documents the editable Remotion project, capture provenance, source footage and rebuild instructions. No game source or physics was modified by this media package.
+[video/README.md](video/README.md) links the editable Remotion project, source footage, English YouTube captions, provenance and frame-cadence/audio validation. Game source and physics are unchanged by the media package.

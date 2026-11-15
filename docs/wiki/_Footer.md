@@ -1,0 +1,1 @@
+**Kinetic Core — Created by Mykyta Borisov.** Current game: v0.4.4 development preview. NASA/JPL/USGS references, third-party notices and tool/artwork provenance remain documented. No NASA affiliation or endorsement is implied.

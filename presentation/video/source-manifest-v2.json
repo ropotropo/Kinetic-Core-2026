@@ -1,0 +1,357 @@
+{
+  "project": "Kinetic Core",
+  "soleAuthor": "Mykyta Borisov",
+  "revision": "v2",
+  "generatedAtUTC": "2026-11-15T21:37:49.211361+00:00",
+  "film": {
+    "file": "Kinetic-Core-Gameplay-v2.mp4",
+    "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+    "durationSeconds": 82.005,
+    "width": 1920,
+    "height": 1080,
+    "decodedFrameCount": 2460,
+    "containerFrameRate": "30/1",
+    "within90Seconds": true
+  },
+  "voice": "Standard en-US-ChristopherNeural preset; no real-person imitation",
+  "music": "Original algorithmic composition,108BPM",
+  "gameBuild": "Recorded local v0.4.4 distribution; source bundle hashes and physical boundaries in remotion/public/footage-v2/capture-manifest-v2.json",
+  "validation": "validation-v2.json",
+  "files": [
+    {
+      "file": "Kinetic-Core-Gameplay-v2.en.srt",
+      "bytes": 1807,
+      "sha256": "37c22ec73d00f0bcddf499125534ca6211ea737e64f40ef0ad015788833149b5"
+    },
+    {
+      "file": "Kinetic-Core-Gameplay-v2.mp4",
+      "bytes": 11702957,
+      "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703"
+    },
+    {
+      "file": "README-v1.md",
+      "bytes": 5616,
+      "sha256": "249698fd75838cdbc4cf8df5604251675a1eb97d486f58b899de9d9ca71903ef"
+    },
+    {
+      "file": "README-v2.md",
+      "bytes": 3722,
+      "sha256": "c228f19da728e7ab202859f2da8dfab445a03fc275407dd41ffe02d55c826a3b"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1045,
+      "sha256": "b8429e1d82853ddc8ecae83925ce57aaaf634e5c51a97b0ce3bf911c4ea56e2f"
+    },
+    {
+      "file": "capture-manifest.json",
+      "bytes": 4647,
+      "sha256": "cd9a22196277be759e2dd46752f8ea332a56e44c3063194549a22b0d83fed9ca"
+    },
+    {
+      "file": "landing-provenance.json",
+      "bytes": 155178,
+      "sha256": "3c59ff8883c637bb08824c06d1579a480b3918795b40426e443cafef8f8c7268"
+    },
+    {
+      "file": "narration-v2-en.txt",
+      "bytes": 1069,
+      "sha256": "d4660a018087b59cb7dcf3d217fa72a6aa09dbab45981ba3e923e34aec98ab51"
+    },
+    {
+      "file": "narration-v2-timing.json",
+      "bytes": 2780,
+      "sha256": "c26119a5b909cd975ec2eac4734e5f1cb1219e2c28ff56015c4cc1b29f134f2d"
+    },
+    {
+      "file": "qa-v2/README.md",
+      "bytes": 1259,
+      "sha256": "3b472a7eff6c12fc9b44f94df50100b2b4fead49da9b6d808e65afd5710b69fa"
+    },
+    {
+      "file": "qa-v2/analyze_audio.py",
+      "bytes": 6995,
+      "sha256": "49ebd0fa62b2d19bbbb48ae3211fda839f41c7f6b36591131af2e2de0fee21ec"
+    },
+    {
+      "file": "qa-v2/analyze_cadence.py",
+      "bytes": 6889,
+      "sha256": "2a13acf058b4f36f3024c09923a9c03a0c3ccdf2abb65bedae718883d6eb7f3d"
+    },
+    {
+      "file": "qa-v2/analyze_cadence_v2-pts.py",
+      "bytes": 5141,
+      "sha256": "190393e3f8fccdc69df10bc8aee8da32d9cb95429d64d1e42d1750ad1c16a33f"
+    },
+    {
+      "file": "qa-v2/build_validation.py",
+      "bytes": 6672,
+      "sha256": "17db26e40a0e61918cf7462d3e7d403ae9178389ccf99f0f14f39a11a3d73b12"
+    },
+    {
+      "file": "qa-v2/source-prescan-v2.json",
+      "bytes": 3470,
+      "sha256": "35a2d7c91a0029ce89833d32baeed07ce0efd47f2836c336cc3606cfe9b9e20c"
+    },
+    {
+      "file": "qa-v2/v1-cadence-review.json",
+      "bytes": 24680,
+      "sha256": "754cef0ed295d28f93036fca8a1222ec6097a23dfb15ba434cdc06d806ea2366"
+    },
+    {
+      "file": "qa-v2/v1-cadence-review.md",
+      "bytes": 2796,
+      "sha256": "8af9e11fedd1cbcd4de17d4aaaef8062ff4b07213645ef749bc76985aee1f872"
+    },
+    {
+      "file": "qa-v2/v2-audio-validation.json",
+      "bytes": 10243,
+      "sha256": "ac9bec7d8f9437514e81c2d0b4282fe05916d9466e6f568e13d0537c059f1bdc"
+    },
+    {
+      "file": "qa-v2/v2-full-game-cadence.json",
+      "bytes": 858345,
+      "sha256": "ef772e74d3e640c01e7f48b60ba58cb2d25f8531d13c3907f218fb1bfa344951"
+    },
+    {
+      "file": "qa-v2/v2-whole-frame-cadence.json",
+      "bytes": 859878,
+      "sha256": "566e00ec523b0ad974818e7c76a3fd832bd827dd89d9c57a9055d007a5f3819f"
+    },
+    {
+      "file": "qa-v2/v2-world-cadence.json",
+      "bytes": 851243,
+      "sha256": "1ecbdb39846a0bb8b39ce959b0f2a8cf3d711d0520722f64a70cfc10945d8f45"
+    },
+    {
+      "file": "qa-v2/visual-review-v2.json",
+      "bytes": 1666,
+      "sha256": "350d98a66cb2b37e904bc2a7dedf45e90ab1e6945012278f8535021dd1f50b80"
+    },
+    {
+      "file": "remotion/.gitignore",
+      "bytes": 110,
+      "sha256": "aec949d1fbf80687da7f6059290d2f7d0515f759903f774075f7957ca71667da"
+    },
+    {
+      "file": "remotion/.prettierrc",
+      "bytes": 66,
+      "sha256": "10e86224d2f90945fbe57db21ac109bdb0ce9b5d7470e7b78fa5f8b6d49a1afd"
+    },
+    {
+      "file": "remotion/README.md",
+      "bytes": 1138,
+      "sha256": "cf37158f12dff533b34b437686ec3d05beca19c9151de1ecd36230a1e7cbfda0"
+    },
+    {
+      "file": "remotion/eslint.config.mjs",
+      "bytes": 79,
+      "sha256": "7f2ca640409fd597965bedf929073b9a74f143643e1711150c4cac3b6ec5c80d"
+    },
+    {
+      "file": "remotion/package-lock.json",
+      "bytes": 189390,
+      "sha256": "a56e5c1f0002eafa44f3faf6885e11221cc9a82704d9c7fa04c641371273f80a"
+    },
+    {
+      "file": "remotion/package.json",
+      "bytes": 788,
+      "sha256": "a5f7a53e7dce8c14511f27d6cb9ed8e1bcf9dc00d76e3456163b7f01d1179de1"
+    },
+    {
+      "file": "remotion/public/audio-v2/music.wav",
+      "bytes": 17280044,
+      "sha256": "72bf1063fbd741fae15e8929ce4fd89243472080bdafbad71e80f52f1280fd71"
+    },
+    {
+      "file": "remotion/public/audio-v2/provenance.json",
+      "bytes": 1354,
+      "sha256": "c7d67df5ef9b44d0df49718bc02b4d3a3ea8b09912cd6926fabbc715687d9c89"
+    },
+    {
+      "file": "remotion/public/audio-v2/voiceover-en.json",
+      "bytes": 4457,
+      "sha256": "01b8db397e9cc3e3233b163e378e02108f50b3dc44c8b5f8b447263f1d2fa153"
+    },
+    {
+      "file": "remotion/public/audio-v2/voiceover-en.mp3",
+      "bytes": 472752,
+      "sha256": "c63f86daa8a358bb636a6709d228f8e41160c3949f99b679b77e9e97f8ad7cbc"
+    },
+    {
+      "file": "remotion/public/audio-v2/voiceover-en.wav",
+      "bytes": 7564110,
+      "sha256": "42847f35219f340669ee571e23e885945c6668d200065fc678dbdfd48c75c280"
+    },
+    {
+      "file": "remotion/public/footage-v2/builder.mp4",
+      "bytes": 380356,
+      "sha256": "97390a467b4900256bef0d92cb694674f2c0754d50eb10b19d72c1ecf4c0490b"
+    },
+    {
+      "file": "remotion/public/footage-v2/capture-manifest-v2.json",
+      "bytes": 51795,
+      "sha256": "f0f41a42a754df261a2fe1de327c160eb792b86fcefa4363bc2c5670b1354929"
+    },
+    {
+      "file": "remotion/public/footage-v2/contact.mp4",
+      "bytes": 1442890,
+      "sha256": "b246bd077de7b037aeb46d1bf069c3e967a7885d3768f718645800eff3db4695"
+    },
+    {
+      "file": "remotion/public/footage-v2/destinations.mp4",
+      "bytes": 140367,
+      "sha256": "7b4ed90707fa19fe527af2654aa4c629ed7713e0839a47ede1eced668457a76b"
+    },
+    {
+      "file": "remotion/public/footage-v2/docking-provenance-v2.json",
+      "bytes": 7221,
+      "sha256": "22de1e2af2708a377b33eb6a77dd4d79e230e2ad07c6fc2f3595c555ff7d8c27"
+    },
+    {
+      "file": "remotion/public/footage-v2/landing.mp4",
+      "bytes": 2331917,
+      "sha256": "f20e222c832a0733d9d30a94890c0a68b8e6ce10a0fb27a926cd05e3e884ca8a"
+    },
+    {
+      "file": "remotion/public/footage-v2/liftoff.mp4",
+      "bytes": 4205636,
+      "sha256": "956d06c95f4ff9a938dd3ade8d6dff9ea8659864820a5e8aaa130ce304b21b4a"
+    },
+    {
+      "file": "remotion/public/footage-v2/planner-provenance.json",
+      "bytes": 618,
+      "sha256": "117b5ffcb7d988c3a181c37bcc5c8ef0bfb46150af06d1ab9142ad764befa8aa"
+    },
+    {
+      "file": "remotion/public/footage-v2/planner.mp4",
+      "bytes": 119356,
+      "sha256": "b752d3001f22c50de0cd1ca56cfac561807e0ac6be34fd44ff670733330dc044"
+    },
+    {
+      "file": "remotion/public/footage-v2/root-docking-cockpit.mp4",
+      "bytes": 873586,
+      "sha256": "9da8d97daf26b3f2299fec32c4a7e488def3343bb324d6baa39a6ccab6038e3a"
+    },
+    {
+      "file": "remotion/public/footage-v2/root-docking-external.mp4",
+      "bytes": 277869,
+      "sha256": "04a9f81b3d588e9ce09474031d0535d703268522c075048de2db208eed875b45"
+    },
+    {
+      "file": "remotion/public/footage-v2/solar-system-provenance.json",
+      "bytes": 462,
+      "sha256": "2527c89b43c930704667e0c63fd5b47a44472a005afab860563b07c0721b767e"
+    },
+    {
+      "file": "remotion/public/footage-v2/solar-system.mp4",
+      "bytes": 287292,
+      "sha256": "d302ea7583ebeeb352bdd0552521e5c27dadd36cdbd4ba542ca5ff66ec160f12"
+    },
+    {
+      "file": "remotion/remotion.config.ts",
+      "bytes": 371,
+      "sha256": "af5ce97f98b2c91a7891f2bef4801f7dc700843f010fd81e1566d9eebf6f5ad1"
+    },
+    {
+      "file": "remotion/src/Composition.tsx",
+      "bytes": 5374,
+      "sha256": "41be4aa37769311ba2d38b58b4ded433c8b6eac4173efcf1c103a75b384dd6ba"
+    },
+    {
+      "file": "remotion/src/GameplayV2.tsx",
+      "bytes": 9904,
+      "sha256": "b3c19fe287b774da5aa118eaae00ef3c449877bd709f763c531d80a062b0a18f"
+    },
+    {
+      "file": "remotion/src/Root.tsx",
+      "bytes": 588,
+      "sha256": "7b1d98d66d0eb8d9edbddcba439e2310025320aa028707365e8664aeb5e06650"
+    },
+    {
+      "file": "remotion/src/index.ts",
+      "bytes": 109,
+      "sha256": "957e481dd33a29b4a55ae0e95dbf763b7e48c37c427ca4bd1275faf34bc07a74"
+    },
+    {
+      "file": "remotion/tsconfig.json",
+      "bytes": 368,
+      "sha256": "a6fbcf514dbfd3d116c3f7f78b72949c8c2ff45bdbe17aeff4c97e16bc1327fa"
+    },
+    {
+      "file": "retimed-landing-v2.json",
+      "bytes": 682,
+      "sha256": "4046e9ebb5f12081ad7fadbc8f083545af2dc5d2dc25b31bd65341af7a4f6fbb"
+    },
+    {
+      "file": "scripts/capture-docking-v2.mjs",
+      "bytes": 3076,
+      "sha256": "d7600e51164b4bb1f9f1dbced6d23dce3e4fef458413b5ef462e82db723662f7"
+    },
+    {
+      "file": "scripts/capture-gameplay.mjs",
+      "bytes": 4794,
+      "sha256": "7c7dfc06c64dbfebe192e648790b3f30c06a388ef48d9daaea06af3006fde4c1"
+    },
+    {
+      "file": "scripts/capture-local-landing.mjs",
+      "bytes": 3227,
+      "sha256": "53ecd55d587077d73af30fb7f3f8a91f4520b6ba9da040b66b797a9ca3ad6e50"
+    },
+    {
+      "file": "scripts/capture-solar-v2.mjs",
+      "bytes": 2962,
+      "sha256": "55377f897cc25f9c436a140faf8c6a0e4c4f1ca1e658bed261271516bd00e636"
+    },
+    {
+      "file": "scripts/generate-audio.mjs",
+      "bytes": 944,
+      "sha256": "d4986a1a10362bbebf9f781277834ec04113066f591daa0cb79e83f82897dfc6"
+    },
+    {
+      "file": "scripts/generate-score-v2.py",
+      "bytes": 2549,
+      "sha256": "fc7e71fbe3b42648c2a235d7427e806b8b4b5128edee5f74dd08f34daed9eab8"
+    },
+    {
+      "file": "scripts/generate-voiceover-v2.py",
+      "bytes": 1118,
+      "sha256": "92940aee2f994f822336c1387733e2a1221f67777dbeb041080f4f2fb2be0c9f"
+    },
+    {
+      "file": "scripts/requirements-audio-v2.txt",
+      "bytes": 29,
+      "sha256": "f4e0703c474e036a0d8b9cf8fea68637420ea8a13bf7b22d42fca031c057e117"
+    },
+    {
+      "file": "scripts/v2/capture-flight.mjs",
+      "bytes": 4864,
+      "sha256": "da3dd6727dcdab1c991adc891050cd68a3bce7e6190ffbe7e1bcae6130f4c93e"
+    },
+    {
+      "file": "scripts/v2/capture-smooth.mjs",
+      "bytes": 9297,
+      "sha256": "5188251afd194b822a95e179dee947642159c8e88315ecd9fb385c982725d94e"
+    },
+    {
+      "file": "scripts/v2/probe-clock.mjs",
+      "bytes": 1896,
+      "sha256": "31a8e87f390f19738b788835f4756c4cc2980ef8677fbfc468f8034a17b426b0"
+    },
+    {
+      "file": "source-manifest.json",
+      "bytes": 2592,
+      "sha256": "ef972576b8067ef9a5ed0dd759768b3683558bcb4c3a76cef00a2ffff31c7040"
+    },
+    {
+      "file": "v2-edit-plan.json",
+      "bytes": 11800,
+      "sha256": "6add4f6660084bc525832f329a354d0280a80af9a2d754d536a4307e20146db5"
+    },
+    {
+      "file": "validation-v2.json",
+      "bytes": 51322,
+      "sha256": "afec20e6e56004baa0171c0a3f83d30ba607371d8cf15188ccc48d174e4e4461"
+    }
+  ]
+}

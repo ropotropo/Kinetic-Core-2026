@@ -1,0 +1,223 @@
+{
+  "url": "http://127.0.0.1:5188/",
+  "method": "Ordinary docking practice UI, keyboard RCS and cockpit view; browser clock stepped33/33/34ms; one rendered screenshot per1/30s; no state injection or physics edits",
+  "before": {
+    "phase": "docking",
+    "paused": false,
+    "cameraView": "chase",
+    "config": {
+      "capsule": "pioneer",
+      "service": "survey",
+      "core": "atlas",
+      "upper": "swift",
+      "cargo": "none",
+      "site": "kennedy"
+    },
+    "timeUnits": "seconds",
+    "distanceUnits": "meters",
+    "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+    "destination": "moon",
+    "preview": false,
+    "telemetry": {
+      "phase": "docking",
+      "time": 0.18333333333333332,
+      "range": 69.99999999998927,
+      "distance": 70.03342059366726,
+      "offsetX": 1.799999957501976,
+      "offsetY": -1.2000000849960506,
+      "lateralOffset": 2.1633307770652284,
+      "velocityX": -4.636148130516682e-07,
+      "velocityY": -9.272296337021794e-07,
+      "velocityZ": -1.831714303466742e-10,
+      "closingSpeed": 1.831714303466742e-10,
+      "relativeSpeed": 1.0366742603384074e-06,
+      "pitch": 0.0348840627415092,
+      "yaw": -0.05232737742696992,
+      "roll": 0.034884064791972376,
+      "angle": 0.07146743648421636,
+      "pitchDegrees": 1.9987095673580413,
+      "yawDegrees": -2.9981378795535094,
+      "rollDegrees": 1.9987096848409271,
+      "angleDegrees": 4.094782483164876,
+      "angularSpeed": 0.0004444278450351009,
+      "angularSpeedDegrees": 0.025463839818605456,
+      "fuel": 319.9960540181117,
+      "fuelFraction": 0.9999876688065991,
+      "fuelUsed": 0.003945981888233048,
+      "mass": 7919.996054018112,
+      "holdAttitude": true,
+      "brake": false,
+      "lastThrust": [
+        0,
+        0,
+        0
+      ],
+      "lastTorque": [
+        -39.62158619537014,
+        61.7481868759656,
+        -15.115649943671864
+      ],
+      "capture": {
+        "lateral": 0.35,
+        "speed": 0.2,
+        "closingSpeed": 0.15,
+        "angle": 0.08726646259971647,
+        "angularSpeed": 0.017453292519943295
+      },
+      "captureReady": false,
+      "event": "Terminal approach training begins 70 m from the port. Manual RCS control.",
+      "failure": null
+    }
+  },
+  "clips": [
+    {
+      "file": "root-docking-external.mp4",
+      "frames": 150,
+      "fps": 30,
+      "seconds": 5,
+      "after": {
+        "phase": "docking",
+        "paused": false,
+        "cameraView": "chase",
+        "config": {
+          "capsule": "pioneer",
+          "service": "survey",
+          "core": "atlas",
+          "upper": "swift",
+          "cargo": "none",
+          "site": "kennedy"
+        },
+        "timeUnits": "seconds",
+        "distanceUnits": "meters",
+        "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+        "destination": "moon",
+        "preview": false,
+        "telemetry": {
+          "phase": "docking",
+          "time": 5.18333333333332,
+          "range": 69.31353419506249,
+          "distance": 69.34355930637528,
+          "offsetX": 1.664906371364684,
+          "offsetY": -1.1795259392137138,
+          "lateralOffset": 2.040390812243751,
+          "velocityX": -0.03690676904354383,
+          "velocityY": 0.0063141535061677825,
+          "velocityZ": -0.18719841686230748,
+          "closingSpeed": 0.18719841686230748,
+          "relativeSpeed": 0.1909063262741368,
+          "pitch": 0.025908735355507504,
+          "yaw": -0.03927567802319941,
+          "roll": 0.02594240453393644,
+          "angle": 0.05348121923492977,
+          "pitchDegrees": 1.4844611883919585,
+          "yawDegrees": -2.2503305882440463,
+          "rollDegrees": 1.4863902902156094,
+          "angleDegrees": 3.064248145375353,
+          "angularSpeed": 0.004869608288839051,
+          "angularSpeedDegrees": 0.27900800283240035,
+          "fuel": 319.3007967452039,
+          "fuelFraction": 0.9978149898287623,
+          "fuelUsed": 0.6992032547964466,
+          "mass": 7919.300796745204,
+          "holdAttitude": true,
+          "brake": false,
+          "lastThrust": [
+            0,
+            0,
+            0
+          ],
+          "lastTorque": [
+            -0.2678359010865492,
+            0.6581339906073822,
+            -0.19555883851055356
+          ],
+          "capture": {
+            "lateral": 0.35,
+            "speed": 0.2,
+            "closingSpeed": 0.15,
+            "angle": 0.08726646259971647,
+            "angularSpeed": 0.017453292519943295
+          },
+          "captureReady": false,
+          "event": "Terminal approach training begins 70 m from the port. Manual RCS control.",
+          "failure": null
+        }
+      }
+    },
+    {
+      "file": "root-docking-cockpit.mp4",
+      "frames": 270,
+      "fps": 30,
+      "seconds": 9,
+      "after": {
+        "phase": "docking",
+        "paused": false,
+        "cameraView": "cockpit",
+        "config": {
+          "capsule": "pioneer",
+          "service": "survey",
+          "core": "atlas",
+          "upper": "swift",
+          "cargo": "none",
+          "site": "kennedy"
+        },
+        "timeUnits": "seconds",
+        "distanceUnits": "meters",
+        "dockingAxes": "+X right, +Y up, +Z away from target; craft nose \u2212Z",
+        "destination": "moon",
+        "preview": false,
+        "telemetry": {
+          "phase": "docking",
+          "time": 14.383333333333628,
+          "range": 66.79576679096549,
+          "distance": 66.82054416458067,
+          "offsetX": 1.4557923032681004,
+          "offsetY": -1.0914806582679406,
+          "lateralOffset": 1.819522260822235,
+          "velocityX": -0.008983581459207145,
+          "velocityY": 0.007017024508630214,
+          "velocityZ": -0.16772448842797438,
+          "closingSpeed": 0.16772448842797438,
+          "relativeSpeed": 0.1681114136137539,
+          "pitch": 0.008716878578932911,
+          "yaw": -0.013590486179416342,
+          "roll": 0.008855712537846993,
+          "angle": 0.018386325131032378,
+          "pitchDegrees": 0.49944035310085044,
+          "yawDegrees": -0.7786774996114313,
+          "rollDegrees": 0.5073949529997199,
+          "angleDegrees": 1.0534588307634756,
+          "angularSpeed": 0.002427289429921609,
+          "angularSpeedDegrees": 0.1390734399912238,
+          "fuel": 317.9526696080177,
+          "fuelFraction": 0.9936020925250553,
+          "fuelUsed": 2.0473303919827863,
+          "mass": 7917.9526696080175,
+          "holdAttitude": true,
+          "brake": false,
+          "lastThrust": [
+            0,
+            0,
+            0
+          ],
+          "lastTorque": [
+            4.816751126916698,
+            -7.340712478569721,
+            1.762071447385316
+          ],
+          "capture": {
+            "lateral": 0.35,
+            "speed": 0.2,
+            "closingSpeed": 0.15,
+            "angle": 0.08726646259971647,
+            "angularSpeed": 0.017453292519943295
+          },
+          "captureReady": false,
+          "event": "Terminal approach training begins 70 m from the port. Manual RCS control.",
+          "failure": null
+        }
+      }
+    }
+  ],
+  "outcomeClaim": "Separate terminal exercise; no soft-capture success is claimed"
+}
