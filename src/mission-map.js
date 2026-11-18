@@ -1,10 +1,11 @@
 import { EARTH } from './physics.js';
+import { drawWorldDisc } from './map-world-disc.js';
 import { MOON, moonState, getMissionWorldState } from './lunar-mission.js';
 const names=['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
 export function drawMissionMap(canvas,m,t){
   const c=canvas.getContext('2d'),w=canvas.width,h=canvas.height;c.clearRect(0,0,w,h);c.fillStyle='#020305';c.fillRect(0,0,w,h);
   c.font='12px system-ui';c.lineWidth=1;
-  const body=(x,y,r,name,color)=>{c.fillStyle=color;c.beginPath();c.arc(x,y,Math.max(2,r),0,Math.PI*2);c.fill();c.fillStyle='#cad0d8';c.fillText(name,x+r+5,y+4);};
+  const body=(x,y,r,name,color)=>{if(['Earth','Moon'].includes(name))drawWorldDisc(c,x,y,r,name.toLowerCase(),color);else{c.fillStyle=color;c.beginPath();c.arc(x,y,Math.max(2,r),0,Math.PI*2);c.fill();}c.fillStyle='#cad0d8';c.fillText(name,x+r+5,y+4);};
   if(m.kind==='custom-descent'||m.primary==='moon'&&t.altitude<100000){
     const pos=t.positionLocal??m.position,vel=t.velocityLocal??m.velocity;
     const scale=Math.max(2,Math.abs(pos[0])/90,pos[1]/90),x=w*.48+pos[0]/scale,y=h-35-pos[1]/scale;

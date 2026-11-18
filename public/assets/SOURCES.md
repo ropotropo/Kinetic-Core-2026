@@ -65,3 +65,7 @@ Launchpad and coastal terrain are illustrative. Camera framing, Earth distance h
 The approved KC vector, wordmark, mission emblem and 3:5 flag are stored in
 `branding/`. The interface and post-contact flag embed the original approved
 vectors. They travel with the source export; no remote logo service is used.
+
+## Mission selector Moon preview
+
+`kc-moon-preview.jpg` is a still rendered from the project's Moon globe using the credited NASA lunar maps above. It is a destination illustration, not a captured mission outcome or live ephemeris. Rendered locally for the v0.5 mission selector.

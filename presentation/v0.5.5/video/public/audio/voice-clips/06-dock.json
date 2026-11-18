@@ -1,0 +1,15 @@
+{
+  "text": "Take control for a separate docking exercise.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 33547620,
+      "text": "Take control for a separate docking exercise."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

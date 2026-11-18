@@ -2,6 +2,10 @@
 
 Verification is separated into numerical/state tests, build checks, browser interaction evidence and platform acceptance. These records support a prototype; they do not certify a flight solver or establish a universal accuracy percentage.
 
+## Current publication check
+
+v0.5.6 was imported from release commit `8db271f`. A fresh install, **155 passing tests**, and production/portable build succeeded; rebuilt distribution bytes match the release. Historical evidence below remains tied to its original version.
+
 ## Numerical and state checks
 
 The v0.4.4 suite contains **86 automated tests**, covering thrust/fuel behavior, ballistic conservation, actual orbit checks, stage release, landing feasibility and failure, docking motion/capture, typed hardware geometry, frame scheduling and checkpoint validation.

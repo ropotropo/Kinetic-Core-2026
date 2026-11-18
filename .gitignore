@@ -4,3 +4,9 @@ work/
 outputs/
 .gstack/
 *.log
+__pycache__/
+*.pyc
+.cache/
+.env
+.env.*
+!.env.example

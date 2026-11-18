@@ -1,0 +1,15 @@
+{
+  "text": "Physics makes every decision count.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 27357144,
+      "text": "Physics makes every decision count."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

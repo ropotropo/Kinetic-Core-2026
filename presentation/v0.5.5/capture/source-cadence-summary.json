@@ -1,0 +1,92 @@
+[
+  {
+    "name": "ascent",
+    "crop": "900:300:180:140",
+    "sha256": "8f3efef3f3858d29d9d6ff8ec3656b57a943cae4cffbf18ac2ba1463e3d1701e",
+    "summary": {
+      "start": 0,
+      "end": 7.0,
+      "decodedTransitions": 209,
+      "exactDuplicatePct": 0.0,
+      "nearDuplicatePct": 0.0,
+      "meaningfulChangesPerSecond": 29.857142857142858,
+      "medianAdjacentLumaMAE": 0.08199074074074074,
+      "longestNearStaticHoldSeconds": 0,
+      "nearStaticHoldsAtLeastHalfSecond": [],
+      "anchorNearDuplicatePct": 0.0,
+      "longestAnchoredNearStaticHoldSeconds": 0
+    }
+  },
+  {
+    "name": "stage-release",
+    "crop": "900:300:180:140",
+    "sha256": "6a38e7b8306c6400fb5b2e3d2e2a435a8f3ecf5995e13b4f3f7aa1b3df25fbe1",
+    "summary": {
+      "start": 0,
+      "end": 8.0,
+      "decodedTransitions": 239,
+      "exactDuplicatePct": 0.0,
+      "nearDuplicatePct": 0.0,
+      "meaningfulChangesPerSecond": 29.875,
+      "medianAdjacentLumaMAE": 0.14055555555555554,
+      "longestNearStaticHoldSeconds": 0,
+      "nearStaticHoldsAtLeastHalfSecond": [],
+      "anchorNearDuplicatePct": 0.0,
+      "longestAnchoredNearStaticHoldSeconds": 0
+    }
+  },
+  {
+    "name": "moon-descent",
+    "crop": "900:300:180:140",
+    "sha256": "147c3f7021589c65f5f774ec3f189eef3dd5fcc6953f130fb8fd87588b739dfa",
+    "summary": {
+      "start": 0,
+      "end": 8.0,
+      "decodedTransitions": 239,
+      "exactDuplicatePct": 0.0,
+      "nearDuplicatePct": 0.0,
+      "meaningfulChangesPerSecond": 29.875,
+      "medianAdjacentLumaMAE": 0.25833333333333336,
+      "longestNearStaticHoldSeconds": 0,
+      "nearStaticHoldsAtLeastHalfSecond": [],
+      "anchorNearDuplicatePct": 0.0,
+      "longestAnchoredNearStaticHoldSeconds": 0
+    }
+  },
+  {
+    "name": "docking",
+    "crop": "1000:200:300:240",
+    "sha256": "2076f15dc3dde1b1e8dc38496412f73c87f369b3fc16719f0874a2b7f058669d",
+    "summary": {
+      "start": 0,
+      "end": 4.0,
+      "decodedTransitions": 119,
+      "exactDuplicatePct": 0.0,
+      "nearDuplicatePct": 0.0,
+      "meaningfulChangesPerSecond": 29.75,
+      "medianAdjacentLumaMAE": 0.06736111111111111,
+      "longestNearStaticHoldSeconds": 0,
+      "nearStaticHoldsAtLeastHalfSecond": [],
+      "anchorNearDuplicatePct": 0.0,
+      "longestAnchoredNearStaticHoldSeconds": 0
+    }
+  },
+  {
+    "name": "cockpit",
+    "crop": "1000:200:300:240",
+    "sha256": "c3b5497f202b8f59eab364706a65bde5a8e88fe41a89ab1bfb60018ab0232eee",
+    "summary": {
+      "start": 0,
+      "end": 5.0,
+      "decodedTransitions": 149,
+      "exactDuplicatePct": 0.0,
+      "nearDuplicatePct": 0.0,
+      "meaningfulChangesPerSecond": 29.8,
+      "medianAdjacentLumaMAE": 0.11444444444444445,
+      "longestNearStaticHoldSeconds": 0,
+      "nearStaticHoldsAtLeastHalfSecond": [],
+      "anchorNearDuplicatePct": 0.0,
+      "longestAnchoredNearStaticHoldSeconds": 0
+    }
+  }
+]

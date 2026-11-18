@@ -1,0 +1,21 @@
+{
+  "text": "Release the stage. Every kilogram matters.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 19738096,
+      "text": "Release the stage."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 20238096,
+      "duration": 22500001,
+      "text": "Every kilogram matters."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

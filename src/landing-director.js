@@ -1,19 +1,39 @@
 import { LANDER, LANDING_LIMITS } from './landing.js';
 
-// Guidance only: these measurements never change the physical state.
-export function installLandingDirector(){
-  const node=document.createElement('div');node.className='landing-director';node.hidden=true;node.setAttribute('aria-label','Landing guidance');
-  document.getElementById('viewport').append(node);
-  let last='';
-  return function update(state){
-    const f=state.flight;node.hidden=f?.kind!=='landing'||state.phase!=='landing'||state.paused;if(node.hidden)return;
-    const mass=LANDER.dryMass+f.fuel,net=f.scenario.thrustLimit/mass-f.gravity;
-    const down=Math.max(0,-f.velocity[1]),brake=net>0?down*down/(2*net):Infinity;
-    const x=f.position[0],vx=f.velocity[0],height=f.position[1];
-    const speedOK=Math.abs(f.velocity[1])<=LANDING_LIMITS.verticalSpeed,offsetOK=Math.abs(x)<=LANDING_LIMITS.padRadius;
-    const warning=height<brake*1.25+8&&!speedOK?'BRAKE NOW':height<80?'FINAL DESCENT':'CONTROL DESCENT';
-    const lateral=offsetOK?'Inside landing zone':x>0?'Landing zone ← LEFT':'Landing zone RIGHT →';
-    const html=`<strong>${warning}</strong><span>${lateral} · ${Math.abs(x).toFixed(1)} m offset</span><span>Drift ${vx.toFixed(2)} m/s · descent ${down.toFixed(1)} m/s</span><span>Full-power stopping distance: ${Number.isFinite(brake)?brake.toFixed(0)+' m':'insufficient thrust'}</span><span>Touchdown limits: vertical ≤ 2 m/s · lateral ≤ 1.5 m/s</span>`;
-    if(html!==last){node.innerHTML=html;last=html;}node.dataset.warning=warning==='BRAKE NOW'?'true':'false';
+// This coach reads physical state. It never steers or changes the simulation.
+export function installLandingDirector() {
+  const node = document.createElement('div');
+  node.className = 'landing-director';
+  node.hidden = true;
+  node.setAttribute('aria-label', 'Landing next action');
+  node.setAttribute('role', 'status');
+  node.innerHTML = '<strong></strong><span></span>';
+  // The coach occupies a dedicated row between the scene and engine controls.
+  // It cannot cover the primary instruments or the landing target on a phone.
+  const controls = document.getElementById('docking-camera-controls');
+  controls.before(node);
+  let last = '';
+  return function update(state) {
+    const flight = state.flight;
+    node.hidden = flight?.kind !== 'landing' || state.phase !== 'landing';
+    if (node.hidden) return;
+    const mass = LANDER.dryMass + flight.fuel;
+    const net = flight.scenario.thrustLimit / mass - flight.gravity;
+    const down = Math.max(0, -flight.velocity[1]);
+    const stoppingDistance = net > 0 ? down * down / (2 * net) : Infinity;
+    const offset = flight.position[0], drift = flight.velocity[0], height = flight.position[1];
+    const critical = height < stoppingDistance * 1.25 + 8 && down > LANDING_LIMITS.verticalSpeed;
+    let title, action;
+    if (state.paused) { title = 'Ready for descent'; action = state.landingAssist ? 'Landing assist is on.' : 'Set engine power, then resume.'; }
+    else if (flight.fuel <= 0) { title = 'Propellant depleted'; action = 'Restore a checkpoint to retry.'; }
+    else if (state.throttle <= .001) { title = 'Engine ceiling is zero'; action = 'Increase power to brake the descent.'; }
+    else if (critical) { title = 'Braking margin low'; action = state.landingAssist ? 'Keep the engine ceiling at 100%.' : 'Increase power and stay upright.'; }
+    else if (height < 100 && Math.abs(drift) > LANDING_LIMITS.horizontalSpeed) { title = 'Reduce lateral drift'; action = state.landingAssist ? 'Assist is controlling the approach.' : `Tilt ${drift > 0 ? 'left' : 'right'} to counter drift.`; }
+    else if (Math.abs(offset) > LANDING_LIMITS.padRadius) { title = 'Align over the pad'; action = `Landing zone is to your ${offset > 0 ? 'left' : 'right'}.`; }
+    else if (height < 80) { title = 'Final descent'; action = 'Contact below 2 m/s, inside the pad.'; }
+    else { title = 'Control descent'; action = state.landingAssist ? 'Landing assist on. Keep power available.' : 'Manage power and keep the lander upright.'; }
+    const signature = title + action;
+    if (signature !== last) { node.firstElementChild.textContent = title; node.lastElementChild.textContent = action; last = signature; }
+    node.dataset.warning = String(!state.paused && (critical || flight.fuel <= 0 || state.throttle <= .001));
   };
 }

@@ -1,0 +1,8 @@
+/* A restrained sensor texture; navigation and the true port reticle stay clear. */
+.docking-feed-effect{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.docking-feed-effect::before,.docking-feed-effect::after{content:'';position:absolute;inset:-3px;pointer-events:none;}
+.docking-feed-effect::before{background:radial-gradient(ellipse at center,transparent 42%,#00000024 100%),repeating-linear-gradient(0deg,#0000000b 0 1px,transparent 1px 4px);}
+.docking-feed-effect::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.78' numOctaves='2' stitchTiles='stitch' seed='23'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:112px 112px;filter:grayscale(1);opacity:.045;mix-blend-mode:screen;animation:docking-grain .64s steps(2,end) infinite;}
+@keyframes docking-grain{0%,100%{transform:translate(0,0);}33%{transform:translate(1px,-1px);}66%{transform:translate(-1px,1px);}}
+#viewport .docking-reticle{z-index:2;}
+@media(prefers-reduced-motion:reduce){.docking-feed-effect::after{animation:none;}}

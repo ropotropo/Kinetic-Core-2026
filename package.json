@@ -1,10 +1,10 @@
 {
   "name": "kineti-core",
-  "version": "0.4.4",
+  "version": "0.5.6",
   "private": true,
   "type": "module",
   "description": "Mykyta's modular spacecraft and orbital flight game",
-  "author": "Mykyta Borisov (Микита Борисов; ropotropo)",
+  "author": "Mykyta Borisov (\u041c\u0438\u043a\u0438\u0442\u0430 \u0411\u043e\u0440\u0438\u0441\u043e\u0432; ropotropo)",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "node scripts/build.mjs",

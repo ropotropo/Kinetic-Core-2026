@@ -1,4 +1,6 @@
-# Kineti Core: direction of flight
+# Kinetic Core: direction of flight
+
+> Roadmap and proposed gates, not a current feature list. The current game is v0.4.4; Windows/Android preview packages now exist. Read [CURRENT-VERSION.md](CURRENT-VERSION.md) for implemented scope and device limits.
 
 Working product direction, 15 November 2026. Sole game author: Mykyta. Andrii relays feedback and coordinates development. This implementation establishes a proposal for Mykyta to review, not a claim of his approval of every design choice.
 

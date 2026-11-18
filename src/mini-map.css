@@ -1,0 +1,14 @@
+.mini-map[hidden]{display:none!important;}.mini-map{position:absolute;z-index:3;right:14px;bottom:14px;width:152px;margin:0;padding:0;background:#0002;pointer-events:none;opacity:.86;border-radius:8px;}.mini-map canvas{display:block;width:100%;height:84px;background:transparent;}.mini-map figcaption{text-align:right;font:11px/1.4 var(--kc-font);color:#d2d8df;padding:0 4px 4px;text-shadow:0 1px 5px #000;white-space:nowrap;}.mc-scene>.mini-map{bottom:96px;}.mc-flight.is-ended .mini-map,#viewport:has(#outcome-overlay:not([hidden]))>.mini-map{display:none;}@media(max-width:650px),(max-height:500px){.mini-map{right:10px;bottom:10px;width:128px;}.mini-map canvas{height:72px;}.mini-map figcaption{font-size:10px;}.mc-scene>.mini-map{bottom:92px;}}
+.mc-mini-map{position:absolute;z-index:3;right:14px;bottom:96px;pointer-events:none;}.mc-mini-map>.mini-map{position:static;}.mc-flight.is-ended .mc-mini-map{display:none;}@media(max-width:650px),(max-height:500px){.mc-mini-map{right:10px;bottom:92px;}}
+/* Inspection and the small map occupy separate touch-safe zones. */
+@media(max-width:650px),(max-height:600px) and (max-width:980px){
+  .mc-scene .mc-inspect-hint{left:17px;right:auto;transform:none;width:auto;max-width:calc(100% - 170px);}
+  .mc-scene .mc-inspect-hint>span{display:none;}
+  .mission-control .ascent-reference{max-width:calc(100% - 175px);}
+}
+@media(min-width:651px) and (max-width:980px) and (max-height:600px){
+  .game-shell[data-flight-kind="landing"] .viewport>.mini-map{left:12px;right:auto;}
+}
+
+.game-shell[data-workspace="flight"] .ascent-reference{max-width:calc(100% - 170px);}
+.mission-control .mc-scene:has(.mc-inspect-hint:not([hidden])) .ascent-reference{visibility:hidden;}

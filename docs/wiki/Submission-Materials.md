@@ -14,7 +14,7 @@ The [presentation source]({{MATERIALS_TREE_URL}}source) contains bilingual copy,
 
 **[Open the current published gameplay film]({{VIDEO_URL}})**
 
-The current film is **Kinetic-Core-Gameplay-v2.mp4 — 82 seconds, 1080p, 30 fps**, with 22 operational shots, English narration and an original musical score. The earlier 88-second edit is historical. The completed film is available through this repository’s configured stable viewer. Replacing its published media at the same path keeps the viewer link unchanged. Update that publication and its notes when the new edit is ready; this documentation does not upload or overwrite video.
+The completed film is available through this repository’s configured stable viewer. Replacing its published media at the same path keeps the viewer link unchanged. Update that publication and its notes when the new edit is ready; this documentation does not upload or overwrite video.
 
 The [video notes]({{VIDEO_NOTES_URL}}) should be updated with the replacement. Do not infer an uninterrupted Earth–Moon flight or a successful docking capture from a montage of separate exercises. Repository cleanup does not modify or freeze the video files.
 

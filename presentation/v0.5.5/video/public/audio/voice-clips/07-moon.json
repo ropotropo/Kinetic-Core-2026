@@ -1,0 +1,27 @@
+{
+  "text": "Continue the Moon expedition. Brake. Descend.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 23904763,
+      "text": "Continue the Moon expedition."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 24404763,
+      "duration": 13690476,
+      "text": "Brake."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 38095239,
+      "duration": 14642857,
+      "text": "Descend."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

@@ -1,0 +1,150 @@
+{
+  "schema": "kinetic-core-audio-validation.v1",
+  "methodVersion": "pcm-stem-comparison.v4-teaser-spoken-anchor",
+  "scriptSha256": "d0c718b857f8804f990fedd8b279d22ad1c1c05baf6b006b9f97af1e10114fe7",
+  "method": "Decode final AAC to48kHz stereo PCM, measure unclipped PCM samples, independently correlate known speech stem to export, then fit known voice/music stems within each spoken beat. Speech-over-residual uses20ms speech-active blocks.",
+  "limits": "RMS dBFS is reported separately from loudnorm integrated LUFS/true peak. A numeric level test does not replace listening for intelligibility/pronunciation. Timing correlation uses mono-average; stem fits and speech/residual level comparisons preserve both stereo channels.",
+  "film": {
+    "file": "Kinetic-Core-Teaser-v0.5.5.mp4",
+    "sha256": "3e79062825cf447474645e70a978251b911051c713527161c74b361c76606f3d",
+    "sampleRate": 48000,
+    "channels": 2,
+    "durationSeconds": 56.0,
+    "rmsDbFS": -20.696839383770154,
+    "samplePeakDbFS": -1.9476154283611604,
+    "clippingSamplesAt0999": 0,
+    "integratedLUFS": -17.18,
+    "truePeakDbTP": -1.93,
+    "loudnessRangeLU": 7.9,
+    "measurement": "ffmpeg loudnorm first-pass input statistics; no modification to deliverable"
+  },
+  "voiceStem": {
+    "file": "voiceover-en.wav",
+    "sha256": "b2dad82888107bcc05146aeadd55f995677f82aa7453feb9771840bbdf9539b0",
+    "sampleRate": 48000,
+    "channels": 1,
+    "durationSeconds": 56.0,
+    "rmsDbFS": -21.203656709097032,
+    "samplePeakDbFS": -1.990177104276904,
+    "clippingSamplesAt0999": 0
+  },
+  "musicStem": {
+    "file": "music.wav",
+    "sha256": "b4c5ccde07ad3470422bb57a7997fd102d82cbafb5c459347b2eeb99ec7160e9",
+    "sampleRate": 48000,
+    "channels": 2,
+    "durationSeconds": 56.0,
+    "rmsDbFS": -18.865117107430187,
+    "samplePeakDbFS": -7.535367628986886,
+    "clippingSamplesAt0999": 0
+  },
+  "measuredVoiceOffsetSeconds": 0.0,
+  "voiceCorrelation17to19Seconds": 0.9708419464784871,
+  "correlationAnchorReason": "17-19s is active narration; the earlier7-9s window included mostly an intentional music gap",
+  "expectedVoiceStartSeconds": 0,
+  "expectedVoiceEndSeconds": 56.0,
+  "narrationFitsWithinFilm": true,
+  "tailAfterCompleteVoiceSeconds": 0.0,
+  "beats": [
+    {
+      "text": "One spacecraft. Every critical moment.",
+      "startSeconds": 0.4,
+      "endSeconds": 4.576,
+      "fittedVoiceGain": 0.9353609033440357,
+      "fittedMusicGain": 0.2336443588015364,
+      "speechActiveRmsDbFS": -16.279313163119582,
+      "residualUnderSpeechRmsDbFS": -32.46211660096921,
+      "speechOverResidualDb": 16.18280343784963,
+      "twoStemFitResidualDbFS": -44.755468475069875
+    },
+    {
+      "text": "Choose a mission. Build the vehicle.",
+      "startSeconds": 4.5,
+      "endSeconds": 8.076,
+      "fittedVoiceGain": 0.93798326573352,
+      "fittedMusicGain": 0.23390453749323853,
+      "speechActiveRmsDbFS": -15.822828801264938,
+      "residualUnderSpeechRmsDbFS": -31.285508119336033,
+      "speechOverResidualDb": 15.462679318071093,
+      "twoStemFitResidualDbFS": -54.13383789904507
+    },
+    {
+      "text": "Physics makes every decision count.",
+      "startSeconds": 10.5,
+      "endSeconds": 13.356,
+      "fittedVoiceGain": 0.9365673732432597,
+      "fittedMusicGain": 0.2334886267555479,
+      "speechActiveRmsDbFS": -16.99349892106961,
+      "residualUnderSpeechRmsDbFS": -31.24850977413285,
+      "speechOverResidualDb": 14.255010853063244,
+      "twoStemFitResidualDbFS": -50.44554639163482
+    },
+    {
+      "text": "Launch from Earth. Put your decisions to the test.",
+      "startSeconds": 16.4,
+      "endSeconds": 20.768,
+      "fittedVoiceGain": 0.9369299401604128,
+      "fittedMusicGain": 0.23346189614350987,
+      "speechActiveRmsDbFS": -16.950163134214836,
+      "residualUnderSpeechRmsDbFS": -31.071278977765825,
+      "speechOverResidualDb": 14.121115843550989,
+      "twoStemFitResidualDbFS": -50.995292647508606
+    },
+    {
+      "text": "Release the stage. Every kilogram matters.",
+      "startSeconds": 24,
+      "endSeconds": 28.344,
+      "fittedVoiceGain": 0.9367886766916751,
+      "fittedMusicGain": 0.23344854198954043,
+      "speechActiveRmsDbFS": -16.37654208656417,
+      "residualUnderSpeechRmsDbFS": -31.053918058231016,
+      "speechOverResidualDb": 14.677375971666844,
+      "twoStemFitResidualDbFS": -51.18638924999763
+    },
+    {
+      "text": "Take control for a separate docking exercise.",
+      "startSeconds": 31,
+      "endSeconds": 34.456,
+      "fittedVoiceGain": 0.9370162994676797,
+      "fittedMusicGain": 0.23296689081359523,
+      "speechActiveRmsDbFS": -16.787714662540456,
+      "residualUnderSpeechRmsDbFS": -31.375859196049298,
+      "speechOverResidualDb": 14.58814453350884,
+      "twoStemFitResidualDbFS": -50.7725821261241
+    },
+    {
+      "text": "Continue the Moon expedition. Brake. Descend.",
+      "startSeconds": 36.2,
+      "endSeconds": 41.528,
+      "fittedVoiceGain": 0.936739289572433,
+      "fittedMusicGain": 0.23346173168878995,
+      "speechActiveRmsDbFS": -15.965016977123522,
+      "residualUnderSpeechRmsDbFS": -31.185097948803225,
+      "speechOverResidualDb": 15.220080971679701,
+      "twoStemFitResidualDbFS": -50.53919783799465
+    },
+    {
+      "text": "Touch down.",
+      "startSeconds": 44.2,
+      "endSeconds": 45.88,
+      "fittedVoiceGain": 0.9338727632499377,
+      "fittedMusicGain": 0.2338590708671316,
+      "speechActiveRmsDbFS": -17.728020112462353,
+      "residualUnderSpeechRmsDbFS": -30.707156891164633,
+      "speechOverResidualDb": 12.97913677870228,
+      "twoStemFitResidualDbFS": -49.2606619939573
+    },
+    {
+      "text": "Created by Mykyta Borisov. Fly the critical moments.",
+      "startSeconds": 49,
+      "endSeconds": 54.04,
+      "fittedVoiceGain": 0.9378234331833358,
+      "fittedMusicGain": 0.2338586878567849,
+      "speechActiveRmsDbFS": -16.518764258260404,
+      "residualUnderSpeechRmsDbFS": -31.684966842851786,
+      "speechOverResidualDb": 15.166202584591382,
+      "twoStemFitResidualDbFS": -53.99806048295056
+    }
+  ],
+  "listeningStatus": "Not established by this numeric analysis; direct listening required separately."
+}

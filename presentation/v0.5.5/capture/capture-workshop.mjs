@@ -1,0 +1,7 @@
+import {open,mode,click,still,capture,save,manifest} from './lib.mjs';
+const {browser,page}=await open();
+try{
+ await mode(page,'workshop');await page.clock.runFor(300);const w=page.locator('.rocket-workshop');await w.locator('.rw-parts [data-slot="service-tank"]').click({force:true});await page.clock.runFor(300);
+ await capture(page,'workshop',7,async i=>{if(i===25){await w.locator('[data-dimension="length"]').fill('10');await w.locator('[data-dimension="length"]').press('Tab');}if(i===95){await w.locator('[data-dimension="length"]').fill('7');await w.locator('[data-dimension="length"]').press('Tab');}if(i===140)await w.locator('[data-part="tank"]').click({force:true});if(i===175)await still(page,'08-compatible-attachments','Actual compatible typed attachment targets during tank placement.');},'Service tank length7→10→7m through native inputs. Desktop hardware palette selects tank placement and highlights compatible typed points.');
+ await click(page,'.rocket-workshop [data-action="cancel-placement"]');await click(page,'.rocket-workshop [data-action="start"]');await page.clock.runFor(200);await still(page,'09-mission-plan','Full Moon expedition planner and named landing approaches; separate from local exercises.');
+}catch(e){manifest.errors.push({section:'workshop-retry',message:e.message});await save();console.error(e);process.exitCode=1;}finally{await browser.close();await save();}

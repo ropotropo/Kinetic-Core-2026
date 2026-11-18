@@ -1,0 +1,82 @@
+/* Physical staging is an immediate, visible decision in either launch path. */
+.game-shell[data-stage-hold="true"] #stage-button,
+.game-shell[data-stage-hold="true"] .stage-hold-action,
+.mission-control .mc-coach[data-stage-urgent="true"] > button,
+.mission-control [data-action="stage"].stage-ready {
+  background: #c33335; border-color: #ff8b83; color: #fff; font-weight: 650;
+  box-shadow: 0 0 0 3px #ff8b8324; animation: stage-attention 1.6s ease-in-out infinite;
+}
+.game-shell[data-stage-hold="true"] #stage-action-hint,
+.game-shell[data-stage-hold="true"] #practice-next-action,
+.mission-control .mc-coach[data-stage-urgent="true"] h2 { color: #ffaaa4; }
+.game-shell .stage-control .ascent-burn-estimate { margin-top: 4px; color: #a6a8af; font-size: 11px; }
+.game-shell[data-stage-hold="true"] #paused-overlay { background: #0005; backdrop-filter: none; }
+.game-shell[data-stage-hold="true"] #paused-overlay h2 { color: #ffaaa4; font-size: 26px; }
+.game-shell[data-stage-hold="true"] #paused-overlay > div { max-width: 310px; }
+.game-shell[data-stage-hold="true"] #paused-overlay #resume-button { background: #c33335; color: #fff; border-color: #ff8b83; }
+.ascent-reference { position: absolute; z-index: 3; left: 18px; bottom: 16px; width: min(280px, calc(100% - 36px)); pointer-events: none; font-variant-numeric: tabular-nums; text-shadow: 0 1px 8px #000, 0 0 16px #000; }
+.ascent-fuel-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 9px; max-width: 100%; font-size: 11px; line-height: 1.4; }
+.ascent-fuel-line > span { color: #aaaab3; }
+.ascent-fuel-line > strong { font-weight: 500; color: #f5f5f7; }
+.ascent-fuel-line > small { width: 100%; color: #aaaab3; font-size: 10px; }
+.ascent-pressure-readout { display: flex; flex-wrap: wrap; gap: 2px 8px; margin-top: 6px; font-size: 10px; line-height: 1.4; }
+.ascent-pressure-readout[hidden] { display: none; }
+.ascent-pressure-readout > span { color: #aaaab3; }
+.ascent-pressure-readout > strong { font-weight: 550; white-space: nowrap; }
+.ascent-reference[data-aero-pressure="caution"] [data-pressure],
+.ascent-mini-telemetry [data-aero-pressure="caution"],
+.game-shell[data-aero-pressure="caution"] #q-value { color: #edb96d; }
+.ascent-reference[data-aero-pressure="danger"] [data-pressure],
+.ascent-mini-telemetry [data-aero-pressure="danger"],
+.game-shell[data-aero-pressure="danger"] #q-value { color: #ff8b83; }
+.ascent-altitude-reference { margin-top: 9px; width: min(240px, 100%); }
+.ascent-altitude-reference > div { display: flex; justify-content: space-between; gap: 12px; font-size: 10px; color: #aaaab3; }
+.ascent-altitude-reference strong { color: #e2e2e8; font-weight: 450; }
+.ascent-altitude-reference meter { display: block; width: 100%; height: 6px; margin-top: 4px; background: #ffffff26; border: 0; appearance: none; -webkit-appearance: none; }
+.ascent-altitude-reference meter::-webkit-meter-bar { background: #ffffff26; border: 0; border-radius: 4px; }
+.ascent-altitude-reference meter::-webkit-meter-optimum-value { background: #c7c7ce; border-radius: 4px; }
+.ascent-altitude-reference meter::-moz-meter-bar { background: #c7c7ce; border-radius: 4px; }
+.ascent-altitude-reference > small { display: block; margin-top: 4px; color: #91919d; font-size: 9px; line-height: 1.4; }
+.ascent-reference.is-orbit-confirmed .ascent-altitude-reference > small { color: #a8d8bd; }
+.ascent-mini-telemetry { position: absolute; z-index: 5; right: 16px; top: 86px; width: 172px; padding: 11px 13px; border: 1px solid #ffffff26; border-radius: 10px; background: #000b; backdrop-filter: blur(12px); pointer-events: none; font-variant-numeric: tabular-nums; }
+.ascent-mini-telemetry dl { margin: 0; display: grid; gap: 7px; }
+.ascent-mini-telemetry dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.ascent-mini-telemetry dt { color: #a6a8af; font-size: 10px; }
+.ascent-mini-telemetry dd { color: #f5f5f7; font-size: 11px; margin: 0; }
+.mission-control .ascent-reference { bottom: 100px; left: 24px; }
+.mission-control .mc-scene-tools { gap: 5px; }
+.mission-control .mc-scene-tools > .ascent-data-toggle { position: absolute; right: 0; top: 72px; }
+.mission-control .ascent-mini-telemetry { right: 68px; top: 84px; }
+@keyframes stage-attention { 0%, 100% { box-shadow: 0 0 0 3px #ff8b8324; } 50% { box-shadow: 0 0 0 6px #ff8b830a; } }
+@media (max-width: 600px) {
+  .ascent-reference { left: 15px; bottom: 13px; width: min(245px, calc(100% - 30px)); }
+  .ascent-fuel-line { font-size: 10px; gap: 3px 7px; }
+  .ascent-fuel-line > small { font-size: 9px; }
+  .ascent-altitude-reference > div { font-size: 9px; }
+  .ascent-altitude-reference > small { font-size: 8px; }
+  .mission-control .ascent-reference { left: 17px; bottom: 92px; }
+  .mission-control .mc-scene-tools { gap: 4px; }
+  .ascent-mini-telemetry { right: 12px; top: 79px; width: 157px; padding: 10px 11px; }
+}
+@media (max-height: 500px) and (min-width: 601px) {
+  .ascent-reference { bottom: 9px; left: 14px; }
+  .ascent-altitude-reference { margin-top: 5px; }
+  .ascent-fuel-line > small { width: auto; }
+  .ascent-mini-telemetry { top: 76px; width: 155px; padding: 8px 10px; }
+  .mission-control .ascent-reference { bottom: 82px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-shell #stage-button, .game-shell .stage-hold-action, .mission-control .mc-coach > button, .mission-control [data-action="stage"] { animation: none !important; }
+  .ascent-mini-telemetry { backdrop-filter: none; }
+}
+.flight-time-sheet { width: min(380px, calc(100vw - 28px)); padding: 20px; border: 1px solid #ffffff30; border-radius: 16px; background: #0a0a0b; color: #f5f5f7; }
+.flight-time-sheet > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.flight-time-sheet h2 { margin: 0; font: 500 22px/1.2 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.flight-time-sheet > p, .mc-time-sheet .mc-sheet-body > p { color: #a6a8af; font-size: 12px; line-height: 1.6; }
+.flight-time-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: 16px 0; }
+.flight-time-options button { min-height: 44px; padding: 10px 7px; border: 1px solid #ffffff26; border-radius: 8px; background: #151517; color: #f5f5f7; font-size: 12px; }
+.flight-time-options button[aria-pressed="true"] { background: #f5f5f7; border-color: #f5f5f7; color: #080809; }
+.flight-time-options button:disabled { opacity: .32; }
+.flight-time-sheet > .primary-button { width: 100%; min-height: 44px; margin-top: 18px; }
+
+.mission-control .mc-scene-tools [data-action="time"] > span { font-size: 8px; white-space: nowrap; }

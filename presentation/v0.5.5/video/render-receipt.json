@@ -1,0 +1,88 @@
+{
+  "schema": "kinetic-core-teaser-render.v0.5.5",
+  "createdAtUTC": "2026-11-16T08:00:24.113936+00:00",
+  "renderer": "FFmpeg + Pillow deterministic local fallback",
+  "reason": "Remotion4.0.543 Studio works; default headless browser RAF callback stalls during composition retrieval under default,ANGLE and software ANGLE backends. No vendor dependency patches applied.",
+  "editableSource": "src/index.ts /src/Root.tsx /src/Teaser.tsx",
+  "editPlanSha256": "c6d7c6ac87903c2c9faedeb3094fcf4f1d468efbe15bfe21b2b6eb88c49cab86",
+  "scriptSha256": "f12169fa4fcf8d1830016c11df35c00b4c8499a64add92ad972fdc92bbbf4dd6",
+  "outputFile": "Kinetic-Core-Teaser-v0.5.5.mp4",
+  "outputSha256": "3e79062825cf447474645e70a978251b911051c713527161c74b361c76606f3d",
+  "frames": 1680,
+  "fps": 30,
+  "pictureSeconds": 56,
+  "sourceFrameHandling": "Actual decoded30fps source frames; no temporal interpolation, slow motion, repeated-frame filler or changed telemetry. Normal contain-fit resize and purposeful detail crops only.",
+  "typeface": "Local macOS System Font(SFNS), Regular/Semibold; font files are not redistributed.",
+  "audio": {
+    "voiceStartSeconds": 0,
+    "masterDurationSeconds": 56,
+    "musicSpeechGain": 0.25,
+    "musicGapGain": 0.6,
+    "linearDuckRampSeconds": 0.2,
+    "globalMixHeadroomGain": 0.9390993666388345,
+    "pcmSamplePeakTargetDbFS": -2,
+    "editorialEffectsAreNotGameAudio": true
+  },
+  "sources": [
+    {
+      "file": "audio/music.wav",
+      "sha256": "b4c5ccde07ad3470422bb57a7997fd102d82cbafb5c459347b2eeb99ec7160e9"
+    },
+    {
+      "file": "audio/voiceover-en.wav",
+      "sha256": "b2dad82888107bcc05146aeadd55f995677f82aa7453feb9771840bbdf9539b0"
+    },
+    {
+      "file": "footage/ascent.mp4",
+      "sha256": "8f3efef3f3858d29d9d6ff8ec3656b57a943cae4cffbf18ac2ba1463e3d1701e"
+    },
+    {
+      "file": "footage/cockpit.mp4",
+      "sha256": "c3b5497f202b8f59eab364706a65bde5a8e88fe41a89ab1bfb60018ab0232eee"
+    },
+    {
+      "file": "footage/docking.mp4",
+      "sha256": "2076f15dc3dde1b1e8dc38496412f73c87f369b3fc16719f0874a2b7f058669d"
+    },
+    {
+      "file": "footage/home.mp4",
+      "sha256": "d0bd19d30e8d3eb2840e09f910330f784ec6cc68991d52def469a9b7f15897e3"
+    },
+    {
+      "file": "footage/moon-contact.mp4",
+      "sha256": "6344512206ecd6d22eb6f6ab4e1fc5fb2b451bdcbf36fec46d5e4eb4060dbbcc"
+    },
+    {
+      "file": "footage/moon-descent.mp4",
+      "sha256": "147c3f7021589c65f5f774ec3f189eef3dd5fcc6953f130fb8fd87588b739dfa"
+    },
+    {
+      "file": "footage/moon-flag.mp4",
+      "sha256": "8f5410e3abc870e607a0a3a5b76ce8e6828d5bd2b8544ae589e223a2942818df"
+    },
+    {
+      "file": "footage/rollout.mp4",
+      "sha256": "d004cf95d1a13e987652f047af8c903f097d4c6c64eb3b36e3a4baca5fb1df67"
+    },
+    {
+      "file": "footage/stage-release.mp4",
+      "sha256": "6a38e7b8306c6400fb5b2e3d2e2a435a8f3ecf5995e13b4f3f7aa1b3df25fbe1"
+    },
+    {
+      "file": "footage/workshop.mp4",
+      "sha256": "c4fa7a7f37fd0aa30e848f9771251d7bf25c36f44870867e97c2bfd1ec38f429"
+    },
+    {
+      "file": "footage/worlds.mp4",
+      "sha256": "feaa148bd13da63d4e14125df8769f63d66a69eeff57fc7eb051edb0497c5e02"
+    },
+    {
+      "file": "hero.png",
+      "sha256": "aedfd84e37cda055d378233754375603c630aee77a26e558b9883b8775fea915"
+    },
+    {
+      "file": "logo.png",
+      "sha256": "fe208db8f4e493500eff0a6f765f6a42a7c1f61809c7aefda63c4c0ee3b9b061"
+    }
+  ]
+}

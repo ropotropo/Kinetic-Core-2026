@@ -1,19 +1,19 @@
 # Installation and distribution
 
 Kinetic Core is created by **Mykyta Borisov**, the sole game author.
-Version 0.4.4 adds Windows and Android preview packages around the same bundled
-web game. The browser game and portable HTML remain available.
+Version 0.5.0 packages the redesigned Flight Deck interface in the browser,
+Windows and Android previews. The browser game and portable HTML remain available.
 
 ## Downloads
 
-Use the [v0.4.4 release](https://github.com/ropotropo/Kinetic-Core-2026/releases/tag/v0.4.4).
+Use the [v0.5.0 release](https://github.com/ropotropo/Hakaton2026/releases/tag/v0.5.0).
 
 | File | Platform | Status |
 | --- | --- | --- |
-| `Kinetic-Core-0.4.4-Windows-x64-Setup.exe` | Windows 10/11 x64 | Per-user NSIS installer; unsigned preview |
-| `Kinetic-Core-0.4.4-Android-preview.apk` | Android 8+/API 26+, OpenGL ES 3 | Development-signed direct-install preview |
+| `Kinetic-Core-0.5.0-Windows-x64-Setup.exe` | Windows 10/11 x64 | Per-user NSIS installer; unsigned preview |
+| `Kinetic-Core-0.5.0-Android-preview.apk` | Android 8+/API 26+, OpenGL ES 3 | Development-signed direct-install preview |
 | `Kineti-Core.html` | Desktop browser | Self-contained game; no installer |
-| `Kinetic-Core-v0.4.4-source.zip` | Development/transfer | Exact committed source without Git history |
+| `Kinetic-Core-v0.5.0-source.zip` | Development/transfer | Exact committed source without Git history |
 
 `SHA256SUMS.txt` records the downloadable files. Keep the source manifest and
 third-party notices when moving the project to a new repository.
@@ -27,8 +27,9 @@ are local; optional online Earth mode needs internet.
 
 This initial installer has no publisher code-signing certificate. Windows may
 show an unknown-publisher warning. No Windows installation or device/GPU test
-was performed on the macOS build host. Native-host loading, the 3D renderer,
-menu and author page were checked using the same Electron host on macOS.
+was performed on the macOS build host. The earlier v0.4.4 host had a macOS smoke check. Version 0.5.0
+verification checks every bundled web file and executable identity; it does not
+claim a new native runtime acceptance test.
 The EXE payload and every bundled game file were verified separately.
 
 ## Android
@@ -38,6 +39,12 @@ AndroidX WebViewAssetLoader's local HTTPS origin. Hardware acceleration and
 DOM storage are enabled; file/content access, cleartext traffic, popups and
 native JavaScript bridges are disabled. Returning to the background releases
 held inputs and pauses the game.
+
+Version 0.5.0 reuses the unchanged compiled native shell, replaces the complete
+web payload, updates the binary manifest, aligns and re-signs the package.
+The original preview certificate is preserved; the source and normal Gradle
+build instructions remain included. A fresh Gradle compile was blocked by
+evicted local cache files.
 
 The APK is signed with a development key for direct testing. It is not a
 Google Play release and no AAB/store submission is included. Mykyta should

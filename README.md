@@ -1,21 +1,32 @@
 # Kinetic Core 2026
 
-**Design a mission. Fly its critical moments.** An original spaceflight game by **Mykyta Borisov (ropotropo), the sole game author**. See [authorship and assistance](AUTHORS.md).
+**Design a mission. Fly its critical moments.** Created by **Mykyta Borisov (ropotropo), the sole game author**. [Authorship and assistance](AUTHORS.md).
 
-This is the **author-owned publication repository** for the **v0.4.4 development preview**.
+This publication contains the current **v0.5.6** game, imported from the Hakaton2026 release, with the complete source, tests, assets, native wrapper sources and presentation materials.
 
-- **[Play the game](https://ropotropo.github.io/Kinetic-Core-2026/)**
-- [English presentation PDF](https://github.com/ropotropo/Kinetic-Core-2026/blob/main/presentation/Kinetic-Core-EN.pdf)
-- [Project Wiki](https://github.com/ropotropo/Kinetic-Core-2026/wiki)
-- [Watch the 82-second gameplay film v2](https://ropotropo.github.io/Kinetic-Core-2026/demo/) — 1080p, 30 fps; [video details](VIDEO.md).
-- [v0.4.4 downloads](https://github.com/ropotropo/Kinetic-Core-2026/releases/tag/v0.4.4) — portable HTML, Windows and Android previews; [installation and limitations](docs/DISTRIBUTION.md).
+- **[Play Kinetic Core](https://ropotropo.github.io/Kinetic-Core-2026/)** — public, no account required.
+- [English presentation](presentation/Kinetic-Core-EN.pdf) · [Ukrainian presentation](presentation/Kinetic-Core-UA.pdf)
+- [Newer v0.5.5 presentation and teaser package](presentation/v0.5.5/README.md) — retained under its original version.
+- [Project Wiki](https://github.com/ropotropo/Kinetic-Core-2026/wiki) · [Gameplay film](https://ropotropo.github.io/Kinetic-Core-2026/demo/)
+- [Source and transfer record](docs/review/SYNC-V056.json) · [How to play](docs/GETTING-STARTED.md) · [Physics](docs/PHYSICS.md)
 
-**Historical submitted PDF URL:** [original English PDF already sent to judges](https://github.com/ropotropo/Hakaton2026/blob/codex/final-presentations/presentation/Kinetic-Core-EN.pdf). This archive reference remains distinct from this repository’s current presentation.
+Build a modular spacecraft and fly the Earth–Moon route. Docking and surface practice are separate exercises. The game includes mobile controls; real-device acceptance and a new full mission are not claimed by this file transfer.
 
-Build a modular spacecraft and fly the connected Earth–Moon route. Separate docking and surface exercises identify the mission stages they skip. The film shows separate local landing and docking exercises; it does not establish an uninterrupted Earth-to-Moon flight.
+## Run locally
 
-[How to play](docs/GETTING-STARTED.md) · [Current scope and verification](docs/CURRENT-VERSION.md) · [Physics and sources](docs/PHYSICS.md) · [Documentation](docs/README.md) · [Publication links](docs/PROJECT-LINKS.md)
+Use Node.js 22.12+:
 
-For local development, run `npm ci`, `npm test` and `npm run build`. The portable build is `dist/Kineti-Core.html`. The core game needs no account or backend; optional Earth map flight needs internet. Windows/Android preview installation and real-device acceptance have the limits documented above.
+```sh
+npm ci
+npm test
+npm run build
+npm run preview
+```
 
-[Portable repository transfer](docs/REPOSITORY-TRANSFER.md) · [Asset credits](public/assets/SOURCES.md). Third-party notices and provenance travel with the project; original-code licensing remains the author’s decision.
+The self-contained portable build is `dist/Kineti-Core.html`. Optional Earth map flight requires internet. Native wrappers and installation limits are described in [distribution notes](docs/DISTRIBUTION.md).
+
+## Preserved materials
+
+The earlier gameplay film, presentations, editable sources, historical receipts, asset provenance and third-party notices remain included. [The original submitted PDF URL](https://github.com/ropotropo/Hakaton2026/blob/codex/final-presentations/presentation/Kinetic-Core-EN.pdf) remains unchanged. Older v0.4.4 releases retain their historical version; this update does not replace their attachments or move tags.
+
+This repository is a separate public publication. Future source updates require deliberate transfer. See [asset credits](public/assets/SOURCES.md) and [dependency notices](dist/THIRD_PARTY_NOTICES.txt).

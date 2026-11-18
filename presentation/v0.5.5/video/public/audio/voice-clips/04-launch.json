@@ -1,0 +1,21 @@
+{
+  "text": "Launch from Earth. Put your decisions to the test.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 18071429,
+      "text": "Launch from Earth."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 18571429,
+      "duration": 24404763,
+      "text": "Put your decisions to the test."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

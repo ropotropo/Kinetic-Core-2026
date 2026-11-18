@@ -1,0 +1,26 @@
+{
+  "gameVersion": "0.5.6",
+  "sourceRepository": "ropotropo/Hakaton2026",
+  "sourceCommit": "8db271f864359f16a39083edfe2ac734f4f18417",
+  "additionalMediaCommit": "11abc3e1b0475c858b8f13b0b5f5ee3439712233",
+  "additionalMediaDirectory": "presentation/v0.5.5",
+  "destinationBase": "ca38b933d423fe4d6477494871940c31b6112066",
+  "preserved": [
+    "destination Git history",
+    "publication identity and configuration",
+    "all previously published presentation and video bytes",
+    "historical release attachments and tags"
+  ],
+  "excluded": [
+    "old source hosting association .openai/hosting.json",
+    "Git metadata and installed dependencies"
+  ],
+  "verification": {
+    "npmCi": true,
+    "testsPassed": 155,
+    "testsFailed": 0,
+    "productionBuild": true,
+    "rebuiltDistMatchesReleasedBytes": true,
+    "fullMissionOrNativeDeviceAcceptance": false
+  }
+}

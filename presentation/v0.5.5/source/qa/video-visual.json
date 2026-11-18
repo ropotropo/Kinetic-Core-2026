@@ -1,0 +1,404 @@
+{
+  "schema": "kinetic-core-video-visual-qa.v0.5.5",
+  "reviewedAtUTC": "2026-11-16T08:02:43.805655+00:00",
+  "artifact": "Kinetic-Core-Teaser-v0.5.5.mp4",
+  "sha256": "3e79062825cf447474645e70a978251b911051c713527161c74b361c76606f3d",
+  "bytes": 12970989,
+  "result": "pass",
+  "blockingFindings": [],
+  "reviewScope": "Independent visual inspection of actual final encoded frames, not only source code or pre-encode images. No media, PDF or source edits made.",
+  "method": {
+    "shotMidpointsExtracted": 22,
+    "operationalLabelStripsInspected": 20,
+    "additionalProofSamplesSeconds": [
+      27.5,
+      46,
+      51,
+      54.5
+    ],
+    "imageMethod": "FFmpeg decoded PNGs, PIL label-only strips and complete contact sheet. Pixel bounds confirm labels remain within the frame; whole-frame viewer artifacts were not treated as source defects."
+  },
+  "checks": {
+    "all22ShotTitlesAndIdentityCardsFit": true,
+    "all20OperationalLabelsWithinSafeBounds": true,
+    "fontBaselineAndDescendersIntact": true,
+    "exactGameTitleKineticCore": true,
+    "soleAuthorMykytaBorisovOnOpeningAndClosing": true,
+    "correctApprovedKcIdentityAndPortrait": true,
+    "fullContextBeforePurposefulDetailCrops": true,
+    "realStageSeparationVisible": true,
+    "actualContactResultLegible": true,
+    "postContactCrewAndKcFlagVisible": true,
+    "separateDockingExplicitlyLabeled": true,
+    "otherWorldsLabeledLocalPractice": true,
+    "noInventedTelemetryOrGameplayOverlays": true,
+    "noVisibleUrlAiProductionCaptionOrRetiredIdentity": true
+  },
+  "proof": {
+    "stage": "At 27.5 s, retained powered upper spacecraft and a distinct departing lower stage are visible above Earth; stage mass-release label agrees with the actual scene.",
+    "contact": "At 46 s, the in-game Touchdown confirmed panel is legible and reports 0.5 m/s vertical and 0.08 m/s lateral. These are the current-build contact values, not prior-media readings or secured zero-speed values.",
+    "ceremony": "At 51 s, landed craft, crew and KC flag are visible after the contact result; label says Post-contact KC ceremony, without claiming playable EVA or samples.",
+    "identity": "Opening 1.0 s and closing 54.5 s contain exact Kinetic Core / Created by Mykyta Borisov. KC emblem uses approved white/black with Ukrainian blue/yellow accent.",
+    "visualPacing": "Compact menu/workshop cuts establish context; ascent/staging and approach remain clear; 4 s contact and 5 s ceremony provide a readable payoff before the clean 3 s closing."
+  },
+  "limits": [
+    "Visual frame review does not establish a new uninterrupted player playthrough or rerun the 155 historical tests.",
+    "Per-frame cadence, full-stream decode and audio numerical checks are being performed independently by the parent; this report does not claim those measurements."
+  ],
+  "labelBoundsIn1008to1080Band": [
+    {
+      "id": 2,
+      "title": "Begin a Moon expedition",
+      "bboxInBand": [
+        98,
+        22,
+        462,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 3,
+      "title": "Worlds & local practice",
+      "bboxInBand": [
+        97,
+        22,
+        438,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 4,
+      "title": "Build the vehicle",
+      "bboxInBand": [
+        98,
+        22,
+        339,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 5,
+      "title": "Inspect the hardware",
+      "bboxInBand": [
+        98,
+        22,
+        415,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 6,
+      "title": "Change the design",
+      "bboxInBand": [
+        97,
+        22,
+        661,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 7,
+      "title": "Roll to the pad",
+      "bboxInBand": [
+        98,
+        22,
+        307,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 8,
+      "title": "Ready for flight",
+      "bboxInBand": [
+        98,
+        22,
+        326,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 9,
+      "title": "Launch from Earth",
+      "bboxInBand": [
+        98,
+        22,
+        616,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 10,
+      "title": "Every force matters",
+      "bboxInBand": [
+        98,
+        22,
+        391,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 11,
+      "title": "Read the flight",
+      "bboxInBand": [
+        98,
+        22,
+        584,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 12,
+      "title": "Release the stage",
+      "bboxInBand": [
+        98,
+        22,
+        618,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 13,
+      "title": "Leave the mass behind",
+      "bboxInBand": [
+        98,
+        22,
+        438,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 14,
+      "title": "Keep the mission moving",
+      "bboxInBand": [
+        98,
+        22,
+        469,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 15,
+      "title": "Take control",
+      "bboxInBand": [
+        97,
+        22,
+        555,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 16,
+      "title": "Align. Then close.",
+      "bboxInBand": [
+        96,
+        22,
+        605,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 17,
+      "title": "Continue the Moon expedition",
+      "bboxInBand": [
+        97,
+        22,
+        547,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 18,
+      "title": "Brake. Descend.",
+      "bboxInBand": [
+        98,
+        22,
+        573,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 19,
+      "title": "Make the approach count",
+      "bboxInBand": [
+        98,
+        22,
+        704,
+        53
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 20,
+      "title": "Touch down",
+      "bboxInBand": [
+        97,
+        22,
+        283,
+        47
+      ],
+      "insideSafeMargins": true
+    },
+    {
+      "id": 21,
+      "title": "A landing earned",
+      "bboxInBand": [
+        96,
+        22,
+        628,
+        53
+      ],
+      "insideSafeMargins": true
+    }
+  ],
+  "sampledShots": [
+    {
+      "id": 1,
+      "frame": 30,
+      "seconds": 1.0,
+      "title": "Kinetic Core"
+    },
+    {
+      "id": 2,
+      "frame": 97,
+      "seconds": 3.2333333333333334,
+      "title": "Begin a Moon expedition"
+    },
+    {
+      "id": 3,
+      "frame": 172,
+      "seconds": 5.733333333333333,
+      "title": "Worlds & local practice"
+    },
+    {
+      "id": 4,
+      "frame": 247,
+      "seconds": 8.233333333333333,
+      "title": "Build the vehicle"
+    },
+    {
+      "id": 5,
+      "frame": 307,
+      "seconds": 10.233333333333333,
+      "title": "Inspect the hardware"
+    },
+    {
+      "id": 6,
+      "frame": 360,
+      "seconds": 12.0,
+      "title": "Change the design"
+    },
+    {
+      "id": 7,
+      "frame": 427,
+      "seconds": 14.233333333333333,
+      "title": "Roll to the pad"
+    },
+    {
+      "id": 8,
+      "frame": 487,
+      "seconds": 16.233333333333334,
+      "title": "Ready for flight"
+    },
+    {
+      "id": 9,
+      "frame": 555,
+      "seconds": 18.5,
+      "title": "Launch from Earth"
+    },
+    {
+      "id": 10,
+      "frame": 630,
+      "seconds": 21.0,
+      "title": "Every force matters"
+    },
+    {
+      "id": 11,
+      "frame": 690,
+      "seconds": 23.0,
+      "title": "Read the flight"
+    },
+    {
+      "id": 12,
+      "frame": 765,
+      "seconds": 25.5,
+      "title": "Release the stage"
+    },
+    {
+      "id": 13,
+      "frame": 840,
+      "seconds": 28.0,
+      "title": "Leave the mass behind"
+    },
+    {
+      "id": 14,
+      "frame": 900,
+      "seconds": 30.0,
+      "title": "Keep the mission moving"
+    },
+    {
+      "id": 15,
+      "frame": 967,
+      "seconds": 32.233333333333334,
+      "title": "Take control"
+    },
+    {
+      "id": 16,
+      "frame": 1042,
+      "seconds": 34.733333333333334,
+      "title": "Align. Then close."
+    },
+    {
+      "id": 17,
+      "frame": 1117,
+      "seconds": 37.233333333333334,
+      "title": "Continue the Moon expedition"
+    },
+    {
+      "id": 18,
+      "frame": 1192,
+      "seconds": 39.733333333333334,
+      "title": "Brake. Descend."
+    },
+    {
+      "id": 19,
+      "frame": 1275,
+      "seconds": 42.5,
+      "title": "Make the approach count"
+    },
+    {
+      "id": 20,
+      "frame": 1380,
+      "seconds": 46.0,
+      "title": "Touch down"
+    },
+    {
+      "id": 21,
+      "frame": 1515,
+      "seconds": 50.5,
+      "title": "A landing earned"
+    },
+    {
+      "id": 22,
+      "frame": 1635,
+      "seconds": 54.5,
+      "title": "Kinetic Core"
+    }
+  ]
+}

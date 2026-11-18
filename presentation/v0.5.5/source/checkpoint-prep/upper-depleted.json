@@ -1,0 +1,568 @@
+{
+  "version": 1,
+  "kind": "lunar-mission",
+  "design": {
+    "format": "kineti-core-rocket",
+    "version": 2,
+    "slots": {
+      "core-engine": {
+        "type": "engine",
+        "radius": 2.6,
+        "length": 4
+      },
+      "core-tank-1": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "core-tank-2": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "core-separator": {
+        "type": "separator",
+        "radius": 3,
+        "length": 0.5
+      },
+      "upper-engine": {
+        "type": "engine",
+        "radius": 1.8,
+        "length": 3
+      },
+      "upper-tank": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "upper-separator": {
+        "type": "separator",
+        "radius": 2,
+        "length": 0.4
+      },
+      "service-engine": {
+        "type": "engine",
+        "radius": 1.2,
+        "length": 2
+      },
+      "service-tank": {
+        "type": "tank",
+        "radius": 2,
+        "length": 7
+      },
+      "capsule": {
+        "type": "capsule",
+        "radius": 2,
+        "length": 3.4
+      },
+      "leg-1": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-2": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-3": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-4": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "solar-1": {
+        "type": "solar",
+        "radius": 1,
+        "length": 3
+      },
+      "solar-2": {
+        "type": "solar",
+        "radius": 1,
+        "length": 3
+      }
+    }
+  },
+  "config": {
+    "capsule": "pioneer",
+    "service": "survey",
+    "core": "atlas",
+    "upper": "swift",
+    "cargo": "none",
+    "site": "kennedy",
+    "design": {
+      "format": "kineti-core-rocket",
+      "version": 2,
+      "slots": {
+        "core-engine": {
+          "type": "engine",
+          "radius": 2.6,
+          "length": 4
+        },
+        "core-tank-1": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "core-tank-2": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "core-separator": {
+          "type": "separator",
+          "radius": 3,
+          "length": 0.5
+        },
+        "upper-engine": {
+          "type": "engine",
+          "radius": 1.8,
+          "length": 3
+        },
+        "upper-tank": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "upper-separator": {
+          "type": "separator",
+          "radius": 2,
+          "length": 0.4
+        },
+        "service-engine": {
+          "type": "engine",
+          "radius": 1.2,
+          "length": 2
+        },
+        "service-tank": {
+          "type": "tank",
+          "radius": 2,
+          "length": 7
+        },
+        "capsule": {
+          "type": "capsule",
+          "radius": 2,
+          "length": 3.4
+        },
+        "leg-1": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-2": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-3": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-4": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "solar-1": {
+          "type": "solar",
+          "radius": 1,
+          "length": 3
+        },
+        "solar-2": {
+          "type": "solar",
+          "radius": 1,
+          "length": 3
+        }
+      }
+    }
+  },
+  "siteId": "tranquility",
+  "phase": "departure",
+  "time": 4396.999999999909,
+  "sequenceTime": 0,
+  "launch": {
+    "version": 1,
+    "kind": "launch",
+    "phase": "orbit",
+    "config": {
+      "capsule": "pioneer",
+      "service": "survey",
+      "core": "atlas",
+      "upper": "swift",
+      "cargo": "none",
+      "site": "kennedy",
+      "design": {
+        "format": "kineti-core-rocket",
+        "version": 2,
+        "slots": {
+          "core-engine": {
+            "type": "engine",
+            "radius": 2.6,
+            "length": 4
+          },
+          "core-tank-1": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "core-tank-2": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "core-separator": {
+            "type": "separator",
+            "radius": 3,
+            "length": 0.5
+          },
+          "upper-engine": {
+            "type": "engine",
+            "radius": 1.8,
+            "length": 3
+          },
+          "upper-tank": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "upper-separator": {
+            "type": "separator",
+            "radius": 2,
+            "length": 0.4
+          },
+          "service-engine": {
+            "type": "engine",
+            "radius": 1.2,
+            "length": 2
+          },
+          "service-tank": {
+            "type": "tank",
+            "radius": 2,
+            "length": 7
+          },
+          "capsule": {
+            "type": "capsule",
+            "radius": 2,
+            "length": 3.4
+          },
+          "leg-1": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-2": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-3": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-4": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "solar-1": {
+            "type": "solar",
+            "radius": 1,
+            "length": 3
+          },
+          "solar-2": {
+            "type": "solar",
+            "radius": 1,
+            "length": 3
+          }
+        }
+      }
+    },
+    "time": 457.9999999999085,
+    "position": [
+      6309431.066856145,
+      1844875.8122497988
+    ],
+    "velocity": [
+      -2227.8903703155493,
+      7454.359177142888
+    ],
+    "effectiveRotation": 0.00006404003933768906,
+    "stages": [
+      {
+        "id": "custom-0",
+        "name": "Custom core stage",
+        "dryMass": 48346.01414581604,
+        "propellant": 865194.616798629,
+        "thrustSea": 20000000,
+        "thrustVac": 22000000,
+        "ispSea": 285,
+        "ispVac": 315,
+        "radius": 3,
+        "height": 40.5,
+        "dragCoefficient": 0.28,
+        "fuel": 0,
+        "attached": false
+      },
+      {
+        "id": "custom-1",
+        "name": "Custom upper stage",
+        "dryMass": 14298.760077053515,
+        "propellant": 151409.05793976007,
+        "thrustSea": 1100000,
+        "thrustVac": 1800000,
+        "ispSea": 300,
+        "ispVac": 450,
+        "radius": 3,
+        "height": 21.4,
+        "dragCoefficient": 0.28,
+        "fuel": 0,
+        "attached": true
+      }
+    ],
+    "stageIndex": 1,
+    "payloadMass": 36038.4046334184,
+    "initialMass": 1115286.853594677,
+    "throttle": 0,
+    "commandedThrottle": 0,
+    "pitch": 1.5672547510240318,
+    "pitchTrim": 0,
+    "guidance": true,
+    "guidancePitch": 1.5672547510240318,
+    "engineOn": false,
+    "liftoff": true,
+    "maxQ": 54928.796669580915,
+    "dynamicPressure": 0,
+    "loadG": 0,
+    "thrust": 0,
+    "acceleration": 9.224195638706439,
+    "fuelUsed": 992863.0838485439,
+    "deltaVUsed": 8964.196421557324,
+    "dragLoss": 21.69168736281428,
+    "events": [
+      {
+        "time": 0,
+        "type": "liftoff",
+        "message": "Liftoff. Positive vertical acceleration."
+      },
+      {
+        "time": 144.7166666666735,
+        "type": "burnout",
+        "message": "Custom core stage propellant depleted. Separate the stage."
+      },
+      {
+        "time": 145.00000000000702,
+        "type": "separation",
+        "message": "Custom core stage separated. 48,346 kg released."
+      },
+      {
+        "time": 457.9999999999085,
+        "type": "orbit",
+        "message": "A bound orbit with periapsis above 150 km is confirmed. Engine cutoff."
+      }
+    ],
+    "event": "A bound orbit with periapsis above 150 km is confirmed. Engine cutoff.",
+    "failure": null,
+    "orbit": {
+      "energy": -30370878.89610105,
+      "angularMomentum": 51142946432.30895,
+      "eccentricity": 0.006199575232132236,
+      "semiMajor": 6562214.364467594,
+      "periapsis": 150531.4228256978,
+      "apoapsis": 231897.30610948894
+    }
+  },
+  "primary": "earth",
+  "position": [
+    1781565.5672742366,
+    -6358567.605526421
+  ],
+  "velocity": [
+    9138.520384339075,
+    2408.0173209886707
+  ],
+  "stageIndex": 1,
+  "resources": {
+    "dryMass": 9548.937829015427,
+    "serviceFuel": 26169.466804402975,
+    "rcsFuel": 320,
+    "serviceThrust": 90000,
+    "serviceIsp": 450,
+    "upperFuel": 0,
+    "upperDry": 14298.760077053515,
+    "upperThrust": 1800000,
+    "upperIsp": 450,
+    "upperAttached": true,
+    "initialServiceFuel": 26169.466804402975,
+    "initialUpperFuel": 23740.590890854382
+  },
+  "craftAngle": 0.2566782309263796,
+  "throttle": 0,
+  "commandedThrottle": 1,
+  "guide": true,
+  "handedOver": true,
+  "plan": {
+    "burnDuration": 557.5,
+    "coastDuration": 430946.13239646493,
+    "leadAngle": -2.9584369086315725,
+    "targetApoapsis": 384400000,
+    "estimatedPropellant": 33917.35869637284,
+    "epoch": 457.9999999999085
+  },
+  "windowError": 0.003930632183360072,
+  "fuelUsed": 23740.590890854382,
+  "deltaVUsed": 1705.0550947904007,
+  "impact": null,
+  "failure": null,
+  "event": "Upper propellant depleted. Separate the upper stage to continue.",
+  "events": [
+    {
+      "time": 0,
+      "message": "Rollout complete. Ignition countdown armed."
+    },
+    {
+      "time": 0,
+      "message": "Ignition. Flight director controls the first 100 metres."
+    },
+    {
+      "time": 4.899999999999983,
+      "message": "100 metres. Flight controls are yours. Guidance is optional; staging remains manual."
+    },
+    {
+      "time": 145.00000000000702,
+      "message": "Custom core stage separated. 48,346 kg released."
+    },
+    {
+      "time": 457.9999999999085,
+      "message": "Bound Earth orbit confirmed. Plan lunar departure when ready."
+    },
+    {
+      "time": 457.9999999999085,
+      "message": "Waiting for the aligned lunar departure window. Coast time can be accelerated."
+    },
+    {
+      "time": 4337.999999999909,
+      "message": "Lunar departure burn. Prograde guidance uses engine thrust and finite propellant."
+    },
+    {
+      "time": 4396.249999999909,
+      "message": "Upper propellant depleted. Separate the upper stage to continue."
+    }
+  ],
+  "track": [
+    [
+      1291723.190621734,
+      -6472367.522097131
+    ],
+    [
+      1308898.4651529961,
+      -6468957.130899111
+    ],
+    [
+      1326186.868347879,
+      -6465476.898439904
+    ],
+    [
+      1343589.7697428262,
+      -6461926.213792777
+    ],
+    [
+      1361108.576117591,
+      -6458304.452676449
+    ],
+    [
+      1378744.7329967315,
+      -6454610.976925254
+    ],
+    [
+      1396499.726230735,
+      -6450845.133930942
+    ],
+    [
+      1414375.0836621237,
+      -6447006.25605416
+    ],
+    [
+      1432372.3768823263,
+      -6443093.66000358
+    ],
+    [
+      1450493.2230855678,
+      -6439106.646180435
+    ],
+    [
+      1468739.2870265606,
+      -6435044.49798601
+    ],
+    [
+      1487112.2830893649,
+      -6430906.481089486
+    ],
+    [
+      1505613.9774754026,
+      -6426691.842653268
+    ],
+    [
+      1524246.1905193292,
+      -6422399.810512679
+    ],
+    [
+      1543010.7991422154,
+      -6418029.592306629
+    ],
+    [
+      1561909.7394523737,
+      -6413580.374555596
+    ],
+    [
+      1580945.0095050803,
+      -6409051.321682852
+    ],
+    [
+      1600118.6722335052,
+      -6404441.574974543
+    ],
+    [
+      1619432.8585643235,
+      -6399750.251473816
+    ],
+    [
+      1638889.7707327665,
+      -6394976.442803673
+    ],
+    [
+      1658491.6858133136,
+      -6390119.213912787
+    ],
+    [
+      1678240.9594838303,
+      -6385177.601737883
+    ],
+    [
+      1698140.0300427482,
+      -6380150.613775672
+    ],
+    [
+      1718191.4227008957,
+      -6375037.226556612
+    ],
+    [
+      1738397.7541718283,
+      -6369836.384011921
+    ],
+    [
+      1758761.7375870529,
+      -6364546.995724427
+    ],
+    [
+      1779280.860109135,
+      -6359169.334790422
+    ]
+  ],
+  "lastTrack": 4396.749999999909
+}

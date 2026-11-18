@@ -1,4 +1,6 @@
-# Physical models in the first playable
+# Kinetic Core physical models
+
+> Current game: **v0.4.4**. The opening ascent/docking sections record the initial model; the **v0.4 continuous Moon mission** section below documents the connected Earth–Moon route. Read [Current version](CURRENT-VERSION.md) for the complete implemented scope and current verification boundaries.
 
 Game concept: Mykyta. Physics implementation and tests: AI-assisted development with Codex, November 14, 2026. This is an educational game model, not flight software or a NASA-certified simulator.
 
@@ -47,7 +49,7 @@ The builder's ideal delta-v omits gravity, drag and steering losses. It is a des
 
 Manual separation removes an attached stage's dry mass **and any remaining propellant**. Position and velocity remain continuous. Separation cannot occur on the pad. The model does not simulate a pyrotechnic impulse, debris collisions or recovery of the discarded stage.
 
-Optional ascent guidance commands thrust direction and throttle through a closed-loop radial-velocity target. It changes forces, never position or velocity directly. The pilot can trim pitch or fly with guidance off. Guidance limits nominal acceleration to approximately 3.8 g; manual flight can exceed it. The fictional aerodynamic design limit is 110 kPa. Structural flex, bending loads, vibration, heating, lift, winds and detailed engine performance are outside this first version.
+Optional ascent guidance commands thrust direction and throttle through a closed-loop radial-velocity target. It changes forces, never position or velocity directly. The pilot can trim pitch or fly with guidance off. Guidance limits nominal acceleration to approximately 3.8 g; manual flight can exceed it. The fictional aerodynamic design limit is 110 kPa. The UI colors actual dynamic pressure amber at 88 kPa and red at 104.5 kPa (80% and 95% of that limit); these margins do not alter the solver. The model uses a fixed frontal area/Cd and has no angle-of-attack bending failure. Structural flex, bending loads, vibration, heating, lift, winds and detailed engine performance are outside this first version.
 
 An orbit is confirmed only when:
 
@@ -180,3 +182,17 @@ Moon/site references: [JPL satellite parameters](https://ssd.jpl.nasa.gov/sats/p
 [JPL astrodynamic parameters](https://ssd.jpl.nasa.gov/astro_par.html) and
 [NASA lunar landing sites](https://nssdc.gsfc.nasa.gov/planetary/lunar/lunar_sites.html).
 Map limits and processing are documented in [asset credits](../public/assets/SOURCES.md).
+
+
+## Flight-scene Sun presentation
+
+The flight scene uses a fixed illustrative scenario solar direction transformed
+into the same local Earth/Moon frame as the celestial background. Camera rotation
+changes its screen projection, not its world bearing. The visible disk, foreground
+key light and atmospheric shading share that direction. Optical glow and streaks
+are presentation effects and require a visible, unoccluded source.
+
+This is not a live solar ephemeris and does not model solar pressure, heating or
+additional gravitational forces. Local other-world practice uses a fixed local
+scenario bearing; its parent context remains an illustrative angular-size model.
+The independently lit rotating Moon on mission home is a decorative illustration.

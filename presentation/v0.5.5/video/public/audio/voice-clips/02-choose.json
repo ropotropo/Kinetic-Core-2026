@@ -1,0 +1,21 @@
+{
+  "text": "Choose a mission. Build the vehicle.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 16642857,
+      "text": "Choose a mission."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 17142857,
+      "duration": 17976191,
+      "text": "Build the vehicle."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

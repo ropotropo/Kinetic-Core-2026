@@ -1,0 +1,364 @@
+{
+  "frozenCommit": "559a56eab08abfaca62001704c188be71e9f6dab",
+  "method": "Continuous deterministic propagation from the normal Lunar demonstrator through the frozen production game solver. Guidance on; explicit control actions for exhausted stages and departure. Serialized checkpoints pass the production restore validator. No phase/position/fuel/outcome was overwritten.",
+  "captureBoundary": "These are solver-prepared staged capture entry points, not UI-saved human playthrough evidence. The browser must restore through the normal checkpoint path, explicitly set engine power and resume, then record real new simulation frames. Do not claim an uninterrupted browser mission or treat this preparation as flight certification.",
+  "iterations": 17474,
+  "simulatedSeconds": 418868.7654222857,
+  "sources": [
+    {
+      "file": "src/lunar-mission.js",
+      "sha256": "cc03f8e75957c5fde966008610931c0e83309c96e82e4bf0ff397378cac97000"
+    },
+    {
+      "file": "src/physics.js",
+      "sha256": "7f977603b23553d747cfca42036e4d5a6c83506f4ae24798f3d358149cef7907"
+    },
+    {
+      "file": "src/vehicle-design.js",
+      "sha256": "d8017d2d333a6d7e633effe00843ebef5f727654bd330d6e559817325aca5cb4"
+    },
+    {
+      "file": "src/storage.js",
+      "sha256": "3ecc7cd8b671be4872265a7f068b11086501e1f62b91233970f88fddd5b380b3"
+    },
+    {
+      "file": "src/ascent-guidance.js",
+      "sha256": "bc935ee3580c084b79d717a49af321e8e385bfbf1f3e5323fb5f11b4bb0f104c"
+    }
+  ],
+  "phases": [
+    {
+      "phase": "rollout",
+      "time": 0,
+      "altitude": 0
+    },
+    {
+      "phase": "countdown",
+      "time": 0,
+      "altitude": 0
+    },
+    {
+      "phase": "launch",
+      "time": 0,
+      "altitude": 0
+    },
+    {
+      "phase": "orbit",
+      "time": 457.9999999999085,
+      "altitude": 202620.5511144176
+    },
+    {
+      "phase": "window",
+      "time": 467.9999999999085,
+      "altitude": 202156.7528357627
+    },
+    {
+      "phase": "departure",
+      "time": 4345.999999999909,
+      "altitude": 229150.12126786262
+    },
+    {
+      "phase": "coast",
+      "time": 4899.999999999909,
+      "altitude": 1002034.3471927205
+    },
+    {
+      "phase": "lunar-coast",
+      "time": 346899.9999999999,
+      "altitude": 63601706.73580481
+    },
+    {
+      "phase": "capture",
+      "time": 415722.0000000001,
+      "altitude": 215444.97105216025
+    },
+    {
+      "phase": "lunar-orbit",
+      "time": 416010.5000000001,
+      "altitude": 194980.63527876628
+    },
+    {
+      "phase": "descent",
+      "time": 417667.7500000001,
+      "altitude": 194993.80368677666
+    },
+    {
+      "phase": "landing",
+      "time": 418375.0000000001,
+      "altitude": 29989.927269153297
+    }
+  ],
+  "actions": [
+    {
+      "time": 145.00000000000702,
+      "control": "Separate stage",
+      "result": {
+        "ok": true,
+        "message": "Custom core stage separated. 48,346 kg released.",
+        "discardedMass": 48346.01414581604,
+        "remainingFuel": 0
+      },
+      "massBefore": 250092.236796048,
+      "massAfter": 201746.22265023197
+    },
+    {
+      "time": 457.9999999999085,
+      "control": "Plan lunar departure"
+    },
+    {
+      "time": 4396.999999999909,
+      "control": "Separate stage",
+      "result": {
+        "ok": true,
+        "discardedMass": 14298.760077053515,
+        "message": "Upper stage released. 14299 kg discarded; spacecraft engine available."
+      },
+      "massBefore": 50337.164710471916,
+      "massAfter": 36038.4046334184
+    }
+  ],
+  "checkpoints": [
+    {
+      "file": "initial-rollout.json",
+      "sha256": "3650f6a830b663004419abb0763ea45b08318ac7ea16db24568d53cd94ea1957",
+      "phase": "rollout",
+      "time": 0,
+      "stageIndex": 0,
+      "altitude": 0,
+      "mass": 1115286.853594677,
+      "totalFuel": 1042773.1415427921,
+      "verticalSpeed": 0,
+      "horizontalSpeed": 407.999090620417,
+      "restorationValidated": true
+    },
+    {
+      "file": "ascent-500m.json",
+      "sha256": "b6c135ba2b6e119545137abba692400105be78344fc4ba23fb80b2cd561f4e2b",
+      "phase": "launch",
+      "time": 11.000000000000108,
+      "stageIndex": 0,
+      "altitude": 519.4847519667819,
+      "mass": 1036579.7208511122,
+      "totalFuel": 964066.0087992271,
+      "verticalSpeed": 97.0822309628078,
+      "horizontalSpeed": 407.96579324055375,
+      "restorationValidated": true
+    },
+    {
+      "file": "before-core-depletion.json",
+      "sha256": "4db00d242a73beedd59c7e7dcb3808deb3434357d71d378fbc9a4cdce0e16461",
+      "phase": "launch",
+      "time": 140.00000000000318,
+      "stageIndex": 0,
+      "altitude": 87971.32687983476,
+      "mass": 264783.63003508106,
+      "totalFuel": 192269.9179831961,
+      "verticalSpeed": 744.6100306227955,
+      "horizontalSpeed": 3475.5481488816185,
+      "restorationValidated": true
+    },
+    {
+      "file": "core-depleted.json",
+      "sha256": "8c5c4f3252ac4d9e7130e98fea0796013e58d2a6eea04fd9c510431e7714b4ee",
+      "phase": "launch",
+      "time": 145.00000000000702,
+      "stageIndex": 0,
+      "altitude": 91663.83560630307,
+      "mass": 250092.236796048,
+      "totalFuel": 177578.52474416303,
+      "verticalSpeed": 731.24988856703,
+      "horizontalSpeed": 3648.117412571717,
+      "restorationValidated": true
+    },
+    {
+      "file": "earth-orbit.json",
+      "sha256": "d365b5470481643f594d8d43a5cba277fea42173a2e9610b486032eaa22dddfd",
+      "phase": "orbit",
+      "time": 457.9999999999085,
+      "stageIndex": 1,
+      "altitude": 202620.5511144176,
+      "mass": 74077.7556013263,
+      "totalFuel": 49910.05769525736,
+      "verticalSpeed": -46.29926110258111,
+      "horizontalSpeed": 7780.02716077653,
+      "restorationValidated": true
+    },
+    {
+      "file": "upper-depleted.json",
+      "sha256": "3bb02069e1d5f6cf574e6350303a6ea3e0e094d3f3c64fe0b8ec9d4b49f3b142",
+      "phase": "departure",
+      "time": 4396.999999999909,
+      "stageIndex": 1,
+      "altitude": 232435.3078187406,
+      "mass": 50337.164710471916,
+      "totalFuel": 26169.466804402975,
+      "verticalSpeed": 146.79212812752348,
+      "horizontalSpeed": 9449.31501772917,
+      "restorationValidated": true
+    },
+    {
+      "file": "earth-moon-transfer.json",
+      "sha256": "1bb0ff3fec56a757533a9cd241b5dabce1257992f5d4c40a53cfb060c4c55833",
+      "phase": "coast",
+      "time": 4899.999999999909,
+      "stageIndex": 2,
+      "altitude": 1002034.3471927205,
+      "mass": 25785.158111926616,
+      "totalFuel": 15916.220282911188,
+      "verticalSpeed": 3113.283590601095,
+      "horizontalSpeed": 9818.887248418027,
+      "restorationValidated": true
+    },
+    {
+      "file": "lunar-capture.json",
+      "sha256": "000c48423ed0f43dd72dafad18a24bf09a54134a50379c36abd964182f1d9237",
+      "phase": "capture",
+      "time": 415722.0000000001,
+      "stageIndex": 2,
+      "altitude": 215444.97105216025,
+      "mass": 25609.659955186282,
+      "totalFuel": 15740.722126170853,
+      "verticalSpeed": -243.49237720260658,
+      "horizontalSpeed": -2345.016318773848,
+      "restorationValidated": true
+    },
+    {
+      "file": "lunar-orbit.json",
+      "sha256": "3906f39c7f5c953d207a4b66c32c94823de8c4e5eeb26e67826b4d2fe10f2421",
+      "phase": "lunar-orbit",
+      "time": 416010.5000000001,
+      "stageIndex": 2,
+      "altitude": 194980.63527876628,
+      "mass": 21485.55954229844,
+      "totalFuel": 11616.621713283012,
+      "verticalSpeed": -0.9971542243398517,
+      "horizontalSpeed": -1598.5912851768646,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-30000m.json",
+      "sha256": "b615c38698a7d6346142ee6c478ec8177c94c2e9c993809b8b435f8550c6a7de",
+      "phase": "landing",
+      "time": 418375.0000000001,
+      "stageIndex": 2,
+      "altitude": 29989.927269153297,
+      "mass": 15687.900091560792,
+      "totalFuel": 5818.962262545365,
+      "verticalSpeed": -284.6157954411229,
+      "horizontalSpeed": -535.2120118642097,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-5000m.json",
+      "sha256": "976543ad3c00e3861bd0f1d9387a655a55334274d1716c64b743daf5ec1697e9",
+      "phase": "landing",
+      "time": 418533.0000000001,
+      "stageIndex": 2,
+      "altitude": 4993.490726958262,
+      "mass": 13974.628267644133,
+      "totalFuel": 4105.690438628705,
+      "verticalSpeed": -36.14024170880367,
+      "horizontalSpeed": -375.27184808282675,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-500m.json",
+      "sha256": "25db6eb413a42a30ae0f7ebfdae3a5fb846026b0e82dfe9bf8f1740993fc800a",
+      "phase": "landing",
+      "time": 418798.0000000001,
+      "stageIndex": 2,
+      "altitude": 497.7720049105119,
+      "mass": 12314.604736732186,
+      "totalFuel": 2445.666907716759,
+      "verticalSpeed": -19.825771662637145,
+      "horizontalSpeed": -44.83858358627374,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-100m.json",
+      "sha256": "e87638aa905423927d2fcf17637e3a5136efa50d97c0a31f461b2ce244a3a7e8",
+      "phase": "landing",
+      "time": 418828.2500000001,
+      "stageIndex": 2,
+      "altitude": 99.75734790088609,
+      "mass": 12104.167771929899,
+      "totalFuel": 2235.2299429144714,
+      "verticalSpeed": -6.493683817042447,
+      "horizontalSpeed": -4.020727774742795,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-30m.json",
+      "sha256": "2b4f3b314af3be4a026df7459a298fe8ab662e6416da9bcfedc7f91e9373aecd",
+      "phase": "landing",
+      "time": 418845.0000000004,
+      "stageIndex": 2,
+      "altitude": 29.71602838509716,
+      "mass": 12018.192841467842,
+      "totalFuel": 2149.2550124524155,
+      "verticalSpeed": -2.4371897628602293,
+      "horizontalSpeed": -0.7865357351556321,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-8m.json",
+      "sha256": "3d4773e103453695e3ea426ecd771ef6a488d7d30a0c08ddda13f0a98e86da67",
+      "phase": "landing",
+      "time": 418858.2500000006,
+      "stageIndex": 2,
+      "altitude": 7.796998446108773,
+      "mass": 11955.93344981366,
+      "totalFuel": 2086.9956207982314,
+      "verticalSpeed": -1.0449003445135678,
+      "horizontalSpeed": -0.21607291664581574,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-3m.json",
+      "sha256": "8c83c0e5b4e31b87bfd19c000fc5a7ab97b1b9e43ca29b24a3bf1930563bbf36",
+      "phase": "landing",
+      "time": 418863.9999999998,
+      "stageIndex": 2,
+      "altitude": 2.841376581694931,
+      "mass": 11929.726766722617,
+      "totalFuel": 2060.7889377071892,
+      "verticalSpeed": -0.700863822021871,
+      "horizontalSpeed": -0.1232896000935586,
+      "restorationValidated": true
+    },
+    {
+      "file": "moon-below-1m.json",
+      "sha256": "3a8bb54c177e63c1c069edce8c2947e79f76dcdcd6c7d79625e69f9730794dd5",
+      "phase": "landing",
+      "time": 418866.9999999991,
+      "stageIndex": 2,
+      "altitude": 0.9442503824830055,
+      "mass": 11916.204095346831,
+      "totalFuel": 2047.266266331404,
+      "verticalSpeed": -0.5684886032548229,
+      "horizontalSpeed": -0.09199307021663472,
+      "restorationValidated": true
+    },
+    {
+      "file": "computed-contact-reference.json",
+      "sha256": "a1c34fa49cfb43e591fc0d29442ef69e5ef531013888922a5c170b7007ae883a",
+      "phase": "landed",
+      "time": 418868.7654222857,
+      "stageIndex": 2,
+      "altitude": 0,
+      "mass": 11908.285780009815,
+      "totalFuel": 2039.3479509943877,
+      "verticalSpeed": 4.440892098500626e-16,
+      "horizontalSpeed": 8.881784197001252e-16,
+      "restorationValidated": true
+    }
+  ],
+  "computedContactReference": {
+    "verticalSpeed": -0.5025272736427593,
+    "horizontalSpeed": -0.07743110613765669,
+    "offset": 0.7932604235921266,
+    "angle": 0.0045557395484790986,
+    "time": 418868.7654222857,
+    "speed": 0.508457704192321
+  }
+}

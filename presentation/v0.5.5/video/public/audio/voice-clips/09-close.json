@@ -1,0 +1,21 @@
+{
+  "text": "Created by Mykyta Borisov. Fly the critical moments.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 26523810,
+      "text": "Created by Mykyta Borisov."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 27023810,
+      "duration": 22857143,
+      "text": "Fly the critical moments."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

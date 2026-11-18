@@ -1,0 +1,30 @@
+[
+  {
+    "file": "Kinetic-Core-v0.5.5-EN.pdf",
+    "bytes": 6740920,
+    "sha256": "b620fd240677ce42b04fdda35a38c3d369377e6c10b2f8783e6510a9745ebb24",
+    "pages": 18,
+    "canvas": [
+      0,
+      0,
+      1600,
+      900
+    ],
+    "linkAnnotations": 0,
+    "textChecks": "pass"
+  },
+  {
+    "file": "Kinetic-Core-v0.5.5-UA.pdf",
+    "bytes": 6756299,
+    "sha256": "34ede0120a075f1a4b4babcf66e626058aab37be1f90951f8b1c28aed1d8e53d",
+    "pages": 18,
+    "canvas": [
+      0,
+      0,
+      1600,
+      900
+    ],
+    "linkAnnotations": 0,
+    "textChecks": "pass"
+  }
+]

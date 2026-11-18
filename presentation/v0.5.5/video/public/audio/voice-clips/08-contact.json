@@ -1,0 +1,15 @@
+{
+  "text": "Touch down.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 15809524,
+      "text": "Touch down."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

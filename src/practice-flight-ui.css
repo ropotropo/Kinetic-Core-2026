@@ -1,0 +1,664 @@
+/* Flight instruments frame the scene; controls stay within a single screen. */
+.game-shell {
+  --flight-instrument-height: 72px;
+  --flight-command-safe: max(12px, env(safe-area-inset-bottom));
+}
+.game-shell .app-header {
+  height: 64px; min-height: 64px; padding: 0 24px; gap: 20px;
+  background: #000; border-bottom-color: #ffffff18;
+}
+.game-shell .identity { min-width: 210px; gap: 10px; }
+.game-shell .brand-symbol { width: 36px; min-width: 36px; padding: 0; }
+.game-shell .brand { font-size: 19px; }
+.game-shell .authorship { margin-top: 3px; font-size: 10px; }
+.game-shell .header-actions { gap: 8px; }
+.game-shell .flight-identity { margin-left: auto; margin-right: 20px; font-size: 11px; }
+.game-shell .destination-badge { font-size: 11px; }
+.game-shell .mission-nav {
+  position: relative; z-index: 12; height: 64px; min-height: 64px;
+  justify-content: space-between; gap: 20px; padding: 0 24px;
+  border-bottom: 1px solid #ffffff18; background: #000;
+}
+.mission-context { display: grid; gap: 5px; min-width: 0; }
+.mission-context > strong { font-size: 15px; font-weight: 550; letter-spacing: -.02em; }
+.mission-context > span { color: #a1a1a8; font-size: 12px; line-height: 1.35; }
+.mission-context-actions { display: flex; align-items: center; flex-shrink: 0; gap: 20px; }
+.game-shell .simulation-label { font-size: 11px; color: #a1a1a8; }
+.practice-shortcuts { position: relative; }
+.practice-shortcuts > summary {
+  list-style: none; display: flex; align-items: center; justify-content: center;
+  gap: 7px; min-height: 44px; padding: 8px 0 8px 12px;
+  color: #a1a1a8; font-size: 12px; cursor: pointer;
+}
+.practice-shortcuts > summary::-webkit-details-marker { display: none; }
+.practice-shortcuts > summary svg { width: 14px; height: 14px; }
+.practice-shortcuts > summary:focus-visible { outline: 2px solid #9bcaff; outline-offset: 3px; }
+.practice-shortcuts[open] > summary { color: #f5f5f7; }
+.practice-shortcut-menu {
+  position: absolute; z-index: 30; top: calc(100% + 10px); right: 0;
+  display: grid; gap: 4px; width: 220px; padding: 8px;
+  border: 1px solid #ffffff2b; border-radius: 14px;
+  background: #101012f5; box-shadow: 0 18px 50px #000b;
+  backdrop-filter: blur(20px);
+}
+.practice-shortcut-menu > button {
+  min-height: 44px; display: flex; align-items: center; padding: 10px 12px;
+  border: 0; border-radius: 7px; color: #a1a1a8; background: transparent;
+  text-align: left; font-size: 13px;
+}
+.practice-shortcut-menu > button:hover { color: #fff; background: #ffffff0c; }
+.practice-shortcut-menu > button.current { color: #fff; background: #ffffff12; }
+.practice-shortcut-menu > button.current::after { content: '✓'; margin-left: auto; color: #a8d8bd; }
+
+/* A live maneuver is a viewport, not a page with instruments below the fold. */
+body:has(.game-shell[data-workspace="flight"]) { overflow: hidden; }
+body .game-shell[data-workspace="flight"] { height: 100dvh; min-height: 0; overflow: hidden; }
+.game-shell[data-workspace="flight"] .workspace { display: flex; flex: 1 1 0; min-height: 0; }
+.game-shell[data-workspace="flight"] .library { display: none; }
+.game-shell[data-workspace="flight"] .flight-center {
+  display: flex; flex-direction: column; flex: 1 1 0; min-height: 0;
+  width: 100%; overflow: hidden;
+}
+.game-shell[data-workspace="flight"] .app-footer { display: none; }
+.game-shell[data-workspace="flight"] .flight-identity { display: none; }
+.game-shell[data-workspace="flight"] .mission-nav { min-height: 60px; height: 60px; }
+.game-shell[data-workspace="flight"] .practice-shortcuts { display: none; }
+.game-shell[data-workspace="flight"] .mission-context-actions { gap: 18px; }
+.game-shell[data-workspace="flight"] .flight-center .viewport {
+  position: relative; top: auto; order: 1; z-index: 1;
+  flex: 1 1 0; min-height: 0; height: auto; width: 100%;
+}
+.game-shell[data-workspace="flight"] .view-heading,
+.game-shell[data-workspace="flight"] .flight-clock,
+.game-shell[data-workspace="flight"] .view-location,
+.game-shell[data-workspace="flight"] .viewport-bottom { display: none; }
+.game-shell[data-workspace="flight"] #camera-button:not([hidden]) {
+  display: inline-flex; position: fixed; right: 24px; top: 220px;
+}
+/* Surface camera remains a deliberate control alongside the utility tools. */
+.game-shell[data-workspace="flight"][data-flight-kind="landing"] .view-heading {
+  display: flex; left: auto; right: 20px; top: 74px; width: auto;
+}
+.game-shell[data-workspace="flight"][data-flight-kind="landing"] .view-heading > div { display: none; }
+.game-shell[data-workspace="flight"][data-flight-kind="landing"] #camera-button:not([hidden]) {
+  position: static; min-height: 44px; padding: 8px 13px;
+  border: 1px solid #ffffff30; border-radius: 22px;
+  background: #111113bd; backdrop-filter: blur(16px); font-size: 11px;
+}
+.game-shell .primary-telemetry {
+  position: static; order: 0; flex-shrink: 0; width: 100%; height: var(--flight-instrument-height);
+  padding: 13px clamp(22px, 6vw, 110px); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0; border-bottom: 1px solid #ffffff18; background: #080809;
+  text-shadow: none; pointer-events: auto;
+}
+.game-shell .primary-telemetry > div { min-width: 0; padding: 0 24px; border-right: 1px solid #ffffff16; }
+.game-shell .primary-telemetry > div:first-child { padding-left: 0; }
+.game-shell .primary-telemetry > div:last-child { border-right: 0; }
+.game-shell .primary-telemetry small { display: block; margin-bottom: 5px; color: #a1a1a8; font-size: 11px; line-height: 1.2; }
+.game-shell .primary-telemetry strong { display: block; color: #f5f5f7; font-size: 25px; font-weight: 450; line-height: 1.1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.game-shell .primary-telemetry .warning strong { color: #edb96d; }
+.game-shell[data-workspace="flight"] .landing-director {
+  position: static; order: 2; flex-shrink: 0; display: flex; align-items: center;
+  justify-content: center; gap: 12px; min-height: 40px; max-width: none;
+  width: 100%; padding: 9px 20px; border: 0; border-top: 1px solid #ffffff16;
+  border-radius: 0; color: #a1a1a8; background: #080809; font-size: 12px; line-height: 1.45;
+  pointer-events: none;
+}
+.game-shell[data-workspace="flight"] .landing-director strong { font-weight: 500; color: #f5f5f7; }
+.game-shell[data-workspace="flight"] .landing-director[data-warning="true"] strong { color: #edb96d; }
+
+/* Tactile engine and stage controls occupy a single command surface. */
+.game-shell[data-workspace="flight"] .command-deck {
+  order: 6; flex-shrink: 0; min-height: 0; align-items: center;
+  padding: 14px clamp(22px, 6vw, 110px) var(--flight-command-safe);
+  gap: 30px; border-top: 1px solid #ffffff20; background: #0a0a0b;
+}
+.game-shell[data-workspace="flight"] .landing-command { width: 100%; display: grid; grid-template-columns: minmax(180px, .9fr) minmax(320px, 1.5fr); gap: 48px; }
+.game-shell[data-workspace="flight"] .throttle-label { min-width: 0; }
+.game-shell[data-workspace="flight"] .throttle-label label { font-size: 13px; line-height: 1.4; margin-bottom: 0; align-items: baseline; }
+.game-shell[data-workspace="flight"] .throttle-label strong { font-size: 23px; font-weight: 500; letter-spacing: -.03em; }
+.game-shell[data-workspace="flight"] input[type="range"] {
+  appearance: none; -webkit-appearance: none; display: block; width: 100%;
+  height: 44px; margin: 0; padding: 0 4px; border: 0; background: transparent;
+}
+.game-shell[data-workspace="flight"] input[type="range"]::-webkit-slider-runnable-track { height: 4px; border-radius: 2px; background: #76767b; }
+.game-shell[data-workspace="flight"] input[type="range"]::-webkit-slider-thumb { appearance: none; -webkit-appearance: none; height: 24px; width: 24px; margin-top: -10px; border: 1px solid #fff; border-radius: 50%; background: #f5f5f7; box-shadow: 0 2px 8px #0009; }
+.game-shell[data-workspace="flight"] input[type="range"]::-moz-range-track { height: 4px; border-radius: 2px; background: #76767b; }
+.game-shell[data-workspace="flight"] input[type="range"]::-moz-range-thumb { height: 24px; width: 24px; border: 1px solid #fff; border-radius: 50%; background: #f5f5f7; }
+.game-shell[data-workspace="flight"] .landing-controls { min-width: 0; width: 100%; grid-template-columns: 1fr 1fr 100px; gap: 8px; }
+.game-shell[data-workspace="flight"] .landing-controls .toggle-button { grid-column: auto; display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 8px 13px; font-size: 12px; border-radius: 22px; color: #b7b7bf; background: #ffffff04; border-color: #ffffff25; }
+.game-shell[data-workspace="flight"] .landing-controls .landing-assist-toggle::before { display: none; }
+.game-shell[data-workspace="flight"] .landing-controls .toggle-button span { color: #85858e; }
+.game-shell[data-workspace="flight"] .landing-controls .toggle-button.on { background: #ffffff0b; border-color: #ffffff50; color: #f5f5f7; }
+.game-shell[data-workspace="flight"] .landing-controls .toggle-button.on span { color: #9bcaff; }
+.game-shell[data-workspace="flight"] .landing-controls .button-row { grid-column: 1 / 3; gap: 8px; }
+.game-shell[data-workspace="flight"] .landing-controls .button-row button { flex: 1; min-height: 44px; font-size: 13px; border-radius: 22px; touch-action: none; user-select: none; -webkit-user-select: none; }
+.game-shell[data-workspace="flight"] .landing-controls #engine-cut { grid-column: 3; grid-row: 1 / 3; min-height: 44px; font-size: 12px; padding: 10px; border: 1px solid #ff8b8344; border-radius: 22px; color: #ffaaa4; }
+.game-shell[data-workspace="flight"] .ascent-controls { width: auto; max-width: none; min-width: 0; flex: 1; }
+.game-shell[data-workspace="flight"] .assist-controls { display: flex; flex-wrap: nowrap; gap: 8px; margin: 0; }
+.game-shell[data-workspace="flight"] .assist-controls > .toggle-button { white-space: nowrap; border-radius: 22px; }
+.game-shell[data-workspace="flight"] .ascent-pitch-controls { width: auto; flex: 1; flex-basis: auto; order: 0; margin: 0; gap: 8px; }
+.game-shell[data-workspace="flight"] .ascent-pitch-controls > button { min-height: 44px; border-radius: 22px; }
+.game-shell[data-workspace="flight"] .warp-controls { flex-shrink: 0; border-radius: 22px; }
+.game-shell[data-workspace="flight"] .warp-controls button { min-height: 44px; min-width: 42px; padding: 8px 10px; font-size: 12px; }
+.game-shell[data-workspace="flight"] .stage-control { min-width: 205px; width: auto; padding-left: 28px; border-top: 0; border-left: 1px solid #ffffff25; display: grid; gap: 9px; }
+.game-shell[data-workspace="flight"] .stage-control #stage-label { display: block; font-size: 12px; }
+.game-shell[data-workspace="flight"] .stage-control p { max-width: none; font-size: 11px; margin: 4px 0 0; }
+.game-shell[data-workspace="flight"] .stage-control button { width: 100%; border-radius: 22px; min-height: 44px; font-size: 13px; }
+.game-shell[data-workspace="flight"] .stage-control button svg { width: 18px; height: 18px; }
+.game-shell[data-workspace="flight"] .stage-ready { color: #f6d3a0; border-color: #edb96d; background: #edb96d14; }
+
+/* Three physically mounted cameras are explicit, including while paused. */
+.game-shell[data-workspace="flight"] .docking-camera-controls {
+  order: 3; flex-shrink: 0; border-top: 1px solid #ffffff18;
+  background: #080809; padding: 8px clamp(22px, 6vw, 110px);
+}
+.game-shell[data-workspace="flight"] .docking-camera-buttons { display: flex; justify-content: center; gap: 4px; }
+.game-shell[data-workspace="flight"] .docking-camera-label { margin-right: 18px; font-size: 11px; }
+.game-shell[data-workspace="flight"] .docking-camera-buttons button { min-height: 44px; padding: 8px 22px; border: 0; border-radius: 22px; font-size: 12px; background: transparent; color: #a1a1a8; }
+.game-shell[data-workspace="flight"] .docking-camera-buttons button:hover { color: #fff; background: #ffffff0b; }
+.game-shell[data-workspace="flight"] .docking-camera-buttons button.selected { color: #f5f5f7; background: #ffffff18; box-shadow: inset 0 0 0 1px #ffffff25; }
+.game-shell[data-workspace="flight"] #docking-camera-guidance { display: none; }
+.game-shell[data-workspace="flight"] .touch-controls:not([hidden]) {
+  display: flex; align-items: center; order: 4; flex-shrink: 0; gap: 24px;
+  padding: 12px clamp(22px, 6vw, 110px); background: #0a0a0b; border-top: 1px solid #ffffff12;
+}
+.game-shell[data-workspace="flight"] .touch-tabs { display: flex; flex-direction: column; justify-content: center; align-items: stretch; flex-shrink: 0; width: 145px; gap: 4px; margin: 0; }
+.game-shell[data-workspace="flight"] .touch-tabs button { display: flex; justify-content: center; align-items: center; min-height: 36px; padding: 7px 12px; border: 1px solid transparent; border-radius: 22px; color: #a1a1a8; font-size: 12px; background: transparent; }
+.game-shell[data-workspace="flight"] .touch-tabs button.selected { color: #fff; background: #ffffff0d; border-color: #ffffff30; }
+.game-shell[data-workspace="flight"] .touch-tabs #touch-fine { color: #a1a1a8; }
+.game-shell[data-workspace="flight"] .touch-tabs #touch-fine.selected { color: #9bcaff; border-color: #9bcaff55; }
+.game-shell[data-workspace="flight"] .touch-tabs > span { display: none; }
+.game-shell[data-workspace="flight"] .touch-pad { display: grid; grid-template-columns: 1fr 1fr; flex: 1; gap: 32px; max-width: 660px; margin: 0 auto; width: 100%; }
+.rcs-thumb-group { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-content: start; }
+.game-shell[data-workspace="flight"] .touch-pad button { min-width: 0; min-height: 44px; display: flex; justify-content: center; align-items: center; gap: 8px; border: 1px solid #ffffff25; border-radius: 24px; background: #ffffff06; color: #eeeef2; font-size: 12px; padding: 8px 10px; touch-action: none; user-select: none; -webkit-user-select: none; }
+.game-shell[data-workspace="flight"] .touch-pad button .control-direction { color: #a1a1a8; font-size: 14px; line-height: 1; }
+.game-shell[data-workspace="flight"] .touch-pad button[data-control="brake"] { grid-column: 1 / -1; color: #f5f5f7; background: #ffffff0c; }
+.game-shell[data-workspace="flight"] [data-control].firing { background: #f5f5f7; border-color: #fff; color: #000; }
+.game-shell[data-workspace="flight"] [data-control].firing .control-direction { color: #000; }
+.game-shell[data-workspace="flight"] .docking-command { display: flex; align-items: center; gap: 20px; width: 100%; }
+.game-shell[data-workspace="flight"] .docking-command .button-column { display: flex; flex-direction: row; gap: 8px; width: auto; margin-left: auto; }
+.game-shell[data-workspace="flight"] .docking-command .button-column > button { min-height: 44px; min-width: 155px; border-radius: 22px; font-size: 12px; }
+.rcs-power-note { color: #85858e; font-size: 11px; }
+.game-shell[data-workspace="flight"] .result-copy h2 { margin: 0; font-size: 20px; }
+.game-shell[data-workspace="flight"] .result-copy p { margin-top: 5px; font-size: 12px; }
+.game-shell[data-workspace="flight"] .command-deck > .button-column { display: flex; flex-direction: row; align-items: center; width: auto; gap: 14px; }
+.game-shell[data-workspace="flight"] .command-deck > .button-column > button { min-height: 44px; }
+.game-shell[data-workspace="flight"] .paused-overlay { padding: 24px; background: #0007; backdrop-filter: blur(6px); }
+.game-shell[data-workspace="flight"] .paused-overlay .eyebrow { display: none; }
+.game-shell[data-workspace="flight"] .paused-overlay h2 { font-size: clamp(24px, 3vw, 36px); margin-bottom: 8px; }
+.game-shell[data-workspace="flight"] .paused-overlay p:not(.eyebrow) { font-size: 12px; margin-bottom: 18px; }
+.game-shell[data-workspace="flight"] #flight-canvas:focus-visible { outline: 2px solid #9bcaff; outline-offset: -3px; }
+.game-shell[data-workspace="flight"] .outcome-overlay { padding: 28px clamp(22px, 6vw, 110px) 32px; }
+.game-shell[data-workspace="flight"] .outcome-overlay h2 { font-size: clamp(28px, 4vw, 52px); }
+.game-shell[data-workspace="flight"] .outcome-overlay .outcome-kicker { font-size: 11px; }
+.game-shell[data-workspace="flight"] .outcome-overlay p { font-size: 12px; }
+.game-shell[data-workspace="flight"] .outcome-metrics { margin-top: 18px; padding-top: 14px; gap: 28px; }
+.game-shell[data-workspace="flight"] .outcome-actions { margin-top: 18px; }
+.game-shell[data-workspace="flight"] .outcome-actions button { min-height: 44px; font-size: 12px; }
+
+/* Goal, full telemetry and key bindings are available without covering flight. */
+.practice-details {
+  width: min(560px, calc(100vw - 32px)); max-height: min(820px, calc(100dvh - 40px));
+  padding: 0; color: #f5f5f7; background: #0a0a0bf5; border: 1px solid #ffffff28;
+  border-radius: 20px; overflow: hidden; box-shadow: 0 30px 120px #000c;
+}
+.practice-details::backdrop { background: #0009; backdrop-filter: blur(12px); }
+.practice-details[open] { display: flex; flex-direction: column; }
+.practice-details .dialog-header { flex-shrink: 0; align-items: center; padding: 22px 24px 18px; gap: 20px; }
+.practice-details .dialog-header .eyebrow { margin-bottom: 6px; }
+.practice-details .dialog-header h2 { font-size: 24px; line-height: 1.15; }
+.practice-detail-tabs { display: flex; flex-shrink: 0; gap: 8px; padding: 0 24px 14px; border-bottom: 1px solid #ffffff20; }
+.practice-detail-tabs > button { flex: 1; min-height: 44px; padding: 10px; border: 0; border-radius: 22px; color: #a1a1a8; background: transparent; font-size: 13px; }
+.practice-detail-tabs > button[aria-selected="true"] { background: #ffffff12; color: #f5f5f7; }
+.practice-detail-body { overflow-y: auto; overscroll-behavior: contain; padding: 24px; min-height: 0; }
+.practice-details .instruments { display: block; padding: 0; border: 0; background: transparent; }
+.practice-details .instrument-heading { display: flex; }
+.practice-details #instrument-values { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.practice-details .instrument { padding: 18px 0; }
+.practice-details .instrument-name { font-size: 12px; }
+.practice-details .instrument strong { font-size: 30px; }
+.practice-details .readiness { margin-top: 16px; }
+.practice-details .readiness-title { font-size: 13px; }
+.practice-details .readiness p { font-size: 12px; line-height: 1.65; }
+.practice-details .checkpoint-section { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.practice-details .checkpoint-section > div { grid-column: 1 / -1; font-size: 11px; }
+.practice-details .checkpoint-section > button { min-height: 44px; margin: 0; font-size: 12px; }
+.practice-details .training-actions { display: none; }
+.practice-details #flight-heading { font-size: 28px; line-height: 1.15; max-width: 18ch; }
+.practice-details .flight-plan { margin: 22px 0; display: block; }
+.practice-checks { margin: 0; }
+.practice-checks > div { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 14px 0; border-top: 1px solid #ffffff18; }
+.practice-checks dt { font-size: 13px; color: #d7d7dc; }
+.practice-checks dt small { display: block; font-size: 11px; color: #85858e; margin-top: 4px; }
+.practice-checks dd { flex-shrink: 0; margin: 0; color: #a1a1a8; font-size: 13px; font-variant-numeric: tabular-nums; }
+.practice-checks [data-state="within"] dd { color: #a8d8bd; }
+.practice-checks [data-state="within"] dd::before { content: '✓ '; }
+.practice-details .model-note { font-size: 12px; color: #85858e; line-height: 1.65; margin: 18px 0 0; }
+.practice-details .flight-log { margin: 0; padding-top: 18px; border-top: 1px solid #ffffff20; }
+.practice-details .flight-log summary { font-size: 13px; color: #a1a1a8; cursor: pointer; min-height: 44px; }
+.practice-details .flight-log ol { display: grid; grid-template-columns: 1fr; gap: 16px; padding: 0; list-style: none; margin: 0 0 14px; }
+.practice-details .flight-log li { font-size: 12px; }
+.practice-details #return-builder { min-height: 44px; margin-top: 14px; }
+.practice-control-note { margin: 0 0 20px; font-size: 13px; line-height: 1.65; color: #a1a1a8; }
+.practice-key-list { margin: 0 0 22px; }
+.practice-key-list > div { display: grid; grid-template-columns: 135px 1fr; align-items: center; gap: 18px; min-height: 49px; padding: 12px 0; border-top: 1px solid #ffffff18; }
+.practice-key-list dt { font-size: 12px; }
+.practice-key-list kbd { font-size: 11px; }
+.practice-key-list dd { margin: 0; font-size: 12px; color: #c8c8d0; line-height: 1.55; }
+
+/* Legacy vehicle setup stays useful, while the expedition is chosen in Missions. */
+.game-shell[data-workspace="assembly"] .workspace { grid-template-columns: 250px minmax(0, 1fr) 225px; min-height: 0; }
+.game-shell[data-workspace="assembly"] .library,
+.game-shell[data-workspace="assembly"] .instruments { padding: 24px 20px; }
+.game-shell[data-workspace="assembly"] .viewport { min-height: 300px; }
+.game-shell[data-workspace="assembly"] .command-deck { min-height: 120px; padding: 20px 24px; gap: 24px; }
+.game-shell[data-workspace="assembly"] .command-intro h2 { font-size: 23px; margin-bottom: 7px; }
+.game-shell[data-workspace="assembly"] .command-intro p { font-size: 12px; }
+.game-shell[data-workspace="assembly"] .launch-button { min-height: 48px; }
+.game-shell[data-workspace="assembly"] .launch-button svg { width: 18px; height: 18px; }
+
+@media (max-width: 900px) {
+  .game-shell .app-header { min-height: 56px; height: 56px; padding: 0 18px; gap: 12px; }
+  .game-shell .identity { min-width: 0; }
+  .game-shell .brand { font-size: 18px; }
+  .game-shell .flight-identity { display: none; }
+  .game-shell .mission-nav { min-height: 60px; height: 60px; padding: 0 18px; gap: 16px; }
+  .game-shell .mission-context-actions { gap: 12px; }
+  .game-shell .simulation-label { display: flex; }
+  .game-shell[data-workspace="flight"] .command-deck { padding-left: 22px; padding-right: 22px; }
+  .game-shell[data-workspace="flight"] .landing-command { gap: 25px; grid-template-columns: minmax(160px, 1fr) minmax(290px, 1.5fr); }
+  .game-shell[data-workspace="flight"] .landing-controls { grid-template-columns: 1fr 1fr; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row { grid-column: 1; }
+  .game-shell[data-workspace="flight"] .landing-controls #engine-cut { grid-column: 2; grid-row: 2; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row button { font-size: 11px; padding: 8px; }
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button { font-size: 11px; padding: 8px 10px; }
+  .game-shell[data-workspace="flight"] .stage-control { min-width: 175px; padding-left: 20px; }
+  .game-shell[data-workspace="flight"] .assist-controls { flex-wrap: wrap; }
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls { order: 3; flex-basis: 100%; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { gap: 20px; padding: 10px 22px; }
+  .game-shell[data-workspace="flight"] .touch-tabs { width: 120px; }
+  .game-shell[data-workspace="flight"] .touch-pad { gap: 22px; }
+  .game-shell[data-workspace="assembly"] { height: auto; min-height: 100dvh; }
+  .game-shell[data-workspace="assembly"] .workspace { grid-template-columns: 235px minmax(0, 1fr); }
+  .game-shell[data-workspace="assembly"] .instruments { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .game-shell { --flight-instrument-height: 64px; }
+  .game-shell .app-header { padding: 0 14px; }
+  .game-shell .identity { gap: 7px; }
+  .game-shell .brand-symbol { width: 30px; min-width: 30px; }
+  .game-shell .brand { font-size: 17px; }
+  .game-shell .authorship { font-size: 8px; margin-top: 2px; }
+  .game-shell .header-actions { gap: 5px; }
+  .game-shell .mission-nav { padding: 0 16px; gap: 10px; }
+  .mission-context { gap: 4px; }
+  .mission-context > strong { font-size: 14px; }
+  .mission-context > span { font-size: 11px; line-height: 1.35; max-width: 44ch; }
+  .game-shell .simulation-label { display: none; }
+  .game-shell[data-workspace="flight"] .mission-nav { min-height: 60px; height: 60px; }
+  .game-shell[data-workspace="flight"] .mission-context-actions { gap: 0; }
+  .game-shell .primary-telemetry { padding: 12px 16px; height: 64px; }
+  .game-shell .primary-telemetry > div { padding: 0 14px; }
+  .game-shell .primary-telemetry > div:last-child { padding-right: 0; }
+  .game-shell .primary-telemetry small { font-size: 10px; margin-bottom: 5px; }
+  .game-shell .primary-telemetry strong { font-size: clamp(17px, 5.2vw, 23px); }
+  .game-shell[data-workspace="flight"] .landing-director { display: flex; justify-content: flex-start; gap: 8px; min-height: 38px; padding: 8px 16px; font-size: 10px; line-height: 1.4; }
+  .game-shell[data-workspace="flight"] .landing-director strong { white-space: nowrap; }
+  .game-shell[data-workspace="flight"] .landing-director span { min-width: 0; }
+  .game-shell[data-workspace="flight"] .command-deck { padding: 12px 16px var(--flight-command-safe); gap: 12px; flex-wrap: nowrap; }
+  .game-shell[data-workspace="flight"] .landing-command { grid-template-columns: 1fr; gap: 2px; }
+  .game-shell[data-workspace="flight"] .throttle-label label { font-size: 12px; }
+  .game-shell[data-workspace="flight"] .throttle-label strong { font-size: 20px; }
+  .game-shell[data-workspace="flight"] .landing-controls { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 84px; gap: 7px; }
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button { min-height: 40px; grid-column: auto; padding: 7px 10px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row { grid-column: 1 / 3; grid-row: 2; gap: 7px; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row button { min-height: 44px; font-size: 12px; }
+  .game-shell[data-workspace="flight"] .landing-controls #engine-cut { grid-column: 3; grid-row: 1 / 3; min-height: 44px; padding: 8px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .landing-controls #hold-button { grid-column: 2; grid-row: 1; }
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .view-heading { top: 68px; right: 14px; }
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] #camera-button:not([hidden]) { font-size: 10px; min-height: 40px; padding: 8px 11px; }
+  .game-shell[data-workspace="flight"] .ascent-controls { width: 100%; }
+  .game-shell[data-workspace="flight"] .command-deck:has(.ascent-controls) { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .game-shell[data-workspace="flight"] .assist-controls { display: grid; grid-template-columns: 1fr auto; gap: 7px; }
+  .game-shell[data-workspace="flight"] .assist-controls > .toggle-button { min-height: 40px; padding: 8px 12px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls { grid-column: 1; grid-row: 2; gap: 7px; }
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls > button { min-height: 40px; padding: 8px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .warp-controls { grid-column: 2; grid-row: 1 / 3; display: flex; align-self: center; }
+  .game-shell[data-workspace="flight"] .warp-controls button { min-width: 37px; min-height: 44px; font-size: 11px; padding: 7px; }
+  .game-shell[data-workspace="flight"] .stage-control { width: 100%; min-width: 0; padding: 9px 0 0; border-left: 0; border-top: 1px solid #ffffff20; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .game-shell[data-workspace="flight"] .stage-control > div { min-width: 0; }
+  .game-shell[data-workspace="flight"] .stage-control #stage-label { font-size: 10px; }
+  .game-shell[data-workspace="flight"] .stage-control p { font-size: 10px; line-height: 1.35; max-width: 21ch; }
+  .game-shell[data-workspace="flight"] .stage-control button { min-width: 150px; width: auto; font-size: 12px; }
+  .game-shell[data-workspace="flight"] .docking-camera-controls { padding: 6px 12px; }
+  .game-shell[data-workspace="flight"] .docking-camera-label { display: none; }
+  .game-shell[data-workspace="flight"] .docking-camera-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .game-shell[data-workspace="flight"] .docking-camera-buttons button { min-height: 40px; padding: 7px; font-size: 11px; white-space: nowrap; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { display: flex; flex-direction: column; gap: 9px; padding: 9px 16px 11px; }
+  .game-shell[data-workspace="flight"] .touch-tabs { flex-direction: row; width: 100%; gap: 5px; }
+  .game-shell[data-workspace="flight"] .touch-tabs button { flex: 1; min-height: 36px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .touch-pad { gap: 20px; }
+  .game-shell[data-workspace="flight"] .touch-pad button { min-height: 44px; font-size: 11px; padding: 7px; gap: 5px; }
+  .game-shell[data-workspace="flight"] .touch-pad .control-direction { font-size: 12px; }
+  .game-shell[data-workspace="flight"] .command-deck:has(.docking-command) { padding-top: 9px; }
+  .game-shell[data-workspace="flight"] .docking-command { gap: 0; }
+  .game-shell[data-workspace="flight"] .docking-command .rcs-power-note { display: none; }
+  .game-shell[data-workspace="flight"] .docking-command .button-column { width: 100%; gap: 8px; margin: 0; display: grid; grid-template-columns: 1fr 1fr; }
+  .game-shell[data-workspace="flight"] .docking-command .button-column > button { min-width: 0; min-height: 44px; font-size: 11px; }
+  .game-shell[data-workspace="flight"] .result-copy h2 { font-size: 15px; line-height: 1.2; }
+  .game-shell[data-workspace="flight"] .result-copy p { font-size: 10px; }
+  .game-shell[data-workspace="flight"] .command-deck > .button-column { gap: 8px; flex-shrink: 0; }
+  .game-shell[data-workspace="flight"] .command-deck > .button-column > button { font-size: 11px; padding: 10px; }
+  .game-shell[data-workspace="flight"] .command-deck > .button-column > .quiet-button { display: none; }
+  .game-shell[data-workspace="flight"] .command-deck > .primary-button { width: auto; flex-shrink: 0; font-size: 11px; padding: 10px 12px; }
+  .game-shell[data-workspace="flight"] .paused-overlay { padding: 18px; }
+  .game-shell[data-workspace="flight"] .paused-overlay h2 { font-size: 25px; }
+  .game-shell[data-workspace="flight"] .paused-overlay p:not(.eyebrow) { font-size: 11px; line-height: 1.5; margin-bottom: 14px; }
+  .game-shell[data-workspace="flight"] .outcome-overlay { padding: 20px 18px 24px; overflow-y: auto; }
+  .game-shell[data-workspace="flight"] .outcome-overlay h2 { font-size: 31px; margin-bottom: 9px; }
+  .game-shell[data-workspace="flight"] .outcome-overlay p { font-size: 11px; }
+  .game-shell[data-workspace="flight"] .outcome-metrics { margin-top: 13px; gap: 18px; }
+  .game-shell[data-workspace="flight"] .outcome-metrics strong { font-size: 20px; }
+  .game-shell[data-workspace="flight"] .outcome-metrics small { font-size: 9px; }
+  .game-shell[data-workspace="flight"] .outcome-actions { margin-top: 13px; gap: 8px; }
+  .game-shell[data-workspace="flight"] .outcome-actions button { min-height: 44px; padding: 8px 12px; font-size: 11px; }
+  .practice-details { width: calc(100vw - 20px); max-height: calc(100dvh - 24px); border-radius: 18px; }
+  .practice-details .dialog-header { padding: 20px 18px 16px; }
+  .practice-details .dialog-header h2 { font-size: 22px; }
+  .practice-detail-tabs { padding: 0 18px 12px; }
+  .practice-detail-body { padding: 20px 18px; }
+  .practice-key-list > div { grid-template-columns: 118px 1fr; gap: 14px; }
+  .game-shell[data-workspace="assembly"] .workspace { display: flex; flex-direction: column; }
+  .game-shell[data-workspace="assembly"] .flight-center { overflow: visible; }
+  .game-shell[data-workspace="assembly"] .flight-center .viewport { height: 48dvh; min-height: 300px; max-height: 470px; }
+  .game-shell[data-workspace="assembly"] .command-deck { flex-wrap: nowrap; padding: 18px; min-height: 110px; gap: 18px; }
+  .game-shell[data-workspace="assembly"] .command-intro h2 { font-size: 19px; }
+  .game-shell[data-workspace="assembly"] .command-intro p { font-size: 11px; }
+  .game-shell[data-workspace="assembly"] .command-deck > .primary-button { width: auto; flex-shrink: 0; font-size: 11px; padding: 10px 12px; }
+  .game-shell[data-workspace="assembly"] .library,
+  .game-shell[data-workspace="assembly"] .instruments { padding: 26px 20px; }
+  .game-shell[data-workspace="assembly"] .section-heading h1 { font-size: 30px; }
+  .game-shell[data-workspace="assembly"] .intro-copy { font-size: 12px; }
+  .game-shell[data-workspace="assembly"] .module-slots { gap: 0 20px; }
+}
+@media (max-width: 370px) {
+  .game-shell .brand { font-size: 15px; }
+  .game-shell .authorship { font-size: 7px; }
+  .game-shell .primary-telemetry > div { padding-left: 10px; padding-right: 10px; }
+  .game-shell .primary-telemetry strong { font-size: 17px; }
+  .game-shell[data-workspace="flight"] .landing-controls { grid-template-columns: 1fr 1fr 70px; }
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button { font-size: 10px; padding: 7px 8px; gap: 5px; }
+  .game-shell[data-workspace="flight"] .landing-director { gap: 6px; font-size: 9px; }
+  .game-shell[data-workspace="flight"] .touch-pad { gap: 12px; }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  /* Landscape: keep the same controls in shallow rows around the scene. */
+  .game-shell[data-workspace="flight"] { --flight-instrument-height: 57px; }
+  .game-shell[data-workspace="flight"] .app-header { height: 50px; min-height: 50px; }
+  .game-shell[data-workspace="flight"] .mission-nav { height: 50px; min-height: 50px; }
+  .game-shell[data-workspace="flight"] .primary-telemetry { padding-top: 9px; padding-bottom: 9px; }
+  .game-shell[data-workspace="flight"] .primary-telemetry strong { font-size: 20px; }
+  .game-shell[data-workspace="flight"] .primary-telemetry small { font-size: 9px; margin-bottom: 3px; }
+  .game-shell[data-workspace="flight"] .command-deck { padding-top: 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .game-shell[data-workspace="flight"] .landing-command { grid-template-columns: minmax(140px, .7fr) minmax(360px, 1.5fr); gap: 28px; }
+  .game-shell[data-workspace="flight"] .landing-controls { grid-template-columns: 1fr 1fr 82px; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row { grid-column: 1 / 3; }
+  .game-shell[data-workspace="flight"] .landing-controls #engine-cut { grid-column: 3; grid-row: 1 / 3; }
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button,
+  .game-shell[data-workspace="flight"] .landing-controls .button-row button { min-height: 40px; }
+  .game-shell[data-workspace="flight"] .docking-camera-controls { padding-top: 4px; padding-bottom: 4px; }
+  .game-shell[data-workspace="flight"] .docking-camera-buttons button { min-height: 36px; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { padding-top: 6px; padding-bottom: 6px; gap: 14px; }
+  .game-shell[data-workspace="flight"] .touch-tabs { width: 108px; gap: 0; }
+  .game-shell[data-workspace="flight"] .touch-tabs button { min-height: 29px; padding: 4px 8px; font-size: 10px; }
+  .game-shell[data-workspace="flight"] .touch-pad { max-width: none; gap: 16px; }
+  .game-shell[data-workspace="flight"] .rcs-thumb-group { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .game-shell[data-workspace="flight"] .rcs-thumb-group:last-child { grid-template-columns: repeat(3, 1fr); }
+  .game-shell[data-workspace="flight"] .touch-pad button { min-height: 44px; padding: 6px; font-size: 10px; gap: 4px; }
+  .game-shell[data-workspace="flight"] .touch-pad button[data-control="brake"] { grid-column: auto; }
+  .game-shell[data-workspace="flight"] .assist-controls { flex-wrap: nowrap; }
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls { flex-basis: auto; order: 0; }
+  .game-shell[data-workspace="flight"] .stage-control { min-width: 170px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .practice-details::backdrop,
+  .game-shell[data-workspace="flight"] .paused-overlay { backdrop-filter: none; }
+}
+
+/* Header utilities stay in one 56 px row with the Missions and site menus. */
+.game-shell .app-header:has(.site-menu-trigger) { flex-wrap: nowrap; padding-top: 0; padding-bottom: 0; }
+.game-shell .practice-details-button { flex-direction: column; gap: 2px; padding: 5px; }
+.game-shell .practice-details-button > .kc-icon { width: 18px; height: 18px; }
+.game-shell .practice-details-button > span { font-size: 8px; line-height: 1; }
+@media (max-width: 650px) {
+  .game-shell .app-header:has(.site-menu-trigger) { min-height: 56px; height: 56px; }
+  .game-shell .header-actions:has(.site-menu-trigger) { gap: 5px; }
+  .game-shell #guide-button { display: none; }
+}
+@media (max-width: 370px) {
+  .game-shell .identity > div { display: none; }
+}
+.game-shell[data-workspace="assembly"] .flight-center.expanded-flight .viewport { flex: 1 1 0; height: auto; max-height: none; min-height: 0; }
+.practice-details .flight-clock { position: static; display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 0 0 20px; text-shadow: none; }
+.practice-details .flight-clock span { font-size: 12px; margin: 0; }
+.practice-details .flight-clock strong { font-size: 16px; letter-spacing: -.03em; }
+@media (max-width: 650px) {
+  /* One powered brake in the thumb group; hold shares the thruster mode bar. */
+  .game-shell[data-workspace="flight"] .command-deck:has(.docking-command) { display: none; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .game-shell[data-workspace="flight"] .touch-tabs { gap: 4px; }
+  .game-shell[data-workspace="flight"] .touch-tabs > button { min-height: 40px; padding: 7px 8px; font-size: 10px; }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button { text-transform: capitalize; gap: 4px; }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button .hold-long-label { display: none; }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button.on { color: #dcecff; border-color: #9bcaff55; background: #9bcaff09; }
+}
+
+/* Inspection is a separate visual state, never a mounted cockpit claim. */
+.scene-inspection { position: absolute; z-index: 10; top: 14px; left: 18px; display: flex; align-items: center; gap: 10px; color: #d9d9df; font-size: 11px; text-shadow: 0 1px 6px #000; }
+.scene-inspection > span { padding: 8px 0; }
+@media (max-width: 650px) {
+  /* Every flight target remains at least 44 px, including compact mode tabs. */
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs > button,
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button,
+  .game-shell[data-workspace="flight"] .landing-controls .button-row button,
+  .game-shell[data-workspace="flight"] .ascent-controls .assist-controls > .toggle-button,
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls > button,
+  .game-shell[data-workspace="flight"] .docking-camera-buttons button,
+  .game-shell[data-workspace="flight"] #camera-button:not([hidden]) { min-height: 44px; }
+  .scene-inspection { top: 12px; left: 12px; gap: 8px; font-size: 10px; }
+}
+@media (max-width: 370px) {
+  .game-shell .identity .brand-symbol { width: 44px; min-width: 44px; }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs button,
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button,
+  .game-shell[data-workspace="flight"] .landing-controls .button-row button,
+  .game-shell[data-workspace="flight"] .docking-camera-buttons button { min-height: 44px; }
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs { display: grid; grid-template-columns: 1fr; gap: 0; width: 120px; }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs { display: flex; flex-direction: row; gap: 4px; width: auto; }
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs button { padding: 8px; }
+}
+@media (max-height: 600px) and (min-width: 651px) and (max-width: 980px) {
+  .game-shell[data-workspace="flight"] .command-deck:has(.docking-command) { display: none; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button { gap: 4px; font-size: 10px; text-transform: capitalize; }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button .hold-long-label { display: none; }
+  .game-shell[data-workspace="flight"] .touch-tabs #hold-button.on { color: #dcecff; border-color: #9bcaff55; background: #9bcaff09; }
+}
+
+/* A short field guide follows the current maneuver; deep evidence is optional. */
+#guide-dialog.field-guide {
+  width: min(640px, calc(100vw - 32px)); max-height: calc(100dvh - 40px);
+  padding: 0; border: 1px solid #ffffff2b; border-radius: 20px; overflow: hidden;
+  background: #0a0a0bf5; color: #f5f5f7;
+}
+#guide-dialog.field-guide[open] { display: flex; flex-direction: column; }
+#guide-dialog .dialog-header { flex-shrink: 0; min-height: 80px; padding: 18px 24px; border-bottom: 0; }
+#guide-dialog .dialog-header h2 { font-size: 26px; line-height: 1.15; letter-spacing: -.035em; }
+.field-guide-tabs { display: flex; flex-shrink: 0; gap: 6px; padding: 0 24px 14px; border-bottom: 1px solid #ffffff20; }
+.field-guide-tabs > button { flex: 1; min-width: 0; min-height: 44px; padding: 10px 12px; border: 0; border-radius: 24px; background: transparent; color: #a1a1a8; font-size: 14px; }
+.field-guide-tabs > button[aria-selected="true"] { color: #f5f5f7; background: #ffffff14; }
+.field-guide-tabs > button:hover { background: #ffffff0b; color: #fff; }
+#guide-dialog .field-guide-body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 25px 24px 28px; scrollbar-width: thin; scrollbar-color: #44444a transparent; }
+#guide-dialog .field-guide-panel { margin: 0; padding: 0; border: 0; }
+#guide-dialog .field-guide-panel > h3 { margin: 0 0 12px; color: #f5f5f7; font-size: 24px; font-weight: 500; line-height: 1.2; letter-spacing: -.035em; }
+#guide-dialog .field-guide-body p,
+#guide-dialog .field-guide-body li { font-size: 14px; line-height: 1.7; color: #b6b6bf; }
+#guide-dialog .field-guide-body strong { color: #e3e3e9; font-weight: 500; }
+#guide-dialog .field-guide-body p + p { margin-top: 14px; }
+#guide-dialog .field-guide-steps { margin: 22px 0 24px; padding-left: 21px; }
+#guide-dialog .field-guide-steps > li { padding-left: 7px; margin: 0 0 14px; }
+#guide-dialog .field-guide-steps > li:last-child { margin-bottom: 0; }
+#guide-dialog .field-guide-points { margin: 22px 0; padding-left: 19px; }
+#guide-dialog .field-guide-points > li { padding-left: 4px; margin: 0 0 14px; }
+#guide-dialog .field-guide-limit { padding-top: 18px; border-top: 1px solid #ffffff20; }
+.field-guide-next { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin-top: 24px; padding-top: 20px; border-top: 1px solid #ffffff20; }
+.field-guide-next > span { color: #a1a1a8; font-size: 14px; line-height: 1.6; }
+#guide-dialog .field-guide-next > button,
+#guide-dialog .field-guide-disclosure > button { min-height: 44px; padding: 11px 17px; font-size: 14px; }
+.field-guide-disclosure { border-bottom: 1px solid #ffffff20; padding: 0 0 12px; margin: 0 0 12px; }
+.field-guide-disclosure > summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 48px; padding: 8px 0; list-style: none; cursor: pointer; font-size: 14px; color: #e3e3e9; }
+.field-guide-disclosure > summary::-webkit-details-marker { display: none; }
+.field-guide-disclosure > summary::after { content: '+'; flex-shrink: 0; font-size: 21px; color: #a1a1a8; font-weight: 300; }
+.field-guide-disclosure[open] > summary::after { content: '−'; }
+.field-guide-disclosure > summary:focus-visible { outline: 2px solid #9bcaff; outline-offset: 3px; }
+#guide-dialog .field-guide-disclosure > p { margin: 12px 0 16px; }
+#guide-dialog #model-section { padding: 0; margin: 0; border: 0; }
+#guide-dialog .source-links { margin: 18px 0; padding-left: 20px; }
+#guide-dialog .source-links > li { margin: 8px 0; }
+#guide-dialog kbd { font-size: 12px; }
+@media (max-width: 650px) {
+  #guide-dialog.field-guide { width: calc(100vw - 20px); max-height: calc(100dvh - 24px); border-radius: 18px; }
+  #guide-dialog .dialog-header { min-height: 74px; padding: 15px 18px; }
+  #guide-dialog .dialog-header h2 { font-size: 24px; }
+  .field-guide-tabs { padding: 0 14px 12px; gap: 4px; }
+  .field-guide-tabs > button { padding: 10px 8px; }
+  #guide-dialog .field-guide-body { padding: 22px 20px 24px; }
+  #guide-dialog .field-guide-panel > h3 { font-size: 23px; }
+  #guide-dialog .field-guide-next > button { width: 100%; }
+}
+
+/* The safe area is part of the bounded header, so the scene yields its height. */
+.game-shell .app-header,
+.game-shell .app-header:has(.site-menu-trigger) {
+  height: calc(64px + env(safe-area-inset-top, 0px));
+  min-height: calc(64px + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: 0;
+  padding-left: max(24px, env(safe-area-inset-left, 0px));
+  padding-right: max(24px, env(safe-area-inset-right, 0px));
+}
+@media (max-width: 900px) {
+  .game-shell .app-header,
+  .game-shell .app-header:has(.site-menu-trigger) {
+    height: calc(56px + env(safe-area-inset-top, 0px));
+    min-height: calc(56px + env(safe-area-inset-top, 0px));
+    padding-left: max(14px, env(safe-area-inset-left, 0px));
+    padding-right: max(14px, env(safe-area-inset-right, 0px));
+  }
+}
+
+/* Selecting a landing world is a deliberate start, separate from a flight. */
+.landing-world-button { min-height: 44px; display: inline-flex; align-items: center; justify-content: flex-start; flex-shrink: 0; gap: 10px; padding: 0; border: 0; background: transparent; color: #f5f5f7; text-align: left; }
+.landing-world-button > span { display: grid; gap: 3px; }
+.landing-world-button small { color: #85858e; font-size: 10px; line-height: 1.1; }
+.landing-world-button strong { font-size: 15px; line-height: 1.2; font-weight: 550; letter-spacing: -.02em; }
+.landing-world-button > .kc-icon { width: 15px; height: 15px; color: #a1a1a8; }
+.game-shell[data-workspace="flight"][data-flight-kind="landing"] .mission-context { display: flex; align-items: center; gap: 22px; }
+.game-shell[data-workspace="flight"][data-flight-kind="landing"] .mission-context > #practice-next-action { max-width: 58ch; }
+.landing-chooser { width: min(460px, calc(100vw - 28px)); max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: hidden; border: 1px solid #ffffff30; border-radius: 20px; color: #f5f5f7; background: #0a0a0bf7; box-shadow: 0 30px 100px #000c; }
+.landing-chooser[open] { display: flex; flex-direction: column; }
+.landing-chooser::backdrop { background: #000b; backdrop-filter: blur(10px); }
+.landing-chooser .dialog-header { flex-shrink: 0; padding: 22px 24px 18px; align-items: center; }
+.landing-chooser .dialog-header h2 { font-size: 27px; }
+.landing-chooser .dialog-header .eyebrow { margin-bottom: 6px; font-size: 11px; }
+.landing-chooser-body { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 22px 24px; }
+.landing-chooser-body > p { color: #a1a1a8; font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
+.landing-chooser-body > label { display: block; color: #a1a1a8; font-size: 12px; margin-bottom: 8px; }
+.landing-chooser-body > select { display: block; width: 100%; min-height: 48px; padding: 10px 13px; border: 1px solid #ffffff40; border-radius: 10px; background: #171719; color: #f5f5f7; font-size: 15px; }
+.landing-chooser-facts { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: 20px 0; border-bottom: 1px solid #ffffff20; }
+.landing-chooser-facts small, .landing-chooser-challenge > small { color: #85858e; font-size: 11px; }
+.landing-chooser-facts strong { font-size: 22px; font-weight: 450; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.landing-chooser-challenge { padding-top: 18px; }
+.landing-chooser-challenge > p { margin-top: 7px; font-size: 14px; color: #c4c4ce; line-height: 1.6; }
+.landing-chooser-body > .landing-chooser-note { margin: 17px 0 0; font-size: 12px; color: #85858e; }
+.landing-chooser-actions { flex-shrink: 0; display: grid; grid-template-columns: 1fr 1.4fr; gap: 9px; padding: 17px 24px max(20px, env(safe-area-inset-bottom)); border-top: 1px solid #ffffff20; }
+.landing-chooser-actions > button { min-height: 44px; font-size: 14px; }
+@media (max-width: 650px) {
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .mission-context { gap: 14px; }
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .mission-context > #practice-next-action { font-size: 10px; max-width: 24ch; }
+  .landing-world-button strong { font-size: 14px; }
+  .landing-chooser .dialog-header { padding: 20px 20px 16px; }
+  .landing-chooser-body { padding: 20px; }
+  .landing-chooser-actions { padding-left: 20px; padding-right: 20px; }
+}
+@media (max-width: 370px) {
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .mission-context > #practice-next-action { display: none; }
+}
+
+/* A phone in landscape has two usable instruments, rather than a thin scene. */
+@media (min-width: 651px) and (max-width: 980px) and (max-height: 600px) {
+  .game-shell[data-workspace="flight"] .flight-center {
+    display: grid; grid-template-columns: minmax(0, 1fr) 300px;
+    grid-template-rows: 58px minmax(0, 1fr) auto; gap: 0; align-items: stretch;
+  }
+  .game-shell[data-workspace="flight"] .primary-telemetry { grid-column: 1; grid-row: 1; height: 58px; padding: 9px 18px; }
+  .game-shell[data-workspace="flight"] .primary-telemetry > div { padding-left: 16px; padding-right: 16px; }
+  .game-shell[data-workspace="flight"] .primary-telemetry > div:first-child { padding-left: 0; }
+  .game-shell[data-workspace="flight"] .primary-telemetry > div:last-child { padding-right: 0; }
+  .game-shell[data-workspace="flight"] .flight-center .viewport { grid-column: 1; grid-row: 2; min-height: 0; height: auto; width: 100%; }
+  .game-shell[data-workspace="flight"] .landing-director { grid-column: 1; grid-row: 3; min-height: 34px; padding: 7px 14px; gap: 9px; font-size: 10px; }
+  .game-shell[data-workspace="flight"] .command-deck { grid-column: 2; grid-row: 1 / 4; display: flex; flex-direction: column; justify-content: center; align-items: stretch; overflow-y: auto; overscroll-behavior: contain; min-height: 0; width: 300px; padding: 14px 15px max(14px, env(safe-area-inset-bottom)); border-top: 0; border-left: 1px solid #ffffff20; gap: 12px; }
+  .game-shell[data-workspace="flight"] .landing-command { grid-template-columns: 1fr; gap: 10px; }
+  .game-shell[data-workspace="flight"] .landing-controls { grid-template-columns: 1fr 1fr 70px; gap: 7px; }
+  .game-shell[data-workspace="flight"] .landing-controls .toggle-button { min-height: 44px; padding: 7px 9px; font-size: 10px; gap: 4px; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row { grid-column: 1 / 3; }
+  .game-shell[data-workspace="flight"] .landing-controls .button-row > button { min-height: 44px; font-size: 11px; padding: 7px; }
+  .game-shell[data-workspace="flight"] .landing-controls #engine-cut { grid-column: 3; grid-row: 1 / 3; min-height: 44px; font-size: 10px; padding: 8px; }
+  .game-shell[data-workspace="flight"] .ascent-controls { width: 100%; flex: 0 0 auto; }
+  .game-shell[data-workspace="flight"] .assist-controls { flex-wrap: wrap; gap: 7px; }
+  .game-shell[data-workspace="flight"] .ascent-pitch-controls { flex-basis: 100%; order: 3; }
+  .game-shell[data-workspace="flight"] .stage-control { min-width: 0; width: 100%; padding: 12px 0 0; border-left: 0; border-top: 1px solid #ffffff20; }
+  .game-shell[data-workspace="flight"] .stage-control p { font-size: 10px; }
+  .game-shell[data-workspace="flight"] .docking-camera-controls { grid-column: 2; grid-row: 1; min-height: 58px; padding: 7px 10px; border-top: 0; border-left: 1px solid #ffffff20; }
+  .game-shell[data-workspace="flight"] .docking-camera-label { display: none; }
+  .game-shell[data-workspace="flight"] .docking-camera-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; }
+  .game-shell[data-workspace="flight"] .docking-camera-buttons > button { min-height: 44px; padding: 6px 4px; font-size: 10px; white-space: normal; }
+  .game-shell[data-workspace="flight"] .touch-controls:not([hidden]) { grid-column: 2; grid-row: 2 / 4; display: flex; flex-direction: column; align-items: stretch; justify-content: center; min-height: 0; width: 300px; gap: 12px; padding: 12px 12px max(12px, env(safe-area-inset-bottom)); border-left: 1px solid #ffffff20; border-top: 1px solid #ffffff16; }
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs { display: flex; flex-direction: row; width: 100%; gap: 3px; }
+  .game-shell[data-workspace="flight"] .touch-controls .touch-tabs > button { flex: 1; min-width: 0; min-height: 44px; padding: 7px 5px; font-size: 9px; }
+  .game-shell[data-workspace="flight"] .touch-pad { flex: 0 0 auto; max-width: none; margin: 0; gap: 12px; }
+  .game-shell[data-workspace="flight"] .touch-pad .rcs-thumb-group,
+  .game-shell[data-workspace="flight"] .touch-pad .rcs-thumb-group:last-child { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .game-shell[data-workspace="flight"] .touch-pad button { min-height: 44px; padding: 7px 5px; font-size: 10px; gap: 4px; }
+  .game-shell[data-workspace="flight"] .touch-pad button[data-control="brake"] { grid-column: 1 / -1; }
+  .game-shell[data-workspace="flight"] .command-deck:has(.docking-command) { display: none; }
+  .game-shell[data-workspace="flight"] .command-deck > .button-column { flex-direction: column; align-items: stretch; width: 100%; }
+  .game-shell[data-workspace="flight"] .outcome-overlay { justify-content: flex-start; overflow-y: auto; overflow-x: hidden; padding: 17px 20px 22px; background: #000d; }
+  .game-shell[data-workspace="flight"] .outcome-overlay h2 { font-size: 28px; margin-bottom: 9px; }
+  .game-shell[data-workspace="flight"] .outcome-overlay p { font-size: 11px; }
+  .game-shell[data-workspace="flight"] .outcome-metrics { margin-top: 13px; gap: 22px; }
+  .game-shell[data-workspace="flight"] .outcome-actions { margin-top: 13px; }
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .view-heading { top: 76px; right: 12px; }
+  .landing-chooser { max-height: calc(100dvh - 20px); }
+  .landing-chooser .dialog-header { padding-top: 14px; padding-bottom: 12px; }
+  .landing-chooser-body { padding-top: 14px; padding-bottom: 14px; }
+  .landing-chooser-body > p { margin-bottom: 12px; }
+  .landing-chooser-facts { padding: 12px 0; }
+  .landing-chooser-actions { padding-top: 12px; padding-bottom: max(12px, env(safe-area-inset-bottom)); }
+}
+/* One help entry; the author lives in More, rather than a duplicate burger. */
+.game-shell .header-actions #guide-button{display:inline-grid!important;place-items:center;min-width:44px;min-height:44px;}
+/* The debrief owns the scene while open; its close control cannot cover a camera tool. */
+#viewport:has(#outcome-overlay:not([hidden]))>.navigation-tools,
+#viewport:has(#outcome-overlay:not([hidden]))>.scene-inspection,
+#viewport:has(#outcome-overlay:not([hidden]))>.view-heading{visibility:hidden;pointer-events:none;}
+#outcome-overlay #outcome-close{position:sticky;align-self:flex-end;flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0;margin:0 0 8px auto;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;top:0;right:0;background:#08090bd9;z-index:2;}
+.scene-inspection{gap:8px;top:14px;left:14px;}.scene-inspection>span{font-size:11px;}
+@media(max-width:650px){.scene-inspection{top:12px;left:12px;}.game-shell .identity .authorship{display:none;}.game-shell .identity .brand{font-size:16px;}}
+@media(min-width:651px) and (max-width:980px) and (max-height:600px){
+  .game-shell[data-workspace="flight"][data-flight-kind="landing"] .view-heading{top:84px;}
+}

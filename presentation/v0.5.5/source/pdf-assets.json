@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "file": "assets/hero.png",
+    "role": "Approved portrait cover art reused unchanged",
+    "kind": "approved generated artwork"
+  },
+  "logo": {
+    "file": "assets/logo.png",
+    "role": "Approved KC mission emblem",
+    "kind": "approved project identity"
+  },
+  "home": {
+    "file": "assets/screens/01-missions-home.png",
+    "role": "Current mission home and 3D Moon",
+    "kind": "fresh frozen-build capture"
+  },
+  "atlas": {
+    "file": "assets/screens/02-solar-atlas.png",
+    "role": "Current Solar System atlas",
+    "kind": "fresh frozen-build capture"
+  },
+  "workshop": {
+    "file": "assets/screens/05-workshop.png",
+    "role": "Current typed spacecraft workshop",
+    "kind": "fresh frozen-build capture"
+  },
+  "stage": {
+    "file": "assets/screens/17-manual-stage-release.png",
+    "role": "Actual manual stage separation after exact-solver checkpoint preparation and normal Restore/resume",
+    "kind": "fresh frozen-build capture"
+  },
+  "orbit": {
+    "file": "assets/screens/25-lunar-orbit-active.png",
+    "role": "Active integrated lunar orbit after exact-solver checkpoint preparation and normal Restore/Resume; engine off and retained propellant",
+    "kind": "fresh frozen-build capture"
+  },
+  "descent": {
+    "file": "assets/screens/21-descent-plume.png",
+    "role": "Integrated Moon final descent, exact-solver prepared entry followed by normal Restore/power/resume and actual modeled motion",
+    "kind": "fresh frozen-build capture"
+  },
+  "flag": {
+    "file": "assets/screens/23-kc-flag.png",
+    "role": "KC flag ceremony following observed genuine physical contact in the restored continuous-solver prepared integrated craft; no landed-state checkpoint loaded",
+    "kind": "fresh frozen-build capture"
+  },
+  "docking": {
+    "file": "assets/screens/11-docking-cockpit.png",
+    "role": "Current separate docking cockpit; manual RCS and powered attitude hold",
+    "kind": "fresh frozen-build capture"
+  }
+}

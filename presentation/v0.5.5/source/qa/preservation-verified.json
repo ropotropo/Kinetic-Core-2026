@@ -1,0 +1,35 @@
+{
+  "files": [
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/README.md",
+      "sha256": "24b271cdf1bbf328d802af0ce35382e333e2240db51c65201276ed57446116ef",
+      "unchanged": true
+    },
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/source/MANIFEST.json",
+      "sha256": "d0ff699165ae68846bec0ba863d743d4394e3b1d7365c5dd7e28ae451cce14aa",
+      "unchanged": true
+    },
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/Kinetic-Core-EN.pdf",
+      "sha256": "d5dc3f70c35c390731a2a574e742bbf7212b776461e6e4d97ac788048f5bf0e4",
+      "unchanged": true
+    },
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/Kinetic-Core-UA.pdf",
+      "sha256": "b388a0ad6af8609eeb4ecbadc0f72fd6920c4d6b623d48c3c558d21ced663ca1",
+      "unchanged": true
+    },
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/video/Kinetic-Core-Gameplay-v2.mp4",
+      "sha256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703",
+      "unchanged": true
+    },
+    {
+      "canonicalSource": "/Users/andrkrupenko/Documents/ChatGPT/Nick/Hakaton2026/presentation/video/Kinetic-Core-Gameplay-v2.en.srt",
+      "sha256": "37c22ec73d00f0bcddf499125534ca6211ea737e64f40ef0ad015788833149b5",
+      "unchanged": true
+    }
+  ],
+  "allCanonicalFilesUnchanged": true
+}

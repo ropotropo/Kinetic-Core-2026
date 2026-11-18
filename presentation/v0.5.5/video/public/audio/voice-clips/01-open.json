@@ -1,0 +1,21 @@
+{
+  "text": "One spacecraft. Every critical moment.",
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "boundaries": [
+    {
+      "type": "SentenceBoundary",
+      "offset": 1000000,
+      "duration": 20095239,
+      "text": "One spacecraft."
+    },
+    {
+      "type": "SentenceBoundary",
+      "offset": 20595239,
+      "duration": 20595239,
+      "text": "Every critical moment."
+    }
+  ],
+  "genericPreset": true,
+  "celebrityImitation": false
+}

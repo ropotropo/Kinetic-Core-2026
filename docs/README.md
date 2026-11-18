@@ -1,12 +1,17 @@
 # Kinetic Core documentation
 
-Start with the [project README](../README.md), [Wiki](https://github.com/ropotropo/Kinetic-Core-2026/wiki) or [current version](CURRENT-VERSION.md). Current facts are separate from version records and future plans.
+Start with the [current development README](../README.md) or [Wiki](https://github.com/ropotropo/Hakaton2026/wiki). The repository requires collaborator sign-in. Version records and future plans are labelled separately.
 
 ## Current playable
 
 | Topic | Document |
 | --- | --- |
-| Implemented scope, tests and remaining limits | [Current version](CURRENT-VERSION.md) |
+| Current scope, preview and versioned downloads | [Project README](../README.md) |
+| Compact mobile creator portrait and bottom actions | [v0.5.6 verification](QA-V056.md) |
+| Coherent Sun, glare and centered wide activity titles | [v0.5.5 verification](QA-V055.md) |
+| Subtly rotating 3D Moon on home | [v0.5.4 verification](QA-V054.md) |
+| Final phone, camera and detail changes | [v0.5.3 verification](QA-V053.md) |
+| Flight Deck and earlier flight-polish checks | [v0.5 verification](QA-V05.md) · [v0.5.1 verification](QA-V051.md) |
 | First Moon mission, controls and saves | [How to play](GETTING-STARTED.md) |
 | Equations, constants, integration and assumptions | [Physics](PHYSICS.md) |
 | Numerical and browser evidence for the v0.4 family | [v0.4 verification record](QA-V04.md) |
@@ -28,5 +33,7 @@ Start with the [project README](../README.md), [Wiki](https://github.com/ropotro
 ## Development reference
 
 [Design language](DESIGN.md) · [Roadmap and proposed gates](NORTH-STAR.md) · [Interaction review](INTERACTION-AUDIT-V04.md) · [Portable transfer](REPOSITORY-TRANSFER.md)
+
+Planned next stages: [detailed lunar experience](LUNAR-EXPERIENCE-NEXT.md) · [SpaceX reference hardware](SPACEX-HARDWARE-NEXT.md). The [submitted v0.4.4 baseline](CURRENT-VERSION.md) remains a historical record.
 
 Roadmaps describe intended work, not completed mechanics. Version records apply to the named build. [History](history/README.md) preserves earlier implementation and QA records, including earlier working names. Their statements must not be substituted for the current scope.

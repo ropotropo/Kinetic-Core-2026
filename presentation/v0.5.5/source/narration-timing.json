@@ -1,0 +1,70 @@
+{
+  "voice": "en-US-ChristopherNeural",
+  "rate": "+5%",
+  "durationSeconds": 56,
+  "beats": [
+    {
+      "id": "01-open",
+      "start": 0.4,
+      "text": "One spacecraft. Every critical moment.",
+      "duration": 4.176,
+      "end": 4.576
+    },
+    {
+      "id": "02-choose",
+      "start": 4.5,
+      "text": "Choose a mission. Build the vehicle.",
+      "duration": 3.576,
+      "end": 8.076
+    },
+    {
+      "id": "03-physics",
+      "start": 10.5,
+      "text": "Physics makes every decision count.",
+      "duration": 2.856,
+      "end": 13.356
+    },
+    {
+      "id": "04-launch",
+      "start": 16.4,
+      "text": "Launch from Earth. Put your decisions to the test.",
+      "duration": 4.368,
+      "end": 20.768
+    },
+    {
+      "id": "05-stage",
+      "start": 24,
+      "text": "Release the stage. Every kilogram matters.",
+      "duration": 4.344,
+      "end": 28.344
+    },
+    {
+      "id": "06-dock",
+      "start": 31,
+      "text": "Take control for a separate docking exercise.",
+      "duration": 3.456,
+      "end": 34.456
+    },
+    {
+      "id": "07-moon",
+      "start": 36.2,
+      "text": "Continue the Moon expedition. Brake. Descend.",
+      "duration": 5.328,
+      "end": 41.528
+    },
+    {
+      "id": "08-contact",
+      "start": 44.2,
+      "text": "Touch down.",
+      "duration": 1.68,
+      "end": 45.88
+    },
+    {
+      "id": "09-close",
+      "start": 49,
+      "text": "Created by Mykyta Borisov. Fly the critical moments.",
+      "duration": 5.04,
+      "end": 54.04
+    }
+  ]
+}

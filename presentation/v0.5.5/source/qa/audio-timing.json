@@ -1,0 +1,50 @@
+{
+  "voiceStartSeconds": 0,
+  "beats": [
+    {
+      "startSeconds": 0.4,
+      "endSeconds": 4.576,
+      "text": "One spacecraft. Every critical moment."
+    },
+    {
+      "startSeconds": 4.5,
+      "endSeconds": 8.076,
+      "text": "Choose a mission. Build the vehicle."
+    },
+    {
+      "startSeconds": 10.5,
+      "endSeconds": 13.356,
+      "text": "Physics makes every decision count."
+    },
+    {
+      "startSeconds": 16.4,
+      "endSeconds": 20.768,
+      "text": "Launch from Earth. Put your decisions to the test."
+    },
+    {
+      "startSeconds": 24,
+      "endSeconds": 28.344,
+      "text": "Release the stage. Every kilogram matters."
+    },
+    {
+      "startSeconds": 31,
+      "endSeconds": 34.456,
+      "text": "Take control for a separate docking exercise."
+    },
+    {
+      "startSeconds": 36.2,
+      "endSeconds": 41.528,
+      "text": "Continue the Moon expedition. Brake. Descend."
+    },
+    {
+      "startSeconds": 44.2,
+      "endSeconds": 45.88,
+      "text": "Touch down."
+    },
+    {
+      "startSeconds": 49,
+      "endSeconds": 54.04,
+      "text": "Created by Mykyta Borisov. Fly the critical moments."
+    }
+  ]
+}

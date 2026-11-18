@@ -1,1 +1,2 @@
 dist/** linguist-generated=true -whitespace
+presentation/** linguist-documentation=true

@@ -1,75 +1,42 @@
-import { DESTINATIONS } from './destinations.js';
-import { SATELLITES, SYSTEMS, SATELLITE_SOURCE } from './satellite-catalog.js';
-
-// Layout coordinates are schematic, never ephemerides or transfer trajectories.
-export function installNavigation({ state, selectDestination, resetCamera }) {
-  const bar = document.createElement('div');
-  bar.className = 'navigation-tools';
-  bar.innerHTML = '<button class="quiet-button" id="open-map">Flight map</button><button class="quiet-button" id="reset-orbit">Reset camera</button><small>Drag: 360° view · Scroll: zoom</small>';
-  document.querySelector('.flight-center').prepend(bar);
-  const expand=document.createElement('button');expand.className='secondary-button';expand.textContent='Expand flight view';bar.prepend(expand);
-  expand.onclick=()=>{const expanded=document.querySelector('.flight-center').classList.toggle('expanded-flight');expand.textContent=expanded?'Restore layout':'Expand flight view';window.dispatchEvent(new Event('resize'));};
-  const dialog = document.createElement('dialog');
-  dialog.className = 'guide-dialog navigation-map';
-  dialog.innerHTML = `<div class="dialog-header"><div><p class="eyebrow">Kinetic Core / navigation</p><h2>Mission map</h2></div><button class="icon-button" aria-label="Close flight map">×</button></div><div class="guide-content"><p>Choose a destination system, then inspect its moons. System positions are a schematic itinerary, not current astronomical positions. Continuous interplanetary transfer is not simulated yet.</p><div class="map-systems" role="group" aria-label="Destination systems"></div><label>Target moon <select id="map-target"></select></label><p id="map-route"></p><canvas id="local-map" width="760" height="380" aria-label="Live local position, velocity and target diagram"></canvas><p id="map-telemetry" role="status"></p><button class="primary-button" id="map-select">Set mission destination</button><p id="map-note"></p></div>`;
-  document.body.append(dialog);
-  const systems=SYSTEMS;
-  const catalog=SATELLITES.map((s,i)=>{const playable=DESTINATIONS.find(d=>d.name===s.name&&d.parent===s.parent);return {...s,id:playable?.id??`catalog-${i}`,playable:!!playable};});
-  systems.forEach(s=>{const landing=DESTINATIONS.find(d=>d.name===s);catalog.push({id:landing?.id??`planet-${s}`,name:s,parent:s,planet:true,playable:!!landing});});
-  const search=document.createElement('input');search.type='search';search.placeholder='Search planet, moon or provisional designation';search.setAttribute('aria-label','Search Solar System');dialog.querySelector('.map-systems').before(search);
-  const results=document.createElement('div');results.className='catalog-results';search.after(results);
-  search.oninput=()=>{const term=search.value.trim().toLowerCase();results.replaceChildren();if(!term)return;catalog.filter(b=>(b.name+' '+b.parent+' '+b.designation).toLowerCase().includes(term)).slice(0,60).forEach(b=>{const button=document.createElement('button');button.className='quiet-button';button.textContent=`${b.parent} / ${b.name}`;button.onclick=()=>{planned=b.id;chooseSystem(b.parent);};results.append(button);});};
-  const summary=document.createElement('p');summary.textContent=`8 planets + Pluto · ${SATELLITES.length} satellite entries · JPL snapshot: 15 November 2026. Newly discovered bodies may be absent from this snapshot.`;search.before(summary);
-  const source=document.createElement('a');source.href=SATELLITE_SOURCE;source.textContent='JPL satellite catalog and discovery records';source.target='_blank';source.rel='noopener';dialog.querySelector('.guide-content').append(source);
-  const systemsNode=dialog.querySelector('.map-systems');
-  const select=dialog.querySelector('select'), route=dialog.querySelector('#map-route');
-  const set=dialog.querySelector('#map-select'), note=dialog.querySelector('#map-note');
-  let planned=state.destination;
-  function chooseSystem(system){
-    const moons=catalog.filter(d=>d.parent===system);
-    if(!moons.some(d=>d.id===planned))planned=moons[0].id;
-    select.replaceChildren(...moons.map(d=>{const o=document.createElement('option');o.value=d.id;o.textContent=`${d.name}${d.planet?' — '+(d.name==='Pluto'?'dwarf planet':'planet'):d.playable?' — landing available':' — survey only'}`;return o;}));select.value=planned;
-    systemsNode.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.textContent===system)));
-    updateRoute();
-  }
-  systemsNode.innerHTML=systems.map(s=>`<button class="secondary-button">${s}</button>`).join('');
-  systemsNode.querySelectorAll('button').forEach(b=>b.onclick=()=>chooseSystem(b.textContent));
-  select.onchange=()=>{planned=select.value;updateRoute();};
-  function updateRoute(){const d=catalog.find(d=>d.id===planned);route.textContent=`Earth launch → ${d.parent} system${d.planet?'':` → ${d.name}`} · ${d.playable?'Landing exercise available':'Survey target — landing model unavailable'}`;}
-  document.getElementById('open-map').onclick=()=>{planned=state.destination;chooseSystem(DESTINATIONS.find(d=>d.id===planned).parent);dialog.showModal();};
-  document.getElementById('reset-orbit').onclick=resetCamera;
+import { icon } from './ui-icons.js';
+import { drawWorldDisc } from './map-world-disc.js';
+import './navigation.css';
+import { createMiniMap } from './mini-map.js';
+export function installNavigation({state,resetCamera,zoomCamera=()=>{},inspectCamera=()=>{}}){
+  const bar=document.createElement('div');bar.className='navigation-tools';bar.setAttribute('aria-label','Scene tools');
+  bar.innerHTML=`<button class="kc-tool" id="open-time-controls" aria-label="Time controls">${icon('time')}<span class="kc-tool-label">Time</span></button><button class="kc-tool" id="open-camera-tools" aria-label="Open camera tools">${icon('camera')}<span class="kc-tool-label">Camera</span></button><button class="kc-tool" id="expand-flight-view" aria-label="Expand flight view" aria-pressed="false">${icon('expand')}<span class="kc-tool-label">View</span></button>`;
+  document.querySelector('#viewport').append(bar);
+  const dialog=document.createElement('dialog');dialog.className='guide-dialog navigation-map';dialog.setAttribute('aria-label','Local flight map');
+  dialog.innerHTML=`<div class="dialog-header"><h2>Flight map</h2><button class="kc-tool" aria-label="Close flight map">${icon('close')}</button></div><canvas id="local-map" width="760" height="420" aria-label="Actual local spacecraft position and velocity"></canvas><p id="map-telemetry"></p><details><summary>Read this map</summary><p>White is your spacecraft. Green is the target. The blue arrow shows velocity; a dashed line is target bearing, not a planned trajectory.</p><p>Docking uses an X/Z projection; vertical Y offset remains in flight instruments. This is a local diagram, not live astronomical imagery.</p></details>`;
+  const cameraDialog=document.createElement('dialog');cameraDialog.className='guide-dialog navigation-camera';cameraDialog.setAttribute('aria-label','Camera tools');
+  cameraDialog.innerHTML=`<div class="dialog-header"><h2>Camera</h2><button class="kc-tool" aria-label="Close camera tools">${icon('close')}</button></div><p>Drag the scene to look around. Choose a mounted view in flight controls.</p><div class="camera-tool-grid"><button class="kc-action" id="reset-orbit">${icon('reset')}Reset view</button><button class="kc-action" data-inspect>${icon('orbit')}Inspect in 360°</button><button class="kc-action" data-zoom="0.8">${icon('plus')}Zoom in</button><button class="kc-action" data-zoom="1.25">${icon('minus')}Zoom out</button></div>`;
+  document.body.append(dialog,cameraDialog);
+  function pauseForTools(){document.dispatchEvent(new CustomEvent('kc:pause-practice'));document.getElementById('pause-button')?.getAttribute('aria-label')==='Pause simulation'&&document.getElementById('pause-button').click();}
+  bar.querySelector('#open-camera-tools').onclick=()=>{cameraDialog.returnValue='';pauseForTools();cameraDialog.showModal();};
+  cameraDialog.querySelector('[aria-label="Close camera tools"]').onclick=()=>cameraDialog.close('selected');
+  cameraDialog.querySelector('#reset-orbit').onclick=()=>{resetCamera();cameraDialog.close('selected');};
+  cameraDialog.querySelector('[data-inspect]').onclick=()=>{inspectCamera();cameraDialog.close('selected');};
+  for(const button of cameraDialog.querySelectorAll('[data-zoom]'))button.onclick=()=>zoomCamera(Number(button.dataset.zoom));
+  let expanded=false;
+  const expand=bar.querySelector('#expand-flight-view');expand.onclick=()=>{expanded=!expanded;document.querySelector('.flight-center').classList.toggle('expanded-flight',expanded);expand.setAttribute('aria-pressed',String(expanded));expand.setAttribute('aria-label',expanded?'Restore flight layout':'Expand flight view');window.dispatchEvent(new Event('resize'));};
+  const miniMap=createMiniMap(document.querySelector('#viewport'));
+  bar.querySelector('#open-time-controls').onclick=()=>document.dispatchEvent(new CustomEvent('kc:time-practice'));
   dialog.querySelector('[aria-label="Close flight map"]').onclick=()=>dialog.close();
-  set.onclick=()=>{if(state.phase!=='assembly')return;selectDestination(planned);dialog.close();};
-  const canvas=dialog.querySelector('canvas'),ctx=canvas.getContext('2d');
+  const canvas=dialog.querySelector('canvas'),ctx=canvas.getContext('2d');let lastPhase;
+  const marker=(x,y,label,color)=>{ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fill();ctx.font='14px system-ui';ctx.fillText(label,Math.min(610,x+14),Math.max(22,y-12));};
+  function arrow(x,y,vx,vy){const length=Math.hypot(vx,vy);if(length<.001)return;const dx=vx/length*58,dy=vy/length*58,a=Math.atan2(dy,dx);ctx.strokeStyle='#9bcaff';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+dx,y+dy);ctx.lineTo(x+dx-11*Math.cos(a-.5),y+dy-11*Math.sin(a-.5));ctx.moveTo(x+dx,y+dy);ctx.lineTo(x+dx-11*Math.cos(a+.5),y+dy-11*Math.sin(a+.5));ctx.stroke();}
   function draw(){
+    miniMap.updatePractice(state);
+    bar.querySelector('#open-time-controls').disabled=!state.flight||['assembly','landed','docked','failed'].includes(state.phase);
     if(!dialog.open)return;
-    const f=state.flight,kind=f?.kind;
-    const selected=catalog.find(d=>d.id===planned);
-    set.disabled=state.phase!=='assembly'||!selected?.playable;
-    note.textContent=!selected?.playable?'This body is in the survey catalog. A verified landing exercise is not available. Giant planets have no solid landing surface; missing moon parameters are not invented.':state.phase!=='assembly'?'Target changes are available in vehicle assembly.':'Set a target, then use Surface landing practice to fly the separate descent exercise.';
-    ctx.fillStyle='#050506';ctx.fillRect(0,0,760,380);
-    ctx.strokeStyle='#242429';ctx.lineWidth=1;
-    for(let x=40;x<760;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,380);ctx.stroke();}
-    for(let y=30;y<380;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(760,y);ctx.stroke();}
-    ctx.font='14px system-ui';ctx.fillStyle='#a1a1a8';
-    const marker=(x,y,text,color)=>{ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fill();ctx.fillText(text,x+12,y-10);};
-    const arrow=(x,y,dx,dy)=>{const a=Math.atan2(dy,dx);ctx.strokeStyle='#9bcaff';ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+dx,y+dy);ctx.lineTo(x+dx-10*Math.cos(a-.5),y+dy-10*Math.sin(a-.5));ctx.moveTo(x+dx,y+dy);ctx.lineTo(x+dx-10*Math.cos(a+.5),y+dy-10*Math.sin(a+.5));ctx.stroke();};
-    let description;
-    if(kind==='docking'||kind==='landing'){
-      const x=f.position[0],vertical=kind==='landing'?f.position[1]:f.position[2];
-      const scale=Math.max(1,Math.abs(x)/240,Math.abs(vertical)/240);
-      const sx=380+x/scale,sy=310-vertical/scale;
-      marker(380,310,kind==='landing'?'Landing zone':'Docking port','#a8d8bd');marker(sx,sy,'Spacecraft','#f5f5f7');
-      ctx.setLineDash([5,5]);ctx.strokeStyle='#a8d8bd';ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(380,310);ctx.stroke();ctx.setLineDash([]);
-      const vx=f.velocity[0],vy=f.velocity[kind==='landing'?1:2];const magnitude=Math.hypot(vx,vy);if(magnitude>.001)arrow(sx,sy,vx/magnitude*55,-vy/magnitude*55);
-      description=`Local ${kind==='landing'?'descent':'approach'} map · lateral offset ${x.toFixed(1)} m · ${kind==='landing'?'altitude':'axial range'} ${vertical.toFixed(1)} m · velocity (${vx.toFixed(2)}, ${vy.toFixed(2)}) m/s · scale ${scale.toFixed(1)} m/px. Dashed green: target bearing. Blue: current velocity. Docking Y offset is not shown in this X/Z projection.`;
-    }else if(f?.position?.length===2){
-      const r=Math.hypot(...f.position),s=r/130;ctx.strokeStyle='#a1a1a8';ctx.beginPath();ctx.arc(380,190,6371000/s,0,Math.PI*2);ctx.stroke();marker(380+f.position[0]/s,190-f.position[1]/s,'Spacecraft','#f5f5f7');description='Earth-centred launch map · altitude '+Math.round((r-6371000)/1000)+' km. Interplanetary transfer is not active.';
-    }else{
-      systems.forEach((s,i)=>{const x=60+(i%5)*145,y=i<5?105:255;marker(x,y,s,s===selected.parent?'#9bcaff':'#a1a1a8');ctx.fillStyle='#a1a1a8';ctx.fillText(`${SATELLITES.filter(m=>m.parent===s).length} moons`,x,y+30);});description=`Selected: ${selected.name} / ${selected.parent}. Schematic Solar System, not to scale; positions are not ephemerides. Mercury and Venus have no natural moons. Pluto is a dwarf planet.`;
-    }
+    const f=state.flight;ctx.fillStyle='#08090b';ctx.fillRect(0,0,760,420);ctx.strokeStyle='#ffffff12';ctx.lineWidth=1;for(let x=60;x<760;x+=80){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,420);ctx.stroke();}for(let y=50;y<420;y+=80){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(760,y);ctx.stroke();}
+    let description='Start a flight to see its position.';
+    if(f?.kind==='docking'||f?.kind==='landing'){
+      const landing=f.kind==='landing',x=f.position[0],z=f.position[landing?1:2],scale=Math.max(.5,Math.abs(x)/230,Math.abs(z)/270),sx=380+x/scale,sy=345-z/scale;
+      marker(380,345,landing?'Landing zone':'Docking port','#a8d8bd');marker(sx,sy,'Spacecraft','#f5f5f7');ctx.setLineDash([4,6]);ctx.strokeStyle='#a8d8bd66';ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(380,345);ctx.stroke();ctx.setLineDash([]);arrow(sx,sy,f.velocity[0],-f.velocity[landing?1:2]);
+      description=`${landing?'Altitude':'Port range'} ${z.toFixed(1)} m · ${landing?'pad offset':'X offset'} ${x.toFixed(1)} m · ${scale.toFixed(1)} m per pixel`;
+    }else if(f?.position?.length===2){const r=Math.hypot(...f.position),scale=r/145;drawWorldDisc(ctx,380,210,6371000/scale,'earth','#152b3e');marker(380+f.position[0]/scale,210-f.position[1]/scale,'Spacecraft','#f5f5f7');description=`Earth-centred ascent · altitude ${((r-6371000)/1000).toFixed(1)} km`;}
     dialog.querySelector('#map-telemetry').textContent=description;
   }
-  // Pause and release held flight inputs while a modal blocks the controls.
-  return {draw,dialog};
+  return{draw,dialog,cameraDialog};
 }

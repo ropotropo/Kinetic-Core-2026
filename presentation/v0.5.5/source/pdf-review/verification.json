@@ -1,0 +1,71 @@
+{
+  "frozenCommit": "559a56eab08abfaca62001704c188be71e9f6dab",
+  "slideCount": 18,
+  "speechSeconds": 280,
+  "scope": "PDF layout/content/source checks, not a gameplay test run",
+  "spokenWords": {
+    "en": 503,
+    "uk": 432
+  },
+  "outputs": [
+    {
+      "file": "Kinetic-Core-v0.5.5-EN.pdf",
+      "bytes": 6740920,
+      "sha256": "b620fd240677ce42b04fdda35a38c3d369377e6c10b2f8783e6510a9745ebb24",
+      "pages": 18,
+      "renderedPages": 18,
+      "author": "Mykyta Borisov"
+    },
+    {
+      "file": "Kinetic-Core-v0.5.5-UA.pdf",
+      "bytes": 6756299,
+      "sha256": "34ede0120a075f1a4b4babcf66e626058aab37be1f90951f8b1c28aed1d8e53d",
+      "pages": 18,
+      "renderedPages": 18,
+      "author": "Mykyta Borisov"
+    }
+  ],
+  "screenshots": {
+    "home": {
+      "file": "assets/screens/01-missions-home.png",
+      "sha256": "fca721c939d49c3bc871c17d6dcc7a6847f595a2413e321863d69dd5cc76d1f2",
+      "role": "Current mission home and 3D Moon"
+    },
+    "atlas": {
+      "file": "assets/screens/02-solar-atlas.png",
+      "sha256": "8aba64a9d4df8437ab7ebebd879a143ee75ff5424d49f721bf657a18f57c300d",
+      "role": "Current Solar System atlas"
+    },
+    "workshop": {
+      "file": "assets/screens/05-workshop.png",
+      "sha256": "4c7461f6ba2b0792d2edd1cb0ffcf4f53594480395cbeec7c6c8365403c359ba",
+      "role": "Current typed spacecraft workshop"
+    },
+    "stage": {
+      "file": "assets/screens/17-manual-stage-release.png",
+      "sha256": "eb495bd91a062e24cf91c2a0ce5e1f769a083b36501452779aad947c3fb8413a",
+      "role": "Actual manual stage separation after exact-solver checkpoint preparation and normal Restore/resume"
+    },
+    "orbit": {
+      "file": "assets/screens/25-lunar-orbit-active.png",
+      "sha256": "f8a3a901c99a996d9c7f68b1d24f1dedbab90133afce92280bc8de4dd5358893",
+      "role": "Active integrated lunar orbit after exact-solver checkpoint preparation and normal Restore/Resume; engine off and retained propellant"
+    },
+    "descent": {
+      "file": "assets/screens/21-descent-plume.png",
+      "sha256": "eaa8e9f8faac7f2ea5f0c71f8af865c617829b314cd12db2e52bd6f4aff4969f",
+      "role": "Integrated Moon final descent, exact-solver prepared entry followed by normal Restore/power/resume and actual modeled motion"
+    },
+    "flag": {
+      "file": "assets/screens/23-kc-flag.png",
+      "sha256": "906331e05bb0644e5c9351f8ae76156e54b64674bd31355b1dae12af36629ea2",
+      "role": "KC flag ceremony following observed genuine physical contact in the restored continuous-solver prepared integrated craft; no landed-state checkpoint loaded"
+    },
+    "docking": {
+      "file": "assets/screens/11-docking-cockpit.png",
+      "sha256": "fa6ecd9d26d849f823b1349de28428aa1a84e70d9677c7dc4148df3fa3d30c4e",
+      "role": "Current separate docking cockpit; manual RCS and powered attitude hold"
+    }
+  },
+  "screenshotsIdenticalBetweenLanguages": true
+}

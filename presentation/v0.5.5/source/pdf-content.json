@@ -1,0 +1,418 @@
+{
+  "project": "Kinetic Core",
+  "version": "0.5.5",
+  "frozenCommit": "559a56eab08abfaca62001704c188be71e9f6dab",
+  "author": "Mykyta Borisov",
+  "event": "NASA Space Apps Challenge 2026",
+  "challenge": "Space Mission Design Game",
+  "canvas": {
+    "width": 1600,
+    "height": 900,
+    "safe": 80
+  },
+  "totalSeconds": 280,
+  "slides": [
+    {
+      "id": "cover",
+      "kind": "cover",
+      "seconds": 15,
+      "en": {
+        "title": "Kinetic Core",
+        "lead": "Space Mission Design Game",
+        "points": [
+          "Created by Mykyta Borisov"
+        ],
+        "speech": "Hello, I'm Mykyta Borisov, the author of Kinetic Core. This is my space mission design game for NASA Space Apps Challenge 2026."
+      },
+      "uk": {
+        "title": "Kinetic Core",
+        "lead": "Гра з проєктування космічних місій",
+        "points": [
+          "Автор: Микита Борисов"
+        ],
+        "speech": "Вітаю! Я Микита Борисов, автор Kinetic Core. Це моя гра з проєктування космічних місій для NASA Space Apps Challenge 2026."
+      },
+      "technicalNotes": [
+        "Approved generated portrait artwork reused unchanged. Image provenance remains in the presentation source records, not on the visible cover."
+      ]
+    },
+    {
+      "id": "mission",
+      "kind": "statement",
+      "seconds": 20,
+      "en": {
+        "title": "One spacecraft.\nEvery critical moment.",
+        "lead": "Space engineering through play",
+        "points": [
+          "Curious learners",
+          "Students",
+          "Space enthusiasts"
+        ],
+        "speech": "The game connects spacecraft design with the decisions that follow in flight. I built it for curious learners, students and space enthusiasts who want engineering choices they can inspect. The mission home puts the Moon at the centre of that experience."
+      },
+      "uk": {
+        "title": "Один апарат.\nКожен важливий момент.",
+        "lead": "Космічна інженерія через гру",
+        "points": [
+          "Допитливі люди",
+          "Учні та студенти",
+          "Шанувальники космосу"
+        ],
+        "speech": "Гра пов'язує проєктування апарата з рішеннями під час польоту. Я створюю її для допитливих людей, учнів, студентів і шанувальників космосу, які хочуть бачити наслідки інженерного вибору. На головному екрані в центрі цього досвіду перебуває Місяць."
+      },
+      "technicalNotes": [
+        "Audience is a design target, not a measured learning outcome. The slowly rotating home Moon is a decorative 3D illustration, not a dated ephemeris."
+      ]
+    },
+    {
+      "id": "home-view",
+      "kind": "screenshot",
+      "imageKey": "home",
+      "seconds": 10,
+      "en": {
+        "title": "Mission home",
+        "speech": "From here, players can prepare the expedition, return to a mission, or open the available exercises and guidance."
+      },
+      "uk": {
+        "title": "Головний екран місій",
+        "speech": "Звідси можна підготувати експедицію, повернутися до місії або відкрити доступні вправи й пояснення керування."
+      },
+      "technicalNotes": [
+        "Fresh frozen-v0.5.5 interface capture. Preserve the full screen and its current identity."
+      ]
+    },
+    {
+      "id": "worlds",
+      "kind": "statement",
+      "seconds": 14,
+      "en": {
+        "title": "Choose the mission",
+        "lead": "Compare worlds before flight",
+        "points": [
+          "A complete Moon route",
+          "Separate local rehearsals"
+        ],
+        "speech": "The atlas makes the destination a deliberate choice. The Moon offers the connected expedition. Other available landing destinations provide clearly separate local rehearsals."
+      },
+      "uk": {
+        "title": "Оберіть місію",
+        "lead": "Порівняйте світи перед польотом",
+        "points": [
+          "Повний маршрут до Місяця",
+          "Окремі локальні тренування"
+        ],
+        "speech": "Атлас допомагає свідомо обрати ціль. Для Місяця є пов'язана експедиція. Інші доступні світи пропонують чітко відокремлені локальні вправи з посадки."
+      },
+      "technicalNotes": [
+        "Do not imply every atlas body supports landing or a continuous Earth transfer. Sun and Earth include survey-only gates. Local rehearsal and integrated Moon expedition remain distinct."
+      ]
+    },
+    {
+      "id": "atlas-view",
+      "kind": "screenshot",
+      "imageKey": "atlas",
+      "seconds": 10,
+      "en": {
+        "title": "World atlas",
+        "speech": "Players can inspect a world, read its reference parameters, and see which exercise is actually available for that destination."
+      },
+      "uk": {
+        "title": "Атлас світів",
+        "speech": "Можна роздивитися світ, прочитати його довідкові параметри та побачити, яка саме вправа доступна для обраної цілі."
+      },
+      "technicalNotes": [
+        "Keep the actual globe rail, body labels and landing gate visible. Source reference values are separate from illustrative terrain and fictional hardware."
+      ]
+    },
+    {
+      "id": "workshop",
+      "kind": "statement",
+      "seconds": 20,
+      "en": {
+        "title": "Build the spacecraft",
+        "lead": "One design drives geometry and flight",
+        "points": [
+          "Compatible attachment points",
+          "Dimensions change mass and fuel",
+          "An inspectable propulsion budget"
+        ],
+        "speech": "The workshop uses compatible attachment points rather than an invisible assembly order. Players select hardware and dimensions. The same design determines geometry, loaded mass, fuel and propulsion values, so a change has consequences beyond its appearance."
+      },
+      "uk": {
+        "title": "Зберіть космічний апарат",
+        "lead": "Одна конструкція для вигляду й польоту",
+        "points": [
+          "Сумісні точки кріплення",
+          "Розміри змінюють масу й пальне",
+          "Зрозумілий бюджет рушійної системи"
+        ],
+        "speech": "Конструктор використовує сумісні точки кріплення. Гравець обирає обладнання та розміри. Ця сама конструкція визначає геометрію, стартову масу, запас пального й характеристики рушійної системи. Тому зміна має наслідки не лише для вигляду апарата."
+      },
+      "technicalNotes": [
+        "Typed design and dimension-dependent mass/fuel are implemented. Catalog hardware, tank densities and structural limits are fictional educational inputs. The ideal delta-v budget excludes gravity, drag and steering losses."
+      ]
+    },
+    {
+      "id": "workshop-view",
+      "kind": "screenshot",
+      "imageKey": "workshop",
+      "seconds": 18,
+      "en": {
+        "title": "The assembled spacecraft",
+        "speech": "Here the model and its engineering readings sit together. The player can inspect a component, adjust it, and carry the saved design into mission planning instead of starting with an unrelated vehicle."
+      },
+      "uk": {
+        "title": "Зібраний апарат",
+        "speech": "Модель і розрахункові показники розташовані поруч. Можна оглянути компонент, змінити його та перейти зі збереженою конструкцією до планування місії, продовжуючи роботу з тим самим апаратом."
+      },
+      "technicalNotes": [
+        "Use an actual new-build workshop capture. Never substitute generated interface imagery or invented before/after values."
+      ]
+    },
+    {
+      "id": "launch",
+      "kind": "statement",
+      "seconds": 18,
+      "en": {
+        "title": "Launch. Burn. Separate.",
+        "lead": "The vehicle changes during flight",
+        "points": [
+          "Actual thrust and propellant flow",
+          "Pilot-controlled stage release"
+        ],
+        "speech": "Launch applies real modeled thrust and consumes propellant. When a stage is released, the retained spacecraft loses that hardware and its remaining fuel. The pilot performs the release; a camera beat makes the physical event easier to follow."
+      },
+      "uk": {
+        "title": "Старт. Маневр. Відокремлення.",
+        "lead": "Апарат змінюється під час польоту",
+        "points": [
+          "Тяга та витрата пального в моделі",
+          "Відокремлення ступеня пілотом"
+        ],
+        "speech": "Під час запуску модель застосовує тягу й витрачає пальне. Відокремлення прибирає масу відповідного обладнання та залишок його пального. Цю дію виконує пілот, а короткий рух камери допомагає побачити реальну подію."
+      },
+      "technicalNotes": [
+        "The capture must show a real validated stage release, not a renderer-only separation fixture. v0.5.5 inherits the 4.7-second stage camera beat; it does not replace the physical separation condition."
+      ]
+    },
+    {
+      "id": "stage-view",
+      "kind": "screenshot",
+      "imageKey": "stage",
+      "seconds": 15,
+      "en": {
+        "title": "Stage separation",
+        "speech": "This view shows the spacecraft and the departing stage. Position and velocity continue through separation, while the retained mass and available propulsion change."
+      },
+      "uk": {
+        "title": "Відокремлення ступеня",
+        "speech": "У кадрі видно апарат і відокремлений ступінь. Положення та швидкість зберігаються, а маса апарата й доступні можливості рушійної системи змінюються."
+      },
+      "technicalNotes": [
+        "Record the exact current-build phase and capture preparation in the capture manifest. A staged phase capture is not itself proof of a new uninterrupted full mission run."
+      ]
+    },
+    {
+      "id": "moon-route",
+      "kind": "statement",
+      "seconds": 20,
+      "en": {
+        "title": "From Earth to the Moon",
+        "lead": "A connected mission and resource ledger",
+        "points": [
+          "Ascent and Earth orbit",
+          "Departure, coast and lunar capture",
+          "Descent with the retained spacecraft"
+        ],
+        "speech": "The connected Moon route keeps the spacecraft and resource accounting across ascent, Earth orbit, departure, coast, lunar capture and descent. Coasting does not require the engine to stay on. The mission advances through physical state and maneuvers."
+      },
+      "uk": {
+        "title": "Від Землі до Місяця",
+        "lead": "Пов'язана місія та спільний облік ресурсів",
+        "points": [
+          "Запуск і навколоземна орбіта",
+          "Переліт і вихід на місячну орбіту",
+          "Спуск на збереженому апараті"
+        ],
+        "speech": "Місячний маршрут зберігає апарат і спільний облік ресурсів під час запуску, виходу на орбіту, відльоту, пасивного перельоту, захоплення Місяцем і спуску. На пасивній ділянці двигун може бути вимкнений. Перехід між етапами залежить від фізичного стану та маневрів."
+      },
+      "technicalNotes": [
+        "Continuous route is an implemented model and has historical guided-playthrough evidence. These new media images may use exact-solver checkpoint preparation; do not call them a new uninterrupted player acceptance run. Route is 2D patched conics with a synthetic circular Moon and ideal pointing."
+      ]
+    },
+    {
+      "id": "orbit-view",
+      "kind": "screenshot",
+      "imageKey": "orbit",
+      "seconds": 18,
+      "en": {
+        "title": "Lunar approach and orbit",
+        "speech": "The navigation view and live readings show where the spacecraft is within the model. Finite burns change its trajectory, and the fuel ledger continues into the lunar phases."
+      },
+      "uk": {
+        "title": "Наближення до Місяця й орбіта",
+        "speech": "Навігаційний вигляд і показники відображають стан апарата в моделі. Маневри з обмеженим запасом пального змінюють траєкторію, а облік ресурсів продовжується на місячних етапах."
+      },
+      "technicalNotes": [
+        "Use a current-build transfer, approach, capture or lunar-orbit image with its actual phase. Match the visible scene to the capture provenance; no live NASA telemetry or ephemeris accuracy is implied."
+      ]
+    },
+    {
+      "id": "physics",
+      "kind": "physics",
+      "seconds": 32,
+      "en": {
+        "title": "The numbers drive the flight",
+        "lead": "SI units. Finite fuel. Explicit limits.",
+        "points": [
+          "Inverse-square gravity",
+          "Positive propellant flow",
+          "Ideal delta-v budget"
+        ],
+        "speech": "The simulation uses SI units and double-precision state. Inverse-square gravity, propellant flow and changing mass drive the motion. The displayed flow is positive fuel consumption; vehicle mass decreases as that fuel is burned. Existing v0.5.5 QA records one hundred and fifty-five passing checks. That is prior verification, not a new test run or a universal accuracy percentage."
+      },
+      "uk": {
+        "title": "Числа визначають політ",
+        "lead": "Одиниці SI. Обмежене пальне. Чіткі межі.",
+        "points": [
+          "Обернено-квадратична гравітація",
+          "Додатна витрата пального",
+          "Ідеальний запас Δv"
+        ],
+        "speech": "Модель використовує одиниці SI та обчислення подвійної точності. Рух визначають гравітація, витрата пального й змінна маса. Додатна витрата означає споживання пального, тому маса апарата зменшується. У наявному звіті QA для v0.5.5 зафіксовано сто п'ятдесят п'ять успішних перевірок. Це попередні результати, а не новий запуск тестів чи універсальний відсоток точності."
+      },
+      "technicalNotes": [
+        "Positive flow convention: mdot_prop = T/(Isp*g0) >= 0; d(m_vehicle)/dt = -mdot_prop during a burn, excluding discrete staging. g0 = 9.80665 m/s^2. Ideal delta-v excludes losses.",
+        "Source: docs/PHYSICS.md model definitions and docs/QA-V055.md prior 155-test record. This media build does not rerun or certify them.",
+        "Integrated route: 2D patched conics, synthetic circular Moon, ideal pointing. Separate local docking uses HCW/quaternion dynamics. No universal real-world accuracy, surveyed terrain, certification or NASA endorsement is asserted."
+      ]
+    },
+    {
+      "id": "descent-view",
+      "kind": "screenshot",
+      "imageKey": "descent",
+      "seconds": 16,
+      "en": {
+        "title": "Powered lunar descent",
+        "speech": "During descent, altitude, vertical speed and pad offset help explain the approach. Powered guidance is an explicit assist that still uses available thrust and finite propellant."
+      },
+      "uk": {
+        "title": "Спуск до Місяця з тягою",
+        "speech": "Під час спуску висота, вертикальна швидкість і відхилення від майданчика пояснюють наближення до поверхні. Активна допомога наведення використовує доступну тягу та обмежений запас пального."
+      },
+      "technicalNotes": [
+        "Use the genuine new-build descent/plume view. Identify integrated custom-craft versus local standard/custom rehearsal in its asset provenance. Camera/Sun/terrain are illustrative presentation, not new physics forces."
+      ]
+    },
+    {
+      "id": "touchdown",
+      "kind": "statement",
+      "seconds": 12,
+      "en": {
+        "title": "A landing has conditions",
+        "lead": "Contact is decided by the physical state",
+        "points": [
+          "Speed, drift and tilt",
+          "Pad position and landing hardware"
+        ],
+        "speech": "A landing succeeds within explicit contact limits. Speed, sideways motion, tilt, position and suitable hardware matter. A countdown or visual arrival cannot substitute for those conditions."
+      },
+      "uk": {
+        "title": "Посадка має умови",
+        "lead": "Результат визначає стан у момент контакту",
+        "points": [
+          "Швидкість, знос і нахил",
+          "Положення та посадкове обладнання"
+        ],
+        "speech": "Успішна посадка потребує виконання умов контакту. Важливі швидкість, боковий рух, нахил, положення та обладнання. Візуальне прибуття не замінює цих умов."
+      },
+      "technicalNotes": [
+        "Contact limits are fictional educational thresholds. Never replace actual contact readings with post-constraint zero values. Do not introduce fabricated numerical results."
+      ]
+    },
+    {
+      "id": "flag-view",
+      "kind": "screenshot",
+      "imageKey": "flag",
+      "seconds": 12,
+      "en": {
+        "title": "Touchdown and KC flag",
+        "speech": "The real landing outcome leads into the KC flag ceremony. The mission retains the contact result and its resource accounting."
+      },
+      "uk": {
+        "title": "Посадка та прапор KC",
+        "speech": "Після справжнього результату посадки починається церемонія з прапором KC. Місія зберігає умови контакту та облік ресурсів."
+      },
+      "technicalNotes": [
+        "Use genuine current-build successful contact and the implemented visual flag finale. Crew/flag animation does not imply playable EVA controls, sampling, life-support, lunar ascent or Earth return."
+      ]
+    },
+    {
+      "id": "docking",
+      "kind": "statement",
+      "seconds": 14,
+      "en": {
+        "title": "Dock with precision",
+        "lead": "A separate local terminal exercise",
+        "points": [
+          "Translation and attitude",
+          "Finite RCS and powered braking"
+        ],
+        "speech": "Docking is a separate local three-dimensional exercise. The player controls translation and attitude, reads the approach instruments, and uses reaction-control thrusters or powered braking with finite propellant."
+      },
+      "uk": {
+        "title": "Точність під час стикування",
+        "lead": "Окрема локальна вправа зближення",
+        "points": [
+          "Переміщення та орієнтація",
+          "Обмежене пальне й активне гальмування"
+        ],
+        "speech": "Стикування є окремою локальною тривимірною вправою. Гравець керує рухом та орієнтацією, стежить за приладами й використовує маневрові двигуни або активне гальмування з обмеженим запасом пального."
+      },
+      "technicalNotes": [
+        "Local HCW/quaternion scenario, not a complete long-range rendezvous or an automatic continuation of the Moon expedition. Powered assists consume RCS propellant."
+      ]
+    },
+    {
+      "id": "docking-view",
+      "kind": "screenshot",
+      "imageKey": "docking",
+      "seconds": 10,
+      "en": {
+        "title": "Docking cockpit",
+        "speech": "Cockpit and external views share the same local physical state. Small corrections change the approach and consume real modeled resources."
+      },
+      "uk": {
+        "title": "Кабіна стикування",
+        "speech": "Кабіна й зовнішній вигляд показують той самий локальний стан. Невеликі корекції змінюють зближення та витрачають ресурси моделі."
+      },
+      "technicalNotes": [
+        "Use new-build actual docking footage/capture. A screenshot of approach does not establish successful soft capture. Cabin geometry is a fictional procedural reconstruction."
+      ]
+    },
+    {
+      "id": "thanks",
+      "kind": "closing",
+      "seconds": 6,
+      "en": {
+        "title": "Thank you",
+        "lead": "Kinetic Core",
+        "points": [
+          "Created by Mykyta Borisov"
+        ],
+        "speech": "Thank you. I'm Mykyta Borisov, the author of Kinetic Core."
+      },
+      "uk": {
+        "title": "Дякую за увагу",
+        "lead": "Kinetic Core",
+        "points": [
+          "Автор: Микита Борисов"
+        ],
+        "speech": "Дякую за увагу. Я Микита Борисов, автор Kinetic Core."
+      },
+      "technicalNotes": [
+        "No public URL or additional author credit on the slide. Technical sources and capture provenance remain in source files."
+      ]
+    }
+  ]
+}

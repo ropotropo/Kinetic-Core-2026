@@ -1,0 +1,272 @@
+{
+  "commit": "559a56eab08abfaca62001704c188be71e9f6dab",
+  "clips": [
+    {
+      "id": "home",
+      "file": "video/public/footage/home.mp4",
+      "sha256": "d0bd19d30e8d3eb2840e09f910330f784ec6cc68991d52def469a9b7f15897e3",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "120",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    {
+      "id": "worlds",
+      "file": "video/public/footage/worlds.mp4",
+      "sha256": "feaa148bd13da63d4e14125df8769f63d66a69eeff57fc7eb051edb0497c5e02",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "210",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "7.000000"
+        }
+      }
+    },
+    {
+      "id": "docking",
+      "file": "video/public/footage/docking.mp4",
+      "sha256": "2076f15dc3dde1b1e8dc38496412f73c87f369b3fc16719f0874a2b7f058669d",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "120",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    {
+      "id": "cockpit",
+      "file": "video/public/footage/cockpit.mp4",
+      "sha256": "c3b5497f202b8f59eab364706a65bde5a8e88fe41a89ab1bfb60018ab0232eee",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "150",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "5.000000"
+        }
+      }
+    },
+    {
+      "id": "workshop",
+      "file": "video/public/footage/workshop.mp4",
+      "sha256": "c4fa7a7f37fd0aa30e848f9771251d7bf25c36f44870867e97c2bfd1ec38f429",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "30/1",
+            "nb_frames": "210",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "7.000000"
+        }
+      }
+    },
+    {
+      "id": "rollout",
+      "file": "video/public/footage/rollout.mp4",
+      "sha256": "d004cf95d1a13e987652f047af8c903f097d4c6c64eb3b36e3a4baca5fb1df67",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "120",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    {
+      "id": "ascent",
+      "file": "video/public/footage/ascent.mp4",
+      "sha256": "8f3efef3f3858d29d9d6ff8ec3656b57a943cae4cffbf18ac2ba1463e3d1701e",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "210",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "7.000000"
+        }
+      }
+    },
+    {
+      "id": "stage-release",
+      "file": "video/public/footage/stage-release.mp4",
+      "sha256": "6a38e7b8306c6400fb5b2e3d2e2a435a8f3ecf5995e13b4f3f7aa1b3df25fbe1",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "240",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "moon-descent",
+      "file": "video/public/footage/moon-descent.mp4",
+      "sha256": "147c3f7021589c65f5f774ec3f189eef3dd5fcc6953f130fb8fd87588b739dfa",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "240",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "id": "moon-contact",
+      "file": "video/public/footage/moon-contact.mp4",
+      "sha256": "6344512206ecd6d22eb6f6ab4e1fc5fb2b451bdcbf36fec46d5e4eb4060dbbcc",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "270",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "9.000000"
+        }
+      }
+    },
+    {
+      "id": "moon-flag",
+      "file": "video/public/footage/moon-flag.mp4",
+      "sha256": "8f5410e3abc870e607a0a3a5b76ce8e6828d5bd2b8544ae589e223a2942818df",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "30/1",
+            "nb_frames": "300",
+            "side_data_list": [
+              {}
+            ]
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    }
+  ],
+  "stills": 25,
+  "all30fps": true,
+  "gameSourceUnchanged": true
+}

@@ -65,7 +65,7 @@ export function createVehicleGeometry(design,options={}){
   const layout=options.layout||getVehicleLayout(design),ownMaterials=!options.materials;
   const m=options.materials||palette(),root=new THREE.Group();root.name='Player vehicle';
   const stages=[0,1,2].map(i=>{const group=new THREE.Group();group.name=`Stage ${i}`;root.add(group);return group;});
-  const parts=new Map(),flames=[],attitudeJets=[],effectMaterials=[];
+  const parts=new Map(),flames=[],attitudeJets=[],effectMaterials=[],solarWings=[];
   for(const p of layout.parts){
     const part=new THREE.Group();part.name=p.slotId;part.userData={partId:p.slotId,slotId:p.slotId,type:p.type,stage:p.stage};
     part.position.set(...p.position);if(Array.isArray(p.rotation))part.rotation.set(...p.rotation);stages[p.stage??2].add(part);parts.set(p.slotId,part);
@@ -105,9 +105,10 @@ export function createVehicleGeometry(design,options={}){
       flames.push({stage:p.stage,object:flame,partId:p.slotId,origin:[p.position[0],p.position[1]-h*.51,p.position[2]],radius:r});
       for(const y of [-.3,.2])ring(part,r*1.012,y*h,m.darkMetal,r*.025);
     }else if(p.type==='solar'){
-      box(part,[r*2,.065,h],m.solar);for(let i=0;i<7;i++)box(part,[.025,.075,h],m.titanium,[-r+i*r/3,0,0]);
-      for(const z of [-h*.5,h*.5])box(part,[r*2,.08,.04],m.titanium,[0,0,z]);
-      beam(part,[-r,0,0],[r,0,0],.045,m.titanium);
+      const hinge=new THREE.Group(),wing=new THREE.Group();hinge.position.x=-r;wing.position.x=r;part.add(hinge);hinge.add(wing);solarWings.push(hinge);
+      box(wing,[r*2,.065,h],m.solar);for(let i=0;i<7;i++)box(wing,[.025,.075,h],m.titanium,[-r+i*r/3,0,0]);
+      for(const z of [-h*.5,h*.5])box(wing,[r*2,.08,.04],m.titanium,[0,0,z]);
+      beam(wing,[-r,0,0],[r,0,0],.045,m.titanium);
     }else if(p.type==='legs'){
       const foot=[r,-h*.5,0],hip=[-h*.35,h*.5,0];
       beam(part,hip,foot,.07,m.titanium);beam(part,[hip[0],0,hip[2]],[foot[0]*.9,foot[1]+h*.17,foot[2]*.9],.05,m.copper);
@@ -118,7 +119,7 @@ export function createVehicleGeometry(design,options={}){
   root.updateMatrixWorld(true);
   const bounds=hardwareBounds(root),stageBoxes=stages.map(hardwareBounds);
   const size=bounds.getSize(new THREE.Vector3());
-  root.userData={parts,stages,flames,attitudeJets,layout,design,height:layout.height||size.y,radius:layout.radius||Math.max(size.x,size.z)/2,
+  root.userData={parts,stages,flames,attitudeJets,solarWings,layout,design,height:layout.height||size.y,radius:layout.radius||Math.max(size.x,size.z)/2,
     bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()},stageBounds:stageBoxes,
     landingFeetY:stageBoxes[2].isEmpty()?0:stageBoxes[2].min.y,
     core:stages[0],upper:stages[1],spacecraft:stages[2],coreHeight:stageBoxes[0].isEmpty()?0:stageBoxes[0].max.y,
@@ -130,6 +131,14 @@ export function createVehicleGeometry(design,options={}){
 }
 
 export function setVehicleStage(root,index=0){root.userData.stages?.forEach((stage,i)=>{stage.visible=i>=index;});}
+// Detached hardware must not retain a visible copy of an engine/RCS effect.
+export function disableVehicleEffects(root){root.traverse(object=>{if(object.userData.effect)object.visible=false;});}
+// Visual hinge only: deployment never changes mass, power or the typed layout.
+// Contact and framing keep the canonical deployed-envelope bounds above.
+export function setVehicleSolar(root,deployed=true,dt=1/60,immediate=false){
+  const target=deployed?0:Math.PI/2,blend=immediate?1:1-Math.exp(-Math.max(0,dt)*3);
+  root.userData.solarWings?.forEach(hinge=>{hinge.rotation.z=THREE.MathUtils.lerp(hinge.rotation.z,target,blend);});
+}
 export function setVehicleThrust(root,index,throttle=0,atmosphere=0,time=0){
   for(const flame of root.userData.flames||[]){
     flame.object.visible=flame.stage===index&&throttle>.001;

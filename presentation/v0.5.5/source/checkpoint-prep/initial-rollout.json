@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "kind": "lunar-mission",
+  "design": {
+    "format": "kineti-core-rocket",
+    "version": 2,
+    "slots": {
+      "core-engine": {
+        "type": "engine",
+        "radius": 2.6,
+        "length": 4
+      },
+      "core-tank-1": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "core-tank-2": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "core-separator": {
+        "type": "separator",
+        "radius": 3,
+        "length": 0.5
+      },
+      "upper-engine": {
+        "type": "engine",
+        "radius": 1.8,
+        "length": 3
+      },
+      "upper-tank": {
+        "type": "tank",
+        "radius": 3,
+        "length": 18
+      },
+      "upper-separator": {
+        "type": "separator",
+        "radius": 2,
+        "length": 0.4
+      },
+      "service-engine": {
+        "type": "engine",
+        "radius": 1.2,
+        "length": 2
+      },
+      "service-tank": {
+        "type": "tank",
+        "radius": 2,
+        "length": 7
+      },
+      "capsule": {
+        "type": "capsule",
+        "radius": 2,
+        "length": 3.4
+      },
+      "leg-1": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-2": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-3": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "leg-4": {
+        "type": "legs",
+        "radius": 0.35,
+        "length": 3
+      },
+      "solar-1": {
+        "type": "solar",
+        "radius": 1,
+        "length": 3
+      },
+      "solar-2": {
+        "type": "solar",
+        "radius": 1,
+        "length": 3
+      }
+    }
+  },
+  "config": {
+    "capsule": "pioneer",
+    "service": "survey",
+    "core": "atlas",
+    "upper": "swift",
+    "cargo": "none",
+    "site": "kennedy",
+    "design": {
+      "format": "kineti-core-rocket",
+      "version": 2,
+      "slots": {
+        "core-engine": {
+          "type": "engine",
+          "radius": 2.6,
+          "length": 4
+        },
+        "core-tank-1": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "core-tank-2": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "core-separator": {
+          "type": "separator",
+          "radius": 3,
+          "length": 0.5
+        },
+        "upper-engine": {
+          "type": "engine",
+          "radius": 1.8,
+          "length": 3
+        },
+        "upper-tank": {
+          "type": "tank",
+          "radius": 3,
+          "length": 18
+        },
+        "upper-separator": {
+          "type": "separator",
+          "radius": 2,
+          "length": 0.4
+        },
+        "service-engine": {
+          "type": "engine",
+          "radius": 1.2,
+          "length": 2
+        },
+        "service-tank": {
+          "type": "tank",
+          "radius": 2,
+          "length": 7
+        },
+        "capsule": {
+          "type": "capsule",
+          "radius": 2,
+          "length": 3.4
+        },
+        "leg-1": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-2": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-3": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "leg-4": {
+          "type": "legs",
+          "radius": 0.35,
+          "length": 3
+        },
+        "solar-1": {
+          "type": "solar",
+          "radius": 1,
+          "length": 3
+        },
+        "solar-2": {
+          "type": "solar",
+          "radius": 1,
+          "length": 3
+        }
+      }
+    }
+  },
+  "siteId": "tranquility",
+  "phase": "rollout",
+  "time": 0,
+  "sequenceTime": 0,
+  "launch": {
+    "version": 1,
+    "kind": "launch",
+    "phase": "launch",
+    "config": {
+      "capsule": "pioneer",
+      "service": "survey",
+      "core": "atlas",
+      "upper": "swift",
+      "cargo": "none",
+      "site": "kennedy",
+      "design": {
+        "format": "kineti-core-rocket",
+        "version": 2,
+        "slots": {
+          "core-engine": {
+            "type": "engine",
+            "radius": 2.6,
+            "length": 4
+          },
+          "core-tank-1": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "core-tank-2": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "core-separator": {
+            "type": "separator",
+            "radius": 3,
+            "length": 0.5
+          },
+          "upper-engine": {
+            "type": "engine",
+            "radius": 1.8,
+            "length": 3
+          },
+          "upper-tank": {
+            "type": "tank",
+            "radius": 3,
+            "length": 18
+          },
+          "upper-separator": {
+            "type": "separator",
+            "radius": 2,
+            "length": 0.4
+          },
+          "service-engine": {
+            "type": "engine",
+            "radius": 1.2,
+            "length": 2
+          },
+          "service-tank": {
+            "type": "tank",
+            "radius": 2,
+            "length": 7
+          },
+          "capsule": {
+            "type": "capsule",
+            "radius": 2,
+            "length": 3.4
+          },
+          "leg-1": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-2": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-3": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "leg-4": {
+            "type": "legs",
+            "radius": 0.35,
+            "length": 3
+          },
+          "solar-1": {
+            "type": "solar",
+            "radius": 1,
+            "length": 3
+          },
+          "solar-2": {
+            "type": "solar",
+            "radius": 1,
+            "length": 3
+          }
+        }
+      }
+    },
+    "time": 0,
+    "position": [
+      6371000,
+      0
+    ],
+    "velocity": [
+      0,
+      407.999090620417
+    ],
+    "effectiveRotation": 0.00006404003933768906,
+    "stages": [
+      {
+        "id": "custom-0",
+        "name": "Custom core stage",
+        "dryMass": 48346.01414581604,
+        "propellant": 865194.616798629,
+        "thrustSea": 20000000,
+        "thrustVac": 22000000,
+        "ispSea": 285,
+        "ispVac": 315,
+        "radius": 3,
+        "height": 40.5,
+        "dragCoefficient": 0.28,
+        "fuel": 865194.616798629,
+        "attached": true
+      },
+      {
+        "id": "custom-1",
+        "name": "Custom upper stage",
+        "dryMass": 14298.760077053515,
+        "propellant": 151409.05793976007,
+        "thrustSea": 1100000,
+        "thrustVac": 1800000,
+        "ispSea": 300,
+        "ispVac": 450,
+        "radius": 3,
+        "height": 21.4,
+        "dragCoefficient": 0.28,
+        "fuel": 151409.05793976007,
+        "attached": true
+      }
+    ],
+    "stageIndex": 0,
+    "payloadMass": 36038.4046334184,
+    "initialMass": 1115286.853594677,
+    "throttle": 0,
+    "commandedThrottle": 1,
+    "pitch": 0,
+    "pitchTrim": 0,
+    "guidance": true,
+    "guidancePitch": 0,
+    "engineOn": false,
+    "liftoff": false,
+    "maxQ": 0,
+    "dynamicPressure": 0,
+    "loadG": 0,
+    "thrust": 0,
+    "acceleration": 0,
+    "fuelUsed": 0,
+    "deltaVUsed": 0,
+    "dragLoss": 0,
+    "events": [],
+    "event": "Vehicle ready on the launch pad.",
+    "failure": null,
+    "orbit": {
+      "energy": -62481583.23635372,
+      "angularMomentum": 2599362206.3426766,
+      "eccentricity": 0.9973393470706274,
+      "semiMajor": 3189743.4000606593,
+      "periapsis": -6362513.199878681,
+      "apoapsis": 9.313225746154785e-10
+    }
+  },
+  "primary": "earth",
+  "position": [
+    6371000,
+    0
+  ],
+  "velocity": [
+    0,
+    407.999090620417
+  ],
+  "stageIndex": 0,
+  "resources": null,
+  "craftAngle": 0,
+  "throttle": 0,
+  "commandedThrottle": 1,
+  "guide": true,
+  "handedOver": false,
+  "plan": null,
+  "windowError": null,
+  "fuelUsed": 0,
+  "deltaVUsed": 0,
+  "impact": null,
+  "failure": null,
+  "event": "Vehicle secured on the rollout platform.",
+  "events": [],
+  "track": [],
+  "lastTrack": 0
+}

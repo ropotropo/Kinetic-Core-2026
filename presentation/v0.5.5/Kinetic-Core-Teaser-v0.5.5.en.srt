@@ -1,0 +1,63 @@
+1
+00:00:00,500 --> 00:00:02,510
+One spacecraft.
+
+2
+00:00:02,460 --> 00:00:04,519
+Every critical moment.
+
+3
+00:00:04,600 --> 00:00:06,264
+Choose a mission.
+
+4
+00:00:06,214 --> 00:00:08,012
+Build the vehicle.
+
+5
+00:00:10,600 --> 00:00:13,336
+Physics makes every decision count.
+
+6
+00:00:16,500 --> 00:00:18,307
+Launch from Earth.
+
+7
+00:00:18,257 --> 00:00:20,698
+Put your decisions to the test.
+
+8
+00:00:24,100 --> 00:00:26,074
+Release the stage.
+
+9
+00:00:26,024 --> 00:00:28,274
+Every kilogram matters.
+
+10
+00:00:31,100 --> 00:00:34,455
+Take control for a separate docking exercise.
+
+11
+00:00:36,300 --> 00:00:38,690
+Continue the Moon expedition.
+
+12
+00:00:38,640 --> 00:00:40,010
+Brake.
+
+13
+00:00:40,010 --> 00:00:41,474
+Descend.
+
+14
+00:00:44,300 --> 00:00:45,881
+Touch down.
+
+15
+00:00:49,100 --> 00:00:51,752
+Created by Mykyta Borisov.
+
+16
+00:00:51,702 --> 00:00:53,988
+Fly the critical moments.

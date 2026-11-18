@@ -1,6 +1,10 @@
 # Portable repository handover
 
-The author requested a new public repository, Kinetic-Core-2026, on 15 November 2026. Mykyta Borisov is the sole game author; see [AUTHORS.md](../AUTHORS.md). This copy uses a fresh snapshot history and preserves third-party notices.
+Requirement recorded from Andrii on 15 November 2026: after v1 is ready, Mykyta
+must be able to move the complete game into another repository without missing
+assets or conflicting game authorship. Mykyta is the sole game author; see
+[AUTHORS.md](../AUTHORS.md). No new destination repository is created by this
+requirement alone.
 
 ## What travels together
 

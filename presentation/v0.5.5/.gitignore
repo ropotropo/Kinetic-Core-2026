@@ -1,0 +1,7 @@
+# Reproducible full-page review rasters remain local scratch; contact sheets and
+# hash/verification reports are deliverables.
+source/pdf-review/EN/
+source/pdf-review/UA/
+# Canonical downloadable movie is one level above video/; preserve this local
+# renderer output without committing the same bytes twice.
+video/Kinetic-Core-Teaser-v0.5.5.mp4

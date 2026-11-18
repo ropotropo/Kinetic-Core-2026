@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import './rollout.css';
+import { icon } from './ui-icons.js';
 
 // Fictional ground-handling exercise. Metres, seconds and radians throughout.
 // A low-speed tracked kinematic model: driven acceleration, rolling resistance,
@@ -26,30 +27,29 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
   panel.setAttribute('aria-label', 'Manual launch vehicle rollout');
   panel.innerHTML = `
     <canvas class="rollout-scene" aria-label="3D crawler carrying a rocket from assembly to launchpad"></canvas>
-    <header class="rollout-header"><div><span class="rollout-eyebrow">Kinetic Core / ground operations</span><h1>Rollout to the pad</h1></div><button type="button" data-return>Return / cancel</button></header>
+    <header class="rollout-header"><div><span class="rollout-eyebrow">Practice · manual ground handling</span><h1>Rollout to the pad</h1></div><button type="button" class="kc-tool" data-return aria-label="Return to game" title="Return to game">${icon('back')}</button></header>
     <section class="rollout-instruments" aria-label="Rollout telemetry">
-      <div><span>Pad distance</span><output data-distance>360.0</output><small>m</small></div>
-      <div><span>Ground speed</span><output data-speed>0.00</output><small>m/s</small></div>
-      <div><span>Heading / target 000°</span><output data-heading>000.0</output><small>°</small></div>
-      <div class="rollout-alignment"><span>Pad alignment</span><output data-alignment>Approach</output><small data-offset></small></div>
+      <div><span>Pad distance</span><output data-distance>360.0</output><small>m</small><em data-check="distance">Target ≤2 m</em></div>
+      <div><span>Ground speed</span><output data-speed>0.00</output><small>m/s</small><em data-check="speed">Stop ≤0.08 m/s</em></div>
+      <div><span>Heading</span><output data-heading>000.0</output><small>°</small><em data-check="heading">Target 000° ±4°</em></div>
+      <div class="rollout-alignment"><output data-alignment>Approach</output><small data-offset></small></div>
     </section>
-    <div class="rollout-view-tools"><button type="button" data-camera>View: chase</button><button type="button" data-pause aria-pressed="false">Pause</button></div>
+    <nav class="rollout-view-tools" aria-label="Rollout view tools"><button type="button" class="kc-tool" data-camera aria-label="Camera: chase. Switch to overview" title="Camera: chase" aria-pressed="false">${icon('camera')}<span class="kc-tool-label" data-camera-label>Chase</span></button><button type="button" class="kc-tool" data-pause aria-pressed="false" aria-label="Pause rollout" title="Pause rollout">${icon('pause')}<span class="kc-tool-label">Pause</span></button><button type="button" class="kc-tool" data-info aria-label="Rollout controls and information" title="Rollout information" aria-haspopup="dialog">${icon('info')}<span class="kc-tool-label">Info</span></button></nav>
     <section class="rollout-command" aria-label="Driving controls">
       <p data-status role="status" aria-live="polite">Drive out of assembly and follow the road to the launchpad.</p>
-      <p class="rollout-help">W / ↑ accelerate · S / ↓ reverse · A D / ← → steer · Space brake · P pause · Esc return</p>
       <div class="rollout-touch" role="group" aria-label="Hold to drive">
-        <button type="button" data-drive="left" aria-label="Hold to steer left">←<span>Left</span></button>
-        <button type="button" data-drive="forward" aria-label="Hold to accelerate forward">↑<span>Forward</span></button>
-        <button type="button" data-drive="brake" aria-label="Hold service brake">■<span>Brake</span></button>
-        <button type="button" data-drive="reverse" aria-label="Hold to accelerate in reverse">↓<span>Reverse</span></button>
-        <button type="button" data-drive="right" aria-label="Hold to steer right">→<span>Right</span></button>
+        <button type="button" data-drive="left" aria-label="Hold to steer left">${icon('chevron-left')}<span>Left</span></button>
+        <button type="button" data-drive="forward" aria-label="Hold to accelerate forward">${icon('arrow-up')}<span>Forward</span></button>
+        <button type="button" data-drive="brake" aria-label="Hold service brake">${icon('pause')}<span>Brake</span></button>
+        <button type="button" data-drive="reverse" aria-label="Hold to accelerate in reverse">${icon('arrow-down')}<span>Reverse</span></button>
+        <button type="button" data-drive="right" aria-label="Hold to steer right">${icon('chevron-right')}<span>Right</span></button>
       </div>
-      <div class="rollout-handoff"><span>Park within 2 m · heading ±4° · speed ≤0.08 m/s</span><button type="button" data-ready disabled>Confirm pad placement</button></div>
-      <small class="rollout-model">Procedural launch site · fictional hardware · simplified ground handling · independent rollout exercise</small>
-    </section>`;
+      <div class="rollout-handoff"><span>Meet all three parking limits.</span><button type="button" class="kc-action kc-action-primary" data-ready disabled>Confirm placement</button></div>
+    </section><dialog class="rollout-info" aria-labelledby="rollout-info-title"><header><h2 id="rollout-info-title">Park at the launchpad</h2><button type="button" class="kc-tool" data-info-close aria-label="Close rollout information">${icon('close')}</button></header><div><p>Follow the centre line. Park within <strong>2 m</strong>, align to <strong>000° ±4°</strong> and brake below <strong>0.08 m/s</strong>. The indicators follow your actual position, heading and speed.</p><dl><dt>W / ↑</dt><dd>Accelerate forward</dd><dt>S / ↓</dt><dd>Reverse</dd><dt>A / D / ← / →</dt><dd>Steer</dd><dt>Space</dt><dd>Service brake</dd><dt>P</dt><dd>Pause / resume</dd></dl><p>Touch: hold the labelled driving controls. Keyboard: focused driving buttons also work with Enter or Space. Information pauses rollout; close it and choose Resume when ready.</p><details><summary>Model and mission boundary</summary><p>This is an independent ground-handling exercise with fictional hardware and a procedural launch site. Its low-speed kinematic model includes acceleration, rolling resistance, differential steering and service braking; suspension and structural loads are not simulated.</p><p>Confirm becomes available only after the physical parking limits and the route's travel requirement are met. This is distinct from the Moon mission's rollout cinematic.</p></details></div></dialog>`;
   document.body.append(panel);
   const $ = selector => panel.querySelector(selector);
   const canvas = $('canvas');
+  const info = $('.rollout-info');
   const keys = new Set();
   const pointers = new Map();
   const buttonKeys = new Set();
@@ -78,7 +78,9 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
   }
   function setPaused(value) {
     paused = value; release(); accumulator = 0; previousTime = 0;
-    $('[data-pause]').textContent = paused ? 'Resume' : 'Pause';
+    $('[data-pause]').innerHTML = `${icon(paused ? 'play' : 'pause')}<span class="kc-tool-label">${paused ? 'Resume' : 'Pause'}</span>`;
+    $('[data-pause]').setAttribute('aria-label', paused ? 'Resume rollout' : 'Pause rollout');
+    $('[data-pause]').title = paused ? 'Resume rollout' : 'Pause rollout';
     $('[data-pause]').setAttribute('aria-pressed', String(paused));
     updateHUD();
   }
@@ -278,7 +280,8 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
     $('[data-alignment]').textContent = ready ? 'In position' : m.distance < 20 ? 'Fine approach' : 'Approach';
     $('[data-ready]').disabled = !ready;
     panel.classList.toggle('is-aligned', ready);
-    const message = paused ? 'Paused. Inputs released. Select Resume to continue.' : ready ? 'Placement verified. Confirm to hand the vehicle over for launch.' : m.distance < 20 ? 'Align with the blue pad outline. Brake to a stop within 2 m of its centre.' : m.distance < 90 ? 'Pad ahead. Reduce speed and align heading to 000°.' : 'Follow the centre line to the launchpad. Maximum forward speed: 6 m/s.';
+    for(const [name,passed] of [['distance',m.distance<=LIMITS.position&&state.distanceTravelled>300],['speed',m.speed<=LIMITS.speed],['heading',m.headingError<=LIMITS.heading]]){$(`[data-check="${name}"]`).classList.toggle('is-met',passed);$(`[data-check="${name}"]`).setAttribute('aria-label',`${name} parking limit ${passed?'met':'not met'}`);}
+    const message = paused ? 'Paused. Resume when ready.' : ready ? 'Parking limits verified. Confirm placement.' : m.distance < 20 ? 'Align with the pad outline and brake to a stop.' : m.distance < 90 ? 'Pad ahead. Slow down and align to 000°.' : 'Follow the centre line to the launchpad.';
     if ($('[data-status]').textContent !== message) $('[data-status]').textContent = message;
   }
   function frame(now) {
@@ -303,6 +306,7 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
   function close(reason = 'cancel') {
     if (!active) return;
     active = false; release(); cancelAnimationFrame(animation); accumulator = 0;
+    if (info.open) info.close();
     panel.close();
     if (previousFocus?.isConnected) previousFocus.focus();
     onClose({ reason });
@@ -310,7 +314,8 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
   listen($('[data-return]'), 'click', () => close());
   listen(panel, 'cancel', event => { event.preventDefault(); close(); });
   listen($('[data-pause]'), 'click', () => setPaused(!paused));
-  listen($('[data-camera]'), 'click', () => { overview = !overview; $('[data-camera]').textContent = `View: ${overview ? 'overview' : 'chase'}`; });
+  listen($('[data-camera]'), 'click', () => { overview = !overview; $('[data-camera-label]').textContent=overview?'Overview':'Chase';$('[data-camera]').setAttribute('aria-pressed',String(overview));$('[data-camera]').setAttribute('aria-label',`Camera: ${overview?'overview. Switch to chase':'chase. Switch to overview'}`);$('[data-camera]').title=`Camera: ${overview?'overview':'chase'}`; });
+  listen($('[data-info]'),'click',()=>{setPaused(true);info.showModal();$('[data-info-close]').focus();});listen($('[data-info-close]'),'click',()=>info.close());listen(info,'close',()=>{if(active)$('[data-info]').focus({preventScroll:true});});
   listen($('[data-ready]'), 'click', () => {
     if (!aligned()) return;
     readySent = true;
@@ -319,13 +324,18 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
   });
   listen(window, 'keydown', event => {
     if (!active) return;
+    const focusedDialog = event.target.closest?.('dialog');
+    if (focusedDialog && focusedDialog !== info) return;
+    if(event.code==='Escape'){event.preventDefault();event.stopImmediatePropagation();if(info.open)info.close();else close();return;}
+    if(info.open)return;
+    if(event.target instanceof Element&&(event.target.closest('input,select,textarea,summary,a,[contenteditable="true"]')||event.target.closest('button')&&['Space','Enter'].includes(event.code)))return;
     const action = keyActions[event.code];
     if (action) { event.preventDefault(); event.stopImmediatePropagation(); if (!paused && !event.repeat) keys.add(event.code); }
     else if (event.code === 'KeyP') { event.preventDefault(); event.stopImmediatePropagation(); if (!event.repeat) setPaused(!paused); }
-    else if (event.code === 'Escape') { event.preventDefault(); event.stopImmediatePropagation(); close(); }
   }, { capture: true });
   listen(window, 'keyup', event => {
     if (!active || !keyActions[event.code]) return;
+    if(event.target instanceof Element&&event.target.closest('button')&&['Space','Enter'].includes(event.code))return;
     event.preventDefault(); event.stopImmediatePropagation(); keys.delete(event.code);
   }, { capture: true });
   listen(window, 'blur', () => { if (active) setPaused(true); });
@@ -337,12 +347,12 @@ export function createRollout({ onOpen = () => {}, onClose = () => {}, onReady =
       event.preventDefault(); button.focus(); button.setPointerCapture(event.pointerId);
       pointers.set(event.pointerId, action); button.classList.add('is-held');
     });
-    const end = event => { pointers.delete(event.pointerId); if (![...pointers.values()].includes(action)) button.classList.remove('is-held'); };
+    const end = event => { pointers.delete(event.pointerId); if (![...pointers.values()].includes(action)&&!buttonKeys.has(action)) button.classList.remove('is-held'); };
     for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) listen(button, type, end);
-    // Enter operates the focused touch control; Space always remains the brake.
-    listen(button, 'keydown', event => { if (event.code === 'Enter' && !paused) { event.preventDefault(); buttonKeys.add(action); button.classList.add('is-held'); } });
-    listen(button, 'keyup', event => { if (event.code === 'Enter') { event.preventDefault(); buttonKeys.delete(action); button.classList.remove('is-held'); } });
-    listen(button, 'blur', () => { buttonKeys.delete(action); button.classList.remove('is-held'); });
+    // Focused held controls keep normal Enter/Space ownership; elsewhere Space brakes.
+    listen(button, 'keydown', event => { if (['Enter','Space'].includes(event.code)) { event.preventDefault();event.stopPropagation();if(!paused){buttonKeys.add(action);button.classList.add('is-held');} } });
+    listen(button, 'keyup', event => { if (['Enter','Space'].includes(event.code)) { event.preventDefault();event.stopPropagation();buttonKeys.delete(action);if(![...pointers.values()].includes(action))button.classList.remove('is-held'); } });
+    listen(button, 'blur', () => { buttonKeys.delete(action);if(![...pointers.values()].includes(action))button.classList.remove('is-held'); });
   });
   listen(canvas, 'webglcontextlost', event => { event.preventDefault(); if (active) { setPaused(true); $('[data-status]').textContent = '3D graphics interrupted. Return and reopen the exercise.'; } });
   return {
