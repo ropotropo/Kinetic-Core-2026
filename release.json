@@ -1,8 +1,5 @@
 {
-  "version": "0.4.4",
-  "repository": "ropotropo/Kinetic-Core-2026",
-  "sourceCommit": "ca38b933d423fe4d6477494871940c31b6112066",
+  "sourceCommit": "8db271f864359f16a39083edfe2ac734f4f18417",
   "author": "Mykyta Borisov",
-  "mediaCommit": "cffa56667d6a05c4680e0b1f75864e8865858c4a",
-  "currentVideoSHA256": "2d8aed6939f81dca63833cd483a8413b4462f299725ff234aaa7bde9fd818703"
+  "version": "0.5.6"
 }

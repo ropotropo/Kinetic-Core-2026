@@ -1,0 +1,16 @@
+{
+  "asset": "mykyta-portrait.jpg",
+  "subject": "Микита Борисов",
+  "authorCredit": "Created by Mykyta Borisov",
+  "country": "Ukraine",
+  "type": "AI-generated illustrative portrait",
+  "sourceFile": "mykyta-anamorphic-portrait-v5.png",
+  "sourceSha256": "cbb7f33b48025522324f16f3096a6e3a68e5669a3170fd7087e31425c25e46f8",
+  "outputSha256": "925e4a74e8498bcea3e3559d2cc649714480652057179334b8ee297564451c6d",
+  "dimensions": [
+    1024,
+    1536
+  ],
+  "processing": "Current approved KC portrait v5, PNG to RGB JPEG quality92 4:4:4. No generative edit or facial alteration.",
+  "authorization": "Existing current project portrait explicitly requested for the game author page by Andrii, 2026-11-15."
+}
