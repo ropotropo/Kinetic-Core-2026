@@ -1,5 +1,6 @@
 {
-  "sourceCommit": "8db271f864359f16a39083edfe2ac734f4f18417",
-  "author": "Mykyta Borisov",
-  "version": "0.5.6"
+  "version": "0.5.6",
+  "sourceCommit": "d53f17af28163f7e8e556fe5839c73b6eef24689",
+  "upstreamCommit": "8db271f864359f16a39083edfe2ac734f4f18417",
+  "author": "Mykyta Borisov"
 }
